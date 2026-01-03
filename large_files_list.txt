@@ -1,2 +1,0 @@
-﻿C:\Ampps\www\walkforgod\public_html\wp-content\backups-WT1EO\backup_walkforgod.org-2025-09-22_04-23-sql-e348d.tar
-C:\Ampps\www\walkforgod\public_html\wp-content\litespeed\debug\debugefe0e13a4da38708.log
