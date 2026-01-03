@@ -1,0 +1,5 @@
+[27-Dec-2022 07:32:59 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/dash-notice/wpmudev-dash-notification.php:10
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/dash-notice/wpmudev-dash-notification.php(65): WPMUDEV_Dashboard_Notice->WPMUDEV_Dashboard_Notice()
+#1 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/dash-notice/wpmudev-dash-notification.php on line 10

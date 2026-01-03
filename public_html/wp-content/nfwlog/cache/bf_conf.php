@@ -1,0 +1,1 @@
+<?php $bf_enable=1;$bf_type=1;$bf_request='GETPOST';$bf_bantime=5;$bf_attempt=5;$bf_maxtime=15;$bf_xmlrpc=1;$bf_allow_bot=0;$auth_name='';$auth_pass='da39a3ee5e6b4b0d3255bfef95601890afd80709';$auth_msgtxt='QWNjZXNzIHJlc3RyaWN0ZWQ=';$bf_rand='889036';$bf_authlog=1;$captcha_text='R3Vlc3MgV2hhdCB5b3UgbmVlZCB0byBEbyB0byBQcm9jZWVkPw==';$bf_nosig=0; ?>

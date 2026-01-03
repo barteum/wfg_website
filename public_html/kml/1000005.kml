@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>1000005 - BONDI NORTH.KML</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>1000005 - BONDI NORTH.KML</name>
+		
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1441401</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0969</td></tr>
+      <tr><td>Postcode</td><td>2026</td></tr>
+      <tr><td>Persons</td><td>640</td></tr>
+      <tr><td>A1996_dwel</td><td>268</td></tr>
+      <tr><td>_2006_4cast</td><td>302</td></tr>
+      <tr><td>Dwellings</td><td>285</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.2776,-33.878116,0 151.27749,-33.878101,0 151.277327,-33.878078,0 151.277166,-33.878056,0 151.276712,-33.877994,0 151.276265,-33.877932,0 151.275976,-33.877892,0 151.275683,-33.877852,0 151.275524,-33.877827,0 151.275222,-33.877785,0 151.275078,-33.877766,0 151.274935,-33.877747,0 151.274905,-33.877743,0 151.274842,-33.878068,0 151.274825,-33.87816,0 151.274759,-33.878152,0 151.273947,-33.878047,0 151.27372,-33.87805,0 151.273636,-33.878552,0 151.273567,-33.878965,0 151.273547,-33.879087,0 151.273538,-33.87952,0 151.273557,-33.879813,0 151.275211,-33.879976,0 151.275055,-33.880804,0 151.276071,-33.880911,0 151.277057,-33.881015,0 151.27725,-33.879961,0 151.277526,-33.878503,0 151.2776,-33.878116,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.280089,-33.882599,0 151.281294,-33.88277,0 151.281413,-33.882787,0 151.281989,-33.882868,0 151.282533,-33.882945,0 151.282567,-33.882118,0 151.282537,-33.881461,0 151.282451,-33.881217,0 151.282404,-33.881146,0 151.282391,-33.881126,0 151.281438,-33.880348,0 151.281315,-33.880234,0 151.281314,-33.880108,0 151.281237,-33.8805,0 151.279724,-33.880297,0 151.279539,-33.880175,0 151.279475,-33.879979,0 151.279556,-33.87956,0 151.278735,-33.879448,0 151.278504,-33.879179,0 151.278556,-33.878911,0 151.278382,-33.878817,0 151.277955,-33.878563,0 151.277526,-33.878503,0 151.27725,-33.879961,0 151.277057,-33.881015,0 151.277047,-33.881067,0 151.276843,-33.882155,0 151.276992,-33.882162,0 151.27751,-33.882235,0 151.278368,-33.882356,0 151.279224,-33.882477,0 151.280089,-33.882599,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1441403</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0684</td></tr>
+      <tr><td>Postcode</td><td>2026</td></tr>
+      <tr><td>Persons</td><td>610</td></tr>
+      <tr><td>A1996_dwel</td><td>242</td></tr>
+      <tr><td>_2006_4cast</td><td>274</td></tr>
+      <tr><td>Dwellings</td><td>258</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.280089,-33.882599,0 151.279224,-33.882477,0 151.278368,-33.882356,0 151.27751,-33.882235,0 151.276992,-33.882162,0 151.276843,-33.882155,0 151.27664,-33.882077,0 151.276273,-33.883983,0 151.277155,-33.884112,0 151.278008,-33.884231,0 151.278869,-33.88435,0 151.279577,-33.884449,0 151.279607,-33.884464,0 151.279735,-33.884482,0 151.279762,-33.884372,0 151.280089,-33.882599,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.280089,-33.882599,0 151.279762,-33.884372,0 151.279735,-33.884482,0 151.279721,-33.884564,0 151.280013,-33.884604,0 151.280914,-33.88473,0 151.283817,-33.885141,0 151.283481,-33.884826,0 151.283126,-33.884336,0 151.282519,-33.883483,0 151.282533,-33.882945,0 151.281989,-33.882868,0 151.281413,-33.882787,0 151.281294,-33.88277,0 151.280089,-33.882599,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1441405</td></tr>
+      <tr><td>Area_sqkms</td><td>0.045</td></tr>
+      <tr><td>Postcode</td><td>2026</td></tr>
+      <tr><td>Persons</td><td>304</td></tr>
+      <tr><td>A1996_dwel</td><td>121</td></tr>
+      <tr><td>_2006_4cast</td><td>147</td></tr>
+      <tr><td>Dwellings</td><td>134</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.279735,-33.884482,0 151.279607,-33.884464,0 151.279492,-33.885039,0 151.279365,-33.885674,0 151.279795,-33.885698,0 151.28061,-33.885739,0 151.284263,-33.885932,0 151.284203,-33.885776,0 151.28402,-33.88533,0 151.283817,-33.885141,0 151.280914,-33.88473,0 151.280013,-33.884604,0 151.279721,-33.884564,0 151.279735,-33.884482,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.279607,-33.884464,0 151.279577,-33.884449,0 151.278869,-33.88435,0 151.278008,-33.884231,0 151.277155,-33.884112,0 151.276273,-33.883983,0 151.276136,-33.884694,0 151.275985,-33.885494,0 151.277755,-33.885588,0 151.279365,-33.885674,0 151.279492,-33.885039,0 151.279607,-33.884464,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1441408</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0262</td></tr>
+      <tr><td>Postcode</td><td>2026</td></tr>
+      <tr><td>Persons</td><td>172</td></tr>
+      <tr><td>A1996_dwel</td><td>71</td></tr>
+      <tr><td>_2006_4cast</td><td>97</td></tr>
+      <tr><td>Dwellings</td><td>84</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.275985,-33.885494,0 151.276136,-33.884694,0 151.276273,-33.883983,0 151.275842,-33.883884,0 151.275369,-33.883817,0 151.274799,-33.883771,0 151.274693,-33.884495,0 151.27463,-33.8846,0 151.274163,-33.885398,0 151.275985,-33.885494,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.276273,-33.883983,0 151.27664,-33.882077,0 151.276605,-33.882064,0 151.275854,-33.881985,0 151.275719,-33.881971,0 151.275369,-33.883817,0 151.275842,-33.883884,0 151.276273,-33.883983,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1441410</td></tr>
+      <tr><td>Area_sqkms</td><td>0.1245</td></tr>
+      <tr><td>Postcode</td><td>2026</td></tr>
+      <tr><td>Persons</td><td>721</td></tr>
+      <tr><td>A1996_dwel</td><td>253</td></tr>
+      <tr><td>_2006_4cast</td><td>311</td></tr>
+      <tr><td>Dwellings</td><td>282</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.276843,-33.882155,0 151.277047,-33.881067,0 151.277057,-33.881015,0 151.276071,-33.880911,0 151.275055,-33.880804,0 151.275211,-33.879976,0 151.273557,-33.879813,0 151.273538,-33.87952,0 151.270448,-33.879102,0 151.270499,-33.87965,0 151.270487,-33.879982,0 151.270472,-33.880398,0 151.27034,-33.881045,0 151.27018,-33.881377,0 151.270787,-33.881442,0 151.271605,-33.88153,0 151.272496,-33.881626,0 151.273426,-33.881726,0 151.27481,-33.881875,0 151.274852,-33.881879,0 151.275719,-33.881971,0 151.275854,-33.881985,0 151.276605,-33.882064,0 151.27664,-33.882077,0 151.276843,-33.882155,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.270448,-33.879102,0 151.273538,-33.87952,0 151.273547,-33.879087,0 151.273567,-33.878965,0 151.273636,-33.878552,0 151.27372,-33.87805,0 151.273583,-33.878052,0 151.270449,-33.877622,0 151.270408,-33.877673,0 151.270338,-33.87795,0 151.270353,-33.878098,0 151.270448,-33.879102,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1441502</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0339</td></tr>
+      <tr><td>Postcode</td><td>2026</td></tr>
+      <tr><td>Persons</td><td>251</td></tr>
+      <tr><td>A1996_dwel</td><td>150</td></tr>
+      <tr><td>_2006_4cast</td><td>170</td></tr>
+      <tr><td>Dwellings</td><td>160</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.284145,-33.893461,0 151.284094,-33.893074,0 151.283978,-33.892099,0 151.28376,-33.890284,0 151.282969,-33.889789,0 151.282799,-33.889892,0 151.282427,-33.890023,0 151.282404,-33.890007,0 151.282033,-33.889752,0 151.281736,-33.889693,0 151.281279,-33.889744,0 151.281176,-33.889759,0 151.282289,-33.890448,0 151.282381,-33.890505,0 151.283234,-33.891033,0 151.283368,-33.892152,0 151.283485,-33.893127,0 151.283562,-33.893739,0 151.283736,-33.893741,0 151.284004,-33.893587,0 151.284145,-33.893461,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.284145,-33.893461,0 151.284187,-33.893424,0 151.284192,-33.89342,0 151.284652,-33.893009,0 151.284797,-33.892853,0 151.284835,-33.892711,0 151.284872,-33.89264,0 151.284944,-33.892555,0 151.285033,-33.892513,0 151.285075,-33.892484,0 151.285015,-33.892015,0 151.284752,-33.889818,0 151.28467,-33.88977,0 151.28357,-33.889103,0 151.283566,-33.889204,0 151.283309,-33.889544,0 151.283073,-33.889725,0 151.282969,-33.889789,0 151.28376,-33.890284,0 151.283978,-33.892099,0 151.284094,-33.893074,0 151.284145,-33.893461,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1441504</td></tr>
+      <tr><td>Area_sqkms</td><td>0.1871</td></tr>
+      <tr><td>Postcode</td><td>2026</td></tr>
+      <tr><td>Persons</td><td>441</td></tr>
+      <tr><td>A1996_dwel</td><td>206</td></tr>
+      <tr><td>_2006_4cast</td><td>240</td></tr>
+      <tr><td>Dwellings</td><td>223</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.285075,-33.892484,0 151.28532,-33.892316,0 151.285465,-33.892161,0 151.285556,-33.892004,0 151.285558,-33.891919,0 151.285577,-33.891847,0 151.28558,-33.89169,0 151.285691,-33.891477,0 151.285731,-33.891234,0 151.285741,-33.890719,0 151.285709,-33.890561,0 151.285659,-33.890417,0 151.285627,-33.890245,0 151.285576,-33.890172,0 151.285577,-33.890087,0 151.285543,-33.890014,0 151.285511,-33.889871,0 151.28555,-33.889714,0 151.285663,-33.889372,0 151.285902,-33.888888,0 151.285875,-33.888458,0 151.285888,-33.887814,0 151.285857,-33.887585,0 151.285861,-33.887428,0 151.285809,-33.887355,0 151.285811,-33.887269,0 151.28576,-33.887169,0 151.285762,-33.887054,0 151.285746,-33.886982,0 151.285752,-33.886696,0 151.285735,-33.886624,0 151.285741,-33.886338,0 151.285725,-33.886266,0 151.285728,-33.886123,0 151.285712,-33.886051,0 151.285714,-33.885908,0 151.285666,-33.885664,0 151.285548,-33.885376,0 151.285497,-33.885304,0 151.285463,-33.885218,0 151.285411,-33.88516,0 151.285378,-33.885074,0 151.285326,-33.885015,0 151.285292,-33.884929,0 151.285267,-33.884886,0 151.285173,-33.884727,0 151.285156,-33.884684,0 151.285088,-33.88454,0 151.285089,-33.884483,0 151.284996,-33.884288,0 151.284902,-33.884094,0 151.284904,-33.884008,0 151.284717,-33.883633,0 151.284719,-33.883547,0 151.284667,-33.883475,0 151.284669,-33.883389,0 151.284618,-33.883317,0 151.284619,-33.883241,0 151.283393,-33.883067,0 151.282962,-33.883005,0 151.282533,-33.882945,0 151.282519,-33.883483,0 151.283126,-33.884336,0 151.283481,-33.884826,0 151.283817,-33.885141,0 151.28402,-33.88533,0 151.284203,-33.885776,0 151.284263,-33.885932,0 151.284293,-33.886013,0 151.284414,-33.886791,0 151.283306,-33.887735,0 151.283288,-33.887803,0 151.280366,-33.885988,0 151.279701,-33.886693,0 151.281999,-33.888118,0 151.283494,-33.889046,0 151.28357,-33.889103,0 151.28467,-33.88977,0 151.284752,-33.889818,0 151.285015,-33.892015,0 151.285075,-33.892484,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.277629,-33.886174,0 151.277578,-33.886355,0 151.277628,-33.88639,0 151.279064,-33.887378,0 151.28027,-33.888122,0 151.282404,-33.88944,0 151.282969,-33.889789,0 151.283073,-33.889725,0 151.283309,-33.889544,0 151.283566,-33.889204,0 151.28357,-33.889103,0 151.283494,-33.889046,0 151.281999,-33.888118,0 151.279701,-33.886693,0 151.27923,-33.886406,0 151.279189,-33.886381,0 151.279167,-33.88637,0 151.279146,-33.88636,0 151.279102,-33.886341,0 151.279054,-33.886325,0 151.279008,-33.88631,0 151.278935,-33.886294,0 151.27886,-33.886285,0 151.277939,-33.886195,0 151.277629,-33.886174,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1441506</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0376</td></tr>
+      <tr><td>Postcode</td><td>2026</td></tr>
+      <tr><td>Persons</td><td>432</td></tr>
+      <tr><td>A1996_dwel</td><td>201</td></tr>
+      <tr><td>_2006_4cast</td><td>269</td></tr>
+      <tr><td>Dwellings</td><td>235</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.281176,-33.889759,0 151.281279,-33.889744,0 151.281736,-33.889693,0 151.282033,-33.889752,0 151.282404,-33.890007,0 151.282427,-33.890023,0 151.282799,-33.889892,0 151.282969,-33.889789,0 151.282404,-33.88944,0 151.28027,-33.888122,0 151.279064,-33.887378,0 151.278433,-33.888058,0 151.278532,-33.888127,0 151.281176,-33.889759,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.275897,-33.88596,0 151.275776,-33.886602,0 151.276346,-33.886682,0 151.276427,-33.886699,0 151.276506,-33.886722,0 151.276557,-33.886741,0 151.276582,-33.886752,0 151.276607,-33.886763,0 151.27663,-33.886775,0 151.276677,-33.8868,0 151.2767,-33.886813,0 151.27702,-33.887031,0 151.277789,-33.887555,0 151.278433,-33.888058,0 151.279064,-33.887378,0 151.277628,-33.88639,0 151.277578,-33.886355,0 151.277629,-33.886174,0 151.277285,-33.88615,0 151.277241,-33.886148,0 151.275897,-33.88596,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1441510</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0476</td></tr>
+      <tr><td>Postcode</td><td>2026</td></tr>
+      <tr><td>Persons</td><td>546</td></tr>
+      <tr><td>A1996_dwel</td><td>274</td></tr>
+      <tr><td>_2006_4cast</td><td>364</td></tr>
+      <tr><td>Dwellings</td><td>319</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.28061,-33.885739,0 151.280366,-33.885988,0 151.283288,-33.887803,0 151.283306,-33.887735,0 151.284414,-33.886791,0 151.284293,-33.886013,0 151.284263,-33.885932,0 151.28061,-33.885739,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.275897,-33.88596,0 151.277241,-33.886148,0 151.277285,-33.88615,0 151.277629,-33.886174,0 151.277939,-33.886195,0 151.27886,-33.886285,0 151.278935,-33.886294,0 151.279008,-33.88631,0 151.279054,-33.886325,0 151.279102,-33.886341,0 151.279146,-33.88636,0 151.279167,-33.88637,0 151.279189,-33.886381,0 151.27923,-33.886406,0 151.279701,-33.886693,0 151.280366,-33.885988,0 151.28061,-33.885739,0 151.279795,-33.885698,0 151.279365,-33.885674,0 151.277755,-33.885588,0 151.275985,-33.885494,0 151.275897,-33.88596,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1441601</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0351</td></tr>
+      <tr><td>Postcode</td><td>2026</td></tr>
+      <tr><td>Persons</td><td>304</td></tr>
+      <tr><td>A1996_dwel</td><td>149</td></tr>
+      <tr><td>_2006_4cast</td><td>169</td></tr>
+      <tr><td>Dwellings</td><td>159</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.273698,-33.884487,0 151.273681,-33.884522,0 151.273567,-33.884923,0 151.273532,-33.885365,0 151.274163,-33.885398,0 151.27463,-33.8846,0 151.274693,-33.884495,0 151.274799,-33.883771,0 151.275369,-33.883817,0 151.275719,-33.881971,0 151.274852,-33.881879,0 151.27481,-33.881875,0 151.274584,-33.883243,0 151.274363,-33.883221,0 151.273994,-33.883195,0 151.273951,-33.883479,0 151.273846,-33.884178,0 151.273698,-33.884487,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.273698,-33.884487,0 151.273846,-33.884178,0 151.273951,-33.883479,0 151.273994,-33.883195,0 151.274363,-33.883221,0 151.274584,-33.883243,0 151.27481,-33.881875,0 151.273426,-33.881726,0 151.272496,-33.881626,0 151.271605,-33.88153,0 151.270787,-33.881442,0 151.27018,-33.881377,0 151.269796,-33.882151,0 151.270581,-33.882266,0 151.271454,-33.882359,0 151.27249,-33.88247,0 151.272358,-33.883307,0 151.272295,-33.883707,0 151.273698,-33.884487,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1441603</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0258</td></tr>
+      <tr><td>Postcode</td><td>2026</td></tr>
+      <tr><td>Persons</td><td>301</td></tr>
+      <tr><td>A1996_dwel</td><td>150</td></tr>
+      <tr><td>_2006_4cast</td><td>172</td></tr>
+      <tr><td>Dwellings</td><td>161</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.269796,-33.882151,0 151.269635,-33.882475,0 151.269311,-33.883007,0 151.270868,-33.884002,0 151.271285,-33.88355,0 151.271454,-33.882359,0 151.270581,-33.882266,0 151.269796,-33.882151,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000005 - BONDI NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.267864,-33.885065,0 151.268421,-33.885095,0 151.269801,-33.885168,0 151.270626,-33.885211,0 151.271255,-33.885244,0 151.272955,-33.885334,0 151.273532,-33.885365,0 151.273567,-33.884923,0 151.273681,-33.884522,0 151.273698,-33.884487,0 151.272295,-33.883707,0 151.272358,-33.883307,0 151.27249,-33.88247,0 151.271454,-33.882359,0 151.271285,-33.88355,0 151.270868,-33.884002,0 151.269311,-33.883007,0 151.268781,-33.883879,0 151.268118,-33.884772,0 151.267864,-33.885065,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+		<LookAt>
+		  <longitude>151.278937</longitude>
+		  <latitude>-33.884968</latitude>
+		  <range>5000</range>
+		</LookAt></Document>
+</kml>

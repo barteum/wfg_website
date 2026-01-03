@@ -1,0 +1,70 @@
+[10-Jun-2020 04:51:32 UTC] WordPress database error Table 'walkforg_wfg.wp_litespeed_img_optm' doesn't exist for query SELECT src,post_id FROM `wp_litespeed_img_optm` WHERE post_id = 441 made by File_Upload_Upgrader->cleanup, wp_delete_attachment, do_action('delete_attachment'), WP_Hook->do_action, WP_Hook->apply_filters, LiteSpeed\Media->delete_attachment, LiteSpeed\Img_Optm->reset_row
+[04-Dec-2024 14:47:33 UTC] WordPress database error Table 'wp_e_events' already exists for query CREATE TABLE `wp_e_events` (
+			id bigint(20) unsigned auto_increment primary key,
+			event_data text null,
+			created_at datetime not null
+		) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Elementor\Plugin->init, Elementor\Plugin->init_components, Elementor\Core\Admin\Admin->__construct, Elementor\Plugin->init_common, Elementor\Core\Common\App->init_components, Elementor\Core\Common\Modules\EventTracker\Module->__construct, Elementor\Core\Common\Modules\EventTracker\DB->__construct, Elementor\Core\Common\Modules\EventTracker\DB->create_table
+[04-Dec-2024 14:47:33 UTC] WordPress database error Duplicate key name 'created_at_index' for query ALTER TABLE wp_e_events
+    		ADD INDEX `created_at_index` (`created_at`)
+		 made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Elementor\Plugin->init, Elementor\Plugin->init_components, Elementor\Core\Admin\Admin->__construct, Elementor\Plugin->init_common, Elementor\Core\Common\App->init_components, Elementor\Core\Common\Modules\EventTracker\Module->__construct, Elementor\Core\Common\Modules\EventTracker\DB->__construct, Elementor\Core\Common\Modules\EventTracker\DB->add_indexes
+[04-Dec-2024 14:55:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_function() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php:145
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php(6472): MarketPress->__construct()
+#1 /home/walkforg/public_html/wp-settings.php(409): include_once('/home/walkforg/...')
+#2 /home/walkforg/public_html/wp-config.php(92): require_once('/home/walkforg/...')
+#3 /home/walkforg/public_html/wp-load.php(50): require_once('/home/walkforg/...')
+#4 /home/walkforg/public_html/wp-admin/admin-ajax.php(22): require_once('/home/walkforg/...')
+#5 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php on line 145
+[04-Dec-2024 14:55:48 UTC] PHP Warning:  PHP Startup: Invalid date.timezone value '', using 'UTC' instead in Unknown on line 0
+[04-Dec-2024 14:56:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_function() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php:145
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php(6472): MarketPress->__construct()
+#1 /home/walkforg/public_html/wp-settings.php(409): include_once('/home/walkforg/...')
+#2 /home/walkforg/public_html/wp-config.php(92): require_once('/home/walkforg/...')
+#3 /home/walkforg/public_html/wp-load.php(50): require_once('/home/walkforg/...')
+#4 /home/walkforg/public_html/wp-admin/admin-ajax.php(22): require_once('/home/walkforg/...')
+#5 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php on line 145
+[04-Dec-2024 14:57:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_function() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php:145
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php(6472): MarketPress->__construct()
+#1 /home/walkforg/public_html/wp-settings.php(409): include_once('/home/walkforg/...')
+#2 /home/walkforg/public_html/wp-config.php(92): require_once('/home/walkforg/...')
+#3 /home/walkforg/public_html/wp-load.php(50): require_once('/home/walkforg/...')
+#4 /home/walkforg/public_html/wp-admin/admin.php(34): require_once('/home/walkforg/...')
+#5 /home/walkforg/public_html/wp-admin/plugins.php(10): require_once('/home/walkforg/...')
+#6 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php on line 145
+[04-Dec-2024 14:57:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_function() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php:145
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php(6472): MarketPress->__construct()
+#1 /home/walkforg/public_html/wp-settings.php(409): include_once('/home/walkforg/...')
+#2 /home/walkforg/public_html/wp-config.php(92): require_once('/home/walkforg/...')
+#3 /home/walkforg/public_html/wp-load.php(50): require_once('/home/walkforg/...')
+#4 /home/walkforg/public_html/wp-admin/admin.php(34): require_once('/home/walkforg/...')
+#5 /home/walkforg/public_html/wp-admin/plugins.php(10): require_once('/home/walkforg/...')
+#6 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php on line 145
+[04-Dec-2024 14:58:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_function() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php:145
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php(6472): MarketPress->__construct()
+#1 /home/walkforg/public_html/wp-settings.php(409): include_once('/home/walkforg/...')
+#2 /home/walkforg/public_html/wp-config.php(92): require_once('/home/walkforg/...')
+#3 /home/walkforg/public_html/wp-load.php(50): require_once('/home/walkforg/...')
+#4 /home/walkforg/public_html/wp-admin/admin.php(34): require_once('/home/walkforg/...')
+#5 /home/walkforg/public_html/wp-admin/plugin-install.php(16): require_once('/home/walkforg/...')
+#6 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php on line 145
+[04-Dec-2024 14:58:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_function() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php:145
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php(6472): MarketPress->__construct()
+#1 /home/walkforg/public_html/wp-settings.php(409): include_once('/home/walkforg/...')
+#2 /home/walkforg/public_html/wp-config.php(92): require_once('/home/walkforg/...')
+#3 /home/walkforg/public_html/wp-load.php(50): require_once('/home/walkforg/...')
+#4 /home/walkforg/public_html/wp-admin/admin.php(34): require_once('/home/walkforg/...')
+#5 /home/walkforg/public_html/wp-admin/update-core.php(10): require_once('/home/walkforg/...')
+#6 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php on line 145
+[05-Dec-2024 00:42:57 UTC] PHP Warning:  PHP Startup: Invalid date.timezone value '', using 'UTC' instead in Unknown on line 0
+[05-Dec-2024 00:43:03 UTC] PHP Warning:  PHP Startup: Invalid date.timezone value '', using 'UTC' instead in Unknown on line 0

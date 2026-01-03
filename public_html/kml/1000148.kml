@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>1000148 - KENSINGTON.KML</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>1000148 - KENSINGTON.KML</name>
+		
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1430201</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0722</td></tr>
+    <tr><td>Persons</td><td>616</td></tr>
+    <tr><td>Postcode</td><td>2033</td></tr>
+    <tr><td>_2006_4cast</td><td>421</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.22403,-33.905187,0 151.223962,-33.905611,0 151.225078,-33.905763,0 151.226154,-33.90591,0 151.226365,-33.904855,0 151.226406,-33.904679,0 151.226458,-33.904403,0 151.226199,-33.904271,0 151.226122,-33.904213,0 151.225577,-33.903801,0 151.223795,-33.902328,0 151.222604,-33.901311,0 151.222577,-33.901288,0 151.222585,-33.901319,0 151.222638,-33.901519,0 151.222772,-33.902022,0 151.2231,-33.902694,0 151.223302,-33.903108,0 151.223562,-33.90364,0 151.223563,-33.903641,0 151.22391,-33.904351,0 151.223949,-33.904527,0 151.224044,-33.904953,0 151.22403,-33.905187,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.225699,-33.908201,0 151.225876,-33.907308,0 151.226154,-33.90591,0 151.225078,-33.905763,0 151.223962,-33.905611,0 151.223734,-33.907009,0 151.223709,-33.907159,0 151.223585,-33.907907,0 151.225699,-33.908201,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1430203</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0503</td></tr>
+    <tr><td>Persons</td><td>575</td></tr>
+    <tr><td>Postcode</td><td>2033</td></tr>
+    <tr><td>_2006_4cast</td><td>311</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.223141,-33.905052,0 151.223044,-33.905532,0 151.222753,-33.906996,0 151.222396,-33.908864,0 151.223426,-33.909002,0 151.223437,-33.908919,0 151.22351,-33.908359,0 151.223585,-33.907907,0 151.223709,-33.907159,0 151.223734,-33.907009,0 151.223962,-33.905611,0 151.22403,-33.905187,0 151.224044,-33.904953,0 151.223949,-33.904527,0 151.22391,-33.904351,0 151.223563,-33.903641,0 151.223562,-33.90364,0 151.223562,-33.903641,0 151.223249,-33.90469,0 151.223108,-33.904672,0 151.222574,-33.904601,0 151.222179,-33.904542,0 151.222177,-33.904751,0 151.222089,-33.904908,0 151.222872,-33.905015,0 151.223141,-33.905052,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.221216,-33.908705,0 151.221571,-33.90684,0 151.221855,-33.905369,0 151.223044,-33.905532,0 151.223141,-33.905052,0 151.222872,-33.905015,0 151.222089,-33.904908,0 151.221319,-33.904801,0 151.220656,-33.904711,0 151.220654,-33.90472,0 151.220582,-33.905102,0 151.220688,-33.905116,0 151.220673,-33.905195,0 151.220671,-33.905206,0 151.22039,-33.906686,0 151.220036,-33.908549,0 151.219457,-33.908473,0 151.218589,-33.908839,0 151.219127,-33.909462,0 151.219824,-33.90957,0 151.221019,-33.909734,0 151.221216,-33.908705,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1430209</td></tr>
+    <tr><td>Area_sqkms</td><td>0.2312</td></tr>
+    <tr><td>Persons</td><td>724</td></tr>
+    <tr><td>Postcode</td><td>2033</td></tr>
+    <tr><td>_2006_4cast</td><td>296</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.220429,-33.917105,0 151.220762,-33.915405,0 151.220787,-33.915338,0 151.221911,-33.915445,0 151.223044,-33.915561,0 151.22364,-33.915621,0 151.224236,-33.915682,0 151.22462,-33.913706,0 151.224033,-33.913652,0 151.223428,-33.913597,0 151.222778,-33.913537,0 151.222891,-33.91273,0 151.223031,-33.911733,0 151.221765,-33.911618,0 151.220677,-33.911519,0 151.21948,-33.911357,0 151.219155,-33.911313,0 151.218707,-33.914632,0 151.218299,-33.915847,0 151.217989,-33.916768,0 151.219301,-33.916949,0 151.220429,-33.917105,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.225482,-33.91484,0 151.225414,-33.914539,0 151.225238,-33.913691,0 151.224723,-33.913171,0 151.22462,-33.913706,0 151.224236,-33.915682,0 151.22364,-33.915621,0 151.223044,-33.915561,0 151.221911,-33.915445,0 151.220787,-33.915338,0 151.220762,-33.915405,0 151.220429,-33.917105,0 151.221554,-33.917261,0 151.221166,-33.91945,0 151.222254,-33.919596,0 151.22285,-33.919677,0 151.223446,-33.919757,0 151.223867,-33.917581,0 151.224461,-33.917664,0 151.225072,-33.917749,0 151.22562,-33.917817,0 151.226205,-33.91789,0 151.226461,-33.919418,0 151.228159,-33.919663,0 151.230347,-33.919961,0 151.231048,-33.920056,0 151.231748,-33.920151,0 151.231977,-33.918998,0 151.2321,-33.918383,0 151.232826,-33.918507,0 151.233557,-33.918633,0 151.235212,-33.918915,0 151.235973,-33.919045,0 151.235989,-33.918974,0 151.236539,-33.91653,0 151.234778,-33.916274,0 151.234556,-33.916078,0 151.225482,-33.91484,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1430211</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0415</td></tr>
+    <tr><td>Persons</td><td>659</td></tr>
+    <tr><td>Postcode</td><td>2033</td></tr>
+    <tr><td>_2006_4cast</td><td>361</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.221216,-33.908705,0 151.222396,-33.908864,0 151.222753,-33.906996,0 151.223044,-33.905532,0 151.221855,-33.905369,0 151.221571,-33.90684,0 151.221216,-33.908705,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.221019,-33.909734,0 151.219824,-33.90957,0 151.219646,-33.910493,0 151.21948,-33.911357,0 151.220677,-33.911519,0 151.221765,-33.911618,0 151.223031,-33.911733,0 151.223297,-33.911758,0 151.223148,-33.911502,0 151.223151,-33.911306,0 151.223157,-33.911194,0 151.223173,-33.910938,0 151.223288,-33.910053,0 151.222089,-33.909885,0 151.221019,-33.909734,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1430306</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1059</td></tr>
+    <tr><td>Persons</td><td>1024</td></tr>
+    <tr><td>Postcode</td><td>2032</td></tr>
+    <tr><td>_2006_4cast</td><td>427</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.227973,-33.924253,0 151.227995,-33.924211,0 151.228008,-33.924194,0 151.228024,-33.924172,0 151.228061,-33.924136,0 151.228098,-33.924107,0 151.228137,-33.924087,0 151.228166,-33.924076,0 151.228205,-33.924066,0 151.228255,-33.92406,0 151.228296,-33.92406,0 151.228341,-33.92407,0 151.22839,-33.924086,0 151.228435,-33.924111,0 151.228466,-33.924135,0 151.228484,-33.924152,0 151.228537,-33.924159,0 151.229482,-33.924288,0 151.229784,-33.922783,0 151.230081,-33.921274,0 151.229338,-33.921173,0 151.228692,-33.921087,0 151.2282,-33.921145,0 151.228058,-33.920306,0 151.228043,-33.920215,0 151.228159,-33.919663,0 151.226461,-33.919418,0 151.226609,-33.920287,0 151.226788,-33.921336,0 151.227001,-33.922577,0 151.227147,-33.922827,0 151.227839,-33.924022,0 151.227877,-33.924086,0 151.227889,-33.924107,0 151.227973,-33.924253,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.232953,-33.921664,0 151.233086,-33.921002,0 151.233216,-33.920352,0 151.232474,-33.92025,0 151.231748,-33.920151,0 151.231048,-33.920056,0 151.230347,-33.919961,0 151.228159,-33.919663,0 151.228043,-33.920215,0 151.228058,-33.920306,0 151.2282,-33.921145,0 151.228692,-33.921087,0 151.229338,-33.921173,0 151.230081,-33.921274,0 151.230784,-33.921369,0 151.231484,-33.921464,0 151.232219,-33.921564,0 151.232953,-33.921664,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1430308</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1342</td></tr>
+    <tr><td>Persons</td><td>880</td></tr>
+    <tr><td>Postcode</td><td>2032</td></tr>
+    <tr><td>_2006_4cast</td><td>424</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.233216,-33.920352,0 151.233086,-33.921002,0 151.232953,-33.921664,0 151.232802,-33.922422,0 151.232651,-33.923177,0 151.234104,-33.923377,0 151.234797,-33.923472,0 151.23512,-33.921965,0 151.235401,-33.920656,0 151.235607,-33.920685,0 151.235802,-33.91981,0 151.235859,-33.919557,0 151.235973,-33.919045,0 151.235212,-33.918915,0 151.233557,-33.918633,0 151.232826,-33.918507,0 151.2321,-33.918383,0 151.231977,-33.918998,0 151.231748,-33.920151,0 151.232474,-33.92025,0 151.233216,-33.920352,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.225024,-33.919575,0 151.225195,-33.920573,0 151.225299,-33.921181,0 151.226028,-33.921268,0 151.226788,-33.921336,0 151.226609,-33.920287,0 151.226461,-33.919418,0 151.225728,-33.919491,0 151.225024,-33.919575,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1430310</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0234</td></tr>
+    <tr><td>Persons</td><td>255</td></tr>
+    <tr><td>Postcode</td><td>2032</td></tr>
+    <tr><td>_2006_4cast</td><td>118</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.232953,-33.921664,0 151.232219,-33.921564,0 151.231484,-33.921464,0 151.231184,-33.922973,0 151.231921,-33.923073,0 151.232651,-33.923177,0 151.232802,-33.922422,0 151.232953,-33.921664,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.226461,-33.919418,0 151.226205,-33.91789,0 151.22562,-33.917817,0 151.225072,-33.917749,0 151.224461,-33.917664,0 151.223867,-33.917581,0 151.223446,-33.919757,0 151.224034,-33.919836,0 151.224063,-33.91969,0 151.225024,-33.919575,0 151.225728,-33.919491,0 151.226461,-33.919418,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1430312</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0334</td></tr>
+    <tr><td>Persons</td><td>443</td></tr>
+    <tr><td>Postcode</td><td>2032</td></tr>
+    <tr><td>_2006_4cast</td><td>221</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.231184,-33.922973,0 151.231484,-33.921464,0 151.230784,-33.921369,0 151.230081,-33.921274,0 151.229784,-33.922783,0 151.229482,-33.924288,0 151.23018,-33.924384,0 151.230485,-33.922878,0 151.231184,-33.922973,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.226983,-33.904646,0 151.226858,-33.904606,0 151.226458,-33.904403,0 151.226406,-33.904679,0 151.226365,-33.904855,0 151.226154,-33.90591,0 151.225876,-33.907308,0 151.225699,-33.908201,0 151.22553,-33.909117,0 151.225307,-33.91024,0 151.225081,-33.911375,0 151.224723,-33.913171,0 151.225238,-33.913691,0 151.225414,-33.914539,0 151.225482,-33.91484,0 151.225722,-33.914872,0 151.225627,-33.914764,0 151.225385,-33.913574,0 151.225326,-33.913099,0 151.22531,-33.912986,0 151.225381,-33.912638,0 151.225514,-33.911969,0 151.225613,-33.911471,0 151.225701,-33.911024,0 151.22585,-33.910276,0 151.225945,-33.909794,0 151.226,-33.909517,0 151.226066,-33.909182,0 151.226106,-33.908979,0 151.226211,-33.908452,0 151.226256,-33.908185,0 151.226418,-33.907365,0 151.226511,-33.906892,0 151.226698,-33.905941,0 151.226778,-33.905537,0 151.226923,-33.904806,0 151.226926,-33.904735,0 151.226983,-33.904646,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1430411</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0458</td></tr>
+    <tr><td>Persons</td><td>334</td></tr>
+    <tr><td>Postcode</td><td>2033</td></tr>
+    <tr><td>_2006_4cast</td><td>182</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.223157,-33.911194,0 151.223151,-33.911306,0 151.223148,-33.911502,0 151.223297,-33.911758,0 151.223031,-33.911733,0 151.222891,-33.91273,0 151.222778,-33.913537,0 151.223428,-33.913597,0 151.224033,-33.913652,0 151.22462,-33.913706,0 151.224723,-33.913171,0 151.225081,-33.911375,0 151.223705,-33.911246,0 151.223157,-33.911194,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000148 - KENSINGTON</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.221216,-33.908705,0 151.221019,-33.909734,0 151.222089,-33.909885,0 151.223288,-33.910053,0 151.223173,-33.910938,0 151.223157,-33.911194,0 151.223705,-33.911246,0 151.225081,-33.911375,0 151.225307,-33.91024,0 151.22553,-33.909117,0 151.225699,-33.908201,0 151.223585,-33.907907,0 151.22351,-33.908359,0 151.223437,-33.908919,0 151.223426,-33.909002,0 151.222396,-33.908864,0 151.221216,-33.908705,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+		<LookAt>
+		  <longitude>151.225832</longitude>
+		  <latitude>-33.913736</latitude>
+		  <range>5000</range>
+		</LookAt></Document>
+</kml>

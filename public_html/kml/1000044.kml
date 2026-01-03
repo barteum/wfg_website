@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>1000044 - BELMORE.KML</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>1000044 - BELMORE.KML</name>
+		
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1350701</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1612</td></tr>
+    <tr><td>Persons</td><td>568</td></tr>
+    <tr><td>Postcode</td><td>2192</td></tr>
+    <tr><td>_2006_4cast</td><td>195</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.080598,-33.914772,0 151.081251,-33.915905,0 151.081281,-33.9159,0 151.081693,-33.915756,0 151.082624,-33.915377,0 151.083546,-33.915002,0 151.084396,-33.914656,0 151.085313,-33.914282,0 151.086258,-33.913916,0 151.085579,-33.912751,0 151.084991,-33.911744,0 151.084761,-33.911351,0 151.083687,-33.911788,0 151.080427,-33.913116,0 151.079793,-33.913374,0 151.080598,-33.914772,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.082876,-33.917789,0 151.08314,-33.917738,0 151.083459,-33.917686,0 151.083772,-33.917642,0 151.083929,-33.917622,0 151.084244,-33.91759,0 151.088203,-33.917223,0 151.08815,-33.917135,0 151.088114,-33.917062,0 151.087988,-33.916848,0 151.087592,-33.916178,0 151.087507,-33.916033,0 151.087063,-33.91528,0 151.086258,-33.913916,0 151.085313,-33.914282,0 151.084396,-33.914656,0 151.083546,-33.915002,0 151.082624,-33.915377,0 151.081693,-33.915756,0 151.082501,-33.917143,0 151.082796,-33.917654,0 151.082876,-33.917789,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1350703</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0941</td></tr>
+    <tr><td>Persons</td><td>688</td></tr>
+    <tr><td>Postcode</td><td>2192</td></tr>
+    <tr><td>_2006_4cast</td><td>262</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.086258,-33.913916,0 151.087063,-33.91528,0 151.087507,-33.916033,0 151.088015,-33.915827,0 151.08858,-33.915597,0 151.089667,-33.915157,0 151.090925,-33.914646,0 151.090446,-33.913821,0 151.089685,-33.912511,0 151.089641,-33.912439,0 151.088785,-33.912812,0 151.088396,-33.912982,0 151.087326,-33.913449,0 151.087159,-33.913522,0 151.086757,-33.913697,0 151.086258,-33.913916,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.090302,-33.919373,0 151.090799,-33.919164,0 151.091463,-33.918884,0 151.09198,-33.918666,0 151.091159,-33.91732,0 151.090945,-33.916969,0 151.08854,-33.917192,0 151.088203,-33.917223,0 151.088298,-33.91738,0 151.088307,-33.917433,0 151.088397,-33.917566,0 151.088442,-33.917658,0 151.088464,-33.917702,0 151.088021,-33.917754,0 151.087485,-33.917816,0 151.085721,-33.918022,0 151.085958,-33.918441,0 151.086206,-33.918873,0 151.086148,-33.918896,0 151.086643,-33.919749,0 151.086722,-33.919885,0 151.087181,-33.920674,0 151.088468,-33.920154,0 151.08914,-33.919881,0 151.089518,-33.91973,0 151.089616,-33.919677,0 151.089746,-33.919607,0 151.090178,-33.919426,0 151.090302,-33.919373,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1350705</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1103</td></tr>
+    <tr><td>Persons</td><td>426</td></tr>
+    <tr><td>Postcode</td><td>2192</td></tr>
+    <tr><td>_2006_4cast</td><td>141</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.087181,-33.920674,0 151.086722,-33.919885,0 151.086643,-33.919749,0 151.086148,-33.918896,0 151.086206,-33.918873,0 151.085958,-33.918441,0 151.085721,-33.918022,0 151.087485,-33.917816,0 151.088021,-33.917754,0 151.088464,-33.917702,0 151.088442,-33.917658,0 151.088397,-33.917566,0 151.088307,-33.917433,0 151.088298,-33.91738,0 151.088203,-33.917223,0 151.084244,-33.91759,0 151.083929,-33.917622,0 151.083772,-33.917642,0 151.083459,-33.917686,0 151.08314,-33.917738,0 151.082876,-33.917789,0 151.08311,-33.918183,0 151.083527,-33.9189,0 151.084027,-33.919758,0 151.084274,-33.920182,0 151.084521,-33.920607,0 151.085067,-33.921544,0 151.085157,-33.921502,0 151.087181,-33.920674,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.085067,-33.921544,0 151.084521,-33.920607,0 151.084274,-33.920182,0 151.084027,-33.919758,0 151.083527,-33.9189,0 151.08311,-33.918183,0 151.082876,-33.917789,0 151.082824,-33.917799,0 151.082668,-33.917834,0 151.082474,-33.917881,0 151.08228,-33.917934,0 151.082089,-33.91799,0 151.0819,-33.918052,0 151.081752,-33.918101,0 151.08193,-33.918408,0 151.083247,-33.920606,0 151.084068,-33.921957,0 151.085221,-33.923807,0 151.085207,-33.92393,0 151.085883,-33.923656,0 151.085298,-33.922682,0 151.085006,-33.922195,0 151.084958,-33.922122,0 151.084711,-33.921703,0 151.08495,-33.921599,0 151.085067,-33.921544,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1350711</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0731</td></tr>
+    <tr><td>Persons</td><td>269</td></tr>
+    <tr><td>Postcode</td><td>2192</td></tr>
+    <tr><td>_2006_4cast</td><td>141</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.091422,-33.915503,0 151.090925,-33.914646,0 151.089667,-33.915157,0 151.08858,-33.915597,0 151.088015,-33.915827,0 151.087507,-33.916033,0 151.087592,-33.916178,0 151.087988,-33.916848,0 151.088114,-33.917062,0 151.08815,-33.917135,0 151.088203,-33.917223,0 151.08854,-33.917192,0 151.090945,-33.916969,0 151.091272,-33.916934,0 151.091586,-33.916886,0 151.091899,-33.916824,0 151.092152,-33.916762,0 151.091991,-33.916483,0 151.091422,-33.915503,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.085298,-33.922682,0 151.088672,-33.921317,0 151.088468,-33.920154,0 151.087181,-33.920674,0 151.085157,-33.921502,0 151.085067,-33.921544,0 151.08495,-33.921599,0 151.084711,-33.921703,0 151.084958,-33.922122,0 151.085006,-33.922195,0 151.085298,-33.922682,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1350801</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0564</td></tr>
+    <tr><td>Persons</td><td>552</td></tr>
+    <tr><td>Postcode</td><td>2192</td></tr>
+    <tr><td>_2006_4cast</td><td>249</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.078732,-33.911411,0 151.07925,-33.912327,0 151.0793,-33.912304,0 151.081621,-33.911351,0 151.084155,-33.910311,0 151.084091,-33.910203,0 151.083861,-33.909825,0 151.083621,-33.90941,0 151.081095,-33.910444,0 151.078732,-33.911411,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.083687,-33.911788,0 151.084761,-33.911351,0 151.084155,-33.910311,0 151.081621,-33.911351,0 151.0793,-33.912304,0 151.07925,-33.912327,0 151.079793,-33.913374,0 151.080427,-33.913116,0 151.083687,-33.911788,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1350803</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1457</td></tr>
+    <tr><td>Persons</td><td>444</td></tr>
+    <tr><td>Postcode</td><td>2192</td></tr>
+    <tr><td>_2006_4cast</td><td>170</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.085132,-33.909152,0 151.085028,-33.909317,0 151.084168,-33.910085,0 151.084091,-33.910203,0 151.084155,-33.910311,0 151.084761,-33.911351,0 151.084991,-33.911744,0 151.085579,-33.912751,0 151.086258,-33.913916,0 151.086757,-33.913697,0 151.087159,-33.913522,0 151.087326,-33.913449,0 151.088396,-33.912982,0 151.088785,-33.912812,0 151.089641,-33.912439,0 151.088851,-33.911118,0 151.088582,-33.91067,0 151.087163,-33.910045,0 151.085132,-33.909152,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.078185,-33.910545,0 151.081516,-33.909189,0 151.083054,-33.908564,0 151.083407,-33.90842,0 151.083289,-33.90837,0 151.082936,-33.908237,0 151.082582,-33.90811,0 151.082225,-33.907999,0 151.081863,-33.907917,0 151.081669,-33.907886,0 151.081474,-33.90786,0 151.081278,-33.90784,0 151.081082,-33.907825,0 151.080886,-33.907816,0 151.080638,-33.907836,0 151.080389,-33.907847,0 151.08014,-33.90785,0 151.079891,-33.907845,0 151.079643,-33.907833,0 151.079233,-33.907797,0 151.078821,-33.90774,0 151.078413,-33.907661,0 151.078012,-33.907557,0 151.077625,-33.907427,0 151.077324,-33.907299,0 151.077063,-33.907472,0 151.076634,-33.907752,0 151.076581,-33.907788,0 151.076705,-33.90797,0 151.076854,-33.90823,0 151.077201,-33.908833,0 151.077696,-33.909693,0 151.078185,-33.910545,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1350810</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0709</td></tr>
+    <tr><td>Persons</td><td>492</td></tr>
+    <tr><td>Postcode</td><td>2192</td></tr>
+    <tr><td>_2006_4cast</td><td>184</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.083407,-33.90842,0 151.083054,-33.908564,0 151.081516,-33.909189,0 151.078185,-33.910545,0 151.078248,-33.910655,0 151.078312,-33.910692,0 151.078331,-33.910702,0 151.078732,-33.911411,0 151.081095,-33.910444,0 151.083621,-33.90941,0 151.083861,-33.909825,0 151.084091,-33.910203,0 151.084168,-33.910085,0 151.085028,-33.909317,0 151.085132,-33.909152,0 151.083407,-33.90842,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.09141,-33.911914,0 151.088582,-33.91067,0 151.088851,-33.911118,0 151.089641,-33.912439,0 151.089685,-33.912511,0 151.090446,-33.913821,0 151.090925,-33.914646,0 151.091422,-33.915503,0 151.091991,-33.916483,0 151.092152,-33.916762,0 151.092205,-33.916749,0 151.092505,-33.91666,0 151.092722,-33.916585,0 151.092936,-33.916503,0 151.093353,-33.916318,0 151.093751,-33.916112,0 151.093942,-33.916002,0 151.094127,-33.915882,0 151.094311,-33.915764,0 151.094487,-33.915637,0 151.096182,-33.914046,0 151.096662,-33.913595,0 151.097228,-33.913064,0 151.096941,-33.91316,0 151.096747,-33.913218,0 151.09653,-33.913277,0 151.09631,-33.913333,0 151.096088,-33.913381,0 151.095866,-33.913416,0 151.095644,-33.913434,0 151.095266,-33.913425,0 151.094879,-33.913374,0 151.094495,-33.913284,0 151.094125,-33.913157,0 151.09141,-33.911914,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1351409</td></tr>
+    <tr><td>Area_sqkms</td><td>0.2814</td></tr>
+    <tr><td>Persons</td><td>807</td></tr>
+    <tr><td>Postcode</td><td>2192</td></tr>
+    <tr><td>_2006_4cast</td><td>270</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.092865,-33.918796,0 151.093376,-33.919662,0 151.093753,-33.920303,0 151.093888,-33.92053,0 151.094394,-33.921389,0 151.094647,-33.921818,0 151.094886,-33.922209,0 151.096412,-33.921559,0 151.097256,-33.921199,0 151.098226,-33.920787,0 151.097015,-33.918713,0 151.096168,-33.917257,0 151.095966,-33.916902,0 151.097404,-33.916299,0 151.097457,-33.91618,0 151.096336,-33.914274,0 151.096182,-33.914046,0 151.094487,-33.915637,0 151.094311,-33.915764,0 151.094127,-33.915882,0 151.093942,-33.916002,0 151.093751,-33.916112,0 151.093353,-33.916318,0 151.092936,-33.916503,0 151.092722,-33.916585,0 151.092505,-33.91666,0 151.092205,-33.916749,0 151.092152,-33.916762,0 151.091899,-33.916824,0 151.091586,-33.916886,0 151.091272,-33.916934,0 151.090945,-33.916969,0 151.091159,-33.91732,0 151.09198,-33.918666,0 151.092608,-33.918401,0 151.092865,-33.918796,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.090302,-33.919373,0 151.091409,-33.921263,0 151.092614,-33.923322,0 151.092672,-33.923293,0 151.09293,-33.923165,0 151.093754,-33.922759,0 151.093909,-33.922684,0 151.094788,-33.922251,0 151.094886,-33.922209,0 151.094647,-33.921818,0 151.094394,-33.921389,0 151.093888,-33.92053,0 151.093753,-33.920303,0 151.093376,-33.919662,0 151.092865,-33.918796,0 151.092608,-33.918401,0 151.09198,-33.918666,0 151.091463,-33.918884,0 151.090799,-33.919164,0 151.090302,-33.919373,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1351502</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1375</td></tr>
+    <tr><td>Persons</td><td>551</td></tr>
+    <tr><td>Postcode</td><td>2192</td></tr>
+    <tr><td>_2006_4cast</td><td>247</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.090302,-33.919373,0 151.090178,-33.919426,0 151.089746,-33.919607,0 151.089616,-33.919677,0 151.089518,-33.91973,0 151.08914,-33.919881,0 151.088468,-33.920154,0 151.088672,-33.921317,0 151.085298,-33.922682,0 151.085883,-33.923656,0 151.088868,-33.922449,0 151.090049,-33.921975,0 151.090152,-33.92257,0 151.090455,-33.923097,0 151.090843,-33.923769,0 151.091062,-33.924151,0 151.091259,-33.92407,0 151.091557,-33.923906,0 151.092614,-33.923322,0 151.091409,-33.921263,0 151.090302,-33.919373,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.091062,-33.924151,0 151.090843,-33.923769,0 151.090455,-33.923097,0 151.090152,-33.92257,0 151.090049,-33.921975,0 151.088868,-33.922449,0 151.085883,-33.923656,0 151.086146,-33.924094,0 151.086413,-33.924539,0 151.08667,-33.924966,0 151.086904,-33.9254,0 151.089028,-33.924782,0 151.089676,-33.924594,0 151.09034,-33.924401,0 151.090481,-33.92436,0 151.090647,-33.924312,0 151.090896,-33.924215,0 151.091062,-33.924151,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1351504</td></tr>
+    <tr><td>Area_sqkms</td><td>0.2192</td></tr>
+    <tr><td>Persons</td><td>952</td></tr>
+    <tr><td>Postcode</td><td>2192</td></tr>
+    <tr><td>_2006_4cast</td><td>362</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.09034,-33.924401,0 151.090628,-33.924873,0 151.091651,-33.926552,0 151.091039,-33.926811,0 151.090624,-33.926988,0 151.090432,-33.927069,0 151.089751,-33.927359,0 151.088434,-33.927919,0 151.088687,-33.928336,0 151.08882,-33.928556,0 151.089072,-33.929117,0 151.089151,-33.929295,0 151.09041,-33.93142,0 151.091797,-33.930864,0 151.092717,-33.930497,0 151.093499,-33.930185,0 151.093729,-33.930125,0 151.093981,-33.93006,0 151.093792,-33.929076,0 151.093667,-33.928421,0 151.093667,-33.928163,0 151.093672,-33.927256,0 151.093576,-33.927295,0 151.091557,-33.923906,0 151.091259,-33.92407,0 151.091062,-33.924151,0 151.090896,-33.924215,0 151.090647,-33.924312,0 151.090481,-33.92436,0 151.09034,-33.924401,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.086904,-33.9254,0 151.087342,-33.926121,0 151.087798,-33.926871,0 151.088434,-33.927919,0 151.089751,-33.927359,0 151.090432,-33.927069,0 151.090624,-33.926988,0 151.091039,-33.926811,0 151.091651,-33.926552,0 151.090628,-33.924873,0 151.09034,-33.924401,0 151.089676,-33.924594,0 151.089028,-33.924782,0 151.086904,-33.9254,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1351506</td></tr>
+    <tr><td>Area_sqkms</td><td>0.2371</td></tr>
+    <tr><td>Persons</td><td>815</td></tr>
+    <tr><td>Postcode</td><td>2192</td></tr>
+    <tr><td>_2006_4cast</td><td>331</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.097872,-33.927697,0 151.097347,-33.926464,0 151.097079,-33.925836,0 151.096958,-33.925887,0 151.096042,-33.926267,0 151.095037,-33.926686,0 151.094548,-33.92689,0 151.093672,-33.927256,0 151.093667,-33.928163,0 151.093667,-33.928421,0 151.093792,-33.929076,0 151.093981,-33.93006,0 151.094836,-33.929841,0 151.095965,-33.929682,0 151.097001,-33.929536,0 151.098503,-33.929326,0 151.098543,-33.929327,0 151.098942,-33.929263,0 151.099648,-33.929149,0 151.100728,-33.928983,0 151.10137,-33.928884,0 151.101549,-33.928856,0 151.102453,-33.928717,0 151.103488,-33.928557,0 151.103935,-33.928487,0 151.103791,-33.927762,0 151.103763,-33.927624,0 151.103602,-33.926813,0 151.10104,-33.927208,0 151.097872,-33.927697,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.096412,-33.921559,0 151.094886,-33.922209,0 151.094788,-33.922251,0 151.093909,-33.922684,0 151.094138,-33.923068,0 151.095174,-33.924809,0 151.096042,-33.926267,0 151.096958,-33.925887,0 151.097079,-33.925836,0 151.098544,-33.925245,0 151.09663,-33.921936,0 151.096412,-33.921559,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000044 - BELMORE</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1351510</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1106</td></tr>
+    <tr><td>Persons</td><td>387</td></tr>
+    <tr><td>Postcode</td><td>2192</td></tr>
+    <tr><td>_2006_4cast</td><td>144</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.096042,-33.926267,0 151.095174,-33.924809,0 151.094138,-33.923068,0 151.093909,-33.922684,0 151.093754,-33.922759,0 151.09293,-33.923165,0 151.092672,-33.923293,0 151.092614,-33.923322,0 151.091557,-33.923906,0 151.093576,-33.927295,0 151.093672,-33.927256,0 151.094548,-33.92689,0 151.095037,-33.926686,0 151.096042,-33.926267,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+		<LookAt>
+		  <longitude>151.088763</longitude>
+		  <latitude>-33.918429</latitude>
+		  <range>5000</range>
+		</LookAt></Document>
+</kml>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>1000158 - WATERLOO.KML</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>1000158 - WATERLOO.KML</name>
+		
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1400509</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1418</td></tr>
+    <tr><td>Persons</td><td>712</td></tr>
+    <tr><td>Postcode</td><td>2015</td></tr>
+    <tr><td>_2006_4cast</td><td>418</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.197474,-33.897149,0 151.196639,-33.897361,0 151.195887,-33.897544,0 151.195574,-33.897569,0 151.195412,-33.897899,0 151.194895,-33.898963,0 151.194607,-33.899308,0 151.194197,-33.899766,0 151.193789,-33.900221,0 151.196095,-33.899642,0 151.196467,-33.899549,0 151.197326,-33.899338,0 151.198164,-33.899133,0 151.198993,-33.898933,0 151.19949,-33.898861,0 151.199979,-33.898784,0 151.199938,-33.898672,0 151.199243,-33.896652,0 151.199201,-33.89653,0 151.199108,-33.896191,0 151.199017,-33.895786,0 151.199006,-33.895626,0 151.199016,-33.895559,0 151.199049,-33.895411,0 151.199096,-33.895269,0 151.199156,-33.89511,0 151.198668,-33.895049,0 151.198387,-33.895013,0 151.198246,-33.894998,0 151.19817,-33.894991,0 151.198116,-33.894988,0 151.197836,-33.894972,0 151.197759,-33.894969,0 151.197525,-33.894969,0 151.197489,-33.895036,0 151.197395,-33.895177,0 151.197276,-33.895806,0 151.197224,-33.896504,0 151.197474,-33.897149,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.206362,-33.898455,0 151.206842,-33.898519,0 151.207093,-33.898554,0 151.207296,-33.898583,0 151.20819,-33.898708,0 151.208041,-33.89945,0 151.207819,-33.900474,0 151.208739,-33.900654,0 151.20874,-33.900649,0 151.209383,-33.897537,0 151.209594,-33.896512,0 151.209433,-33.896505,0 151.209131,-33.896468,0 151.208665,-33.896408,0 151.207749,-33.896281,0 151.207193,-33.896203,0 151.206726,-33.896139,0 151.206595,-33.896971,0 151.20648,-33.8977,0 151.206362,-33.898455,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1400705</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0466</td></tr>
+    <tr><td>Persons</td><td>510</td></tr>
+    <tr><td>Postcode</td><td>2017</td></tr>
+    <tr><td>_2006_4cast</td><td>254</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.206362,-33.898455,0 151.20648,-33.8977,0 151.206595,-33.896971,0 151.205769,-33.896941,0 151.205142,-33.896919,0 151.204492,-33.896896,0 151.20432,-33.896889,0 151.203634,-33.896864,0 151.203987,-33.898287,0 151.204801,-33.898313,0 151.205438,-33.898331,0 151.205286,-33.899056,0 151.206357,-33.899191,0 151.206362,-33.898455,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.214269,-33.903929,0 151.21429,-33.903845,0 151.214878,-33.901498,0 151.21503,-33.900896,0 151.21508,-33.900701,0 151.215325,-33.899354,0 151.215675,-33.89762,0 151.213728,-33.897358,0 151.213279,-33.897267,0 151.213216,-33.897242,0 151.213133,-33.897175,0 151.213102,-33.897129,0 151.21321,-33.897013,0 151.212949,-33.896976,0 151.212801,-33.896956,0 151.212414,-33.896902,0 151.212002,-33.896845,0 151.211653,-33.896796,0 151.211151,-33.896726,0 151.210685,-33.896661,0 151.210137,-33.896583,0 151.209594,-33.896512,0 151.209383,-33.897537,0 151.20874,-33.900649,0 151.208739,-33.900654,0 151.208811,-33.900664,0 151.207261,-33.90205,0 151.207048,-33.902013,0 151.205786,-33.901794,0 151.205561,-33.902653,0 151.205539,-33.902736,0 151.205052,-33.90267,0 151.20352,-33.902464,0 151.203323,-33.902438,0 151.201814,-33.902787,0 151.202134,-33.903439,0 151.20251,-33.904206,0 151.202653,-33.90465,0 151.202845,-33.905524,0 151.204435,-33.904668,0 151.204528,-33.904616,0 151.205133,-33.904289,0 151.205236,-33.904234,0 151.20536,-33.904166,0 151.206587,-33.903499,0 151.207094,-33.903225,0 151.20726,-33.903076,0 151.207861,-33.903326,0 151.207925,-33.903343,0 151.208993,-33.903517,0 151.20967,-33.903755,0 151.209712,-33.903681,0 151.210144,-33.903359,0 151.214269,-33.903929,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1400707</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1293</td></tr>
+    <tr><td>Persons</td><td>412</td></tr>
+    <tr><td>Postcode</td><td>2017</td></tr>
+    <tr><td>_2006_4cast</td><td>218</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.206362,-33.898455,0 151.206357,-33.899191,0 151.205286,-33.899056,0 151.205438,-33.898331,0 151.204801,-33.898313,0 151.203987,-33.898287,0 151.204163,-33.898995,0 151.204568,-33.900653,0 151.204374,-33.9007,0 151.205052,-33.90267,0 151.205539,-33.902736,0 151.205561,-33.902653,0 151.205786,-33.901794,0 151.207048,-33.902013,0 151.207261,-33.90205,0 151.208811,-33.900664,0 151.208739,-33.900654,0 151.207819,-33.900474,0 151.208041,-33.89945,0 151.20819,-33.898708,0 151.207296,-33.898583,0 151.207093,-33.898554,0 151.206842,-33.898519,0 151.206362,-33.898455,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.20352,-33.902464,0 151.202998,-33.901037,0 151.202687,-33.899814,0 151.20233,-33.898399,0 151.201667,-33.898509,0 151.201601,-33.898521,0 151.200885,-33.898641,0 151.199979,-33.898784,0 151.200464,-33.900198,0 151.200502,-33.900306,0 151.20054,-33.900374,0 151.201173,-33.901484,0 151.201555,-33.902261,0 151.201591,-33.902333,0 151.201814,-33.902787,0 151.203323,-33.902438,0 151.20352,-33.902464,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1400709</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0695</td></tr>
+    <tr><td>Persons</td><td>582</td></tr>
+    <tr><td>Postcode</td><td>2017</td></tr>
+    <tr><td>_2006_4cast</td><td>290</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.20352,-33.902464,0 151.205052,-33.90267,0 151.204374,-33.9007,0 151.204568,-33.900653,0 151.204163,-33.898995,0 151.203987,-33.898287,0 151.203205,-33.898262,0 151.203191,-33.898261,0 151.20233,-33.898399,0 151.202687,-33.899814,0 151.202998,-33.901037,0 151.20352,-33.902464,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.203987,-33.898287,0 151.203634,-33.896864,0 151.202851,-33.896824,0 151.203205,-33.898262,0 151.203987,-33.898287,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1400711</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0141</td></tr>
+    <tr><td>Persons</td><td>325</td></tr>
+    <tr><td>Postcode</td><td>2017</td></tr>
+    <tr><td>_2006_4cast</td><td>227</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.201945,-33.896777,0 151.20233,-33.898399,0 151.203191,-33.898261,0 151.203205,-33.898262,0 151.202851,-33.896824,0 151.201945,-33.896777,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.201945,-33.896777,0 151.202851,-33.896824,0 151.202554,-33.895621,0 151.202278,-33.895584,0 151.201678,-33.895527,0 151.201601,-33.895523,0 151.201945,-33.896777,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1400713</td></tr>
+    <tr><td>Area_sqkms</td><td>0.032</td></tr>
+    <tr><td>Persons</td><td>343</td></tr>
+    <tr><td>Postcode</td><td>2017</td></tr>
+    <tr><td>_2006_4cast</td><td>166</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.206726,-33.896139,0 151.205929,-33.896042,0 151.204991,-33.895927,0 151.204856,-33.895913,0 151.204718,-33.895898,0 151.204125,-33.895824,0 151.203578,-33.895746,0 151.203325,-33.895719,0 151.203634,-33.896864,0 151.20432,-33.896889,0 151.204492,-33.896896,0 151.205142,-33.896919,0 151.205769,-33.896941,0 151.206595,-33.896971,0 151.206726,-33.896139,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.203325,-33.895719,0 151.203214,-33.895708,0 151.202554,-33.895621,0 151.202851,-33.896824,0 151.203634,-33.896864,0 151.203325,-33.895719,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1400715</td></tr>
+    <tr><td>Area_sqkms</td><td>0.8072</td></tr>
+    <tr><td>Persons</td><td>579</td></tr>
+    <tr><td>Postcode</td><td>2017</td></tr>
+    <tr><td>_2006_4cast</td><td>282</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.202845,-33.905524,0 151.203012,-33.906265,0 151.202853,-33.90762,0 151.202838,-33.908736,0 151.20282,-33.90883,0 151.20263,-33.909426,0 151.202382,-33.910184,0 151.202813,-33.910246,0 151.204291,-33.910439,0 151.205249,-33.910557,0 151.205372,-33.910572,0 151.206124,-33.910683,0 151.206392,-33.910722,0 151.20648,-33.910729,0 151.207852,-33.910926,0 151.208685,-33.911354,0 151.208785,-33.911402,0 151.208945,-33.911479,0 151.209997,-33.911804,0 151.210156,-33.911853,0 151.210992,-33.911974,0 151.212864,-33.912245,0 151.212891,-33.911862,0 151.212933,-33.911214,0 151.21295,-33.911088,0 151.213018,-33.910592,0 151.213134,-33.909817,0 151.213244,-33.909085,0 151.213295,-33.908822,0 151.21354,-33.907578,0 151.213813,-33.90619,0 151.213969,-33.905395,0 151.21421,-33.904169,0 151.214258,-33.903975,0 151.214269,-33.903929,0 151.210144,-33.903359,0 151.209712,-33.903681,0 151.20967,-33.903755,0 151.208993,-33.903517,0 151.207925,-33.903343,0 151.207861,-33.903326,0 151.20726,-33.903076,0 151.207094,-33.903225,0 151.206587,-33.903499,0 151.20536,-33.904166,0 151.205236,-33.904234,0 151.205133,-33.904289,0 151.204528,-33.904616,0 151.204435,-33.904668,0 151.202845,-33.905524,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.200874,-33.895518,0 151.20111,-33.896734,0 151.201945,-33.896777,0 151.201601,-33.895523,0 151.201531,-33.89552,0 151.201231,-33.895524,0 151.200874,-33.895518,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1400813</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0105</td></tr>
+    <tr><td>Persons</td><td>343</td></tr>
+    <tr><td>Postcode</td><td>2017</td></tr>
+    <tr><td>_2006_4cast</td><td>218</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.200874,-33.895518,0 151.20082,-33.895517,0 151.200026,-33.895631,0 151.200035,-33.896055,0 151.200245,-33.896689,0 151.20111,-33.896734,0 151.200874,-33.895518,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.199243,-33.896652,0 151.199938,-33.898672,0 151.199979,-33.898784,0 151.200885,-33.898641,0 151.201601,-33.898521,0 151.201667,-33.898509,0 151.20233,-33.898399,0 151.201945,-33.896777,0 151.20111,-33.896734,0 151.200245,-33.896689,0 151.199243,-33.896652,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1430205</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1055</td></tr>
+    <tr><td>Persons</td><td>687</td></tr>
+    <tr><td>Postcode</td><td>2033</td></tr>
+    <tr><td>_2006_4cast</td><td>331</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.218589,-33.908839,0 151.219457,-33.908473,0 151.220036,-33.908549,0 151.22039,-33.906686,0 151.220671,-33.905206,0 151.220673,-33.905195,0 151.220309,-33.905148,0 151.220208,-33.905316,0 151.219946,-33.905276,0 151.219846,-33.90532,0 151.219776,-33.905371,0 151.218462,-33.905189,0 151.218441,-33.9052,0 151.218375,-33.905189,0 151.218362,-33.905175,0 151.218109,-33.905142,0 151.217764,-33.905095,0 151.217663,-33.905098,0 151.217541,-33.905102,0 151.217367,-33.90515,0 151.217218,-33.905222,0 151.217188,-33.905248,0 151.217223,-33.905324,0 151.217258,-33.905445,0 151.217253,-33.905554,0 151.217214,-33.905692,0 151.217245,-33.905732,0 151.217157,-33.905721,0 151.217096,-33.905743,0 151.217027,-33.905794,0 151.216874,-33.905812,0 151.21676,-33.905856,0 151.216581,-33.905895,0 151.216619,-33.90594,0 151.21668,-33.906011,0 151.217093,-33.907084,0 151.217159,-33.907163,0 151.217852,-33.907975,0 151.218589,-33.908839,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.218589,-33.908839,0 151.217852,-33.907975,0 151.217159,-33.907163,0 151.217093,-33.907084,0 151.21668,-33.906011,0 151.216619,-33.90594,0 151.216581,-33.905895,0 151.216112,-33.905344,0 151.215035,-33.90408,0 151.214258,-33.903975,0 151.21421,-33.904169,0 151.213969,-33.905395,0 151.213813,-33.90619,0 151.21354,-33.907578,0 151.213295,-33.908822,0 151.21417,-33.908934,0 151.214264,-33.908906,0 151.215167,-33.908361,0 151.216132,-33.907779,0 151.218103,-33.91006,0 151.219127,-33.909462,0 151.218589,-33.908839,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1430207</td></tr>
+    <tr><td>Area_sqkms</td><td>0.105</td></tr>
+    <tr><td>Persons</td><td>350</td></tr>
+    <tr><td>Postcode</td><td>2033</td></tr>
+    <tr><td>_2006_4cast</td><td>133</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.218103,-33.91006,0 151.216132,-33.907779,0 151.215167,-33.908361,0 151.214264,-33.908906,0 151.21417,-33.908934,0 151.213295,-33.908822,0 151.213244,-33.909085,0 151.213134,-33.909817,0 151.213018,-33.910592,0 151.21295,-33.911088,0 151.213577,-33.911176,0 151.215383,-33.910321,0 151.216124,-33.911181,0 151.216646,-33.910934,0 151.217129,-33.910643,0 151.218103,-33.91006,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000158 - WATERLOO</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.220656,-33.904711,0 151.219475,-33.90455,0 151.216551,-33.904153,0 151.21429,-33.903845,0 151.214269,-33.903929,0 151.214258,-33.903975,0 151.215035,-33.90408,0 151.216112,-33.905344,0 151.216581,-33.905895,0 151.21676,-33.905856,0 151.216874,-33.905812,0 151.217027,-33.905794,0 151.217096,-33.905743,0 151.217157,-33.905721,0 151.217245,-33.905732,0 151.217214,-33.905692,0 151.217253,-33.905554,0 151.217258,-33.905445,0 151.217223,-33.905324,0 151.217188,-33.905248,0 151.217218,-33.905222,0 151.217367,-33.90515,0 151.217541,-33.905102,0 151.217663,-33.905098,0 151.217764,-33.905095,0 151.218109,-33.905142,0 151.218362,-33.905175,0 151.218375,-33.905189,0 151.218441,-33.9052,0 151.218462,-33.905189,0 151.219776,-33.905371,0 151.219846,-33.90532,0 151.219946,-33.905276,0 151.220208,-33.905316,0 151.220309,-33.905148,0 151.220673,-33.905195,0 151.220688,-33.905116,0 151.220582,-33.905102,0 151.220654,-33.90472,0 151.220656,-33.904711,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+		<LookAt>
+		  <longitude>151.208394</longitude>
+		  <latitude>-33.901951</latitude>
+		  <range>5000</range>
+		</LookAt></Document>
+</kml>

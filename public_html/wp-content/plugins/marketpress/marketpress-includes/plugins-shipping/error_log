@@ -1,0 +1,24 @@
+[27-Dec-2022 07:38:23 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Shipping_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-shipping/mp-flat-rate.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-shipping/mp-flat-rate.php on line 6
+[27-Dec-2022 07:38:25 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Shipping_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-shipping/mp-table-quantity.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-shipping/mp-table-quantity.php on line 9
+[27-Dec-2022 07:38:26 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Shipping_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-shipping/mp-table-rate.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-shipping/mp-table-rate.php on line 8
+[27-Dec-2022 07:38:28 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Shipping_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-shipping/mp-usps.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-shipping/mp-usps.php on line 6
+[27-Dec-2022 07:38:30 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Shipping_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-shipping/mp-weight-rate.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-shipping/mp-weight-rate.php on line 8
+[27-Dec-2022 07:38:32 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Shipping_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-shipping/plugin-template.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-shipping/plugin-template.php on line 6

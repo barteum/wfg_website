@@ -1,0 +1,39 @@
+<?php
+
+namespace XCloner\As247\CloudStorages\Storage;
+
+if (!defined('ABSPATH') && \PHP_SAPI !== 'cli') {
+    die;
+}
+use XCloner\As247\CloudStorages\Cache\PathCache;
+use XCloner\As247\CloudStorages\Contracts\Storage\StorageContract;
+use XCloner\As247\CloudStorages\Service\HasLogger;
+use Closure;
+abstract class Storage implements StorageContract
+{
+    /**
+     * @var PathCache
+     */
+    protected $cache;
+    use HasLogger;
+    protected function setupCache($options)
+    {
+        $cache = $options['cache'] ?? null;
+        if ($cache instanceof Closure) {
+            $cache = $cache();
+        }
+        if (!$cache instanceof PathCache) {
+            $cache = new PathCache();
+        }
+        $this->setCache($cache);
+    }
+    public function setCache(PathCache $cache)
+    {
+        $this->cache = $cache;
+        return $this;
+    }
+    public function getCache()
+    {
+        return $this->cache;
+    }
+}

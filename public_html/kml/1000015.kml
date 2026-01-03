@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>1000015 - MAROUBRA JUNCTION.KML</name>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>1000015 - MAROUBRA JUNCTION.KML</name>
+		
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431303</td></tr>
+      <tr><td>Area_sqkms</td><td>0.1137</td></tr>
+      <tr><td>Postcode</td><td>2035</td></tr>
+      <tr><td>Persons</td><td>591</td></tr>
+      <tr><td>A1996_dwel</td><td>215</td></tr>
+      <tr><td>_2006_4cast</td><td>229</td></tr>
+      <tr><td>Dwellings</td><td>222</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.236792,-33.936593,0 151.235644,-33.936433,0 151.233753,-33.93617,0 151.23284,-33.936043,0 151.232127,-33.935934,0 151.231959,-33.935921,0 151.231601,-33.935872,0 151.231556,-33.935875,0 151.230143,-33.93598,0 151.229915,-33.936479,0 151.229796,-33.93674,0 151.22968,-33.937168,0 151.229643,-33.937285,0 151.232515,-33.937683,0 151.232747,-33.937718,0 151.235317,-33.938071,0 151.236465,-33.938231,0 151.236627,-33.937419,0 151.236792,-33.936593,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.239157,-33.940074,0 151.241855,-33.940451,0 151.242008,-33.939687,0 151.242162,-33.93892,0 151.242055,-33.938903,0 151.241084,-33.938771,0 151.241366,-33.93735,0 151.240296,-33.9372,0 151.238419,-33.936937,0 151.238773,-33.938455,0 151.238963,-33.939265,0 151.239157,-33.940074,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431305</td></tr>
+      <tr><td>Area_sqkms</td><td>0.1168</td></tr>
+      <tr><td>Postcode</td><td>2035</td></tr>
+      <tr><td>Persons</td><td>616</td></tr>
+      <tr><td>A1996_dwel</td><td>202</td></tr>
+      <tr><td>_2006_4cast</td><td>254</td></tr>
+      <tr><td>Dwellings</td><td>228</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.250808,-33.939858,0 151.250724,-33.939813,0 151.250507,-33.939695,0 151.249561,-33.939187,0 151.248044,-33.938715,0 151.245463,-33.937914,0 151.245233,-33.937882,0 151.242443,-33.937492,0 151.241366,-33.93735,0 151.241084,-33.938771,0 151.242055,-33.938903,0 151.242162,-33.93892,0 151.242277,-33.938939,0 151.244947,-33.939306,0 151.247846,-33.939705,0 151.250744,-33.940108,0 151.250765,-33.940004,0 151.250808,-33.939858,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.250439,-33.941637,0 151.250591,-33.940877,0 151.250744,-33.940108,0 151.247846,-33.939705,0 151.244947,-33.939306,0 151.242277,-33.938939,0 151.242162,-33.93892,0 151.242008,-33.939687,0 151.241855,-33.940451,0 151.244643,-33.940839,0 151.247539,-33.941237,0 151.24872,-33.9414,0 151.250439,-33.941637,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431307</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0454</td></tr>
+      <tr><td>Postcode</td><td>2035</td></tr>
+      <tr><td>Persons</td><td>322</td></tr>
+      <tr><td>A1996_dwel</td><td>130</td></tr>
+      <tr><td>_2006_4cast</td><td>176</td></tr>
+      <tr><td>Dwellings</td><td>153</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.244405,-33.942323,0 151.245783,-33.942525,0 151.247239,-33.942739,0 151.247394,-33.941955,0 151.247539,-33.941237,0 151.244643,-33.940839,0 151.2445,-33.941554,0 151.244349,-33.942315,0 151.244405,-33.942323,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.241855,-33.940451,0 151.239157,-33.940074,0 151.23934,-33.940839,0 151.239528,-33.941622,0 151.239692,-33.942306,0 151.24004,-33.943757,0 151.240737,-33.943655,0 151.241229,-33.943576,0 151.241416,-33.942639,0 151.241437,-33.942533,0 151.241559,-33.941924,0 151.244191,-33.942292,0 151.244349,-33.942315,0 151.2445,-33.941554,0 151.244643,-33.940839,0 151.241855,-33.940451,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431309</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0756</td></tr>
+      <tr><td>Postcode</td><td>2035</td></tr>
+      <tr><td>Persons</td><td>471</td></tr>
+      <tr><td>A1996_dwel</td><td>184</td></tr>
+      <tr><td>_2006_4cast</td><td>208</td></tr>
+      <tr><td>Dwellings</td><td>196</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.244405,-33.942323,0 151.244349,-33.942315,0 151.244191,-33.942292,0 151.241559,-33.941924,0 151.241437,-33.942533,0 151.241416,-33.942639,0 151.241229,-33.943576,0 151.240737,-33.943655,0 151.24004,-33.943757,0 151.240264,-33.944691,0 151.240941,-33.944565,0 151.241054,-33.944555,0 151.243521,-33.944155,0 151.24428,-33.944034,0 151.244195,-33.943951,0 151.244105,-33.943729,0 151.244132,-33.943628,0 151.244173,-33.943472,0 151.244261,-33.943037,0 151.244405,-33.942323,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.250439,-33.941637,0 151.24872,-33.9414,0 151.247539,-33.941237,0 151.247394,-33.941955,0 151.247239,-33.942739,0 151.245783,-33.942525,0 151.244405,-33.942323,0 151.244261,-33.943037,0 151.244173,-33.943472,0 151.244132,-33.943628,0 151.245563,-33.943647,0 151.246987,-33.943657,0 151.24706,-33.943633,0 151.247366,-33.943534,0 151.248213,-33.943258,0 151.24879,-33.943022,0 151.248904,-33.942977,0 151.250125,-33.942499,0 151.25047,-33.942362,0 151.250308,-33.942357,0 151.250297,-33.942357,0 151.250299,-33.942349,0 151.250325,-33.942209,0 151.250439,-33.941637,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431311</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0874</td></tr>
+      <tr><td>Postcode</td><td>2035</td></tr>
+      <tr><td>Persons</td><td>477</td></tr>
+      <tr><td>A1996_dwel</td><td>172</td></tr>
+      <tr><td>_2006_4cast</td><td>186</td></tr>
+      <tr><td>Dwellings</td><td>179</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.235031,-33.939502,0 151.235174,-33.938787,0 151.235317,-33.938071,0 151.232747,-33.937718,0 151.232515,-33.937683,0 151.229643,-33.937285,0 151.229594,-33.937439,0 151.229502,-33.937728,0 151.229384,-33.937987,0 151.229205,-33.938382,0 151.229072,-33.938674,0 151.23223,-33.939116,0 151.232432,-33.939141,0 151.235031,-33.939502,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.238419,-33.936937,0 151.238389,-33.936802,0 151.238047,-33.936757,0 151.236792,-33.936593,0 151.236627,-33.937419,0 151.236465,-33.938231,0 151.235317,-33.938071,0 151.235174,-33.938787,0 151.235031,-33.939502,0 151.236919,-33.939764,0 151.237164,-33.939798,0 151.238769,-33.94002,0 151.238964,-33.940047,0 151.239157,-33.940074,0 151.238963,-33.939265,0 151.238773,-33.938455,0 151.238419,-33.936937,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431409</td></tr>
+      <tr><td>Area_sqkms</td><td>0.1323</td></tr>
+      <tr><td>Postcode</td><td>2035</td></tr>
+      <tr><td>Persons</td><td>638</td></tr>
+      <tr><td>A1996_dwel</td><td>254</td></tr>
+      <tr><td>_2006_4cast</td><td>282</td></tr>
+      <tr><td>Dwellings</td><td>268</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.252081,-33.942743,0 151.251245,-33.942597,0 151.251155,-33.94258,0 151.250466,-33.942457,0 151.25047,-33.942362,0 151.250125,-33.942499,0 151.248904,-33.942977,0 151.24879,-33.943022,0 151.248213,-33.943258,0 151.247366,-33.943534,0 151.24706,-33.943633,0 151.246987,-33.943657,0 151.245563,-33.943647,0 151.244132,-33.943628,0 151.244105,-33.943729,0 151.244195,-33.943951,0 151.24428,-33.944034,0 151.244477,-33.944225,0 151.244888,-33.944681,0 151.244999,-33.944798,0 151.24612,-33.944932,0 151.246598,-33.944964,0 151.247014,-33.945011,0 151.248602,-33.945345,0 151.248851,-33.945322,0 151.249099,-33.945239,0 151.249503,-33.945027,0 151.249616,-33.94495,0 151.250018,-33.944673,0 151.250166,-33.944584,0 151.250258,-33.94453,0 151.250359,-33.944495,0 151.250467,-33.944484,0 151.250691,-33.944514,0 151.251155,-33.944599,0 151.251319,-33.944629,0 151.251566,-33.944678,0 151.2516,-33.944684,0 151.251596,-33.944566,0 151.251775,-33.943894,0 151.252081,-33.942743,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.245121,-33.94579,0 151.245355,-33.945785,0 151.245939,-33.945826,0 151.246335,-33.945935,0 151.24684,-33.94618,0 151.247091,-33.946332,0 151.247521,-33.946594,0 151.248027,-33.946839,0 151.248726,-33.947063,0 151.249291,-33.947186,0 151.250452,-33.947442,0 151.251156,-33.947595,0 151.251477,-33.947664,0 151.251754,-33.946842,0 151.251796,-33.946595,0 151.251808,-33.946484,0 151.251814,-33.946383,0 151.251821,-33.946281,0 151.251822,-33.94623,0 151.251823,-33.946179,0 151.251819,-33.946027,0 151.251802,-33.945824,0 151.25177,-33.945624,0 151.2516,-33.944684,0 151.251566,-33.944678,0 151.251319,-33.944629,0 151.251155,-33.944599,0 151.250691,-33.944514,0 151.250467,-33.944484,0 151.250359,-33.944495,0 151.250258,-33.94453,0 151.250166,-33.944584,0 151.250018,-33.944673,0 151.249616,-33.94495,0 151.249503,-33.945027,0 151.249099,-33.945239,0 151.248851,-33.945322,0 151.248602,-33.945345,0 151.247014,-33.945011,0 151.246598,-33.944964,0 151.24612,-33.944932,0 151.244999,-33.944798,0 151.244888,-33.944681,0 151.244477,-33.944225,0 151.24428,-33.944034,0 151.243521,-33.944155,0 151.243567,-33.944571,0 151.243633,-33.944878,0 151.243682,-33.945014,0 151.243748,-33.945193,0 151.244032,-33.94593,0 151.244904,-33.945794,0 151.245121,-33.94579,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431501</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0503</td></tr>
+      <tr><td>Postcode</td><td>2035</td></tr>
+      <tr><td>Persons</td><td>459</td></tr>
+      <tr><td>A1996_dwel</td><td>228</td></tr>
+      <tr><td>_2006_4cast</td><td>270</td></tr>
+      <tr><td>Dwellings</td><td>249</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.228755,-33.939366,0 151.228418,-33.940107,0 151.228675,-33.940141,0 151.229885,-33.940301,0 151.231938,-33.940587,0 151.234718,-33.940973,0 151.234884,-33.940218,0 151.232311,-33.939836,0 151.232091,-33.939816,0 151.228755,-33.939366,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.235687,-33.943303,0 151.235742,-33.943538,0 151.236084,-33.944982,0 151.23648,-33.946698,0 151.237467,-33.946582,0 151.238471,-33.946444,0 151.238077,-33.944739,0 151.237931,-33.94411,0 151.237596,-33.942664,0 151.237284,-33.94133,0 151.237191,-33.941317,0 151.236831,-33.941537,0 151.235078,-33.942608,0 151.235687,-33.943303,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431510</td></tr>
+      <tr><td>Area_sqkms</td><td>0.1141</td></tr>
+      <tr><td>Postcode</td><td>2035</td></tr>
+      <tr><td>Persons</td><td>695</td></tr>
+      <tr><td>A1996_dwel</td><td>303</td></tr>
+      <tr><td>_2006_4cast</td><td>329</td></tr>
+      <tr><td>Dwellings</td><td>316</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.240626,-33.946197,0 151.240708,-33.946208,0 151.240947,-33.94626,0 151.241372,-33.946352,0 151.242825,-33.946121,0 151.244032,-33.94593,0 151.243748,-33.945193,0 151.243682,-33.945014,0 151.243633,-33.944878,0 151.243567,-33.944571,0 151.243521,-33.944155,0 151.241054,-33.944555,0 151.240941,-33.944565,0 151.240264,-33.944691,0 151.24004,-33.943757,0 151.239814,-33.94379,0 151.239655,-33.943818,0 151.238783,-33.943972,0 151.237931,-33.94411,0 151.238077,-33.944739,0 151.238471,-33.946444,0 151.239332,-33.94633,0 151.240207,-33.946187,0 151.240221,-33.946185,0 151.240356,-33.94618,0 151.240465,-33.946182,0 151.240588,-33.946192,0 151.240626,-33.946197,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.228755,-33.939366,0 151.232091,-33.939816,0 151.232311,-33.939836,0 151.234884,-33.940218,0 151.23671,-33.940465,0 151.236996,-33.940526,0 151.236851,-33.94127,0 151.237191,-33.941317,0 151.237284,-33.94133,0 151.237596,-33.942664,0 151.237931,-33.94411,0 151.238783,-33.943972,0 151.239655,-33.943818,0 151.239814,-33.94379,0 151.24004,-33.943757,0 151.239692,-33.942306,0 151.239528,-33.941622,0 151.23934,-33.940839,0 151.239157,-33.940074,0 151.238964,-33.940047,0 151.238769,-33.94002,0 151.237164,-33.939798,0 151.236919,-33.939764,0 151.235031,-33.939502,0 151.232432,-33.939141,0 151.23223,-33.939116,0 151.229072,-33.938674,0 151.228817,-33.939231,0 151.228755,-33.939366,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431513</td></tr>
+      <tr><td>Area_sqkms</td><td>0.017</td></tr>
+      <tr><td>Postcode</td><td>2035</td></tr>
+      <tr><td>Persons</td><td>588</td></tr>
+      <tr><td>A1996_dwel</td><td>260</td></tr>
+      <tr><td>_2006_4cast</td><td>276</td></tr>
+      <tr><td>Dwellings</td><td>268</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.234884,-33.940218,0 151.234718,-33.940973,0 151.236851,-33.94127,0 151.236996,-33.940526,0 151.23671,-33.940465,0 151.234884,-33.940218,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.240626,-33.946197,0 151.241394,-33.949398,0 151.241599,-33.949382,0 151.242774,-33.949662,0 151.24309,-33.948896,0 151.244113,-33.949188,0 151.244199,-33.949213,0 151.244228,-33.949222,0 151.244287,-33.949234,0 151.244317,-33.949239,0 151.244377,-33.949248,0 151.244438,-33.949253,0 151.24453,-33.949256,0 151.244591,-33.949252,0 151.244682,-33.949246,0 151.244742,-33.949237,0 151.244831,-33.949218,0 151.244889,-33.949203,0 151.244917,-33.949193,0 151.244973,-33.949173,0 151.245107,-33.949112,0 151.245131,-33.949097,0 151.245156,-33.949081,0 151.245229,-33.949035,0 151.245274,-33.949001,0 151.245295,-33.948983,0 151.245315,-33.948964,0 151.245336,-33.948945,0 151.24541,-33.948864,0 151.245458,-33.948799,0 151.245502,-33.948725,0 151.245522,-33.948702,0 151.245544,-33.94868,0 151.245556,-33.94867,0 151.245581,-33.948651,0 151.245595,-33.948642,0 151.245624,-33.948627,0 151.245639,-33.94862,0 151.245719,-33.948596,0 151.245771,-33.948592,0 151.245839,-33.948597,0 151.246089,-33.948664,0 151.246286,-33.948724,0 151.24648,-33.948792,0 151.246544,-33.948815,0 151.246599,-33.948854,0 151.246656,-33.948755,0 151.247012,-33.948098,0 151.247103,-33.947927,0 151.247304,-33.947552,0 151.246264,-33.946953,0 151.246161,-33.9469,0 151.246054,-33.946854,0 151.245943,-33.946813,0 151.245829,-33.946778,0 151.245713,-33.94675,0 151.245595,-33.946728,0 151.245475,-33.946712,0 151.245355,-33.946704,0 151.245234,-33.946702,0 151.245153,-33.946704,0 151.245121,-33.94579,0 151.244904,-33.945794,0 151.244032,-33.94593,0 151.242825,-33.946121,0 151.241372,-33.946352,0 151.240947,-33.94626,0 151.240708,-33.946208,0 151.240626,-33.946197,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000015 - MAROUBRA JUNCTION</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431602</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0783</td></tr>
+      <tr><td>Postcode</td><td>2035</td></tr>
+      <tr><td>Persons</td><td>610</td></tr>
+      <tr><td>A1996_dwel</td><td>276</td></tr>
+      <tr><td>_2006_4cast</td><td>344</td></tr>
+      <tr><td>Dwellings</td><td>310</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.251092,-33.94863,0 151.251156,-33.948505,0 151.251229,-33.94836,0 151.251423,-33.947825,0 151.251477,-33.947664,0 151.251156,-33.947595,0 151.250452,-33.947442,0 151.249291,-33.947186,0 151.248726,-33.947063,0 151.248027,-33.946839,0 151.247521,-33.946594,0 151.247091,-33.946332,0 151.24684,-33.94618,0 151.246335,-33.945935,0 151.245939,-33.945826,0 151.245355,-33.945785,0 151.245121,-33.94579,0 151.245153,-33.946704,0 151.245234,-33.946702,0 151.245355,-33.946704,0 151.245475,-33.946712,0 151.245595,-33.946728,0 151.245713,-33.94675,0 151.245829,-33.946778,0 151.245943,-33.946813,0 151.246054,-33.946854,0 151.246161,-33.9469,0 151.246264,-33.946953,0 151.247304,-33.947552,0 151.247103,-33.947927,0 151.247012,-33.948098,0 151.248545,-33.949066,0 151.248635,-33.948965,0 151.248856,-33.948571,0 151.249016,-33.948063,0 151.249769,-33.94821,0 151.25007,-33.948297,0 151.250251,-33.94835,0 151.251092,-33.94863,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+		<LookAt>
+		  <longitude>151.243177</longitude>
+		  <latitude>-33.943516</latitude>
+		  <range>5000</range>
+		</LookAt></Document>
+</kml>

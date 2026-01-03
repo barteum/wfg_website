@@ -1,0 +1,22 @@
+# OS-specific files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+
+# Web server specific
+.htaccess
+
+# Backups and Archives
+**/wp-content/backups-*/
+*.tar
+*.zip
+*.gz
+*.sql
+
+# Logs
+**/wp-content/litespeed/debug/
+*.log

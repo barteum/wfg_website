@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>1000235.KML</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>66ffffff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>66ffffff</color>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>1000235.KML</name>
+		
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1400105</td></tr>
+      <tr><td>Area_sqkms</td><td>0.3911</td></tr>
+      <tr><td>Postcode</td><td>2011</td></tr>
+      <tr><td>Persons</td><td>654</td></tr>
+      <tr><td>A1996_dwel</td><td>439</td></tr>
+      <tr><td>_2006_4cast</td><td>659</td></tr>
+      <tr><td>Dwellings</td><td>549</td></tr>
+      <tr><td>MP_Region</td><td>Pyrmont</td></tr>
+      <tr><td>MP_Zone_Name_1</td><td></td></tr>
+      <tr><td>MP_Zone_Code</td><td>1000235</td></tr>
+      <tr><td>Postal_Code</td><td></td></tr>
+      <tr><td>Suburb_Name</td><td></td></tr>
+      <tr><td>MP_Zone_Name_2</td><td></td></tr>
+      <tr><td>MP_Zone_Name_3</td><td></td></tr>
+      <tr><td>Hornsby</td><td></td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.218866,-33.868422,0 151.218866,-33.868422,0 151.219352,-33.868791,0 151.219456,-33.868869,0 151.219724,-33.869058,0 151.219956,-33.869167,0 151.220152,-33.869228,0 151.220294,-33.869264,0 151.220413,-33.869284,0 151.220551,-33.869306,0 151.221051,-33.869341,0 151.221374,-33.869343,0 151.221483,-33.869336,0 151.221626,-33.869298,0 151.22165,-33.869292,0 151.221802,-33.869216,0 151.221917,-33.869171,0 151.222125,-33.869056,0 151.222147,-33.869043,0 151.222508,-33.868762,0 151.222664,-33.868988,0 151.223377,-33.869098,0 151.223456,-33.868698,0 151.223465,-33.868657,0 151.223495,-33.868589,0 151.223586,-33.868305,0 151.223623,-33.868184,0 151.223654,-33.867983,0 151.223698,-33.867708,0 151.223636,-33.867657,0 151.223728,-33.86758,0 151.223835,-33.867358,0 151.224295,-33.866395,0 151.224422,-33.866129,0 151.224311,-33.86593,0 151.224455,-33.865967,0 151.224472,-33.865971,0 151.22449,-33.865976,0 151.224507,-33.865982,0 151.224524,-33.865988,0 151.224541,-33.865995,0 151.224557,-33.866002,0 151.224573,-33.86601,0 151.224588,-33.866018,0 151.224603,-33.866027,0 151.224618,-33.866036,0 151.224633,-33.866046,0 151.224646,-33.866057,0 151.224659,-33.866068,0 151.224672,-33.86608,0 151.224684,-33.866091,0 151.224695,-33.866104,0 151.224705,-33.866117,0 151.224715,-33.86613,0 151.224723,-33.866144,0 151.224732,-33.866158,0 151.224774,-33.866229,0 151.224838,-33.866337,0 151.224812,-33.866487,0 151.224776,-33.866636,0 151.224841,-33.866777,0 151.224888,-33.866829,0 151.225211,-33.867205,0 151.225544,-33.867506,0 151.225839,-33.867781,0 151.225802,-33.868025,0 151.225764,-33.868225,0 151.225738,-33.86836,0 151.225845,-33.868375,0 151.22632,-33.86844,0 151.226361,-33.868445,0 151.226671,-33.868303,0 151.226748,-33.868266,0 151.226785,-33.868249,0 151.226809,-33.868237,0 151.226812,-33.868255,0 151.22684,-33.868242,0 151.226845,-33.868221,0 151.227069,-33.868137,0 151.227077,-33.868143,0 151.227616,-33.86804,0 151.227626,-33.868038,0 151.227625,-33.868021,0 151.22789,-33.867595,0 151.228391,-33.867416,0 151.228617,-33.867261,0 151.22881,-33.867049,0 151.228885,-33.866764,0 151.228808,-33.866319,0 151.228737,-33.865969,0 151.22844,-33.864497,0 151.22837,-33.86415,0 151.228427,-33.863893,0 151.228506,-33.863365,0 151.228543,-33.86325,0 151.228543,-33.863245,0 151.228547,-33.86305,0 151.228568,-33.862864,0 151.228538,-33.862606,0 151.228507,-33.862462,0 151.228527,-33.862334,0 151.228511,-33.862276,0 151.228546,-33.862234,0 151.228685,-33.862164,0 151.228706,-33.861964,0 151.228859,-33.861135,0 151.229543,-33.8604,0 151.230868,-33.859315,0 151.230868,-33.859299,0 151.230869,-33.859272,0 151.230113,-33.85846,0 151.229978,-33.858343,0 151.229792,-33.858212,0 151.229605,-33.858138,0 151.229468,-33.858107,0 151.229383,-33.858106,0 151.229263,-33.858076,0 151.229023,-33.858101,0 151.228608,-33.858224,0 151.228504,-33.858309,0 151.228487,-33.858309,0 151.228347,-33.858464,0 151.227804,-33.858987,0 151.22777,-33.858986,0 151.227682,-33.859085,0 151.227612,-33.859156,0 151.227595,-33.859184,0 151.226979,-33.861682,0 151.226978,-33.86174,0 151.227045,-33.861826,0 151.22755,-33.863165,0 151.226602,-33.863381,0 151.226498,-33.863409,0 151.226309,-33.863435,0 151.22595,-33.862556,0 151.225951,-33.86247,0 151.225821,-33.862125,0 151.225771,-33.862053,0 151.225703,-33.862009,0 151.225618,-33.861993,0 151.225584,-33.861964,0 151.22555,-33.861964,0 151.222758,-33.867769,0 151.222674,-33.867696,0 151.221463,-33.869055,0 151.221274,-33.869152,0 151.220587,-33.869157,0 151.222484,-33.866018,0 151.221838,-33.865751,0 151.219924,-33.86889,0 151.219822,-33.868832,0 151.219787,-33.868846,0 151.219619,-33.868686,0 151.219452,-33.868454,0 151.21937,-33.868267,0 151.219406,-33.86821,0 151.219579,-33.868098,0 151.219633,-33.867998,0 151.21967,-33.867841,0 151.220001,-33.866729,0 151.220054,-33.866672,0 151.220057,-33.866501,0 151.219938,-33.86647,0 151.220011,-33.866185,0 151.219858,-33.866154,0 151.219982,-33.865955,0 151.220001,-33.865898,0 151.219905,-33.865916,0 151.219271,-33.866491,0 151.219099,-33.86659,0 151.219077,-33.866583,0 151.219058,-33.866645,0 151.219057,-33.866675,0 151.219137,-33.866708,0 151.219171,-33.866722,0 151.219159,-33.866778,0 151.219128,-33.866874,0 151.219024,-33.866972,0 151.218965,-33.867047,0 151.2189,-33.867602,0 151.218864,-33.868172,0 151.218866,-33.868421,0 151.218866,-33.868422,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.222494,-33.869818,0 151.222574,-33.869828,0 151.222698,-33.869844,0 151.222725,-33.869816,0 151.222737,-33.869823,0 151.222749,-33.86983,0 151.222758,-33.869825,0 151.222767,-33.86982,0 151.222778,-33.869816,0 151.222789,-33.869813,0 151.222799,-33.869811,0 151.22281,-33.869809,0 151.222822,-33.869808,0 151.222834,-33.869807,0 151.222845,-33.869808,0 151.222855,-33.869808,0 151.222867,-33.86981,0 151.222878,-33.869812,0 151.222889,-33.869815,0 151.222899,-33.869819,0 151.22291,-33.869823,0 151.222918,-33.869828,0 151.223118,-33.869856,0 151.223222,-33.86987,0 151.223377,-33.869098,0 151.222664,-33.868988,0 151.222494,-33.869818,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1401501</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0203</td></tr>
+      <tr><td>Postcode</td><td>2011</td></tr>
+      <tr><td>Persons</td><td>299</td></tr>
+      <tr><td>A1996_dwel</td><td>145</td></tr>
+      <tr><td>_2006_4cast</td><td>191</td></tr>
+      <tr><td>Dwellings</td><td>168</td></tr>
+      <tr><td>MP_Region</td><td>Pyrmont</td></tr>
+      <tr><td>MP_Zone_Name_1</td><td></td></tr>
+      <tr><td>MP_Zone_Code</td><td>1000235</td></tr>
+      <tr><td>Postal_Code</td><td></td></tr>
+      <tr><td>Suburb_Name</td><td></td></tr>
+      <tr><td>MP_Zone_Name_2</td><td></td></tr>
+      <tr><td>MP_Zone_Name_3</td><td></td></tr>
+      <tr><td>Hornsby</td><td></td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.222124,-33.875216,0 151.221989,-33.87539,0 151.222084,-33.875458,0 151.222278,-33.875596,0 151.222361,-33.875644,0 151.222389,-33.875659,0 151.222446,-33.875685,0 151.222464,-33.875702,0 151.222914,-33.875795,0 151.224296,-33.87598,0 151.224443,-33.87599,0 151.224439,-33.875681,0 151.224444,-33.875638,0 151.224456,-33.875541,0 151.224515,-33.875186,0 151.224388,-33.875131,0 151.223699,-33.875029,0 151.223589,-33.874992,0 151.223161,-33.874925,0 151.223044,-33.874906,0 151.222746,-33.874868,0 151.222643,-33.874858,0 151.222486,-33.874833,0 151.222124,-33.875216,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.224125,-33.873428,0 151.22402,-33.873474,0 151.223922,-33.873517,0 151.223845,-33.873554,0 151.223772,-33.873596,0 151.223703,-33.873644,0 151.22364,-33.873697,0 151.222594,-33.874715,0 151.222486,-33.874833,0 151.222643,-33.874858,0 151.222746,-33.874868,0 151.223044,-33.874906,0 151.223161,-33.874925,0 151.223891,-33.874218,0 151.224864,-33.874356,0 151.224904,-33.874291,0 151.224964,-33.874218,0 151.225017,-33.874169,0 151.225121,-33.874086,0 151.224762,-33.873875,0 151.224574,-33.873763,0 151.224125,-33.873428,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1401605</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0101</td></tr>
+      <tr><td>Postcode</td><td>2011</td></tr>
+      <tr><td>Persons</td><td>67</td></tr>
+      <tr><td>A1996_dwel</td><td>49</td></tr>
+      <tr><td>_2006_4cast</td><td>57</td></tr>
+      <tr><td>Dwellings</td><td>53</td></tr>
+      <tr><td>MP_Region</td><td>Pyrmont</td></tr>
+      <tr><td>MP_Zone_Name_1</td><td></td></tr>
+      <tr><td>MP_Zone_Code</td><td>1000235</td></tr>
+      <tr><td>Postal_Code</td><td></td></tr>
+      <tr><td>Suburb_Name</td><td></td></tr>
+      <tr><td>MP_Zone_Name_2</td><td></td></tr>
+      <tr><td>MP_Zone_Name_3</td><td></td></tr>
+      <tr><td>Hornsby</td><td></td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.224864,-33.874356,0 151.223891,-33.874218,0 151.223161,-33.874925,0 151.223589,-33.874992,0 151.223699,-33.875029,0 151.224388,-33.875131,0 151.224515,-33.875186,0 151.22469,-33.874749,0 151.224864,-33.874356,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.22377,-33.873111,0 151.223402,-33.873422,0 151.22289,-33.873855,0 151.222824,-33.873986,0 151.222386,-33.873934,0 151.222224,-33.874708,0 151.222213,-33.874762,0 151.222201,-33.874862,0 151.222124,-33.875216,0 151.222486,-33.874833,0 151.222594,-33.874715,0 151.22364,-33.873697,0 151.223703,-33.873644,0 151.223772,-33.873596,0 151.223845,-33.873554,0 151.223922,-33.873517,0 151.22402,-33.873474,0 151.223984,-33.873422,0 151.22377,-33.873111,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1401702</td></tr>
+      <tr><td>Area_sqkms</td><td>0.007</td></tr>
+      <tr><td>Postcode</td><td>2011</td></tr>
+      <tr><td>Persons</td><td>191</td></tr>
+      <tr><td>A1996_dwel</td><td>127</td></tr>
+      <tr><td>_2006_4cast</td><td>173</td></tr>
+      <tr><td>Dwellings</td><td>150</td></tr>
+      <tr><td>MP_Region</td><td>Pyrmont</td></tr>
+      <tr><td>MP_Zone_Name_1</td><td></td></tr>
+      <tr><td>MP_Zone_Code</td><td>1000235</td></tr>
+      <tr><td>Postal_Code</td><td></td></tr>
+      <tr><td>Suburb_Name</td><td></td></tr>
+      <tr><td>MP_Zone_Name_2</td><td></td></tr>
+      <tr><td>MP_Zone_Name_3</td><td></td></tr>
+      <tr><td>Hornsby</td><td></td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.22377,-33.873111,0 151.223723,-33.872964,0 151.223778,-33.872681,0 151.223751,-33.87246,0 151.223255,-33.872391,0 151.223251,-33.872425,0 151.223246,-33.872453,0 151.223232,-33.872562,0 151.223125,-33.873108,0 151.223116,-33.873134,0 151.223067,-33.873158,0 151.222988,-33.873199,0 151.222941,-33.873422,0 151.222824,-33.873986,0 151.22289,-33.873855,0 151.223402,-33.873422,0 151.22377,-33.873111,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.222932,-33.871306,0 151.222817,-33.871866,0 151.22335,-33.871938,0 151.22451,-33.872093,0 151.224547,-33.872094,0 151.224565,-33.872026,0 151.224663,-33.871538,0 151.224002,-33.871449,0 151.223461,-33.871376,0 151.223394,-33.871368,0 151.222932,-33.871306,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1401704</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0114</td></tr>
+      <tr><td>Postcode</td><td>2011</td></tr>
+      <tr><td>Persons</td><td>306</td></tr>
+      <tr><td>A1996_dwel</td><td>219</td></tr>
+      <tr><td>_2006_4cast</td><td>301</td></tr>
+      <tr><td>Dwellings</td><td>260</td></tr>
+      <tr><td>MP_Region</td><td>Pyrmont</td></tr>
+      <tr><td>MP_Zone_Name_1</td><td></td></tr>
+      <tr><td>MP_Zone_Code</td><td>1000235</td></tr>
+      <tr><td>Postal_Code</td><td></td></tr>
+      <tr><td>Suburb_Name</td><td></td></tr>
+      <tr><td>MP_Zone_Name_2</td><td></td></tr>
+      <tr><td>MP_Zone_Name_3</td><td></td></tr>
+      <tr><td>Hornsby</td><td></td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.224547,-33.872094,0 151.22461,-33.8721,0 151.225009,-33.872149,0 151.225113,-33.871598,0 151.225144,-33.871429,0 151.225221,-33.871026,0 151.225255,-33.870844,0 151.22415,-33.870698,0 151.224002,-33.871449,0 151.224663,-33.871538,0 151.224565,-33.872026,0 151.224547,-33.872094,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.22335,-33.871938,0 151.222817,-33.871866,0 151.222765,-33.872118,0 151.222567,-33.873082,0 151.222495,-33.873422,0 151.222386,-33.873934,0 151.222824,-33.873986,0 151.222941,-33.873422,0 151.222988,-33.873199,0 151.223067,-33.873158,0 151.223116,-33.873134,0 151.223125,-33.873108,0 151.223232,-33.872562,0 151.223246,-33.872453,0 151.223251,-33.872425,0 151.223255,-33.872391,0 151.223268,-33.872329,0 151.223333,-33.872009,0 151.22335,-33.871938,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1401707</td></tr>
+      <tr><td>Area_sqkms</td><td>0.006</td></tr>
+      <tr><td>Postcode</td><td>2011</td></tr>
+      <tr><td>Persons</td><td>247</td></tr>
+      <tr><td>A1996_dwel</td><td>179</td></tr>
+      <tr><td>_2006_4cast</td><td>239</td></tr>
+      <tr><td>Dwellings</td><td>209</td></tr>
+      <tr><td>MP_Region</td><td>Pyrmont</td></tr>
+      <tr><td>MP_Zone_Name_1</td><td></td></tr>
+      <tr><td>MP_Zone_Code</td><td>1000235</td></tr>
+      <tr><td>Postal_Code</td><td></td></tr>
+      <tr><td>Suburb_Name</td><td></td></tr>
+      <tr><td>MP_Zone_Name_2</td><td></td></tr>
+      <tr><td>MP_Zone_Name_3</td><td></td></tr>
+      <tr><td>Hornsby</td><td></td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.225009,-33.872149,0 151.22461,-33.8721,0 151.224547,-33.872094,0 151.22451,-33.872093,0 151.224415,-33.872548,0 151.224247,-33.873371,0 151.224834,-33.873099,0 151.224866,-33.872909,0 151.225009,-33.872149,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.224125,-33.873428,0 151.224138,-33.873422,0 151.224247,-33.873371,0 151.224415,-33.872548,0 151.223751,-33.87246,0 151.223778,-33.872681,0 151.223723,-33.872964,0 151.22377,-33.873111,0 151.223984,-33.873422,0 151.22402,-33.873474,0 151.224125,-33.873428,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1401709</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0056</td></tr>
+      <tr><td>Postcode</td><td>2011</td></tr>
+      <tr><td>Persons</td><td>260</td></tr>
+      <tr><td>A1996_dwel</td><td>159</td></tr>
+      <tr><td>_2006_4cast</td><td>225</td></tr>
+      <tr><td>Dwellings</td><td>192</td></tr>
+      <tr><td>MP_Region</td><td>Pyrmont</td></tr>
+      <tr><td>MP_Zone_Name_1</td><td></td></tr>
+      <tr><td>MP_Zone_Code</td><td>1000235</td></tr>
+      <tr><td>Postal_Code</td><td></td></tr>
+      <tr><td>Suburb_Name</td><td></td></tr>
+      <tr><td>MP_Zone_Name_2</td><td></td></tr>
+      <tr><td>MP_Zone_Name_3</td><td></td></tr>
+      <tr><td>Hornsby</td><td></td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.224415,-33.872548,0 151.22451,-33.872093,0 151.22335,-33.871938,0 151.223333,-33.872009,0 151.223268,-33.872329,0 151.223255,-33.872391,0 151.223751,-33.87246,0 151.224415,-33.872548,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.225764,-33.868225,0 151.225802,-33.868025,0 151.225839,-33.867781,0 151.225544,-33.867506,0 151.225211,-33.867205,0 151.224501,-33.867304,0 151.224093,-33.867361,0 151.22404,-33.86738,0 151.224028,-33.867583,0 151.224035,-33.867642,0 151.224033,-33.867687,0 151.224018,-33.868108,0 151.224018,-33.868115,0 151.224036,-33.86811,0 151.224133,-33.868091,0 151.224231,-33.868071,0 151.224408,-33.868035,0 151.224504,-33.868016,0 151.22456,-33.868004,0 151.224647,-33.867987,0 151.224699,-33.867976,0 151.224724,-33.867971,0 151.224772,-33.867979,0 151.224752,-33.868068,0 151.224776,-33.868071,0 151.225238,-33.868143,0 151.225764,-33.868225,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1401802</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0074</td></tr>
+      <tr><td>Postcode</td><td>2011</td></tr>
+      <tr><td>Persons</td><td>222</td></tr>
+      <tr><td>A1996_dwel</td><td>172</td></tr>
+      <tr><td>_2006_4cast</td><td>186</td></tr>
+      <tr><td>Dwellings</td><td>179</td></tr>
+      <tr><td>MP_Region</td><td>Pyrmont</td></tr>
+      <tr><td>MP_Zone_Name_1</td><td></td></tr>
+      <tr><td>MP_Zone_Code</td><td>1000235</td></tr>
+      <tr><td>Postal_Code</td><td></td></tr>
+      <tr><td>Suburb_Name</td><td></td></tr>
+      <tr><td>MP_Zone_Name_2</td><td></td></tr>
+      <tr><td>MP_Zone_Name_3</td><td></td></tr>
+      <tr><td>Hornsby</td><td></td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.223698,-33.867708,0 151.223654,-33.867983,0 151.223623,-33.868184,0 151.223586,-33.868305,0 151.225158,-33.868545,0 151.225238,-33.868143,0 151.224776,-33.868071,0 151.224752,-33.868068,0 151.224772,-33.867979,0 151.224724,-33.867971,0 151.224699,-33.867976,0 151.224647,-33.867987,0 151.22456,-33.868004,0 151.224504,-33.868016,0 151.224408,-33.868035,0 151.224231,-33.868071,0 151.224133,-33.868091,0 151.224036,-33.86811,0 151.224018,-33.868115,0 151.224018,-33.868108,0 151.224033,-33.867687,0 151.224035,-33.867642,0 151.223698,-33.867708,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.225764,-33.868225,0 151.225238,-33.868143,0 151.225158,-33.868545,0 151.223586,-33.868305,0 151.223495,-33.868589,0 151.223465,-33.868657,0 151.223456,-33.868698,0 151.225609,-33.869025,0 151.225738,-33.86836,0 151.225764,-33.868225,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1401804</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0253</td></tr>
+      <tr><td>Postcode</td><td>2011</td></tr>
+      <tr><td>Persons</td><td>180</td></tr>
+      <tr><td>A1996_dwel</td><td>64</td></tr>
+      <tr><td>_2006_4cast</td><td>72</td></tr>
+      <tr><td>Dwellings</td><td>68</td></tr>
+      <tr><td>MP_Region</td><td>Pyrmont</td></tr>
+      <tr><td>MP_Zone_Name_1</td><td></td></tr>
+      <tr><td>MP_Zone_Code</td><td>1000235</td></tr>
+      <tr><td>Postal_Code</td><td></td></tr>
+      <tr><td>Suburb_Name</td><td></td></tr>
+      <tr><td>MP_Zone_Name_2</td><td></td></tr>
+      <tr><td>MP_Zone_Name_3</td><td></td></tr>
+      <tr><td>Hornsby</td><td></td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.223847,-33.870353,0 151.223863,-33.870183,0 151.223866,-33.870159,0 151.223941,-33.869969,0 151.223931,-33.869965,0 151.223936,-33.869956,0 151.224352,-33.87002,0 151.224363,-33.869967,0 151.224373,-33.869967,0 151.224419,-33.86975,0 151.22444,-33.869661,0 151.224987,-33.869745,0 151.225455,-33.869817,0 151.225576,-33.869196,0 151.225609,-33.869025,0 151.223456,-33.868698,0 151.223377,-33.869098,0 151.223222,-33.86987,0 151.223146,-33.870253,0 151.223166,-33.870256,0 151.223253,-33.870268,0 151.223655,-33.870326,0 151.223847,-33.870353,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.223847,-33.870353,0 151.223655,-33.870326,0 151.223253,-33.870268,0 151.223166,-33.870256,0 151.223146,-33.870253,0 151.223062,-33.870673,0 151.223038,-33.87079,0 151.222932,-33.871306,0 151.223394,-33.871368,0 151.223461,-33.871376,0 151.224002,-33.871449,0 151.22415,-33.870698,0 151.225255,-33.870844,0 151.225455,-33.869817,0 151.224987,-33.869745,0 151.22444,-33.869661,0 151.224419,-33.86975,0 151.224373,-33.869967,0 151.224363,-33.869967,0 151.224352,-33.87002,0 151.223936,-33.869956,0 151.223931,-33.869965,0 151.223941,-33.869969,0 151.223866,-33.870159,0 151.223863,-33.870183,0 151.223847,-33.870353,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1401806</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0304</td></tr>
+      <tr><td>Postcode</td><td>2011</td></tr>
+      <tr><td>Persons</td><td>538</td></tr>
+      <tr><td>A1996_dwel</td><td>354</td></tr>
+      <tr><td>_2006_4cast</td><td>482</td></tr>
+      <tr><td>Dwellings</td><td>418</td></tr>
+      <tr><td>MP_Region</td><td>Pyrmont</td></tr>
+      <tr><td>MP_Zone_Name_1</td><td></td></tr>
+      <tr><td>MP_Zone_Code</td><td>1000235</td></tr>
+      <tr><td>Postal_Code</td><td></td></tr>
+      <tr><td>Suburb_Name</td><td></td></tr>
+      <tr><td>MP_Zone_Name_2</td><td></td></tr>
+      <tr><td>MP_Zone_Name_3</td><td></td></tr>
+      <tr><td>Hornsby</td><td></td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.226703,-33.87046,0 151.226685,-33.870351,0 151.226673,-33.870281,0 151.226703,-33.870246,0 151.22672,-33.870205,0 151.226724,-33.870172,0 151.226717,-33.870129,0 151.226697,-33.870089,0 151.226508,-33.869819,0 151.226491,-33.869714,0 151.22649,-33.869681,0 151.226497,-33.869615,0 151.226518,-33.869551,0 151.226551,-33.869492,0 151.22668,-33.86939,0 151.226619,-33.869325,0 151.226649,-33.869172,0 151.226246,-33.869119,0 151.226125,-33.869104,0 151.226082,-33.869262,0 151.225576,-33.869196,0 151.225455,-33.869817,0 151.225255,-33.870844,0 151.225221,-33.871026,0 151.22593,-33.871122,0 151.225963,-33.871127,0 151.225988,-33.871122,0 151.226159,-33.871146,0 151.226182,-33.871002,0 151.226287,-33.871007,0 151.226325,-33.871011,0 151.226354,-33.871017,0 151.226385,-33.871027,0 151.226417,-33.871041,0 151.226442,-33.871056,0 151.226467,-33.871074,0 151.226488,-33.871094,0 151.226508,-33.871117,0 151.226524,-33.871141,0 151.226536,-33.871168,0 151.226544,-33.871194,0 151.226549,-33.871223,0 151.226552,-33.871247,0 151.226536,-33.871537,0 151.226532,-33.871629,0 151.22653,-33.871649,0 151.226637,-33.871674,0 151.22686,-33.871713,0 151.227728,-33.871865,0 151.227599,-33.871626,0 151.227484,-33.871547,0 151.227331,-33.871475,0 151.227162,-33.871335,0 151.227046,-33.871167,0 151.226717,-33.870548,0 151.226703,-33.87046,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.223698,-33.867708,0 151.224035,-33.867642,0 151.224028,-33.867583,0 151.22404,-33.86738,0 151.224093,-33.867361,0 151.224501,-33.867304,0 151.225211,-33.867205,0 151.224888,-33.866829,0 151.224841,-33.866777,0 151.224776,-33.866636,0 151.224812,-33.866487,0 151.224838,-33.866337,0 151.224774,-33.866229,0 151.224732,-33.866158,0 151.224723,-33.866144,0 151.224715,-33.86613,0 151.224705,-33.866117,0 151.224695,-33.866104,0 151.224684,-33.866091,0 151.224672,-33.86608,0 151.224659,-33.866068,0 151.224646,-33.866057,0 151.224633,-33.866046,0 151.224618,-33.866036,0 151.224603,-33.866027,0 151.224588,-33.866018,0 151.224573,-33.86601,0 151.224557,-33.866002,0 151.224541,-33.865995,0 151.224524,-33.865988,0 151.224507,-33.865982,0 151.22449,-33.865976,0 151.224472,-33.865971,0 151.224455,-33.865967,0 151.224311,-33.86593,0 151.224422,-33.866129,0 151.224295,-33.866395,0 151.223835,-33.867358,0 151.223728,-33.86758,0 151.223636,-33.867657,0 151.223698,-33.867708,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1401809</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0052</td></tr>
+      <tr><td>Postcode</td><td>2011</td></tr>
+      <tr><td>Persons</td><td>253</td></tr>
+      <tr><td>A1996_dwel</td><td>178</td></tr>
+      <tr><td>_2006_4cast</td><td>266</td></tr>
+      <tr><td>Dwellings</td><td>222</td></tr>
+      <tr><td>MP_Region</td><td>Pyrmont</td></tr>
+      <tr><td>MP_Zone_Name_1</td><td></td></tr>
+      <tr><td>MP_Zone_Code</td><td>1000235</td></tr>
+      <tr><td>Postal_Code</td><td></td></tr>
+      <tr><td>Suburb_Name</td><td></td></tr>
+      <tr><td>MP_Zone_Name_2</td><td></td></tr>
+      <tr><td>MP_Zone_Name_3</td><td></td></tr>
+      <tr><td>Hornsby</td><td></td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.225576,-33.869196,0 151.226082,-33.869262,0 151.226125,-33.869104,0 151.226246,-33.869119,0 151.22625,-33.869099,0 151.22628,-33.868954,0 151.226312,-33.868793,0 151.226263,-33.868787,0 151.226294,-33.868629,0 151.22632,-33.868495,0 151.226327,-33.868461,0 151.226361,-33.868445,0 151.22632,-33.86844,0 151.225845,-33.868375,0 151.225738,-33.86836,0 151.225609,-33.869025,0 151.225576,-33.869196,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>MapInfo Saved Objects</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.225643,-33.871501,0 151.226324,-33.871599,0 151.22653,-33.871649,0 151.226532,-33.871629,0 151.226536,-33.871537,0 151.226552,-33.871247,0 151.226549,-33.871223,0 151.226544,-33.871194,0 151.226536,-33.871168,0 151.226524,-33.871141,0 151.226508,-33.871117,0 151.226488,-33.871094,0 151.226467,-33.871074,0 151.226442,-33.871056,0 151.226417,-33.871041,0 151.226385,-33.871027,0 151.226354,-33.871017,0 151.226325,-33.871011,0 151.226287,-33.871007,0 151.226182,-33.871002,0 151.226159,-33.871146,0 151.225988,-33.871122,0 151.225963,-33.871127,0 151.22593,-33.871122,0 151.225221,-33.871026,0 151.225144,-33.871429,0 151.225113,-33.871598,0 151.225009,-33.872149,0 151.224866,-33.872909,0 151.224834,-33.873099,0 151.225134,-33.873035,0 151.225754,-33.872906,0 151.225872,-33.872283,0 151.225933,-33.871989,0 151.225833,-33.871984,0 151.225647,-33.871959,0 151.225564,-33.87191,0 151.225643,-33.871501,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+		<LookAt>
+		  <longitude>151.224463</longitude>
+		  <latitude>-33.86933</latitude>
+		  <range>5000</range>
+		</LookAt></Document>
+</kml>

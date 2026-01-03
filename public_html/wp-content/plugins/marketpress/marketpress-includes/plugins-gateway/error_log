@@ -1,0 +1,48 @@
+[27-Dec-2022 07:36:26 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Gateway_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/2checkout.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/2checkout.php on line 7
+[27-Dec-2022 07:36:27 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Gateway_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/authorizenet-aim.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/authorizenet-aim.php on line 7
+[27-Dec-2022 07:36:28 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Gateway_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/cubepoints.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/cubepoints.php on line 8
+[27-Dec-2022 07:36:31 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Gateway_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/eway.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/eway.php on line 7
+[27-Dec-2022 07:36:33 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Gateway_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/google-checkout.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/google-checkout.php on line 7
+[27-Dec-2022 07:36:34 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Gateway_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/ideal.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/ideal.php on line 7
+[27-Dec-2022 07:36:36 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Gateway_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/manual-payments.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/manual-payments.php on line 7
+[27-Dec-2022 07:36:39 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Gateway_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/moneybookers.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/moneybookers.php on line 7
+[27-Dec-2022 07:36:41 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Gateway_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/payflow.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/payflow.php on line 7
+[27-Dec-2022 07:37:12 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Gateway_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/paypal-chained-payments.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/paypal-chained-payments.php on line 7
+[27-Dec-2022 07:37:16 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Gateway_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/paypal-express.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/paypal-express.php on line 7
+[27-Dec-2022 07:38:07 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'MP_Gateway_API' not found in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/stripe.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/plugins-gateway/stripe.php on line 7

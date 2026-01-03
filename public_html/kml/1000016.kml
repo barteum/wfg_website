@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>1000016 - RANDWICK.KML</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>1000016 - RANDWICK.KML</name>
+		
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1430508</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0375</td></tr>
+      <tr><td>Postcode</td><td>2031</td></tr>
+      <tr><td>Persons</td><td>280</td></tr>
+      <tr><td>A1996_dwel</td><td>126</td></tr>
+      <tr><td>_2006_4cast</td><td>142</td></tr>
+      <tr><td>Dwellings</td><td>134</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.239703,-33.915506,0 151.239499,-33.916413,0 151.236676,-33.915993,0 151.236539,-33.91653,0 151.236641,-33.916543,0 151.237457,-33.916662,0 151.237943,-33.916732,0 151.239388,-33.916942,0 151.241168,-33.917201,0 151.241188,-33.917105,0 151.240654,-33.915788,0 151.240488,-33.915386,0 151.239993,-33.915542,0 151.239703,-33.915506,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.236925,-33.915077,0 151.235054,-33.914812,0 151.234778,-33.916274,0 151.236539,-33.91653,0 151.236676,-33.915993,0 151.239499,-33.916413,0 151.239703,-33.915506,0 151.236925,-33.915077,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1430510</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0542</td></tr>
+      <tr><td>Postcode</td><td>2031</td></tr>
+      <tr><td>Persons</td><td>86</td></tr>
+      <tr><td>A1996_dwel</td><td>37</td></tr>
+      <tr><td>_2006_4cast</td><td>51</td></tr>
+      <tr><td>Dwellings</td><td>44</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.240488,-33.915386,0 151.240654,-33.915788,0 151.241188,-33.917105,0 151.241251,-33.916806,0 151.241442,-33.915899,0 151.241586,-33.915219,0 151.241845,-33.913987,0 151.242,-33.913162,0 151.241495,-33.913086,0 151.241399,-33.913071,0 151.240825,-33.912985,0 151.239813,-33.912832,0 151.23941,-33.912772,0 151.239616,-33.913272,0 151.239748,-33.913591,0 151.240085,-33.914408,0 151.240488,-33.915386,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.236925,-33.915077,0 151.239703,-33.915506,0 151.239993,-33.915542,0 151.240488,-33.915386,0 151.240085,-33.914408,0 151.239748,-33.913591,0 151.239616,-33.913272,0 151.23941,-33.912772,0 151.239207,-33.912742,0 151.238928,-33.912695,0 151.238837,-33.913141,0 151.238744,-33.913594,0 151.238676,-33.913584,0 151.237383,-33.913393,0 151.237159,-33.914214,0 151.237148,-33.914256,0 151.236925,-33.915077,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1430801</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0498</td></tr>
+      <tr><td>Postcode</td><td>2031</td></tr>
+      <tr><td>Persons</td><td>305</td></tr>
+      <tr><td>A1996_dwel</td><td>122</td></tr>
+      <tr><td>_2006_4cast</td><td>138</td></tr>
+      <tr><td>Dwellings</td><td>130</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.246406,-33.913568,0 151.246557,-33.914503,0 151.246397,-33.915253,0 151.247894,-33.915477,0 151.247703,-33.916369,0 151.248897,-33.916547,0 151.249333,-33.914521,0 151.24822,-33.914288,0 151.24784,-33.914204,0 151.247733,-33.914144,0 151.247339,-33.913922,0 151.246788,-33.91361,0 151.246406,-33.913568,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.24526,-33.915997,0 151.247703,-33.916369,0 151.247894,-33.915477,0 151.246397,-33.915253,0 151.246557,-33.914503,0 151.246406,-33.913568,0 151.245879,-33.913522,0 151.245828,-33.913942,0 151.24589,-33.914313,0 151.245743,-33.914427,0 151.245449,-33.914594,0 151.245383,-33.914727,0 151.245401,-33.914894,0 151.245446,-33.915119,0 151.245433,-33.915181,0 151.24526,-33.915997,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1430803</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0912</td></tr>
+      <tr><td>Postcode</td><td>2031</td></tr>
+      <tr><td>Persons</td><td>788</td></tr>
+      <tr><td>A1996_dwel</td><td>364</td></tr>
+      <tr><td>_2006_4cast</td><td>440</td></tr>
+      <tr><td>Dwellings</td><td>402</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.248528,-33.918267,0 151.248564,-33.918103,0 151.248671,-33.917601,0 151.24871,-33.917419,0 151.248835,-33.916838,0 151.248897,-33.916547,0 151.247703,-33.916369,0 151.24526,-33.915997,0 151.244577,-33.915893,0 151.244496,-33.91628,0 151.244386,-33.9168,0 151.245062,-33.9169,0 151.246458,-33.917106,0 151.24628,-33.917935,0 151.246249,-33.918077,0 151.246104,-33.918746,0 151.246118,-33.919113,0 151.246201,-33.919146,0 151.246683,-33.919342,0 151.248247,-33.919578,0 151.248355,-33.919076,0 151.248375,-33.918979,0 151.248528,-33.918267,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.241845,-33.913987,0 151.242934,-33.914149,0 151.243458,-33.914226,0 151.243745,-33.914269,0 151.244486,-33.914375,0 151.244653,-33.913705,0 151.244698,-33.91351,0 151.244541,-33.913542,0 151.243912,-33.913447,0 151.243102,-33.913327,0 151.242587,-33.91325,0 151.242,-33.913162,0 151.241845,-33.913987,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1430809</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0614</td></tr>
+      <tr><td>Postcode</td><td>2031</td></tr>
+      <tr><td>Persons</td><td>557</td></tr>
+      <tr><td>A1996_dwel</td><td>252</td></tr>
+      <tr><td>_2006_4cast</td><td>278</td></tr>
+      <tr><td>Dwellings</td><td>265</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.241845,-33.913987,0 151.241586,-33.915219,0 151.24303,-33.91543,0 151.243784,-33.915484,0 151.244639,-33.915599,0 151.244577,-33.915893,0 151.24526,-33.915997,0 151.245433,-33.915181,0 151.245446,-33.915119,0 151.245401,-33.914894,0 151.245383,-33.914727,0 151.245449,-33.914594,0 151.245743,-33.914427,0 151.24589,-33.914313,0 151.245828,-33.913942,0 151.245879,-33.913522,0 151.245109,-33.913455,0 151.244981,-33.913454,0 151.244698,-33.91351,0 151.244653,-33.913705,0 151.244486,-33.914375,0 151.243745,-33.914269,0 151.243458,-33.914226,0 151.242934,-33.914149,0 151.241845,-33.913987,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.246816,-33.920708,0 151.24688,-33.920872,0 151.247505,-33.921515,0 151.247884,-33.921548,0 151.248053,-33.92062,0 151.248158,-33.920044,0 151.248247,-33.919578,0 151.246683,-33.919342,0 151.246201,-33.919146,0 151.246816,-33.920708,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1430901</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0767</td></tr>
+      <tr><td>Postcode</td><td>2031</td></tr>
+      <tr><td>Persons</td><td>420</td></tr>
+      <tr><td>A1996_dwel</td><td>171</td></tr>
+      <tr><td>_2006_4cast</td><td>201</td></tr>
+      <tr><td>Dwellings</td><td>186</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.249705,-33.923847,0 151.249721,-33.923732,0 151.249007,-33.923015,0 151.248,-33.922001,0 151.247505,-33.921515,0 151.247035,-33.92173,0 151.246826,-33.921813,0 151.246638,-33.921904,0 151.246534,-33.921994,0 151.245771,-33.922589,0 151.245692,-33.922651,0 151.245399,-33.922886,0 151.245011,-33.92304,0 151.244955,-33.923063,0 151.246126,-33.924003,0 151.245868,-33.924865,0 151.246282,-33.924952,0 151.246863,-33.925074,0 151.247272,-33.923697,0 151.248256,-33.924011,0 151.24851,-33.923665,0 151.249705,-33.923847,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.243544,-33.918344,0 151.244044,-33.918428,0 151.244194,-33.917718,0 151.244386,-33.9168,0 151.244496,-33.91628,0 151.244577,-33.915893,0 151.244639,-33.915599,0 151.243784,-33.915484,0 151.24303,-33.91543,0 151.241586,-33.915219,0 151.241442,-33.915899,0 151.241251,-33.916806,0 151.241686,-33.91687,0 151.242289,-33.916957,0 151.243343,-33.917109,0 151.24327,-33.917466,0 151.243701,-33.917538,0 151.243544,-33.918344,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431002</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0239</td></tr>
+      <tr><td>Postcode</td><td>2031</td></tr>
+      <tr><td>Persons</td><td>241</td></tr>
+      <tr><td>A1996_dwel</td><td>128</td></tr>
+      <tr><td>_2006_4cast</td><td>162</td></tr>
+      <tr><td>Dwellings</td><td>145</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.243544,-33.918344,0 151.243701,-33.917538,0 151.24327,-33.917466,0 151.243343,-33.917109,0 151.242289,-33.916957,0 151.241686,-33.91687,0 151.241251,-33.916806,0 151.241188,-33.917105,0 151.242067,-33.918009,0 151.242179,-33.918091,0 151.242268,-33.918132,0 151.24278,-33.918217,0 151.243544,-33.918344,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.246458,-33.917106,0 151.245062,-33.9169,0 151.244386,-33.9168,0 151.244194,-33.917718,0 151.244044,-33.918428,0 151.244578,-33.918519,0 151.245003,-33.918656,0 151.246118,-33.919113,0 151.246104,-33.918746,0 151.246249,-33.918077,0 151.24628,-33.917935,0 151.246458,-33.917106,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431004</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0788</td></tr>
+      <tr><td>Postcode</td><td>2031</td></tr>
+      <tr><td>Persons</td><td>345</td></tr>
+      <tr><td>A1996_dwel</td><td>185</td></tr>
+      <tr><td>_2006_4cast</td><td>235</td></tr>
+      <tr><td>Dwellings</td><td>210</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.243544,-33.918344,0 151.24278,-33.918217,0 151.242268,-33.918132,0 151.242179,-33.918091,0 151.24244,-33.919211,0 151.242457,-33.919276,0 151.242696,-33.920225,0 151.243902,-33.920405,0 151.244571,-33.920505,0 151.245177,-33.920591,0 151.245271,-33.920605,0 151.245714,-33.92065,0 151.245875,-33.920666,0 151.246048,-33.920685,0 151.246816,-33.920708,0 151.246201,-33.919146,0 151.246118,-33.919113,0 151.245003,-33.918656,0 151.244578,-33.918519,0 151.244044,-33.918428,0 151.243544,-33.918344,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.246816,-33.920708,0 151.246048,-33.920685,0 151.245875,-33.920666,0 151.245714,-33.92065,0 151.245271,-33.920605,0 151.245177,-33.920591,0 151.244571,-33.920505,0 151.243902,-33.920405,0 151.242696,-33.920225,0 151.242861,-33.920881,0 151.243199,-33.921754,0 151.243283,-33.921913,0 151.243363,-33.922063,0 151.24364,-33.922588,0 151.244513,-33.922227,0 151.245011,-33.92304,0 151.245399,-33.922886,0 151.245692,-33.922651,0 151.245771,-33.922589,0 151.246534,-33.921994,0 151.246638,-33.921904,0 151.246826,-33.921813,0 151.247035,-33.92173,0 151.247505,-33.921515,0 151.24688,-33.920872,0 151.246816,-33.920708,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431006</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0992</td></tr>
+      <tr><td>Postcode</td><td>2031</td></tr>
+      <tr><td>Persons</td><td>627</td></tr>
+      <tr><td>A1996_dwel</td><td>268</td></tr>
+      <tr><td>_2006_4cast</td><td>334</td></tr>
+      <tr><td>Dwellings</td><td>301</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.242696,-33.920225,0 151.242457,-33.919276,0 151.24244,-33.919211,0 151.242179,-33.918091,0 151.242067,-33.918009,0 151.241188,-33.917105,0 151.241168,-33.917201,0 151.240961,-33.918176,0 151.24078,-33.919024,0 151.240594,-33.919904,0 151.240268,-33.921414,0 151.240257,-33.921466,0 151.240923,-33.921564,0 151.2408,-33.922171,0 151.24109,-33.922212,0 151.240931,-33.922965,0 151.241399,-33.923034,0 151.241578,-33.92306,0 151.241908,-33.923177,0 151.242052,-33.923229,0 151.242143,-33.922786,0 151.242227,-33.922375,0 151.242349,-33.921775,0 151.243283,-33.921913,0 151.243199,-33.921754,0 151.242861,-33.920881,0 151.242696,-33.920225,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.235607,-33.920685,0 151.235401,-33.920656,0 151.23512,-33.921965,0 151.234797,-33.923472,0 151.234475,-33.924971,0 151.236899,-33.925301,0 151.239321,-33.925632,0 151.239348,-33.925512,0 151.239521,-33.924925,0 151.239555,-33.924762,0 151.239737,-33.923908,0 151.239968,-33.922824,0 151.240431,-33.922892,0 151.2406,-33.922917,0 151.240931,-33.922965,0 151.24109,-33.922212,0 151.2408,-33.922171,0 151.240923,-33.921564,0 151.240257,-33.921466,0 151.240268,-33.921414,0 151.240594,-33.919904,0 151.24078,-33.919024,0 151.240961,-33.918176,0 151.241168,-33.917201,0 151.239388,-33.916942,0 151.237943,-33.916732,0 151.237457,-33.916662,0 151.236641,-33.916543,0 151.236539,-33.91653,0 151.235989,-33.918974,0 151.235973,-33.919045,0 151.235859,-33.919557,0 151.235802,-33.91981,0 151.235607,-33.920685,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431009</td></tr>
+      <tr><td>Area_sqkms</td><td>0.078</td></tr>
+      <tr><td>Postcode</td><td>2031</td></tr>
+      <tr><td>Persons</td><td>354</td></tr>
+      <tr><td>A1996_dwel</td><td>132</td></tr>
+      <tr><td>_2006_4cast</td><td>174</td></tr>
+      <tr><td>Dwellings</td><td>153</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.248104,-33.926833,0 151.248401,-33.925397,0 151.24788,-33.925288,0 151.247037,-33.92511,0 151.246863,-33.925074,0 151.246282,-33.924952,0 151.245868,-33.924865,0 151.245611,-33.92481,0 151.244505,-33.924652,0 151.243771,-33.924526,0 151.24368,-33.92496,0 151.243595,-33.925363,0 151.243422,-33.926193,0 151.246263,-33.926582,0 151.246713,-33.926643,0 151.248104,-33.926833,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.243771,-33.924526,0 151.243317,-33.924439,0 151.242154,-33.924267,0 151.241692,-33.924197,0 151.241193,-33.924123,0 151.2407,-33.92405,0 151.240202,-33.923977,0 151.239737,-33.923908,0 151.239555,-33.924762,0 151.239521,-33.924925,0 151.239348,-33.925512,0 151.239321,-33.925632,0 151.239834,-33.925703,0 151.242787,-33.926107,0 151.243422,-33.926193,0 151.243595,-33.925363,0 151.24368,-33.92496,0 151.243771,-33.924526,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+      <tr><td>CD_Code</td><td>1431011</td></tr>
+      <tr><td>Area_sqkms</td><td>0.0679</td></tr>
+      <tr><td>Postcode</td><td>2031</td></tr>
+      <tr><td>Persons</td><td>421</td></tr>
+      <tr><td>A1996_dwel</td><td>183</td></tr>
+      <tr><td>_2006_4cast</td><td>229</td></tr>
+      <tr><td>Dwellings</td><td>206</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.243771,-33.924526,0 151.243953,-33.923657,0 151.244263,-33.923713,0 151.244081,-33.923411,0 151.243998,-33.923274,0 151.24364,-33.922588,0 151.243363,-33.922063,0 151.243283,-33.921913,0 151.242349,-33.921775,0 151.242227,-33.922375,0 151.242143,-33.922786,0 151.242052,-33.923229,0 151.241908,-33.923177,0 151.241578,-33.92306,0 151.241399,-33.923034,0 151.240931,-33.922965,0 151.2406,-33.922917,0 151.240431,-33.922892,0 151.239968,-33.922824,0 151.239737,-33.923908,0 151.240202,-33.923977,0 151.2407,-33.92405,0 151.241193,-33.924123,0 151.241692,-33.924197,0 151.242154,-33.924267,0 151.243317,-33.924439,0 151.243771,-33.924526,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000016 - RANDWICK</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.243771,-33.924526,0 151.244505,-33.924652,0 151.245611,-33.92481,0 151.245868,-33.924865,0 151.246126,-33.924003,0 151.244955,-33.923063,0 151.245011,-33.92304,0 151.244513,-33.922227,0 151.24364,-33.922588,0 151.243998,-33.923274,0 151.244081,-33.923411,0 151.244263,-33.923713,0 151.243953,-33.923657,0 151.243771,-33.924526,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+		<LookAt>
+		  <longitude>151.243264</longitude>
+		  <latitude>-33.919157</latitude>
+		  <range>5000</range>
+		</LookAt></Document>
+</kml>

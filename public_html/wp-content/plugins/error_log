@@ -1,0 +1,4 @@
+[08-Apr-2021 11:55:17 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/walkforg/public_html/wp-content/plugins/hello.php:69
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/hello.php on line 69

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>1000239 - SURRY HILLS.KML</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>1000239 - SURRY HILLS.KML</name>
+		
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1401107</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0529</td></tr>
+    <tr><td>Persons</td><td>584</td></tr>
+    <tr><td>Postcode</td><td>2010</td></tr>
+    <tr><td>_2006_4cast</td><td>372</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.217593,-33.883956,0 151.217088,-33.884025,0 151.216783,-33.88397,0 151.216636,-33.883943,0 151.216389,-33.883899,0 151.216051,-33.883841,0 151.21575,-33.885141,0 151.215696,-33.885372,0 151.215582,-33.885859,0 151.215313,-33.887066,0 151.215319,-33.887142,0 151.215718,-33.887306,0 151.215765,-33.887238,0 151.216053,-33.886741,0 151.21615,-33.886571,0 151.216348,-33.886226,0 151.216423,-33.886096,0 151.216504,-33.885954,0 151.216715,-33.885588,0 151.216857,-33.885655,0 151.21712,-33.885776,0 151.217521,-33.885963,0 151.217971,-33.886172,0 151.21819,-33.88511,0 151.217648,-33.884096,0 151.217606,-33.884014,0 151.217593,-33.883956,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.217611,-33.888034,0 151.217804,-33.887038,0 151.217901,-33.886534,0 151.217971,-33.886172,0 151.217521,-33.885963,0 151.21712,-33.885776,0 151.216857,-33.885655,0 151.216715,-33.885588,0 151.216504,-33.885954,0 151.216423,-33.886096,0 151.216348,-33.886226,0 151.21615,-33.886571,0 151.216053,-33.886741,0 151.215765,-33.887238,0 151.215992,-33.887345,0 151.216313,-33.887481,0 151.216611,-33.887608,0 151.216904,-33.887733,0 151.21722,-33.887868,0 151.217611,-33.888034,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1401109</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0348</td></tr>
+    <tr><td>Persons</td><td>270</td></tr>
+    <tr><td>Postcode</td><td>2010</td></tr>
+    <tr><td>_2006_4cast</td><td>170</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.215319,-33.887142,0 151.215313,-33.887066,0 151.215582,-33.885859,0 151.215696,-33.885372,0 151.215272,-33.885304,0 151.214851,-33.88524,0 151.214474,-33.885182,0 151.214161,-33.885134,0 151.214051,-33.885122,0 151.213844,-33.886193,0 151.213759,-33.886627,0 151.213703,-33.886926,0 151.214116,-33.887109,0 151.214323,-33.8872,0 151.214957,-33.88748,0 151.215361,-33.88766,0 151.215319,-33.887142,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.213703,-33.886926,0 151.21368,-33.887047,0 151.213614,-33.887396,0 151.213585,-33.887545,0 151.213512,-33.887913,0 151.213491,-33.888018,0 151.214627,-33.888366,0 151.214548,-33.888616,0 151.214425,-33.88901,0 151.214683,-33.889044,0 151.214637,-33.88919,0 151.215143,-33.889257,0 151.215199,-33.889057,0 151.215327,-33.888581,0 151.215408,-33.888236,0 151.215361,-33.88766,0 151.214957,-33.88748,0 151.214323,-33.8872,0 151.214116,-33.887109,0 151.213703,-33.886926,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1401111</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0379</td></tr>
+    <tr><td>Persons</td><td>557</td></tr>
+    <tr><td>Postcode</td><td>2010</td></tr>
+    <tr><td>_2006_4cast</td><td>344</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.215319,-33.887142,0 151.215361,-33.88766,0 151.215408,-33.888236,0 151.215327,-33.888581,0 151.215199,-33.889057,0 151.215648,-33.889127,0 151.216693,-33.889314,0 151.216822,-33.889337,0 151.217333,-33.889428,0 151.2175,-33.888601,0 151.217611,-33.888034,0 151.21722,-33.887868,0 151.216904,-33.887733,0 151.216611,-33.887608,0 151.216313,-33.887481,0 151.215992,-33.887345,0 151.215765,-33.887238,0 151.215718,-33.887306,0 151.215319,-33.887142,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.213618,-33.891667,0 151.213692,-33.891315,0 151.213771,-33.890943,0 151.213892,-33.890498,0 151.214009,-33.890067,0 151.214228,-33.889272,0 151.214071,-33.889206,0 151.214164,-33.888978,0 151.214425,-33.88901,0 151.214548,-33.888616,0 151.214627,-33.888366,0 151.213491,-33.888018,0 151.213335,-33.88882,0 151.213216,-33.889423,0 151.213082,-33.890098,0 151.212825,-33.891408,0 151.212812,-33.891554,0 151.212812,-33.891558,0 151.213618,-33.891667,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1401113</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0242</td></tr>
+    <tr><td>Persons</td><td>281</td></tr>
+    <tr><td>Postcode</td><td>2010</td></tr>
+    <tr><td>_2006_4cast</td><td>168</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.213618,-33.891667,0 151.213988,-33.891716,0 151.214442,-33.891777,0 151.214607,-33.891178,0 151.214758,-33.890634,0 151.215045,-33.889599,0 151.215143,-33.889257,0 151.214637,-33.88919,0 151.214683,-33.889044,0 151.214425,-33.88901,0 151.214164,-33.888978,0 151.214071,-33.889206,0 151.214228,-33.889272,0 151.214009,-33.890067,0 151.213892,-33.890498,0 151.213771,-33.890943,0 151.213692,-33.891315,0 151.213618,-33.891667,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.216803,-33.892094,0 151.216921,-33.89149,0 151.217029,-33.890943,0 151.217113,-33.890516,0 151.217333,-33.889428,0 151.216822,-33.889337,0 151.216693,-33.889314,0 151.215648,-33.889127,0 151.215199,-33.889057,0 151.215143,-33.889257,0 151.215045,-33.889599,0 151.214758,-33.890634,0 151.214607,-33.891178,0 151.214442,-33.891777,0 151.214906,-33.891838,0 151.216803,-33.892094,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1401203</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0621</td></tr>
+    <tr><td>Persons</td><td>526</td></tr>
+    <tr><td>Postcode</td><td>2010</td></tr>
+    <tr><td>_2006_4cast</td><td>326</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.208989,-33.88372,0 151.209668,-33.883992,0 151.210357,-33.884268,0 151.211044,-33.884537,0 151.211418,-33.884684,0 151.211499,-33.884716,0 151.211973,-33.884793,0 151.212317,-33.88485,0 151.212738,-33.884918,0 151.212958,-33.88394,0 151.213101,-33.883302,0 151.212654,-33.883219,0 151.212325,-33.88316,0 151.211975,-33.883097,0 151.211887,-33.883081,0 151.211502,-33.883007,0 151.210773,-33.882658,0 151.210602,-33.882577,0 151.210081,-33.882331,0 151.209935,-33.88227,0 151.209758,-33.882542,0 151.209216,-33.883372,0 151.208989,-33.88372,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.214051,-33.885122,0 151.214161,-33.885134,0 151.214474,-33.885182,0 151.214851,-33.88524,0 151.215272,-33.885304,0 151.215696,-33.885372,0 151.21575,-33.885141,0 151.216051,-33.883841,0 151.214358,-33.883532,0 151.213101,-33.883302,0 151.212958,-33.88394,0 151.212738,-33.884918,0 151.213195,-33.88499,0 151.213396,-33.885023,0 151.213621,-33.885058,0 151.213928,-33.885109,0 151.214051,-33.885122,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1401205</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0344</td></tr>
+    <tr><td>Persons</td><td>342</td></tr>
+    <tr><td>Postcode</td><td>2010</td></tr>
+    <tr><td>_2006_4cast</td><td>167</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.21233,-33.886701,0 151.212305,-33.886813,0 151.212213,-33.887219,0 151.212196,-33.887294,0 151.213138,-33.887465,0 151.213579,-33.887544,0 151.213585,-33.887545,0 151.213614,-33.887396,0 151.21368,-33.887047,0 151.213703,-33.886926,0 151.213759,-33.886627,0 151.213844,-33.886193,0 151.214051,-33.885122,0 151.213928,-33.885109,0 151.213621,-33.885058,0 151.213396,-33.885023,0 151.213195,-33.88499,0 151.212738,-33.884918,0 151.212594,-33.885549,0 151.212494,-33.885982,0 151.212466,-33.886104,0 151.212397,-33.886406,0 151.21233,-33.886701,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.21233,-33.886701,0 151.212397,-33.886406,0 151.212466,-33.886104,0 151.212494,-33.885982,0 151.212594,-33.885549,0 151.212738,-33.884918,0 151.212317,-33.88485,0 151.211973,-33.884793,0 151.211499,-33.884716,0 151.211418,-33.884684,0 151.211044,-33.884537,0 151.210357,-33.884268,0 151.209668,-33.883992,0 151.208989,-33.88372,0 151.2088,-33.883643,0 151.208726,-33.884051,0 151.208657,-33.884379,0 151.208721,-33.884404,0 151.209146,-33.884575,0 151.210259,-33.885023,0 151.210126,-33.885269,0 151.21,-33.885503,0 151.209866,-33.88579,0 151.210606,-33.886086,0 151.211311,-33.886378,0 151.211532,-33.88647,0 151.21165,-33.886504,0 151.211941,-33.886589,0 151.21233,-33.886701,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1401207</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0342</td></tr>
+    <tr><td>Persons</td><td>311</td></tr>
+    <tr><td>Postcode</td><td>2010</td></tr>
+    <tr><td>_2006_4cast</td><td>185</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.209075,-33.888888,0 151.209186,-33.888086,0 151.209239,-33.887699,0 151.209403,-33.887381,0 151.209582,-33.887082,0 151.20996,-33.887239,0 151.210148,-33.886904,0 151.210337,-33.886566,0 151.210606,-33.886086,0 151.209866,-33.88579,0 151.209889,-33.886129,0 151.209891,-33.886187,0 151.209859,-33.886308,0 151.209652,-33.886681,0 151.209592,-33.886652,0 151.20942,-33.886578,0 151.209166,-33.886469,0 151.208953,-33.886822,0 151.208729,-33.886717,0 151.208659,-33.886681,0 151.208366,-33.886516,0 151.208229,-33.886426,0 151.208245,-33.886773,0 151.208252,-33.886945,0 151.208256,-33.887032,0 151.208188,-33.887641,0 151.208176,-33.887749,0 151.208145,-33.888,0 151.208047,-33.888821,0 151.208953,-33.888897,0 151.209075,-33.888888,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.21233,-33.886701,0 151.211941,-33.886589,0 151.21165,-33.886504,0 151.211532,-33.88647,0 151.211311,-33.886378,0 151.210606,-33.886086,0 151.210337,-33.886566,0 151.210148,-33.886904,0 151.20996,-33.887239,0 151.2108,-33.887588,0 151.211138,-33.887729,0 151.211606,-33.887924,0 151.21183,-33.888014,0 151.212011,-33.888104,0 151.212196,-33.887294,0 151.212213,-33.887219,0 151.212305,-33.886813,0 151.21233,-33.886701,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1401209</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0433</td></tr>
+    <tr><td>Persons</td><td>203</td></tr>
+    <tr><td>Postcode</td><td>2010</td></tr>
+    <tr><td>_2006_4cast</td><td>171</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<LineString>
+				<coordinates>
+151.21075,-33.888023,0 151.210572,-33.888425,0 151.210945,-33.888599,0 151.211128,-33.888363,0 151.211205,-33.888395,0 151.210819,-33.888891,0 151.210738,-33.888859,0 151.210874,-33.888688,0 151.210444,-33.888491,0 151.209962,-33.888467,0 151.209997,-33.888359,0 151.210444,-33.888382,0 151.210588,-33.888068,0 151.210627,-33.888029,0 151.210657,-33.887985,0 151.21075,-33.888023,0 </coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.21075,-33.888023,0 151.210657,-33.887985,0 151.210627,-33.888029,0 151.210588,-33.888068,0 151.210444,-33.888382,0 151.209997,-33.888359,0 151.209962,-33.888467,0 151.210444,-33.888491,0 151.210874,-33.888688,0 151.210738,-33.888859,0 151.210819,-33.888891,0 151.211205,-33.888395,0 151.211128,-33.888363,0 151.210945,-33.888599,0 151.210572,-33.888425,0 151.21075,-33.888023,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1401211</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0631</td></tr>
+    <tr><td>Persons</td><td>561</td></tr>
+    <tr><td>Postcode</td><td>2010</td></tr>
+    <tr><td>_2006_4cast</td><td>337</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.210761,-33.891038,0 151.211671,-33.891381,0 151.211736,-33.891407,0 151.212156,-33.891466,0 151.212604,-33.891529,0 151.212812,-33.891558,0 151.212812,-33.891554,0 151.212825,-33.891408,0 151.213082,-33.890098,0 151.213216,-33.889423,0 151.213335,-33.88882,0 151.213491,-33.888018,0 151.213512,-33.887913,0 151.213585,-33.887545,0 151.213579,-33.887544,0 151.213138,-33.887465,0 151.212196,-33.887294,0 151.212011,-33.888104,0 151.212091,-33.888147,0 151.212553,-33.888399,0 151.211982,-33.889125,0 151.211798,-33.889359,0 151.211585,-33.889637,0 151.211446,-33.889871,0 151.211126,-33.890418,0 151.210953,-33.890712,0 151.210761,-33.891038,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.211167,-33.889047,0 151.209802,-33.888924,0 151.209782,-33.889036,0 151.209761,-33.889284,0 151.20954,-33.889681,0 151.209487,-33.889787,0 151.209462,-33.889838,0 151.209321,-33.890087,0 151.209134,-33.890416,0 151.2092,-33.890442,0 151.210087,-33.890781,0 151.210696,-33.891013,0 151.210761,-33.891038,0 151.210953,-33.890712,0 151.211126,-33.890418,0 151.211446,-33.889871,0 151.211585,-33.889637,0 151.211798,-33.889359,0 151.211306,-33.889061,0 151.211167,-33.889047,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000239 - SURRY HILLS</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1401215</td></tr>
+    <tr><td>Area_sqkms</td><td>0.022</td></tr>
+    <tr><td>Persons</td><td>412</td></tr>
+    <tr><td>Postcode</td><td>2010</td></tr>
+    <tr><td>_2006_4cast</td><td>203</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.20792,-33.889951,0 151.208321,-33.890106,0 151.209134,-33.890416,0 151.209321,-33.890087,0 151.209462,-33.889838,0 151.209487,-33.889787,0 151.20954,-33.889681,0 151.209761,-33.889284,0 151.209782,-33.889036,0 151.209802,-33.888924,0 151.209253,-33.888874,0 151.209075,-33.888888,0 151.208953,-33.888897,0 151.208047,-33.888821,0 151.207972,-33.889444,0 151.20792,-33.889951,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+		<LookAt>
+		  <longitude>151.21284</longitude>
+		  <latitude>-33.887489</latitude>
+		  <range>5000</range>
+		</LookAt></Document>
+</kml>

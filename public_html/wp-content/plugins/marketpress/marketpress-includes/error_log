@@ -1,0 +1,38 @@
+[27-Dec-2022 07:36:12 Australia/Sydney] PHP Parse error:  syntax error, unexpected 'new' (T_NEW) in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-bp.php on line 22
+[27-Dec-2022 07:36:13 Australia/Sydney] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-data.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-data.php on line 7
+[27-Dec-2022 07:36:16 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function sanitize_title() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-importers.php:20
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-importers.php(213): MarketPress_Importer->__construct()
+#1 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-importers.php on line 20
+[27-Dec-2022 07:36:18 Australia/Sydney] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; MarketPress_Global_Product_List has a deprecated constructor in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-ms.php on line 1512
+[27-Dec-2022 07:36:18 Australia/Sydney] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; MarketPress_Global_Tag_Cloud_Widget has a deprecated constructor in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-ms.php on line 1618
+[27-Dec-2022 07:36:18 Australia/Sydney] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; MarketPress_Global_Category_List_Widget has a deprecated constructor in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-ms.php on line 1666
+[27-Dec-2022 07:36:18 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_site_option() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-ms.php:68
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-ms.php(20): MarketPress_MS->install()
+#1 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-ms.php(1051): MarketPress_MS->__construct()
+#2 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-ms.php on line 68
+[27-Dec-2022 07:36:19 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-shipping.php:250
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-shipping.php(370): MP_Shipping_Handler->__construct()
+#1 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-shipping.php on line 250
+[27-Dec-2022 07:36:21 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function add_shortcode() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-shortcodes.php:15
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-shortcodes.php(322): MarketPress_Shortcodes->__construct()
+#1 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-shortcodes.php on line 15
+[27-Dec-2022 07:36:22 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-stats.php:13
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-stats.php(185): MarketPress_Stats->__construct()
+#1 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/marketpress-stats.php on line 13
+[27-Dec-2022 07:38:47 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/template-functions.php:2096
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress-includes/template-functions.php on line 2096

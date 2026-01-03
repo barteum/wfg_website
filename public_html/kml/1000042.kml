@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>1000042 - ASHFIELD NORTH.KML</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>1000042 - ASHFIELD NORTH.KML</name>
+		
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1411206</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0685</td></tr>
+    <tr><td>Persons</td><td>594</td></tr>
+    <tr><td>Postcode</td><td>2131</td></tr>
+    <tr><td>_2006_4cast</td><td>274</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.12437,-33.883493,0 151.124701,-33.883001,0 151.12494,-33.882647,0 151.125169,-33.882308,0 151.125203,-33.88227,0 151.125078,-33.882133,0 151.124888,-33.881865,0 151.124621,-33.881489,0 151.124473,-33.88128,0 151.124068,-33.880709,0 151.123956,-33.880551,0 151.123511,-33.879923,0 151.122703,-33.88067,0 151.122416,-33.880921,0 151.121994,-33.881549,0 151.121567,-33.882183,0 151.122179,-33.882469,0 151.122205,-33.882482,0 151.122775,-33.882748,0 151.123162,-33.882929,0 151.123758,-33.883207,0 151.12437,-33.883493,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.121385,-33.878454,0 151.121281,-33.878612,0 151.120643,-33.879559,0 151.120532,-33.879724,0 151.120241,-33.880158,0 151.119045,-33.881941,0 151.11842,-33.882873,0 151.118208,-33.883188,0 151.118095,-33.883135,0 151.117498,-33.88398,0 151.117266,-33.884284,0 151.11733,-33.884319,0 151.117704,-33.884528,0 151.118466,-33.884928,0 151.118994,-33.885192,0 151.119261,-33.885319,0 151.119425,-33.885397,0 151.120208,-33.88422,0 151.120252,-33.884146,0 151.120289,-33.884083,0 151.120571,-33.883663,0 151.120696,-33.883477,0 151.120871,-33.883218,0 151.121567,-33.882183,0 151.121994,-33.881549,0 151.122416,-33.880921,0 151.122703,-33.88067,0 151.123511,-33.879923,0 151.123401,-33.879822,0 151.122786,-33.879404,0 151.122682,-33.879334,0 151.121385,-33.878454,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1411208</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1063</td></tr>
+    <tr><td>Persons</td><td>586</td></tr>
+    <tr><td>Postcode</td><td>2132</td></tr>
+    <tr><td>_2006_4cast</td><td>286</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.118953,-33.879109,0 151.118888,-33.879186,0 151.118715,-33.879392,0 151.118706,-33.879404,0 151.118666,-33.879451,0 151.118621,-33.879505,0 151.118581,-33.879553,0 151.11854,-33.879603,0 151.11853,-33.879614,0 151.118451,-33.87971,0 151.118365,-33.87981,0 151.118251,-33.879951,0 151.118167,-33.880051,0 151.118086,-33.880147,0 151.11787,-33.880404,0 151.117791,-33.880498,0 151.117719,-33.880585,0 151.117709,-33.880597,0 151.117651,-33.880668,0 151.117606,-33.880719,0 151.117519,-33.880823,0 151.117308,-33.881075,0 151.117272,-33.881121,0 151.117236,-33.881169,0 151.1164,-33.882208,0 151.116375,-33.882241,0 151.116311,-33.882321,0 151.116292,-33.882344,0 151.116245,-33.882404,0 151.116217,-33.88244,0 151.116177,-33.882491,0 151.116126,-33.882555,0 151.116033,-33.882673,0 151.116028,-33.882679,0 151.115957,-33.882768,0 151.115937,-33.882793,0 151.115859,-33.882892,0 151.115768,-33.882997,0 151.115518,-33.883264,0 151.115871,-33.883479,0 151.116335,-33.883749,0 151.116955,-33.884111,0 151.117266,-33.884284,0 151.117498,-33.88398,0 151.118095,-33.883135,0 151.118208,-33.883188,0 151.11842,-33.882873,0 151.119045,-33.881941,0 151.120241,-33.880158,0 151.120532,-33.879724,0 151.11982,-33.87939,0 151.119513,-33.879246,0 151.119349,-33.879169,0 151.118953,-33.879109,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.120732,-33.891649,0 151.120554,-33.891642,0 151.119908,-33.891622,0 151.119131,-33.891597,0 151.118663,-33.891582,0 151.117125,-33.891529,0 151.117026,-33.892992,0 151.117002,-33.89336,0 151.117004,-33.893425,0 151.117015,-33.893713,0 151.117084,-33.893829,0 151.120561,-33.893967,0 151.120591,-33.893547,0 151.120732,-33.891649,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1411307</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1133</td></tr>
+    <tr><td>Persons</td><td>552</td></tr>
+    <tr><td>Postcode</td><td>2131</td></tr>
+    <tr><td>_2006_4cast</td><td>252</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.117465,-33.888537,0 151.118659,-33.888576,0 151.119065,-33.888477,0 151.120104,-33.888069,0 151.121177,-33.88765,0 151.121413,-33.887591,0 151.12026,-33.887169,0 151.119658,-33.886949,0 151.118772,-33.886626,0 151.119163,-33.885853,0 151.119321,-33.885554,0 151.119352,-33.885507,0 151.119425,-33.885397,0 151.119261,-33.885319,0 151.118994,-33.885192,0 151.118466,-33.884928,0 151.117704,-33.884528,0 151.11733,-33.884319,0 151.117266,-33.884284,0 151.116955,-33.884111,0 151.116335,-33.883749,0 151.11633,-33.883756,0 151.116246,-33.883862,0 151.11615,-33.883978,0 151.115897,-33.884283,0 151.115314,-33.884987,0 151.11624,-33.885472,0 151.116572,-33.885645,0 151.117178,-33.885962,0 151.117706,-33.886238,0 151.117991,-33.886342,0 151.117543,-33.887055,0 151.117273,-33.887486,0 151.116911,-33.888522,0 151.117465,-33.888537,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.12437,-33.883493,0 151.123758,-33.883207,0 151.123162,-33.882929,0 151.122775,-33.882748,0 151.122205,-33.882482,0 151.122179,-33.882469,0 151.121567,-33.882183,0 151.120871,-33.883218,0 151.120696,-33.883477,0 151.120571,-33.883663,0 151.120289,-33.884083,0 151.120252,-33.884146,0 151.121618,-33.884781,0 151.12305,-33.885451,0 151.124329,-33.883553,0 151.12437,-33.883493,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1411309</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0435</td></tr>
+    <tr><td>Persons</td><td>387</td></tr>
+    <tr><td>Postcode</td><td>2131</td></tr>
+    <tr><td>_2006_4cast</td><td>232</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.122369,-33.886466,0 151.122483,-33.886299,0 151.122829,-33.885786,0 151.12305,-33.885451,0 151.121618,-33.884781,0 151.120252,-33.884146,0 151.120208,-33.88422,0 151.119425,-33.885397,0 151.11996,-33.885631,0 151.120283,-33.885759,0 151.120609,-33.885881,0 151.122369,-33.886466,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.122369,-33.886466,0 151.120609,-33.885881,0 151.120283,-33.885759,0 151.11996,-33.885631,0 151.119425,-33.885397,0 151.119352,-33.885507,0 151.119321,-33.885554,0 151.119163,-33.885853,0 151.118772,-33.886626,0 151.119658,-33.886949,0 151.12026,-33.887169,0 151.121413,-33.887591,0 151.121616,-33.887541,0 151.121645,-33.887542,0 151.121945,-33.887094,0 151.122112,-33.886844,0 151.12226,-33.886622,0 151.122369,-33.886466,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1411312</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0892</td></tr>
+    <tr><td>Persons</td><td>624</td></tr>
+    <tr><td>Postcode</td><td>2131</td></tr>
+    <tr><td>_2006_4cast</td><td>301</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.117465,-33.888537,0 151.117384,-33.889124,0 151.117245,-33.889999,0 151.117183,-33.890627,0 151.117159,-33.89096,0 151.117125,-33.891529,0 151.118663,-33.891582,0 151.119131,-33.891597,0 151.119908,-33.891622,0 151.12004,-33.889472,0 151.120218,-33.889405,0 151.120104,-33.888069,0 151.119065,-33.888477,0 151.118659,-33.888576,0 151.117465,-33.888537,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.122369,-33.886466,0 151.12226,-33.886622,0 151.122112,-33.886844,0 151.121945,-33.887094,0 151.121645,-33.887542,0 151.121616,-33.887541,0 151.121413,-33.887591,0 151.121177,-33.88765,0 151.120104,-33.888069,0 151.120218,-33.889405,0 151.120692,-33.889229,0 151.121113,-33.889074,0 151.121268,-33.889017,0 151.121391,-33.888978,0 151.121411,-33.888972,0 151.121492,-33.888963,0 151.121553,-33.888964,0 151.121614,-33.888972,0 151.121634,-33.888975,0 151.121654,-33.88898,0 151.121692,-33.88899,0 151.121729,-33.889006,0 151.121852,-33.889057,0 151.121951,-33.889098,0 151.122082,-33.889152,0 151.122482,-33.889309,0 151.122711,-33.889398,0 151.123315,-33.887964,0 151.124156,-33.888317,0 151.1245,-33.888557,0 151.124897,-33.888832,0 151.125869,-33.889532,0 151.125965,-33.889575,0 151.126063,-33.889621,0 151.12685,-33.889849,0 151.127282,-33.89,0 151.127574,-33.890102,0 151.1279,-33.890225,0 151.12822,-33.890268,0 151.128532,-33.89031,0 151.129171,-33.890337,0 151.129805,-33.890285,0 151.129862,-33.89028,0 151.130644,-33.890012,0 151.130709,-33.889986,0 151.131383,-33.889722,0 151.13155,-33.889657,0 151.131979,-33.889465,0 151.131874,-33.889444,0 151.131713,-33.889404,0 151.131235,-33.889275,0 151.130414,-33.889078,0 151.127901,-33.888305,0 151.126215,-33.887744,0 151.125452,-33.887491,0 151.125375,-33.887465,0 151.124283,-33.887103,0 151.122369,-33.886466,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1411501</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0429</td></tr>
+    <tr><td>Persons</td><td>522</td></tr>
+    <tr><td>Postcode</td><td>2131</td></tr>
+    <tr><td>_2006_4cast</td><td>247</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.12437,-33.883493,0 151.124329,-33.883553,0 151.125268,-33.88399,0 151.125313,-33.883925,0 151.126105,-33.884343,0 151.126152,-33.884368,0 151.126157,-33.884361,0 151.127154,-33.882878,0 151.126297,-33.881695,0 151.126163,-33.881761,0 151.125263,-33.882205,0 151.125203,-33.88227,0 151.125169,-33.882308,0 151.12494,-33.882647,0 151.124701,-33.883001,0 151.12437,-33.883493,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.126215,-33.887744,0 151.126373,-33.887501,0 151.126653,-33.887104,0 151.126731,-33.887138,0 151.128113,-33.887784,0 151.128812,-33.886732,0 151.128856,-33.886718,0 151.128835,-33.885714,0 151.128042,-33.885725,0 151.127476,-33.885463,0 151.126903,-33.885196,0 151.125859,-33.886746,0 151.125537,-33.887225,0 151.125375,-33.887465,0 151.125452,-33.887491,0 151.126215,-33.887744,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1411506</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0743</td></tr>
+    <tr><td>Persons</td><td>379</td></tr>
+    <tr><td>Postcode</td><td>2131</td></tr>
+    <tr><td>_2006_4cast</td><td>187</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.126215,-33.887744,0 151.127901,-33.888305,0 151.130414,-33.889078,0 151.131235,-33.889275,0 151.131713,-33.889404,0 151.131874,-33.889444,0 151.131979,-33.889465,0 151.132277,-33.889332,0 151.132257,-33.889048,0 151.132221,-33.888061,0 151.132196,-33.887361,0 151.132139,-33.887358,0 151.131731,-33.887524,0 151.131546,-33.887215,0 151.131391,-33.886955,0 151.131343,-33.886871,0 151.130973,-33.887023,0 151.129399,-33.887665,0 151.129033,-33.888214,0 151.128113,-33.887784,0 151.126731,-33.887138,0 151.126653,-33.887104,0 151.126373,-33.887501,0 151.126215,-33.887744,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.134398,-33.888419,0 151.133649,-33.887355,0 151.132221,-33.888061,0 151.132257,-33.889048,0 151.132277,-33.889332,0 151.13296,-33.889048,0 151.134295,-33.888469,0 151.134398,-33.888419,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1411508</td></tr>
+    <tr><td>Area_sqkms</td><td>0.1488</td></tr>
+    <tr><td>Persons</td><td>587</td></tr>
+    <tr><td>Postcode</td><td>2131</td></tr>
+    <tr><td>_2006_4cast</td><td>296</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.131544,-33.885631,0 151.12892,-33.886699,0 151.128856,-33.886718,0 151.128812,-33.886732,0 151.128113,-33.887784,0 151.129033,-33.888214,0 151.129399,-33.887665,0 151.130973,-33.887023,0 151.131343,-33.886871,0 151.131391,-33.886955,0 151.131546,-33.887215,0 151.131731,-33.887524,0 151.132139,-33.887358,0 151.132196,-33.887361,0 151.132221,-33.888061,0 151.133649,-33.887355,0 151.133836,-33.887264,0 151.135842,-33.886278,0 151.135916,-33.886207,0 151.136608,-33.885142,0 151.136511,-33.885101,0 151.136461,-33.885078,0 151.135661,-33.8847,0 151.13484,-33.88431,0 151.134822,-33.884296,0 151.133272,-33.884928,0 151.132242,-33.885347,0 151.131544,-33.885631,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.131544,-33.885631,0 151.132242,-33.885347,0 151.133272,-33.884928,0 151.132646,-33.883857,0 151.13258,-33.883773,0 151.132203,-33.883939,0 151.130871,-33.884479,0 151.131207,-33.885055,0 151.131544,-33.885631,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1411511</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0533</td></tr>
+    <tr><td>Persons</td><td>247</td></tr>
+    <tr><td>Postcode</td><td>2131</td></tr>
+    <tr><td>_2006_4cast</td><td>98</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.126152,-33.884368,0 151.12484,-33.886288,0 151.12443,-33.886879,0 151.124283,-33.887103,0 151.125375,-33.887465,0 151.125537,-33.887225,0 151.125859,-33.886746,0 151.126903,-33.885196,0 151.127829,-33.883812,0 151.127154,-33.882878,0 151.126157,-33.884361,0 151.126152,-33.884368,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.122369,-33.886466,0 151.124283,-33.887103,0 151.12443,-33.886879,0 151.12484,-33.886288,0 151.126152,-33.884368,0 151.126105,-33.884343,0 151.125313,-33.883925,0 151.125268,-33.88399,0 151.124329,-33.883553,0 151.12305,-33.885451,0 151.122829,-33.885786,0 151.122483,-33.886299,0 151.122369,-33.886466,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1411513</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0639</td></tr>
+    <tr><td>Persons</td><td>581</td></tr>
+    <tr><td>Postcode</td><td>2131</td></tr>
+    <tr><td>_2006_4cast</td><td>259</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.129206,-33.881859,0 151.127154,-33.882878,0 151.127829,-33.883812,0 151.126903,-33.885196,0 151.127476,-33.885463,0 151.128042,-33.885725,0 151.128835,-33.885714,0 151.12883,-33.885309,0 151.128816,-33.883889,0 151.130104,-33.883364,0 151.129628,-33.882551,0 151.129206,-33.881859,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.131544,-33.885631,0 151.131207,-33.885055,0 151.130871,-33.884479,0 151.12883,-33.885309,0 151.128835,-33.885714,0 151.128856,-33.886718,0 151.12892,-33.886699,0 151.131544,-33.885631,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>1000042 - ASHFIELD NORTH</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1411516</td></tr>
+    <tr><td>Area_sqkms</td><td>0.0672</td></tr>
+    <tr><td>Persons</td><td>463</td></tr>
+    <tr><td>Postcode</td><td>2131</td></tr>
+    <tr><td>_2006_4cast</td><td>245</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+151.134398,-33.888419,0 151.134956,-33.888157,0 151.135869,-33.887725,0 151.136687,-33.887305,0 151.137397,-33.88694,0 151.137612,-33.88683,0 151.138222,-33.886514,0 151.138993,-33.886099,0 151.138656,-33.886027,0 151.138173,-33.885856,0 151.137346,-33.885477,0 151.136679,-33.885174,0 151.136608,-33.885142,0 151.135916,-33.886207,0 151.135842,-33.886278,0 151.133836,-33.887264,0 151.133649,-33.887355,0 151.134398,-33.888419,0 </coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+		<LookAt>
+		  <longitude>151.124117</longitude>
+		  <latitude>-33.885601</latitude>
+		  <range>5000</range>
+		</LookAt></Document>
+</kml>

@@ -1,0 +1,92 @@
+[06-Sep-2021 06:37:35 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[03-Oct-2021 03:58:46 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[31-Oct-2021 06:00:41 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[06-Nov-2021 09:59:10 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[10-Nov-2021 13:28:41 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[13-Nov-2021 07:59:34 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[20-Nov-2021 03:10:45 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[02-Dec-2021 16:42:48 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[05-Dec-2021 02:36:28 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[05-Dec-2021 05:39:35 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[18-Dec-2021 02:56:20 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[10-Jan-2022 21:23:03 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[26-Jan-2022 17:35:18 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[27-Jan-2022 08:48:25 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[28-Apr-2022 06:44:38 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[25-Jul-2022 22:52:41 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[27-Jul-2022 08:45:33 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[27-Jul-2022 20:37:43 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[20-Aug-2022 02:25:24 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[20-Aug-2022 20:36:34 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[21-Aug-2022 15:39:01 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[02-Sep-2022 19:54:08 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[16-May-2023 18:54:55 Australia/Sydney] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17

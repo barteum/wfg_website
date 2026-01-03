@@ -1,0 +1,88 @@
+[06-Sep-2021 06:26:48 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[03-Oct-2021 03:58:17 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[31-Oct-2021 06:00:02 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[06-Nov-2021 09:58:56 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[10-Nov-2021 13:24:59 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[13-Nov-2021 07:59:17 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[20-Nov-2021 03:10:28 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[02-Dec-2021 16:40:20 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[05-Dec-2021 02:35:55 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[18-Dec-2021 02:56:04 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[10-Jan-2022 21:14:52 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[26-Jan-2022 17:25:46 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[27-Jan-2022 08:42:41 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[28-Apr-2022 06:41:32 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[25-Jul-2022 22:49:40 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[27-Jul-2022 08:42:43 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[27-Jul-2022 20:35:59 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[20-Aug-2022 02:23:41 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[20-Aug-2022 20:34:20 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[21-Aug-2022 15:37:36 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[02-Sep-2022 19:49:07 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12
+[16-May-2023 18:53:49 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/walkforg/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/walkforg/public_html/wp-includes/template-canvas.php on line 12

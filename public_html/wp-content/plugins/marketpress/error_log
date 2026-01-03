@@ -1,0 +1,6 @@
+[27-Dec-2022 07:39:36 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to undefined function is_multisite() in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php:362
+Stack trace:
+#0 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php(53): MarketPress->init_vars()
+#1 /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php(6472): MarketPress->__construct()
+#2 {main}
+  thrown in /home/walkforg/public_html/wp-content/plugins/marketpress/marketpress.php on line 362

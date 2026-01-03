@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>1000211 - MT KURING-GAI.KML</name>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fffffff</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>1000211 - MT KURING-GAI.KML</name>
+		
+		<Placemark>
+			<name>1000211 - MT KURING-GAI</name>
+			<description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>CD_Code</td><td>1250204</td></tr>
+    <tr><td>Area_sqkms</td><td>72.4952</td></tr>
+    <tr><td>Persons</td><td>53</td></tr>
+    <tr><td>Postcode</td><td>2081</td></tr>
+    <tr><td>_2006_4cast</td><td>83</td></tr>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<LineString>
+				<coordinates>
+151.168086,-33.585765,0 151.168775,-33.58586,0 151.169038,-33.585897,0 151.169709,-33.585991,0 151.169931,-33.586022,0 151.170089,-33.586044,0 151.170048,-33.586223,0 151.170245,-33.586251,0 151.170724,-33.586318,0 151.171172,-33.58638,0 151.172161,-33.586518,0 151.171529,-33.587204,0 151.171918,-33.587455,0 151.172067,-33.587548,0 151.172076,-33.58752,0 151.173989,-33.586168,0 151.174414,-33.58614,0 151.174621,-33.586126,0 151.174913,-33.586314,0 151.174699,-33.586494,0 151.174552,-33.586618,0 151.174168,-33.587002,0 151.173867,-33.587469,0 151.173495,-33.588193,0 151.173072,-33.589038,0 151.172457,-33.589768,0 151.172034,-33.590575,0 151.171726,-33.591421,0 151.171726,-33.592266,0 151.171771,-33.593262,0 151.171803,-33.593957,0 151.17188,-33.595494,0 151.171841,-33.596378,0 151.171457,-33.597146,0 151.170957,-33.597646,0 151.17038,-33.597991,0 151.170078,-33.598029,0 151.169805,-33.597523,0 151.169617,-33.597205,0 151.169376,-33.596887,0 151.169239,-33.596714,0 151.169101,-33.596511,0 151.169068,-33.596425,0 151.168658,-33.595761,0 151.168451,-33.595472,0 151.168333,-33.595227,0 151.167798,-33.594605,0 151.167662,-33.594375,0 151.167628,-33.594303,0 151.167612,-33.594216,0 151.167459,-33.593914,0 151.167321,-33.593754,0 151.167253,-33.593722,0 151.167199,-33.593695,0 151.16692,-33.593521,0 151.166818,-33.593446,0 151.166659,-33.593331,0 151.166573,-33.593244,0 151.166191,-33.592953,0 151.165807,-33.592762,0 151.165808,-33.592733,0 151.165632,-33.592702,0 151.165248,-33.592526,0 151.164303,-33.592199,0 151.16411,-33.592153,0 151.163364,-33.591852,0 151.165144,-33.588966,0 151.167201,-33.585518,0 151.16789,-33.585614,0 151.167867,-33.585738,0 151.168086,-33.585765,0 </coordinates>
+			</LineString>
+		</Placemark>
+	</Folder>
+		<LookAt>
+		  <longitude>151.169615</longitude>
+		  <latitude>-33.591068</latitude>
+		  <range>5000</range>
+		</LookAt></Document>
+</kml>

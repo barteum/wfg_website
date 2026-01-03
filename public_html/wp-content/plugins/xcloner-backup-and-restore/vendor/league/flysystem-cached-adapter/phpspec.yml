@@ -1,0 +1,6 @@
+---
+suites:
+      cached_adapter_suite:
+        namespace: XCloner\League\Flysystem\Cached
+        psr4_prefix: XCloner\League\Flysystem\Cached
+formatter.name: pretty

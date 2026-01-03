@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Messenger – Walk For God</title>
+    <meta name="description" content="Become a Walk for God Messenger and spread the Good News to every home in your local area.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --black-light: #1a1a1a;
+            --gold: #d4af37;
+            --gold-light: #f0d77c;
+            --purple: #6b4c9a;
+            --purple-dark: #4a3470;
+            --purple-light: #9d7fd1;
+            --heavenly-blue: #4a90d9;
+            --heavenly-blue-light: #7ab3eb;
+            --cyan: #2bb8b8;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray: #888888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            text-wrap: balance;
+        }
+
+        p {
+            text-wrap: pretty;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10,10,10,0.98);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .login-link {
+            color: var(--gold) !important;
+            font-weight: 700;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            transition: height 0.3s ease;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .logo-text small {
+            display: block;
+            font-size: 0.7rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: var(--cyan);
+            -webkit-text-fill-color: var(--cyan);
+        }
+
+        /* Hamburger Menu - 3x larger */
+        .menu-toggle {
+            cursor: pointer;
+            z-index: 1002;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px;
+            background: transparent;
+            border: none;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 45px;
+            height: 4px;
+            background: var(--gold);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span {
+            display: none;
+        }
+
+        /* Prominent X Close Button */
+        .menu-close {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1003;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            background: transparent;
+            border: none;
+        }
+
+        .menu-close.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu-close svg {
+            width: 50px;
+            height: 50px;
+            stroke: var(--gold);
+            stroke-width: 2;
+            transition: all 0.3s ease;
+        }
+
+        .menu-close:hover svg {
+            stroke: var(--gold-light);
+            transform: rotate(90deg);
+        }
+
+        /* Fullscreen Menu */
+        .fullscreen-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, var(--black) 0%, var(--purple-dark) 50%, var(--black) 100%);
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .fullscreen-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu-content {
+            text-align: center;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.5s ease 0.2s;
+        }
+
+        .fullscreen-menu.active .menu-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .menu-nav {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .menu-nav li {
+            overflow: hidden;
+        }
+
+        /* More dynamic menu text - uses smaller vw value to prevent overflow on all screen sizes */
+        .menu-nav a {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.2rem, 3vw, 2.5rem);
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.25rem 0;
+            white-space: nowrap;
+        }
+
+        .menu-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .menu-nav a:hover {
+            color: var(--gold);
+        }
+
+        .menu-nav a:hover::after {
+            width: 100%;
+        }
+
+        .menu-social {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .menu-social a {
+            color: var(--gray);
+            transition: color 0.3s ease;
+        }
+
+        .menu-social a:hover {
+            color: var(--gold);
+        }
+
+        /* Smaller social icons for better fit */
+        .menu-social svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 10rem 2rem 4rem;
+            /* Added messenger-header.png with a dark gradient overlay for text readability */
+            background: linear-gradient(135deg, rgba(10,10,10,0.8) 0%, rgba(74,52,112,0.7) 50%, rgba(10,10,10,0.9) 100%), url('images/messenger-header.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(107, 76, 154, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(74, 144, 217, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-hero .verse {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-style: italic;
+            color: var(--white);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 5rem 2rem;
+            background: var(--black);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .content-block {
+            margin-bottom: 4rem;
+        }
+
+        .content-block h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .content-block h3 {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .content-block h4 {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 1rem;
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+
+        .content-block p {
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
+            color: rgba(255,255,255,0.85);
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-block ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .content-block ul li {
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
+            color: rgba(255,255,255,0.85);
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .content-block ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1.1rem;
+            width: 10px;
+            height: 10px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        .content-block ul li strong {
+            color: var(--gold-light);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(107, 76, 154, 0.2) 0%, rgba(74, 144, 217, 0.15) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--gold);
+        }
+
+        /* Info Cards */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, rgba(107, 76, 154, 0.15) 0%, rgba(26, 26, 26, 0.9) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+        }
+
+        .info-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            margin-bottom: 1rem;
+            color: var(--gold-light);
+        }
+
+        .info-card p {
+            color: rgba(255,255,255,0.75);
+            line-height: 1.7;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
+            margin-bottom: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(74, 52, 112, 0.7) 0%, rgba(10, 10, 10, 0.75) 100%), url('images/secure-area-map.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-box {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: rgba(0,0,0,0.4);
+            border: 2px solid var(--gold);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-box h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .cta-box p {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--black);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.5);
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .logo img {
+                height: 50px;
+            }
+
+            /* Responsive menu text for tablets */
+            .menu-nav a {
+                font-size: clamp(1.1rem, 4vw, 2rem);
+            }
+
+            .menu-nav {
+                gap: 0.4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0.75rem 1.5rem;
+            }
+
+            .logo img {
+                height: 45px;
+            }
+
+            .logo-text {
+                font-size: 1rem;
+            }
+
+            .logo-text small {
+                font-size: 0.6rem;
+            }
+
+            .menu-toggle span {
+                width: 35px;
+                height: 3px;
+            }
+
+            .menu-toggle {
+                gap: 8px;
+                padding: 10px;
+            }
+
+            .menu-close {
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .menu-close svg {
+                width: 40px;
+                height: 40px;
+            }
+
+            /* Smaller menu text on mobile tablets */
+            .menu-nav a {
+                font-size: clamp(1rem, 5vw, 1.75rem);
+            }
+
+            .menu-nav {
+                gap: 0.3rem;
+            }
+
+            .menu-social {
+                margin-top: 1rem;
+                gap: 1rem;
+            }
+
+            .menu-social svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .page-hero {
+                padding: 8rem 1.5rem 3rem;
+            }
+
+            .content-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .cta-box {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                height: 40px;
+            }
+
+            .logo-text {
+                font-size: 0.9rem;
+            }
+
+            .menu-toggle span {
+                width: 30px;
+            }
+
+            /* Smallest menu text for phones */
+            .menu-nav a {
+                font-size: clamp(0.9rem, 6vw, 1.5rem);
+            }
+
+            .menu-nav {
+                gap: 0.2rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 45px;
+            height: 45px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border: none;
+        }
+
+        .scroll-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-top-btn:hover {
+            transform: translateY(-3px);
+            background: var(--gold-light);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+        }
+
+        .scroll-top-btn svg {
+            width: 24px;
+            height: 24px;
+            color: var(--black);
+            stroke-width: 2.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo-wfg.png" alt="Walk For God Logo">
+            <span class="logo-text">WALK FOR GOD<small>Deliver the Good News</small></span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Prominent X Close Button -->
+    <button class="menu-close" id="menuClose" aria-label="Close Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
+    <!-- Fullscreen Menu -->
+    <nav class="fullscreen-menu" id="fullscreenMenu">
+        <div class="menu-content">
+            <ul class="menu-nav">
+                <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+                <li><a href="minister.html" onclick="closeMenu()">Ministry</a></li>
+                <li><a href="about.html" onclick="closeMenu()">About</a></li>
+                <li><a href="https://heyzine.com/flip-book/05d0414636.html" target="_blank" onclick="closeMenu()">Charter</a></li>
+                <li><a href="contact.html" onclick="closeMenu()">Contact Us</a></li>
+                <li><a href="/wp-login.php" class="login-link" onclick="closeMenu()">Member Login</a></li>
+            </ul>
+            <div class="menu-social">
+                <a href="https://www.facebook.com/walkforgod.org" target="_blank" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                </a>
+                <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a href="https://youtube.com/" target="_blank" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-content fade-in">
+            <h1>Be God's Messenger</h1>
+            <p class="verse">"And the Good News about the Kingdom will be preached throughout the whole world so that all nations will hear it." Matthew 24:14</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-block fade-in">
+                <p style="font-size: clamp(1.1rem, 2vw, 1.25rem); color: var(--gold-light);">Walk For God (WFG) exists to make this ancient prophecy a modern reality. A Walk For God Messenger is a consecrated volunteer who executes the Great Commission of our Lord Jesus — one home at a time.</p>
+                <p>This is a personal contribution to the service of God, a ministry dedicated to ensuring that the Word reaches every single household within a defined route of approximately 1,000 homes every single week.</p>
+                <p>Messengers are motivated by a deep love for Scripture and empowered by the Holy Spirit to share the core message of the Gospel. This vital ministry requires an estimated time commitment of <strong style="color: var(--gold);">3 to 6 hours per week</strong> depending on your area terrain.</p>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>The Benefits to You</h2>
+                <ul>
+                    <li><strong>Walk for Me-God Time</strong> daily and grow your faith</li>
+                    <li><strong>Walk for Health</strong> — best exercise on the planet</li>
+                    <li><strong>Walk for Purpose</strong> to minister the Good News</li>
+                    <li><strong>Walk for Souls</strong> and community in need</li>
+                    <li><strong>Walk for God</strong> and do His Will</li>
+                </ul>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Why the Letterbox?</h2>
+                <p>The founders of WFG, leaders in the commercial logistics sector, understand the untapped power of Direct Mail for the Church.</p>
+                <p>Print and Letterbox Media consistently rank as the consumer's <strong style="color: var(--gold);">most preferred</strong> and <strong style="color: var(--gold);">most accepted</strong> advertising medium, outperforming TV, radio, newspapers, and even online marketing.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>Commercial Dominance</h4>
+                        <p>Large corporations and SMEs utilize this consistent, aggressive medium to achieve saturation-level penetration into every home, every week, without fail.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>The Church's Gap</h4>
+                        <p>Due to prohibitive costs, most Christian organizations lack the resources for a consistent, high-frequency Direct Mail campaign, preventing them from leveraging the medium's full potential.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box fade-in">
+                <h3>WFG: Transforming the Landscape</h3>
+                <p>We are fundamentally changing this dynamic. By eliminating the logistics administration and print subsidy barrier and streamlining operations for unprecedented growth, WFG empowers the Church Universal to penetrate every single home, every single week, with the Christian message.</p>
+                <p>Every home in your local area, city, and country possesses a letterbox — a neutral, physical gateway. Print media is retainable, powerful, and visible. It offers a tangible copy of God's Word that can be seen, read many times over, and easily shared within the family and community.</p>
+                <p>While person-to-person evangelism is vital, this method guarantees consistent penetration into every single home in your community with the retainable, printed Word of God.</p>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Where Shall I Choose to Serve?</h2>
+                <p>For logistical efficiency and personal stewardship, we encourage you to choose a postal pocket of 1,000 homes that is <strong style="color: var(--gold);">easily accessible to your residence.</strong> This proximity minimizes your travel costs, saves you time, and integrates your ministry seamlessly into your personal walking or exercise routine.</p>
+                <p><strong>Serve Your Community:</strong> You can check the availability of specific zones by clicking on the Zones Tab in the top menu bar when Memberships start.</p>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>How Do I Join the Ministry?</h2>
+                <p>Walk For God is a <strong style="color: var(--gold);">Not-for-Profit Association of Members.</strong> To join this powerful, subsidised ministry, please complete the following steps:</p>
+                
+                <div class="highlight-box">
+                    <h4>1. Download the Walk For God App</h4>
+                    <p>(When Available)</p>
+                    
+                    <h4>2. Pay the Required Annual Membership Fee</h4>
+                    <p>$9.95 per Month = $119.40 per Year</p>
+                    
+                    <h4>3. Purchase Printed Messages (Optional)</h4>
+                    <p>At the highly subsidised rate of ~$25 per 1,000 leaflets, your estimated annual fee for weekly printing (48 drops per year) would be ~$1,200. This payment covers the non-commercial subsidised cost of printing, ensuring every dollar is used to materialise the Word of God for your route.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-box fade-in">
+            <h2>Secure Your Area Today</h2>
+            <p>The best time to join is now. High-value local area routes will be claimed quickly. Your immediate commitment will secure your preferred zone and immediately contribute to the Mission and Vision of global Gospel distribution.</p>
+            <a href="contact.html" class="btn btn-primary">
+                Join as a Messenger
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Walk For God. All Rights Reserved. Christians Spreading the Good News.</p>
+    </footer>
+
+    <!-- Top of Page Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7 7 7M5 19l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script>
+        // Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const fullscreenMenu = document.getElementById('fullscreenMenu');
+        
+        function openMenu() {
+            menuToggle.classList.add('active');
+            menuClose.classList.add('active');
+            fullscreenMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            menuClose.classList.remove('active');
+            fullscreenMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+
+        // Fade in animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Scroll to Top Logic
+        window.addEventListener('scroll', () => {
+             const scrollTopBtn = document.getElementById('scrollTopBtn');
+             if (window.scrollY > 300) {
+                 scrollTopBtn.classList.add('show');
+             } else {
+                 scrollTopBtn.classList.remove('show');
+             }
+        });
+
+        document.getElementById('scrollTopBtn').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

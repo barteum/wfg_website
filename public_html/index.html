@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk For God – Christians Spreading the Good News</title>
+    <meta name="description" content="Walking The Message of God's Kingdom into every single home in The World. Join us as a Walk for God Messenger.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --black-light: #1a1a1a;
+            --gold: #d4af37;
+            --gold-light: #f0d77c;
+            --purple: #6b4c9a;
+            --purple-dark: #4a3470;
+            --purple-light: #9d7fd1;
+            --heavenly-blue: #4a90d9;
+            --heavenly-blue-light: #7ab3eb;
+            --cyan: #2bb8b8;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray: #888888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            text-wrap: balance;
+        }
+
+        p {
+            text-wrap: pretty;
+        }
+
+        /* Generic link styling for text content */
+        p a {
+            color: var(--cyan);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        p a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(10,10,10,0.98);
+            padding: 0.75rem 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        /* New logo styling with responsive sizing */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .login-link {
+            color: var(--gold) !important;
+            font-weight: 700;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            transition: height 0.3s ease;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .logo-text small {
+            display: block;
+            font-size: 0.7rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: var(--cyan);
+            -webkit-text-fill-color: var(--cyan);
+        }
+
+        /* Hamburger Menu - 3x larger */
+        .menu-toggle {
+            cursor: pointer;
+            z-index: 1002;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px;
+            background: transparent;
+            border: none;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 45px;
+            height: 4px;
+            background: var(--gold);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span {
+            display: none;
+        }
+
+        /* Prominent X Close Button */
+        .menu-close {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1003;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            background: transparent;
+            border: none;
+        }
+
+        .menu-close.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu-close svg {
+            width: 50px;
+            height: 50px;
+            stroke: var(--gold);
+            stroke-width: 2;
+            transition: all 0.3s ease;
+        }
+
+        .menu-close:hover svg {
+            stroke: var(--gold-light);
+            transform: rotate(90deg);
+        }
+
+        /* Fullscreen Menu */
+        .fullscreen-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, var(--black) 0%, var(--purple-dark) 50%, var(--black) 100%);
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .fullscreen-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu-content {
+            text-align: center;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.5s ease 0.2s;
+        }
+
+        .fullscreen-menu.active .menu-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .menu-nav {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .menu-nav li {
+            overflow: hidden;
+        }
+
+        /* More dynamic menu text - uses smaller vw value and vh to prevent overflow */
+        .menu-nav a {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.2rem, 3vw, 2.5rem);
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.25rem 0;
+            white-space: nowrap;
+        }
+
+        .menu-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .menu-nav a:hover {
+            color: var(--gold);
+        }
+
+        .menu-nav a:hover::after {
+            width: 100%;
+        }
+
+        .menu-social {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .menu-social a {
+            color: var(--gray);
+            transition: color 0.3s ease;
+        }
+
+        .menu-social a:hover {
+            color: var(--gold);
+        }
+
+        /* Smaller social icons for better fit */
+        .menu-social svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 8rem 2rem 2rem;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        /* ... (keeping .hero::before) ... */
+
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            transform-style: preserve-3d;
+            transition: transform 0.1s ease-out;
+        }
+
+        .particle {
+            position: absolute;
+            width: 30px;
+            height: 45px;
+            background-image: url('images/footprint_icon.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.6;
+            animation: float 12s infinite linear;
+            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+        }
+
+        @keyframes float {
+            0% { 
+                transform: translateY(110vh) rotate(0deg) scale(0.5); 
+                opacity: 0; 
+            }
+            10% { 
+                opacity: 0.6; 
+            }
+            90% { 
+                opacity: 0.6; 
+            }
+            100% { 
+                transform: translateY(-20vh) rotate(var(--rotation)) scale(1); 
+                opacity: 0; 
+            }
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(107, 76, 154, 0.2));
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: clamp(0.75rem, 2vw, 0.9rem);
+            color: var(--gold-light);
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-badge svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        /* Fixed hero title - using nowrap on key phrases to prevent orphaned words */
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            line-height: 1.25; /* Increased slightly to prevent descender clipping */
+            padding-bottom: 0.2rem; /* Added padding for descenders */
+            margin-bottom: 1.3rem; /* Reduced margin to compensate for padding */
+            background: linear-gradient(135deg, var(--white) 0%, var(--gold-light) 50%, var(--white) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            white-space: nowrap;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: var(--gray-light);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--black);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .scroll-indicator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            font-size: 0.8rem;
+            animation: bounce 2s infinite;
+            margin-top: 2rem;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: clamp(1rem, 1.5vw, 0.85rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--white);
+        }
+
+        .section-title span {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Why Section */
+        .why-section {
+            background: linear-gradient(180deg, var(--black) 0%, var(--black-light) 100%);
+        }
+
+        .why-intro {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .why-intro p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(255,255,255,0.85);
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .why-intro p:first-child {
+            font-style: italic;
+            color: var(--heavenly-blue-light);
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, rgba(107, 76, 154, 0.15) 0%, rgba(26, 26, 26, 0.9) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.15);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-icon svg {
+            width: 30px;
+            height: 30px;
+            color: var(--black);
+        }
+
+        .benefit-card h3 {
+            font-size: clamp(1.2rem, 2vw, 1.4rem);
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .benefit-card p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
+        }
+
+        /* Mission Section */
+        .mission-section {
+            background: linear-gradient(135deg, var(--purple-dark) 0%, var(--black) 50%, var(--purple-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 30% 20%, rgba(74, 144, 217, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mission-card {
+            text-align: center;
+            padding: 2.5rem;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .mission-card h3 {
+            font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .mission-card p {
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
+            color: rgba(255,255,255,0.85);
+            line-height: 1.9;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--black);
+            text-align: center;
+        }
+
+        .cta-box {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+            background: linear-gradient(135deg, rgba(107, 76, 154, 0.2) 0%, rgba(74, 144, 217, 0.1) 100%);
+            border: 2px solid var(--gold);
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.3; }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .cta-box p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: var(--black-light);
+            padding: 4rem 2rem;
+        }
+
+        .newsletter-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-container h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .newsletter-container p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            min-width: 200px;
+            padding: 1rem 1.5rem;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50px;
+            background: rgba(0,0,0,0.5);
+            color: var(--white);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .newsletter-form input::placeholder {
+            color: var(--gray);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-brand img {
+            height: 60px;
+            width: 60px;
+            object-fit: contain;
+            aspect-ratio: 1 / 1;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+        }
+
+        .footer-links h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--black);
+        }
+
+        .footer-social svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.4);
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .logo img {
+                height: 50px;
+            }
+            
+            .menu-toggle span {
+                width: 40px;
+                height: 3px;
+                gap: 8px;
+            }
+
+            /* Responsive menu text for tablets */
+            .menu-nav a {
+                font-size: clamp(1.1rem, 4vw, 2rem);
+            }
+
+            .menu-nav {
+                gap: 0.4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0.75rem 1.5rem;
+            }
+
+            .logo img {
+                height: 45px;
+            }
+
+            .logo-text {
+                font-size: 1rem;
+            }
+
+            .logo-text small {
+                font-size: 0.6rem;
+            }
+
+            .menu-toggle span {
+                width: 35px;
+                height: 3px;
+            }
+
+            .menu-toggle {
+                gap: 8px;
+                padding: 10px;
+            }
+
+            .menu-close {
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .menu-close svg {
+                width: 40px;
+                height: 40px;
+            }
+
+            /* Smaller menu text on mobile tablets */
+            .menu-nav a {
+                font-size: clamp(1rem, 5vw, 1.75rem);
+            }
+
+            .menu-nav {
+                gap: 0.3rem;
+            }
+
+            .menu-social {
+                margin-top: 1rem;
+                gap: 1rem;
+            }
+
+            .menu-social svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .hero {
+                padding: 7rem 1.5rem 3rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .cta-box {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        .scroll-top-btn svg {
+            width: 24px;
+            height: 24px;
+            color: var(--black);
+            stroke-width: 2.5;
+        }
+
+        /* Form Status Messages */
+        .form-status {
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .form-status.success {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+            border: 1px solid #4CAF50;
+        }
+        .form-status.error {
+            background-color: rgba(244, 67, 54, 0.1);
+            color: #F44336;
+            border: 1px solid #F44336;
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                height: 40px;
+            }
+
+            .logo-text {
+                font-size: 0.9rem;
+            }
+
+            .menu-toggle span {
+                width: 30px;
+            }
+
+            /* Smallest menu text for phones */
+            .menu-nav a {
+                font-size: clamp(0.9rem, 6vw, 1.5rem);
+            }
+
+            .menu-nav {
+                gap: 0.2rem;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .benefit-card {
+                padding: 1.25rem;
+            }
+            .benefit-card {
+                padding: 1.25rem;
+            }
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 45px;
+            height: 45px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border: none;
+        }
+
+        .scroll-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-top-btn:hover {
+            transform: translateY(-3px);
+            background: var(--gold-light);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+        }
+
+        .scroll-top-btn svg {
+            width: 24px;
+            height: 24px;
+            color: var(--black);
+            stroke-width: 2.5;
+        }
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <!-- Updated logo to new cyan/gold globe design -->
+        <a href="index.html" class="logo">
+            <img src="images/logo-wfg.png" alt="Walk For God Logo">
+            <span class="logo-text">WALK FOR GOD<small>Deliver the Good News</small></span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Prominent X Close Button -->
+    <button class="menu-close" id="menuClose" aria-label="Close Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
+    <!-- Fullscreen Menu -->
+    <nav class="fullscreen-menu" id="fullscreenMenu">
+        <div class="menu-content">
+            <ul class="menu-nav">
+                <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+                <li><a href="minister.html" onclick="closeMenu()">Ministry</a></li>
+                <li><a href="about.html" onclick="closeMenu()">About</a></li>
+                <li><a href="https://heyzine.com/flip-book/05d0414636.html" target="_blank" onclick="closeMenu()">Charter</a></li>
+                <li><a href="contact.html" onclick="closeMenu()">Contact Us</a></li>
+                <li><a href="/wp-login.php" class="login-link" onclick="closeMenu()">Member Login</a></li>
+            </ul>
+            <div class="menu-social">
+                <a href="https://www.facebook.com/walkforgod.org" target="_blank" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                </a>
+                <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a href="https://youtube.com/" target="_blank" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <!-- Title first -->
+            <h1>Walking The Message of <span class="highlight">God's Kingdom</span> into Every Single Home—in The World</h1>
+            <!-- Badge below title -->
+            <div class="hero-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <span>Spreading God's Kingdom Worldwide</span>
+            </div>
+            <!-- Description -->
+            <p class="hero-subtitle">We're empowering disciples of Christ globally to "preach with their feet", bringing the freedom and healing of God's Word into the hearts of every home.</p>
+            <div class="hero-cta">
+                <a href="minister.html" class="btn btn-primary">Become a Messenger</a>
+                <a href="about.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </div>
+    </section>
+
+    <!-- Why Walk for God Section -->
+    <section class="why-section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label"> - The Great Commission -</span>
+                <h2 class="section-title">Why <span>Walk for God?</span></h2>
+            </div>
+            <div class="why-intro">
+                <p>"Go into all the world and preach the gospel to all creation." — Mark 16:15</p>
+                <p>All spirit-anointed Christians are ministers of our Lord Jesus Christ. The followers of our Lord Jesus are spoken of as 'ministers of the good news,' as Paul was (Col 1:23); they are also "ministers of a new covenant," being in a covenant relationship with God; with Christ as our Mediator.</p>
+                <p>Walk for God is a powerful ministry to deliver God's printed word around the world — at little or no cost to the disciples of our Lord Jesus and his Church. Imagine being able to touch 1,000 homes in your area every week with a printed and digital message from Jesus, that can bring People into the light and love that our Lord and Saviour offers from as little as buying 1,000 Colour Pamphlets for $25. A small contribution to advance God's Kingdom on earth.</p>
+                <p>Becoming a Walk for God 'Local Area Messenger' (LAM) has the added benefit of giving you some healthy <strong>Me-and-God</strong> time, walking with God's Spirit, listening to the Bible or your favourite sermons. Volunteer some time to God and become a "Walk for God Messenger" to spread the message of the "Good News" to a pocket of 1,000 homes around your local area.</p>
+                <p>If you have a love for God's Word and would like to spread the good news greater and farther than ever before then join the walking revolution and consider becoming a Walk for God Messenger.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <h3>Deliver Printed Messages</h3>
+                    <p>Deliver a printed message of the good news every week to a small pocket of 1,000 homes in your local area.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                    </div>
+                    <h3>Promote Your Church</h3>
+                    <p>Promote your church ministry at no cost and receive free printed material of your message of choice.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                    <h3>No Face-to-Face Required</h3>
+                    <p>No face-to-face ministry is required with printed material. Penetrate 1,000 homes every week averaging one hour of walking a day.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                    <h3>Walk for Health</h3>
+                    <p>Enjoy the health benefits of walking with the Spirit daily while serving God's purpose in your community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Pledge Section -->
+    <section class="mission-section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Commitment</span>
+                <h2 class="section-title">Mission & <span>Pledge</span></h2>
+            </div>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <h3>Our Mission</h3>
+                    <p>To Print and Deliver God's Word every week to every home in your local area, utilising the powerful Direct Mail medium. For Churches — this mission is executed by spirit-filled Walk For God Messengers of the Good News at no distribution cost to your church or organisation.</p>
+                </div>
+                <div class="mission-card">
+                    <h3>Members Pledge</h3>
+                    <p>Walk For God Messengers pledge to deliver all approved Christian material within their designated territory, on time and without fail. They further commit to supplying proof of delivery through the use of the <a href="https://mailpost.com.au" target="_blank">MailPost</a> GPS Tracking and Audit system, providing peace of mind and guaranteeing that all printed material has been successfully delivered.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section fade-in">
+        <div class="cta-box">
+            <div class="cta-content">
+                <h2>Join the Walking Revolution</h2>
+                <p>Walk for God (WFG) is on a Global Mission to deliver Christian printed messages ("brochures") to every home that has a WFG Local Area Messenger, every week, at little or no cost to the followers of Jesus. Join us to spread the message of the Good News to homes in your Suburb.</p>
+                <a href="minister.html" class="btn btn-primary">
+                    Become a Messenger
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section fade-in">
+        <div class="newsletter-container">
+            <h3>Subscribe Now!</h3>
+            <p>Sign Up for our Newsletter & Special Offers</p>
+            <div id="newsletterStatus" class="form-status" style="margin-bottom: 1rem; display: none;"></div>
+            <form class="newsletter-form" id="newsletterForm" action="subscribe_newsletter.php" method="post">
+                <input type="text" id="newsletterName" name="name" placeholder="Your Name" required>
+                <input type="email" id="newsletterEmail" name="email" placeholder="Your Email" required>
+                <button type="submit" class="btn btn-primary" id="newsletterSubmitBtn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="images/logo-wfg.png" alt="Walk For God">
+                <p>Christians spreading the Good News to every home, one step at a time. Join us in fulfilling the Great Commission.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/walkforgod.org" target="_blank" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/" target="_blank" aria-label="YouTube">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="minister.html">Ministry</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="https://heyzine.com/flip-book/05d0414636.html" target="_blank">Charter</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Stay Connected</h4>
+                <ul>
+                    <li><a href="contact.html">Get In Touch</a></li>
+                    <li><a href="minister.html">Become a Messenger</a></li>
+                    <li><a href="about.html">Our Mission</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Walk For God. All Rights Reserved. Christians Spreading the Good News.</p>
+        </div>
+    </footer>
+
+    <!-- Top of Page Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7 7 7M5 19l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script>
+        // Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const fullscreenMenu = document.getElementById('fullscreenMenu');
+        
+        function openMenu() {
+            menuToggle.classList.add('active');
+            menuClose.classList.add('active');
+            fullscreenMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            menuClose.classList.remove('active');
+            fullscreenMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+
+        // Fade in animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Scroll to Top Logic
+        window.addEventListener('scroll', () => {
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            const header = document.querySelector('header');
+            
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll to Top Logic (old, now handled in the main scroll listener)
+        document.getElementById('scrollTopBtn').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Footprint Animation & Interaction
+        const heroSection = document.querySelector('.hero');
+        const particlesContainer = document.querySelector('.hero-particles');
+
+        // Create Footprints
+        function createFootprints() {
+            const particleCount = 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random positioning
+                particle.style.left = Math.random() * 100 + '%';
+                
+                // Random animation delay
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                
+                // Random duration (slower to faster)
+                particle.style.animationDuration = (Math.random() * 5 + 10) + 's'; // 10-15s
+                
+                // Random ending rotation for the wiggle effect
+                const rotation = (Math.random() * 60 - 30) + 'deg';
+                particle.style.setProperty('--rotation', rotation);
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        createFootprints();
+
+        // 3D Mouse Movement Effect
+        heroSection.addEventListener('mousemove', (e) => {
+            const width = heroSection.offsetWidth;
+            const height = heroSection.offsetHeight;
+            
+            const xVal = (e.clientX / width - 0.5) * 20; // Max rotation X: 10deg
+            const yVal = (e.clientY / height - 0.5) * 20; // Max rotation Y: 10deg
+            
+            // Invert Y for natural feel, rotate container slightly
+            particlesContainer.style.transform = `rotateX(${-yVal}deg) rotateY(${xVal}deg)`;
+        });
+        
+        // Reset on mouse leave
+        heroSection.addEventListener('mouseleave', () => {
+             particlesContainer.style.transform = `rotateX(0deg) rotateY(0deg)`;
+        });
+
+        // Newsletter Form Submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        const newsletterStatus = document.getElementById('newsletterStatus');
+        const newsletterSubmitBtn = document.getElementById('newsletterSubmitBtn');
+
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                newsletterSubmitBtn.disabled = true;
+                const originalBtnText = newsletterSubmitBtn.innerHTML;
+                newsletterSubmitBtn.textContent = '...';
+
+                const formData = new FormData(newsletterForm);
+
+                fetch('subscribe_newsletter.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    newsletterStatus.style.display = 'block';
+                    if (data.status === 'success') {
+                        newsletterStatus.className = 'form-status success';
+                        newsletterStatus.textContent = data.message;
+                        newsletterForm.reset();
+                    } else {
+                        newsletterStatus.className = 'form-status error';
+                        newsletterStatus.textContent = data.message;
+                    }
+                })
+                .catch(error => {
+                    newsletterStatus.style.display = 'block';
+                    newsletterStatus.className = 'form-status error';
+                    newsletterStatus.textContent = 'Error. Try again later.';
+                    console.error('Error:', error);
+                })
+                .finally(() => {
+                    newsletterSubmitBtn.disabled = false;
+                    newsletterSubmitBtn.innerHTML = originalBtnText;
+                    
+                    setTimeout(() => {
+                        newsletterStatus.style.display = 'none';
+                    }, 5000);
+                });
+            });
+        }
+
+
+    </script>
+</body>
+</html>

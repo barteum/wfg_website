@@ -1,0 +1,40 @@
+<?php
+
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* TiAction File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright (c) Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @link      https://graph.microsoft.com
+*/
+namespace XCloner\Beta\Microsoft\Graph\Model;
+
+if (!defined('ABSPATH') && \PHP_SAPI !== 'cli') {
+    die;
+}
+use XCloner\Microsoft\Graph\Core\Enum;
+/**
+* TiAction class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright (c) Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @link      https://graph.microsoft.com
+*/
+class TiAction extends Enum
+{
+    /**
+     * The Enum TiAction
+     */
+    const UNKNOWN = "unknown";
+    const ALLOW = "allow";
+    const BLOCK = "block";
+    const ALERT = "alert";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+}

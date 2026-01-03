@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About – Walk For God</title>
+    <meta name="description" content="The Great Commission, One Step at a Time, One Home at a Time, One Local Area at a Time.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --black-light: #1a1a1a;
+            --gold: #d4af37;
+            --gold-light: #f0d77c;
+            --purple: #6b4c9a;
+            --purple-dark: #4a3470;
+            --purple-light: #9d7fd1;
+            --heavenly-blue: #4a90d9;
+            --heavenly-blue-light: #7ab3eb;
+            --cyan: #2bb8b8;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray: #888888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            text-wrap: balance;
+        }
+
+        p {
+            text-wrap: pretty;
+        }
+
+        /* Generic link styling for text content */
+        p a {
+            color: var(--cyan);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        p a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10,10,10,0.98);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .login-link {
+            color: var(--gold) !important;
+            font-weight: 700;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            transition: height 0.3s ease;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .logo-text small {
+            display: block;
+            font-size: 0.7rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: var(--cyan);
+            -webkit-text-fill-color: var(--cyan);
+        }
+
+        /* Hamburger Menu - 3x larger */
+        .menu-toggle {
+            cursor: pointer;
+            z-index: 1002;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px;
+            background: transparent;
+            border: none;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 45px;
+            height: 4px;
+            background: var(--gold);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span {
+            display: none;
+        }
+
+        /* Prominent X Close Button */
+        .menu-close {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1003;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            background: transparent;
+            border: none;
+        }
+
+        .menu-close.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu-close svg {
+            width: 50px;
+            height: 50px;
+            stroke: var(--gold);
+            stroke-width: 2;
+            transition: all 0.3s ease;
+        }
+
+        .menu-close:hover svg {
+            stroke: var(--gold-light);
+            transform: rotate(90deg);
+        }
+
+        /* Fullscreen Menu */
+        .fullscreen-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, var(--black) 0%, var(--purple-dark) 50%, var(--black) 100%);
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .fullscreen-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu-content {
+            text-align: center;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.5s ease 0.2s;
+        }
+
+        .fullscreen-menu.active .menu-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .menu-nav {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .menu-nav li {
+            overflow: hidden;
+        }
+
+        /* More dynamic menu text - uses smaller vw value to prevent overflow on all screen sizes */
+        .menu-nav a {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.2rem, 3vw, 2.5rem);
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.25rem 0;
+            white-space: nowrap;
+        }
+
+        .menu-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .menu-nav a:hover {
+            color: var(--gold);
+        }
+
+        .menu-nav a:hover::after {
+            width: 100%;
+        }
+
+        .menu-social {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .menu-social a {
+            color: var(--gray);
+            transition: color 0.3s ease;
+        }
+
+        .menu-social a:hover {
+            color: var(--gold);
+        }
+
+        /* Smaller social icons for better fit */
+        .menu-social svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 10rem 2rem 4rem;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.7) 0%, rgba(74, 52, 112, 0.7) 50%, rgba(10, 10, 10, 0.7) 100%), url('images/about_wfg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(107, 76, 154, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(74, 144, 217, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-hero .subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(255,255,255,0.8);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 5rem 2rem;
+            background: var(--black);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .content-block {
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content-block p {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: rgba(255,255,255,0.85);
+            line-height: 2;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-block p strong {
+            color: var(--gold);
+        }
+
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(74, 144, 217, 0.15) 0%, rgba(107, 76, 154, 0.15) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.15);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-icon svg {
+            width: 35px;
+            height: 35px;
+            color: var(--black);
+        }
+
+        .feature-card h3 {
+            font-size: clamp(1.2rem, 2vw, 1.4rem);
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .feature-card p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(74, 52, 112, 0.6) 0%, rgba(10, 10, 10, 0.6) 100%), url('images/Mission_bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-box {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: rgba(0,0,0,0.4);
+            border: 2px solid var(--gold);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-box h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .cta-box p {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--black);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.5);
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .logo img {
+                height: 50px;
+            }
+
+            /* Responsive menu text for tablets */
+            .menu-nav a {
+                font-size: clamp(1.1rem, 4vw, 2rem);
+            }
+
+            .menu-nav {
+                gap: 0.4rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0.75rem 1.5rem;
+            }
+
+            .logo img {
+                height: 45px;
+            }
+
+            .logo-text {
+                font-size: 1rem;
+            }
+
+            .logo-text small {
+                font-size: 0.6rem;
+            }
+
+            .menu-toggle span {
+                width: 35px;
+                height: 3px;
+            }
+
+            .menu-toggle {
+                gap: 8px;
+                padding: 10px;
+            }
+
+            .menu-close {
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .menu-close svg {
+                width: 40px;
+                height: 40px;
+            }
+
+            /* Smaller menu text on mobile tablets */
+            .menu-nav a {
+                font-size: clamp(1rem, 5vw, 1.75rem);
+            }
+
+            .menu-nav {
+                gap: 0.3rem;
+            }
+
+            .menu-social {
+                margin-top: 1rem;
+                gap: 1rem;
+            }
+
+            .menu-social svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .page-hero {
+                padding: 8rem 1.5rem 3rem;
+            }
+
+            .content-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                height: 40px;
+            }
+
+            .logo-text {
+                font-size: 0.9rem;
+            }
+
+            .menu-toggle span {
+                width: 30px;
+            }
+
+            /* Smallest menu text for phones */
+            .menu-nav a {
+                font-size: clamp(0.9rem, 6vw, 1.5rem);
+            }
+
+            .menu-nav {
+                gap: 0.2rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 45px;
+            height: 45px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border: none;
+        }
+
+        .scroll-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-top-btn:hover {
+            transform: translateY(-3px);
+            background: var(--gold-light);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+        }
+
+        .scroll-top-btn svg {
+            width: 24px;
+            height: 24px;
+            color: var(--black);
+            stroke-width: 2.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo-wfg.png" alt="Walk For God Logo">
+            <span class="logo-text">WALK FOR GOD<small>Deliver the Good News</small></span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Prominent X Close Button -->
+    <button class="menu-close" id="menuClose" aria-label="Close Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
+    <!-- Fullscreen Menu -->
+    <nav class="fullscreen-menu" id="fullscreenMenu">
+        <div class="menu-content">
+            <ul class="menu-nav">
+                <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+                <li><a href="minister.html" onclick="closeMenu()">Ministry</a></li>
+                <li><a href="about.html" onclick="closeMenu()">About</a></li>
+                <li><a href="https://heyzine.com/flip-book/05d0414636.html" target="_blank" onclick="closeMenu()">Charter</a></li>
+                <li><a href="contact.html" onclick="closeMenu()">Contact Us</a></li>
+                <li><a href="/wp-login.php" class="login-link" onclick="closeMenu()">Member Login</a></li>
+            </ul>
+            <div class="menu-social">
+                <a href="https://www.facebook.com/walkforgod.org" target="_blank" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                </a>
+                <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a href="https://youtube.com/" target="_blank" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-content fade-in">
+            <h1>About Walk For God</h1>
+            <p class="subtitle">The Great Commission, One Step at a Time,</br> One Home at a Time, One Local Area at a Time.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-block fade-in">
+                <p><strong>Walk For God (WFG)</strong> is a <strong>Special Purpose Non-Profit Organization</strong> established with the singular mission of delivering the core message of Jesus Christ directly to the letterbox at no cost to Christian individuals or churches.</p>
+                
+                <p>The structural backbone of WFG is the advanced Licensed Delivery and Tracking System developed by <strong>MailPost (<a href="https://mailpost.com.au" target="_blank">mailpost.com.au</a>)</strong>. MailPost is recognized as a leader in Australian letterbox distribution, upholding the <strong>highest Star Google rating</strong> for a logistics business in Australia and offering a <strong>99% distribution guarantee</strong> with full proprietary AI-Driven GPS Auditing for all commercial clients.</p>
+                
+                <p>The founders of MailPost are dedicated Christians who have experienced the undeniable power of the letterbox medium. They established WFG to provide a platform where followers of Jesus could utilise this highly effective medium on a consistent basis — <strong>subsidising the administration and print production</strong> to ensure the proclamation of God's Word reaches every home in their local communities.</p>
+            </div>
+
+            <div class="feature-grid fade-in">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                    </div>
+                    <h3>99% Guarantee</h3>
+                    <p>Industry-leading distribution guarantee with full GPS tracking and AI-driven auditing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    </div>
+                    <h3>GPS Tracking</h3>
+                    <p>Advanced proprietary tracking system ensuring every delivery is verified and documented.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                    </div>
+                    <h3>Christian Mission</h3>
+                    <p>Founded by dedicated Christians to spread God's Word through the most effective medium.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-box fade-in">
+            <h2>Join Our Mission</h2>
+            <p>Be part of a movement that's changing how the Gospel reaches every home. Together, we can ensure that every household has the opportunity to receive God's Word.</p>
+            <a href="minister.html" class="btn btn-primary">
+                Become a Messenger
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Walk For God. All Rights Reserved. Christians Spreading the Good News.</p>
+    </footer>
+
+    <!-- Top of Page Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7 7 7M5 19l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script>
+        // Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const fullscreenMenu = document.getElementById('fullscreenMenu');
+        
+        function openMenu() {
+            menuToggle.classList.add('active');
+            menuClose.classList.add('active');
+            fullscreenMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            menuClose.classList.remove('active');
+            fullscreenMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+
+        // Fade in animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => observer.observe(el));
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Scroll to Top Logic
+        window.addEventListener('scroll', () => {
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        document.getElementById('scrollTopBtn').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
