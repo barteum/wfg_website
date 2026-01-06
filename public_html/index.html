@@ -312,6 +312,12 @@
             background-attachment: fixed;
         }
 
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll;
+            }
+        }
+
         /* ... (keeping .hero::before) ... */
 
         .hero-particles {
@@ -335,7 +341,7 @@
             background-repeat: no-repeat;
             opacity: 0.6;
             animation: float 12s infinite linear;
-            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+            filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
         }
 
         @keyframes float {
@@ -1092,10 +1098,10 @@
         <div class="menu-content">
             <ul class="menu-nav">
                 <li><a href="index.html" onclick="closeMenu()">Home</a></li>
-                <li><a href="minister.html" onclick="closeMenu()">Ministry</a></li>
                 <li><a href="about.html" onclick="closeMenu()">About</a></li>
+                <li><a href="minister.html" onclick="closeMenu()">Be a Messenger</a></li>
                 <li><a href="https://heyzine.com/flip-book/05d0414636.html" target="_blank" onclick="closeMenu()">Charter</a></li>
-                <li><a href="contact.html" onclick="closeMenu()">Contact Us</a></li>
+                <li><a href="contact.html" onclick="closeMenu()">Contact Us</a></li>      
                 <li><a href="/wp-login.php" class="login-link" onclick="closeMenu()">Member Login</a></li>
             </ul>
             <div class="menu-social">
@@ -1141,11 +1147,11 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label"> —The Great Commission— </span>
-                <p style="color: var(--white); font-size: clamp(1rem, 1.8vw, 1.2rem); margin-top: 0.5rem; margin-bottom: 1.5rem; line-height: 1.4;">"Go into all the world and preach the gospel to all creation."<br> Mark 16:15</p>
+                <p style="color: var(--white); font-size: clamp(1rem, 1.8vw, 1.2rem); margin-top: 0.5rem; margin-bottom: 2rem; line-height: 1.4;"><i>"Go into all the world and preach the Good News to all creation."<br> <span style="font-size: 60%;">(Mark 16:15, WEB)</span></i></p>
                 <h2 class="section-title">Why <span>Walk for God?</span></h2>
             </div>
             <div class="why-intro">
-                <p>Walk for God is a powerful ministry dedicated to delivering God's word into homes around the world — at little or no cost to the Church. For a small donation of $25 for 1,000 Colour Pamphlets, you help reach the souls living in 1,000 homes every week with a message from Jesus. This strong touchpoint is connected to bigger digital messages that bring people into the light of our Saviour and advance God's Kingdom — a small contribution for so much good.</p>
+                <p>Walk for God is a powerful ministry dedicated to delivering God's word into homes around the world - at little or no cost to the Church. For a small donation of $25 for 1,000 Colour Pamphlets, you help reach the souls living in 1,000 homes every week with a message from Jesus. This strong touchpoint is connected to bigger digital messages that bring people into the light of our Saviour and advance God's Kingdom - a small contribution for so much good.</p>
                 <p>All spirit-anointed Christians are ministers of our Lord Jesus Christ. The followers of our Lord Jesus are spoken of as 'ministers of the good news,' as Paul was (Col 1:23); they are also "ministers of a new covenant," being in a covenant relationship with God; with Christ as our Mediator.</p>
                 <p>Becoming a Walk for God 'Local Area Messenger' (LAM) has the added benefit of giving you some healthy <strong>Me-and-God</strong> time, walking with God's Spirit, listening to the Bible or your favourite sermons. Volunteer some time to God and become a "Walk for God Messenger" to spread the message of the "Good News" to a pocket of 1,000 homes around your local area.</p>
                 <p>If you have a love for God's Word and would like to spread the good news greater and farther than ever before then join the walking revolution and consider becoming a Walk for God Messenger.</p>
@@ -1220,8 +1226,8 @@
     <!-- Newsletter Section -->
     <section class="newsletter-section fade-in">
         <div class="newsletter-container">
-            <h3>Subscribe Now!</h3>
-            <p>Sign Up for our Newsletter & Special Offers</p>
+            <h3>Sign Up for our Newsletter</h3>
+            <p>Get News First - on New Messengers, Areas & Brochures</p>
             <div id="newsletterStatus" class="form-status" style="margin-bottom: 1rem; display: none;"></div>
             <form class="newsletter-form" id="newsletterForm" action="subscribe_newsletter.php" method="post">
                 <input type="text" id="newsletterName" name="name" placeholder="Your Name" required>
@@ -1252,11 +1258,9 @@
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="minister.html">Ministry</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="https://heyzine.com/flip-book/05d0414636.html" target="_blank">Charter</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+		    <li><a href="bible.html">Bible Online</a></li>
                 </ul>
             </div>
             <div class="footer-links">
@@ -1264,12 +1268,11 @@
                 <ul>
                     <li><a href="contact.html">Get In Touch</a></li>
                     <li><a href="minister.html">Become a Messenger</a></li>
-                    <li><a href="about.html">Our Mission</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Walk For God. All Rights Reserved. Christians Spreading the Good News.</p>
+            <p>&copy; 2026 Walk For God. All Rights Reserved. Christians Spreading the Good News.</p>
         </div>
     </footer>
 
