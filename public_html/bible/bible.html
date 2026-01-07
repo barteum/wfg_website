@@ -1,0 +1,3814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walk For God – My Personal Bible</title>
+    <meta name="description" content="Search the World English Bible (WEB)." />
+    <link rel="icon" type="image/png" href="../images/logo-wfg.png" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --black-light: #1a1a1a;
+            --gold: #d4af37;
+            --gold-light: #f0d77c;
+            --purple: #6b4c9a;
+            --purple-dark: #4a3470;
+            --purple-light: #9d7fd1;
+            --heavenly-blue: #4a90d9;
+            --heavenly-blue-light: #7ab3eb;
+            --cyan: #2bb8b8;
+            --white: #ffffff;
+            --highlight: #ffff00;
+            --highlight-text: #000000;
+            --gray-light: #f5f5f5;
+            --gray: #888888;
+        }
+
+        .highlight {
+            background-color: var(--highlight);
+            color: var(--highlight-text);
+            font-weight: bold;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(10,10,10,0.98);
+            padding: 0.75rem 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            transition: height 0.3s ease;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .logo-text small {
+            display: block;
+            font-size: 0.7rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: var(--cyan);
+            -webkit-text-fill-color: var(--cyan);
+        }
+        
+        /* Menu removed */
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding-top: 100px;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 1.5rem; /* Reduced from 3rem to balance spacing */
+        }
+
+        .page-title h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            /* -webkit-text-fill-color: transparent; Removed to allow icon color */
+             color: var(--gold); /* Fallback */
+            background-clip: text;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .page-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* Search Box */
+        .search-container {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .search-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: nowrap;
+        }
+
+        .form-group {
+            min-width: 100px;
+        }
+
+        .form-group.book-group {
+            flex: 2;
+            min-width: 200px;
+        }
+        
+        .form-group.chapter-group, 
+        .form-group.verse-group {
+            flex: 0 0 210px;
+            min-width: 100px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: rgba(10, 10, 10, 0.6);
+            border: 1px solid var(--gold); /* Gold border by default */
+            border-radius: 10px;
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border: 2px solid var(--gold); /* Bolder border on focus */
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); /* Enhanced glow */
+            /* Removed background color change to keep transparent look clean */
+            padding: calc(1rem - 1px) calc(1.5rem - 1px);
+        }
+        
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d4af37' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1.5rem center;
+            background-size: 1.5rem; /* Big arrow */
+            padding-right: 4rem; /* Space for the arrow */
+        }
+        
+        /* Fix for IE/Edge default icon hiding if needed, although modern browsers use appearance:none */
+        select::-ms-expand {
+            display: none;
+        }
+        
+        select option {
+            background-color: var(--black);
+            color: var(--white);
+        }
+        select:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: rgba(255,255,255,0.05);
+        }
+
+        button {
+            padding: 1rem 3rem;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--black);
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Action Buttons */
+        .verse-action-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            cursor: pointer;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .verse-action-btn:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        /* Backup Modal Styles */
+        .backup-modal-body {
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .backup-info-box {
+            background: rgba(255,255,255,0.05); 
+            padding: 1.5rem; 
+            margin: 1.5rem 0; 
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: left;
+        }
+        
+        .backup-stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+        .backup-stat-label { color: var(--gold); opacity: 0.9; }
+        .backup-stat-value { font-family: 'Inter', sans-serif; }
+        
+        .backup-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .backup-btn-row {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .progress-container {
+            margin-top: 1.5rem;
+            display: none; /* Hidden by default */
+        }
+        
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gold);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress-track {
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold), #fff);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .status-message {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            min-height: 1.2em;
+        }
+        .status-success { color: #28a745; }
+        .status-error { color: #dc3545; }
+        .status-neutral { color: var(--gray); }
+
+        /* Icon styling for buttons */
+        .btn-icon-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        /* Ensure header matches Info Modal exactly */
+        .modal-header {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(10, 10, 10, 0) 100%);
+            padding: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+        }
+        
+        .modal-header h2 {
+            margin: 0;
+            color: var(--gold);
+            font-family: 'Playfair Display', serif; /* Match Theme */
+            font-size: 1.8rem;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: transparent;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+        }
+        .modal-close:hover { color: var(--gold); }
+        
+        .verse-editor-area {
+            width: 100%;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem; /* Larger for readability */
+            line-height: 1.6;
+            min-height: 150px;
+            margin-bottom: 1.5rem;
+            resize: vertical;
+        }
+        
+        .verse-editor-area:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(0,0,0,0.5);
+        }
+        
+        /* List Editor Styles */
+        .editor-section-title {
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            margin: 1.5rem 0 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .editor-list-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255,255,255,0.05);
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .editor-list-item .item-text {
+            flex: 1;
+            color: var(--white);
+            outline: none;
+            cursor: text;
+        }
+        .editor-list-item .item-text:focus {
+            background: rgba(0,0,0,0.2);
+        }
+        
+        .add-item-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px dashed rgba(255,255,255,0.3);
+            color: var(--gray);
+            padding: 0.5rem;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .add-item-btn:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.05);
+        }
+        
+        .delete-btn {
+            background: transparent;
+            color: #ff6b6b;
+            padding: 0.4rem;
+            border-radius: 4px;
+            cursor: pointer;
+            width: auto; /* override global button width */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .delete-btn:hover {
+            background: rgba(255, 107, 107, 0.1);
+            transform: none; /* Override global button hover */
+            box-shadow: none;
+        }
+
+        /* Enhanced Action Buttons in Footer */
+        /* Enforce Button Colors */
+        .btn-green-save {
+            background-color: #28a745 !important;
+            border-color: #28a745 !important;
+            color: white !important;
+        }
+        .btn-green-save:hover {
+            background-color: #218838 !important;
+        }
+        .btn-red-cancel {
+            background-color: #dc3545 !important;
+            border-color: #dc3545 !important;
+            color: white !important;
+        }
+        .btn-red-cancel:hover {
+            background-color: #c82333 !important;
+        }
+        
+        /* Notes Indicator Icon & Popover */
+        .notes-indicator {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0.5rem;
+            color: var(--gold);
+            cursor: pointer;
+            position: relative;
+            vertical-align: middle;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        .notes-indicator:hover { opacity: 1; }
+        
+        .notes-popover {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90vw;
+            max-width: 500px;
+            max-height: 60vh;
+            overflow-y: auto;
+            background: rgba(10, 10, 10, 0.95);
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            padding: 0;
+            z-index: 2000; /* Higher Z-index for modal feel */
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            display: none;
+            font-family: 'Inter', sans-serif;
+            text-align: left;
+        }
+
+        /* 
+           Mobile Media Query Removed 
+           (Base styles now cover both mobile and centered desktop) 
+        */
+        
+        @media (min-width: 769px) {
+            .notes-indicator:hover .notes-popover {
+                display: block;
+            }
+        }
+        
+        .notes-popover.show-mobile {
+            display: block;
+        }
+        
+        .popover-header {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 0.8rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .popover-title {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .popover-close {
+            background: transparent !important; 
+            border: none !important; 
+            outline: none !important;
+            box-shadow: none !important;
+            color: #aaa; 
+            cursor: pointer; 
+            padding: 0.2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+        .popover-close:hover {
+            color: var(--white);
+            background: rgba(255,255,255,0.1) !important;
+        }
+        .popover-close:focus {
+            outline: none !important;
+        }
+        .popover-close svg {
+            width: 18px;
+            height: 18px;
+            stroke-width: 2.5;
+        }
+        .popover-content {
+            padding: 1rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .popover-note-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 0.5rem;
+        }
+        .popover-note-item:last-child { border-bottom: none; margin-bottom: 0; }
+        .popover-note-text {
+            color: #ddd;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .popover-note-date {
+            color: #888;
+            font-size: 0.75rem;
+            margin-top: 0.3rem;
+            font-style: italic;
+        }
+
+        
+        /* Ensure specific Link Button styling */
+        a.btn-gold {
+            background: var(--gold);
+            color: #000;
+            font-weight: 700;
+        }
+        a.btn-gold:hover {
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+
+        /* Pagination & Results */
+        .pagination-bar {
+            display: none;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 0.5rem 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pagination-bar.bottom {
+            margin-top: 1rem;
+            margin-bottom: 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1rem;
+        }
+
+        .pagination-bar select {
+            width: auto;
+            padding: 0.3rem 0.5rem;
+            margin-left: 0.5rem;
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        
+        .icon-btn {
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.2s;
+        }
+
+        .icon-btn:disabled {
+            color: rgba(255,255,255,0.2);
+            cursor: default;
+        }
+
+        .icon-btn:hover:not(:disabled) {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .pagination-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .results-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .verse-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: all 0.3s;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .verse-card.context {
+            opacity: 0.6;
+            transform: scale(0.98);
+        }
+        .verse-card.context .verse-text {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        .verse-card.featured {
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid var(--gold);
+            border-left: 5px solid var(--gold);
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+        
+        .verse-card.featured .verse-text {
+            color: var(--white);
+            font-weight: 500;
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+        
+        .verse-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .nav-link {
+            color: var(--cyan);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .nav-link:hover {
+            color: var(--white);
+        }
+
+        .verse-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .verse-ref {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .verse-text {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .status-msg {
+            text-align: center;
+            color: var(--gray);
+            font-style: italic;
+            margin-top: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black-light);
+            padding: 3rem 2rem 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            margin-top: auto;
+            text-align: center;
+        }
+
+        .footer-content p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        .home-link {
+            color: var(--cyan);
+            text-decoration: none;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+        
+        /* Mobile / Tablet Responsiveness */
+        @media (max-width: 768px) {
+            .search-row {
+                flex-wrap: wrap;
+            }
+            .form-group.book-group, 
+            .form-group.chapter-group, 
+            .form-group.verse-group {
+                flex: 1 1 100%;
+            }
+            .search-container {
+                padding: 1.5rem;
+            }
+            h1 {
+                line-height: 1.3;
+            }
+            .pagination-bar {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .chapter-navigation {
+                flex-direction: row; 
+                gap: 1rem;
+            }
+            .chapter-nav-btn {
+                flex: 1;
+                justify-content: center;
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Chapter Mode Styles */
+        .chapter-mode-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            margin-bottom: 1.5rem;
+        }
+
+        .chapter-mode-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            margin-top: 1.5rem;
+        }
+
+        .chapter-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+        }
+
+        .chapter-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .nav-icon-btn {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+        }
+        
+        .nav-icon-btn:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .chapter-verse {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .verse-num-inline {
+            font-weight: bold;
+            color: var(--cyan);
+            margin-right: 0.5rem;
+            font-size: 0.9em;
+        }
+        
+        .footer-nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            cursor: pointer;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .footer-nav-btn:hover {
+            color: var(--gold);
+        }
+        
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .chapter-nav-btn {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .chapter-nav-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--gold);
+        }
+
+        /* Scroll to Top Button (from index.html) */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 45px;
+            height: 45px;
+            background: var(--gold);
+            padding: 0; /* Override global button padding */
+            background-image: none; /* Override global button gradient */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border: none;
+        }
+
+        .scroll-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-top-btn:hover {
+            transform: translateY(-3px);
+            background: var(--gold-light);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+        }
+
+        .scroll-top-btn svg {
+            width: 24px;
+            height: 24px;
+            color: var(--black);
+            stroke-width: 2.5;
+        }
+
+        /* Widget Container & Progress Bar */
+        .widget-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 0.5rem;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .auth-status {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--gray);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative; 
+            overflow: hidden;   
+        }
+        
+        .widget-progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            display: none;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--gold);
+            width: 0%;
+            transition: width 0.4s ease;
+            box-shadow: 0 0 10px var(--gold);
+        }
+
+        /* Search Layout Tweaks */
+        .text-search-row {
+            align-items: center;
+        }
+        
+        .exact-match-label {
+            display: flex; 
+            align-items: center; 
+            gap: 0.8rem; 
+            color: var(--gold); 
+            font-size: 1.1rem; 
+            cursor: pointer; 
+            white-space: nowrap;
+            min-width: fit-content;
+            
+            /* Professional styling */
+            border: 1px solid var(--gold);
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            background: rgba(212, 175, 55, 0.08); /* Light gold tint */
+            transition: all 0.3s ease;
+            font-family: 'Playfair Display', serif; /* Matching headers for elegance */
+        }
+        
+        .exact-match-label:hover {
+            background: rgba(212, 175, 55, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+        
+        .exact-match-label input {
+            width: 1.3rem; 
+            height: 1.3rem;
+            margin: 0;
+            box-shadow: none; 
+            accent-color: var(--gold);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .search-row {
+                flex-wrap: wrap;
+            }
+            /* Stack search input and checkbox on mobile */
+            .text-search-row {
+                flex-direction: column; 
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .form-group.book-group, 
+            .form-group.chapter-group, 
+            .form-group.verse-group {
+                flex: 1 1 100%;
+            }
+            .search-container {
+                padding: 1.5rem;
+            }
+            h1 {
+                line-height: 1.3;
+            }
+            .pagination-bar {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            /* Chapter Mode Mobile Fixes */
+            .chapter-mode-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+                align-items: center;
+            }
+            .chapter-title {
+                font-size: 1.5rem; /* Smaller font for mobile */
+                width: 100%;
+            }
+            .chapter-controls {
+                width: 100%;
+                justify-content: center;
+                gap: 2rem; /* More space between arrows on mobile */
+            }
+            .nav-icon-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+                flex-shrink: 0; /* Prevent squashing */
+            }
+            
+            /* Footer Nav Buttons */
+            .chapter-navigation {
+                flex-direction: column; 
+                gap: 1rem;
+            }
+            .chapter-nav-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+        /* Info Icon & Modal Styles */
+        .info-icon-btn {
+            background: transparent;
+            border: none;
+            color: var(--gold);
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto; /* override global button */
+            background-image: none; /* override global button */
+        }
+        .info-icon-btn:hover {
+            transform: scale(1.1);
+            color: var(--white);
+            background: transparent; 
+            box-shadow: none;
+        }
+        .info-icon-btn svg {
+            width: 56px;
+            height: 56px;
+            stroke-width: 1.5;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-content {
+            background: var(--black-light);
+            border: 1px solid var(--gold);
+            border-radius: 20px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        @keyframes modalSlideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .modal-header {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(10, 10, 10, 0) 100%);
+            padding: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+        }
+        .modal-header h2 {
+            margin: 0;
+            color: var(--gold);
+            font-size: 1.8rem;
+        }
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: transparent;
+            border: none;
+            color: var(--gray);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: auto;
+            padding: 0;
+            background-image: none;
+        }
+        .modal-close:hover {
+            color: var(--white);
+            transform: rotate(90deg);
+        }
+        .modal-body {
+            padding: 2rem;
+            color: rgba(255,255,255,0.9);
+        }
+        .modal-body h3 {
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(212,175,55,0.3);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+            font-size: 1.3rem;
+        }
+        .modal-body p, .modal-body li {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #ddd;
+        }
+        .bib-meta {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            border-left: 3px solid var(--cyan);
+        }
+        .modal-body ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .modal-body li {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid rgba(255,255,255,0.1);
+        }
+        .modal-body strong {
+            color: var(--white);
+        }
+
+        /* Audio Player Styles */
+        .audio-btn {
+            background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            padding: 0.4rem 1.2rem;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            margin-bottom: 0;
+            width: auto; /* Override global button width */
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(107, 76, 154, 0.3);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .audio-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(107, 76, 154, 0.5);
+            background: linear-gradient(135deg, var(--purple-light) 0%, var(--purple) 100%);
+        }
+        .audio-btn.playing {
+            background: linear-gradient(135deg, #ff6b6b 0%, #c92a2a 100%);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+        }
+
+        
+        /* Auth Status Indicator */
+        .auth-status {
+            display: flex;
+            flex-direction: row; /* Side by side */
+            flex-wrap: nowrap;     /* Prevent wrapping */
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem; /* Space between dot and text */
+            cursor: pointer;
+            text-decoration: none;
+            white-space: nowrap; /* Force single line */
+            width: fit-content;
+            /* Remove margin-right since not in header anymore */
+        }
+        .auth-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ff6b6b; /* Red default */
+            box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+            /* Remove margin-bottom */
+            transition: all 0.3s ease;
+        }
+        .auth-dot.logged-in {
+            background-color: #4cd137; /* Green */
+            box-shadow: 0 0 10px rgba(76, 209, 55, 0.5);
+        }
+        .auth-label {
+            font-size: 0.7rem;
+            color: var(--gray);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Important Notice Tooltip Styles */
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+            margin-right: 1.5rem; /* Space from logo */
+            vertical-align: middle;
+        }
+        .tooltip-text {
+            visibility: hidden;
+            width: 320px;
+            background-color: rgba(10, 10, 10, 0.95);
+            color: #fff;
+            text-align: left;
+            border-radius: 6px;
+            padding: 1rem;
+            position: absolute;
+            z-index: 1000;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-10%); /* Adjusted shift */
+            margin-top: 10px;
+            border: 1px solid #4da6ff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none; /* Prevent blocking hover path if tricky */
+        }
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Mobile Tooltip Fix (Like Notes Popup) */
+        @media (max-width: 768px) {
+            .tooltip-text {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90vw;
+                max-width: 400px;
+                max-height: 50vh;
+                overflow-y: auto;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo">
+            <img src="../images/logo-wfg.png" alt="Walk For God Logo" />
+            <div class="logo-text">
+                Walk For God
+                <small>My Personal Bible</small>
+            </div>
+        </a>
+        
+        <div style="flex: 1;"></div> <!-- Spacer -->
+
+        <!-- Auth Removed from Header -->
+        
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+             <!-- Auth Status -->
+             <a id="authStatusWidget" href="/wp-login.php" class="auth-status" title="Check Login Status" style="padding: 0.3rem 0.8rem; font-size: 0.8rem;">
+                <div id="authDot" class="auth-dot"></div>
+                <span id="authLabel" class="auth-label">Log In</span>
+            </a>
+
+            <!-- Updated Notice Link (Centered, Clickable) -->
+             <div class="header-notice-container" style="position: relative;">
+                <span onclick="toggleNoticePopup()" style="color: #4da6ff; font-weight: 600; cursor: pointer; font-size: 0.9rem;">Notice</span>
+                
+                <!-- Notice Popup (Click to Show) -->
+                <div id="noticePopup" class="notice-popup" style="display: none; position: absolute; top: 120%; right: -20px; width: 300px; background: rgba(10,10,10,0.95); padding: 1rem; border: 1px solid #4da6ff; border-radius: 8px; z-index: 2000; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                        <strong style="color: #4da6ff;">Important Notice</strong>
+                        <button onclick="toggleNoticePopup()" style="background: transparent !important; border: none !important; outline: none !important; box-shadow: none !important; color: #aaa; cursor: pointer; padding: 0; display: flex;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        </button>
+                    </div>
+                    <div style="font-size: 0.9rem; line-height: 1.5; color: #ddd; text-align: left;">
+                        This app allows you to edit and maintain your own personal version of the Bible. To keep your Bible and notes stored locally on your device and to enable editing features, you must first log in. Without logging in, these features are unavailable, but you can still enjoy the online Bible. The Bible editing version is currently free for the first 10,000 users. If you begin using it while it is free, it will remain free for you for life. Enjoy 🙂
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- "Switch to Online Mode" Confirmation Modal -->
+    <div id="switchModeModal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 400px; text-align: center;">
+            <div class="modal-header">
+                <h2>Switch to Online Bible</h2>
+                <button class="modal-close" onclick="closeModal('switchModeModal')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" style="padding: 2rem;">
+                <p style="color: var(--white); font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                    You are about to switch to the <strong>Standard Online Bible</strong>.
+                </p>
+                <p style="color: var(--gold); font-size: 1rem; margin-bottom: 2rem;">
+                    <span style="display:inline-block; margin-bottom:0.5rem;">⚠️</span><br />
+                    <strong>Personal Edits cannot be made in this mode.</strong>
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <button class="btn-gold" onclick="switchToOnlineMode()" style="background-color: #28a745; border-color: #28a745; color: white;">Confirm Switch</button>
+                    <button class="btn-outline" onclick="closeModal('switchModeModal')" style="background-color: #dc3545; border-color: #dc3545; color: white;">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Generic Message Modal (Replaces Alerts) -->
+    <div id="messageModal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 400px; text-align: center;">
+            <div class="modal-header">
+                <h2 id="msgModalTitle">Notice</h2>
+                <button class="modal-close" onclick="closeModal('messageModal')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <div class="modal-body" style="padding: 2rem;">
+                <p id="msgModalText" style="color: var(--white); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;"></p>
+                <div id="msgModalActions" style="display: flex; gap: 1rem; justify-content: center;">
+                    <button class="btn-gold" onclick="closeModal('messageModal')">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <main>
+        <div class="container">
+            <div class="page-title">
+                <h1>
+                    My Bible
+                    <!-- Info Icon Moved Here (Smaller) -->
+                    <button class="info-icon-btn" onclick="openInfoModal()" title="About Bible" aria-label="About Bible" style="transform: scale(0.7); margin-left: 0.5rem; display: inline-flex;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </button>
+                </h1>
+                
+                <!-- Auth Status Widget Removed from here -->
+                <div class="widget-container" style="border: none !important;">
+                     <!-- Only Local Status Remains -->
+                    
+                    <!-- My Bible Data Status + Cloud Actions Unified -->
+                    <div id="localStatusWidget" class="auth-status" style="border: 2px solid var(--gold); padding: 0.5rem 1rem; border-radius: 30px; background: rgba(0,0,0,0.4); display: flex; align-items: center; gap: 0.8rem; cursor: pointer;" onclick="handleBibleAction()">
+                        
+                        <!-- Status Indicator -->
+                        <div style="display: flex; align-items: center; gap: 0.5rem;" title="Check Local Data Status">
+                            <div id="localDot" class="auth-dot" style="background-color: #ff4444;"></div>
+                            <span id="localLabel" class="auth-label" style="min-width: 120px;">Online Bible Active</span>
+                        </div>
+                        
+                        <!-- Divider -->
+                        <div id="cloudDivider" style="width: 1px; height: 16px; background: rgba(255,255,255,0.2); display: none;"></div>
+
+                        <!-- Cloud Actions (Hidden by default) -->
+                        <div id="cloudActions" style="display: none; align-items: center; gap: 0.5rem;">
+                             <button onclick="event.stopPropagation(); openBackupModal()" title="Cloud Backup & Transfer" style="background: transparent; border: none; padding: 0; color: var(--gold); cursor: pointer; display: flex;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="17 8 12 3 7 8"></polyline>
+                                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+                             </button>
+                             
+                             <!-- Explicit Download Icon (Shown if backup exists) -->
+                             <button id="btnCloudDownload" onclick="event.stopPropagation(); openBackupModal('restore')" title="Download available backup" style="background: transparent; border: none; padding: 0; color: #4cd137; cursor: pointer; display: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                             </button>
+                             
+                             <!-- Optional Download Icon (Simulated for now, can be toggled via JS) -->
+                             <!-- We'll keep it simple: One Cloud Icon opens the Hub, as the user requested "Inside the box" -->
+                             <!-- If user wants explicit separate button, we can add it here. Let's start with the Unified Cloud Icon inside the box. -->
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div id="localProgressBar" class="widget-progress-bar">
+                             <div id="localProgressFill" class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Important Notice Removed from here -->
+            </div>
+
+            <div class="search-container">
+                <div class="search-rows">
+                    <!-- Row 1: Filters -->
+                    <div class="search-row">
+                        <div class="form-group book-group">
+                            <select id="bookSelect">
+                                <option value="">Select Book...</option>
+                            </select>
+                        </div>
+                        <div class="form-group chapter-group">
+                            <select id="chapterSelect" disabled>
+                                <option value="">Chapter...</option>
+                            </select>
+                        </div>
+                        <div class="form-group verse-group">
+                            <select id="verseSelect" disabled>
+                                <option value="">Verse...</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 2: Text Search -->
+                    <div class="search-row text-search-row">
+                         <label class="exact-match-label">
+                            <input type="checkbox" id="exactMatchCheckbox" />
+                            Exact match
+                        </label>
+                        <div class="form-group" style="flex: 1;">
+                            <input type="text" id="textInput" placeholder="Search text (e.g. 'Love your neighbor')..." />
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Buttons -->
+                    <div class="search-row">
+                        <button id="searchBtn" onclick="performSearch()">Search Scripture</button>
+                        <button id="resetBtn" onclick="resetSearch()" style="background: transparent; border: 1px solid var(--gold); color: var(--gold); margin-left: 0.5rem;" onmouseover="this.style.background='rgba(212,175,55,0.1)'" onmouseout="this.style.background='transparent'">Reset</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Pagination -->
+            <div class="pagination-bar top" id="topPagination">
+                <div class="rows-per-page">
+                    Rows per page:
+                    <select class="rowsPerPageSelect" onchange="changeRowsPerPage(this.value)">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50" selected>50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="pagination-controls">
+                    <span class="page-info-text">1-50 of 1000</span>
+                    <button class="icon-btn prevBtn" onclick="prevPage()" title="Previous Page">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button class="icon-btn nextBtn" onclick="nextPage()" title="Next Page">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="resultsArea" class="results-container">
+                <div class="status-msg">Initializing App v1.03...</div>
+            </div>
+            
+            <!-- Bottom Pagination -->
+             <div class="pagination-bar bottom" id="bottomPagination">
+                <div class="rows-per-page">
+                    Rows per page:
+                    <select class="rowsPerPageSelect" onchange="changeRowsPerPage(this.value)">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50" selected>50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="pagination-controls">
+                    <span class="page-info-text">1-50 of 1000</span>
+                    <button class="icon-btn prevBtn" onclick="prevPage()" title="Previous Page">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button class="icon-btn nextBtn" onclick="nextPage()" title="Next Page">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Walk For God. All Rights Reserved. <span style="opacity:0.3; font-size:0.7rem;">v1.03</span></p>
+            <a href="index.html" class="home-link">← Back to Home</a>
+        </div>
+    </footer>
+
+    <!-- Top of Page Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7 7 7M5 19l7-7 7 7" />
+        </svg>
+    </button>
+    
+        <!-- Personal Bible Status -->
+        <div id="personalBibleStatus" style="display:none; position: fixed; bottom: 1rem; left: 1rem; background: rgba(0,0,0,0.8); border: 1px solid var(--gold); padding: 0.5rem 1rem; border-radius: 20px; color: var(--gold); font-size: 0.8rem; z-index: 100;">
+            <span id="pbStatusText">My Bible Data Active</span>
+        </div>
+
+        <!-- Init Modal (Simplified "One Button") -->
+        <div id="personalBibleInitModal" class="modal-overlay" onclick="if(event.target === this) closeModal('personalBibleInitModal')">
+            <div class="modal-content" style="max-width: 600px;">
+                <div class="modal-header">
+                    <h2>Setup Personal Bible</h2>
+                    <button class="modal-close" onclick="closeModal('personalBibleInitModal')" aria-label="Close" title="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p style="font-size: 1.1rem; color: #fff;">To edit verses or add notes, you need to create a <strong>personal copy</strong> of the Bible data.</p>
+                    <p style="font-size: 1.1rem; color: #ccc;">This will create a file named <strong>My Bible Data</strong> on your computer where your notes are stored safely.</p>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <!-- Single Primary Button -->
+                    <button id="pbPrimaryActionBtn" class="btn-gold" style="width: 100%; max-width: 300px;" onclick="handleBibleAction()">Create Offline Bible</button>
+                </div>
+                <div style="text-align: center; margin-top: 1rem;">
+                     <!-- Link Removed -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Required Modal -->
+        <div id="loginRequiredModal" class="modal-overlay" onclick="if(event.target === this) closeModal('loginRequiredModal')">
+            <div class="modal-content" style="max-width: 500px;">
+                <div class="modal-header">
+                    <h2>Authentication Required</h2>
+                    <button class="modal-close" onclick="closeModal('loginRequiredModal')" aria-label="Close" title="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p style="font-size: 1.1rem; color: #fff;">You must be logged in to use Personal Bible features.</p>
+                </div>
+                <div class="modal-footer">
+                    <a id="loginLinkBtn" href="#" class="btn-gold" style="text-decoration:none; display:inline-block;">Login / Register</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Editor Modal (Refactored) -->
+        <div id="verseEditorModal" class="modal-overlay" onclick="if(event.target === this) closeModal('verseEditorModal')">
+            <div class="modal-content" style="max-width: 700px;">
+                <div class="modal-header">
+                    <h2 id="editorTitle">Edit Verse</h2>
+                    <button class="modal-close" onclick="closeModal('verseEditorModal')" aria-label="Close" title="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Section A: Scripture Text & Translation Edits (Edit Mode) -->
+                    <div id="editModeSection">
+                        <label style="display:block; color:var(--gold); margin-bottom:0.5rem; font-size: 1.1rem; font-weight:600;">Scripture Text</label>
+                        <textarea id="verseEditText" class="verse-editor-area" rows="4"></textarea>
+
+                        <div class="editor-section-title" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span>Edit Notes</span>
+                                <div style="font-size:0.8rem; color:var(--gray); font-weight:normal; font-family:'Inter', sans-serif;">Alternative translations / specific edits</div>
+                            </div>
+                            <div class="add-item-btn" onclick="addListItem('edit')" style="width: auto; padding: 0.5rem 1rem; margin: 0;">+ Add New Edit Note</div>
+                        </div>
+                        <div id="editsList" style="margin-bottom: 1rem; margin-top: 1rem;"></div>
+                    </div>
+
+                    <!-- Section B: Personal Notes (Notes Mode) -->
+                    <div id="notesModeSection">
+                        <div class="editor-section-title" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span>Personal Notes</span>
+                                <div style="font-size:0.8rem; color:var(--gray); font-weight:normal; font-family:'Inter', sans-serif;">Add reflections or commentary</div>
+                            </div>
+                            <div class="add-item-btn" onclick="addListItem('note')" style="width: auto; padding: 0.5rem 1rem; margin: 0;">+ Add New Note</div>
+                        </div>
+                        <div id="notesList" style="margin-bottom: 1rem; margin-top: 1rem;"></div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="display: flex; gap: 1rem; width: 100%;">
+                    <button class="btn-green-save" onclick="saveVerseEdits()" style="flex: 1;">Save All Changes</button>
+                    <button class="btn-red-cancel" onclick="closeModal('verseEditorModal')" style="flex: 1;">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    <script>
+        let bibleData = [];
+        // Structure: bibleStructure[BookName][ChapterNumber] = MaxVerses
+        let bibleStructure = {}; 
+        let isDataLoaded = false;
+        
+        // Search State
+        let currentResults = [];
+        let currentPage = 0;
+        let rowsPerPage = 50;
+        let activeSearchTerm = '';
+        let isExactMatch = false;
+
+        // Podcast / Audio State
+        let isAutoPlaying = false;
+        let currentUtterance = null;
+        let appVoices = []; // Cache voices
+        let lastSpokenIndex = -1; // Track for continuous reading logic
+
+        // Pre-load voices to ensure consistent selection
+        function loadAppVoices() {
+            if ('speechSynthesis' in window) {
+                appVoices = window.speechSynthesis.getVoices();
+            }
+        }
+        
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.onvoiceschanged = loadAppVoices;
+            // trigger explicitly once
+            loadAppVoices();
+        }
+
+        // Fetch and Parse CSV
+        // Fetch and Parse CSV
+        async function loadBibleData(skipPersonalCheck = false) {
+            const results = document.getElementById('resultsArea');
+            const pBar = document.getElementById('localProgressBar');
+            const pFill = document.getElementById('localProgressFill');
+            
+            // Helper to set progress
+            const setProgress = (pct) => {
+                if(pBar && pFill) {
+                    pBar.style.display = 'block';
+                    // Use slight delay to allow display:block to render before width text applies (for transition)
+                    requestAnimationFrame(() => { pFill.style.width = pct + '%'; });
+                }
+            };
+            
+            try {
+                // Reset Global Data (Fix for Toggle State)
+                bibleData = [];
+                bibleStructure = {};
+
+                setProgress(10); // Start
+                results.innerHTML = '<div class="status-msg">Connecting to database...</div>';
+                
+                // Use Secure Proxy
+                const response = await fetch('get_bible.php');
+                if (!response.ok) throw new Error("Failed to load bible file: " + response.statusText);
+                
+                setProgress(40); // Connected
+                results.innerHTML = '<div class="status-msg">Downloading content...</div>';
+                const text = await response.text();
+                
+                setProgress(70); // Downloaded
+                results.innerHTML = '<div class="status-msg">Processing verses...</div>';
+                // Use setTimeout to allow UI to render the message before heavy parsing
+                await new Promise(r => setTimeout(r, 50)); 
+                
+                parseCSV(text);
+                
+                setProgress(100); // Done
+                
+                populateBooks();
+                results.innerHTML = '';
+                isDataLoaded = true;
+                
+                if (!skipPersonalCheck && typeof checkPersonalBible === 'function') {
+                    checkPersonalBible();
+                }
+                
+                // Hide Bar after delay
+                setTimeout(() => {
+                    if(pBar) pBar.style.display = 'none';
+                    if(pFill) pFill.style.width = '0%';
+                }, 1000);
+                
+            } catch (err) {
+                console.error(err);
+                if(pBar) pBar.style.display = 'none';
+                results.innerHTML = `<div class="status-msg" style="color: #ff6b6b;">Error: ${err.message}</div>`;
+            }
+        }
+        
+        function parseCSV(csvText) {
+            const lines = csvText.split(/\r?\n/);
+            // Header is: "Book","Chapter","Verse","Text"
+            
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+
+                const parts = line.match(/"([^"]*)"/g);
+                
+                if (parts && parts.length >= 4) {
+                    const book = parts[0].replace(/"/g, '');
+                    const chapter = parseInt(parts[1].replace(/"/g, ''));
+                    const verse = parseInt(parts[2].replace(/"/g, ''));
+                    const text = parts[3].replace(/^"|"$/g, '').trim(); 
+                    
+                    // Deduplication Check: Skip if B-C-V already loaded
+                    // This prevents "Double Genesis 1:1" if parseCSV is called multiple times or file has dupes
+                    if (bibleData.some(b => b.b === book && b.c === chapter && b.v === verse)) {
+                        continue;
+                    }
+
+                    let note = [];
+                    let editNote = [];
+                    
+                    const VM = String.fromCharCode(253);
+                    const SM = String.fromCharCode(252);
+                    
+                    // Helper to parse Pick-style values
+                    const parsePickValue = (raw) => {
+                         if (!raw) return [];
+                         let items = [];
+                         if (raw.indexOf(VM) !== -1 || raw.indexOf(SM) !== -1) {
+                             // Pick Format
+                             const entries = raw.split(VM);
+                             items = entries.map(entry => {
+                                 const parts = entry.split(SM);
+                                 return { text: parts[0], date: parts[1] || '' };
+                             });
+                         } else {
+                             // Backward Comp: || or JSON or String
+                             if (raw.includes('||')) {
+                                items = raw.split('||').map(s => ({ text: s.trim(), date: '' }));
+                             } else if (raw.startsWith('[') && raw.endsWith(']')) {
+                                 try { 
+                                     const arr = JSON.parse(raw); 
+                                     items = arr.map(s => ({ text: s, date: '' }));
+                                 } catch(e) { items = [{text: raw, date: ''}]; }
+                             } else {
+                                 items = [{ text: raw, date: '' }];
+                             }
+                         }
+                         // Filter empty text
+                         return items.filter(i => i.text.length > 0);
+                    };
+
+                    if (parts.length >= 5) {
+                        const rawNote = parts[4].replace(/^"|"$/g, '').trim();
+                        note = parsePickValue(rawNote);
+                    }
+                    if (parts.length >= 6) {
+                        const rawEN = parts[5].replace(/^"|"$/g, '').trim();
+                        editNote = parsePickValue(rawEN);
+                    }
+
+                    bibleData.push({ b: book, c: chapter, v: verse, t: text, n: note, en: editNote });
+                    
+                    // Build Structure
+                    if (!bibleStructure[book]) {
+                        bibleStructure[book] = {};
+                    }
+                    if (!bibleStructure[book][chapter]) {
+                        bibleStructure[book][chapter] = 0;
+                    }
+                    if (verse > bibleStructure[book][chapter]) {
+                        bibleStructure[book][chapter] = verse;
+                    }
+                }
+            }
+        }
+
+        function populateBooks() {
+            const select = document.getElementById('bookSelect');
+            select.innerHTML = '<option value="">Select Book...</option><option value="ALL">ALL BOOKS</option>';
+            
+            Object.keys(bibleStructure).forEach(book => {
+                const opt = document.createElement('option');
+                opt.value = book;
+                opt.textContent = book;
+                select.appendChild(opt);
+            });
+        }
+        
+        // Event Listeners for Dynamic Dropdowns
+        const bookSelect = document.getElementById('bookSelect');
+        const chapterSelect = document.getElementById('chapterSelect');
+        const verseSelect = document.getElementById('verseSelect');
+        
+        bookSelect.addEventListener('change', function() {
+            const book = this.value;
+            
+            // Reset dependent dropdowns
+            chapterSelect.innerHTML = '<option value="">Chapter...</option>';
+            verseSelect.innerHTML = '<option value="">Verse...</option>';
+            verseSelect.disabled = true;
+            
+            if (book === 'ALL') {
+                chapterSelect.disabled = true;
+                document.getElementById('textInput').focus();
+            } else if (book && bibleStructure[book]) {
+                chapterSelect.disabled = false;
+                const chapters = Object.keys(bibleStructure[book]).map(Number).sort((a,b) => a - b);
+                
+                chapters.forEach(chap => {
+                    const opt = document.createElement('option');
+                    opt.value = chap;
+                    opt.textContent = chap;
+                    chapterSelect.appendChild(opt);
+                });
+                
+                // Default to Chapter 1
+                chapterSelect.value = "1";
+                
+                // Manually trigger verse population for Chapter 1
+                if (bibleStructure[book]["1"]) {
+                    verseSelect.disabled = false;
+                    const maxVerse = bibleStructure[book]["1"];
+                    for(let i=1; i <= maxVerse; i++) {
+                        const opt = document.createElement('option');
+                        opt.value = i;
+                        opt.textContent = i;
+                        verseSelect.appendChild(opt);
+                    }
+                }
+            } else {
+                chapterSelect.disabled = true;
+            }
+        });
+        
+        chapterSelect.addEventListener('change', function() {
+            const book = bookSelect.value;
+            const chapter = this.value;
+            
+            // Reset verse
+            verseSelect.innerHTML = '<option value="">Verse...</option>';
+            
+            if (book && book !== 'ALL' && chapter && bibleStructure[book][chapter]) {
+                verseSelect.disabled = false;
+                const maxVerse = bibleStructure[book][chapter];
+                
+                for(let i=1; i <= maxVerse; i++) {
+                     const opt = document.createElement('option');
+                     opt.value = i;
+                     opt.textContent = i;
+                     verseSelect.appendChild(opt);
+                }
+            } else {
+                verseSelect.disabled = true;
+            }
+        });
+
+        function resetSearch() {
+            stopAudio(); // Ensure audio stops on reset
+            document.getElementById('bookSelect').value = "";
+            document.getElementById('chapterSelect').innerHTML = '<option value="">Chapter...</option>';
+            document.getElementById('chapterSelect').disabled = true;
+            document.getElementById('verseSelect').innerHTML = '<option value="">Verse...</option>';
+            document.getElementById('verseSelect').disabled = true;
+            document.getElementById('textInput').value = "";
+            document.getElementById('exactMatchCheckbox').checked = false;
+            
+            currentResults = [];
+            document.querySelectorAll('.pagination-bar').forEach(el => el.style.display = 'none');
+            document.getElementById('resultsArea').innerHTML = '';
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function performSearch() {
+            if (!isDataLoaded) return;
+            
+            // Mobile: Scroll to top when search starts to show results/context
+            if (window.innerWidth <= 768) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            const sBook = document.getElementById('bookSelect').value;
+            const sChap = document.getElementById('chapterSelect').value;
+            const sVerse = document.getElementById('verseSelect').value;
+            const sTextRaw = document.getElementById('textInput').value.trim();
+            const sText = sTextRaw.toLowerCase();
+            isExactMatch = document.getElementById('exactMatchCheckbox').checked;
+            
+            // Set initial active search term
+            activeSearchTerm = sTextRaw;
+            
+            const resultsArea = document.getElementById('resultsArea');
+            
+            // Hide pagination initially
+            document.querySelectorAll('.pagination-bar').forEach(el => el.style.display = 'none');
+
+            // --- Match Helper Function ---
+            const checkMatch = (verseText, queryText, isExact) => {
+                const vt = verseText.toLowerCase();
+                if (!isExact) {
+                    return vt.includes(queryText);
+                } else {
+                    // Exact match: word boundary check
+                    // Escape special regex chars in query
+                    const escaped = queryText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    const regex = new RegExp(`\\b${escaped}\\b`, 'i');
+                    return regex.test(verseText);
+                }
+            };
+
+            if (!sBook && !sText) {
+                resultsArea.innerHTML = '<div class="status-msg">Please enter a search criterion.</div>';
+                return;
+            }
+            
+            if (sBook === 'ALL' && !sText) {
+                resultsArea.innerHTML = '<div class="status-msg" style="color: #ff6b6b;">Please enter text to search in "ALL BOOKS".</div>';
+                return;
+            }
+
+            resultsArea.innerHTML = '<div class="status-msg">Searching...</div>';
+
+            // Filter (Phase 1)
+            currentResults = bibleData.filter(item => {
+                let match = true;
+                if (sBook && sBook !== 'ALL' && item.b !== sBook) match = false;
+                if (sChap && item.c != sChap) match = false;
+                if (sVerse && item.v != sVerse) match = false;
+                if (sText && !checkMatch(item.t, sText, isExactMatch)) match = false;
+                return match;
+            });
+            
+            // Auto-correct behavior (UK -> US)
+            if (currentResults.length === 0 && sText) {
+                // ... (omitted spelling logic for brevity, it remains unchanged) ...
+                // Re-inserted full block below to match context
+                const spellingMap = {
+                    'neighbour': 'neighbor', 'saviour': 'savior', 'honour': 'honor', 'labour': 'labor',
+                    'colour': 'color', 'favour': 'favor', 'splendour': 'splendor', 'rumour': 'rumor',
+                    'harbour': 'harbor', 'armour': 'armor', 'clamour': 'clamor', 'endeavour': 'endeavor',
+                    'parlour': 'parlor', 'vigour': 'vigor', 'valour': 'valor', 'centre': 'center',
+                    'theatre': 'theater', 'grey': 'gray'
+                };
+                let usText = sText; 
+                let changed = false;
+                let displayTerm = activeSearchTerm;
+                
+                Object.keys(spellingMap).forEach(uk => {
+                    if (usText.includes(uk)) {
+                        const regex = new RegExp(uk, 'g');
+                        usText = usText.replace(regex, spellingMap[uk]);
+                        const dispRegex = new RegExp(uk, 'gi');
+                        displayTerm = displayTerm.replace(dispRegex, spellingMap[uk]);
+                        changed = true;
+                    }
+                });
+
+                if (changed) {
+                    const retryResults = bibleData.filter(item => {
+                        let match = true;
+                        if (sBook && sBook !== 'ALL' && item.b !== sBook) match = false;
+                        if (sChap && item.c != sChap) match = false;
+                        if (sVerse && item.v != sVerse) match = false;
+                        if (usText && !checkMatch(item.t, usText, isExactMatch)) match = false;
+                        return match;
+                    });
+                    
+                    if (retryResults.length > 0) {
+                       currentResults = retryResults;
+                       activeSearchTerm = displayTerm; 
+                       resultsArea.insertAdjacentHTML('afterbegin', `<div class="status-msg" style="color: var(--gold); font-size: 0.9rem;">Showing results for "${activeSearchTerm}" instead...</div>`);
+                    }
+                }
+            }
+
+            // Reset to page 0
+            currentPage = 0;
+            displayResults();
+            
+            // Scroll to results for all devices
+            setTimeout(() => {
+                const target = document.getElementById('resultsArea');
+                // Adjust offset based on screen size if needed, but 100px is generally safe for fixed header
+                const headerOffset = 100; 
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }, 100);
+        }
+
+        function displayResults() {
+             const resultsArea = document.getElementById('resultsArea');
+             
+             if (currentResults.length === 0) {
+                 resultsArea.innerHTML = '<div class="status-msg">No results found.</div>';
+                 document.querySelectorAll('.pagination-bar').forEach(el => el.style.display = 'none');
+                 return;
+             }
+             
+             // Check if we are in "Single Verse Mode" (Book + Chap + Verse selected, NO text search)
+             // And ensuring we have exactly one main result (or close to it)
+             const sBook = document.getElementById('bookSelect').value;
+             const sChap = document.getElementById('chapterSelect').value;
+             const sVerse = document.getElementById('verseSelect').value;
+             const sText = document.getElementById('textInput').value.trim();
+             
+             const isSingleVerseMode = (sBook && sBook !== 'ALL' && sChap && sVerse && !sText);
+             const isChapterMode = (sBook && sBook !== 'ALL' && sChap && !sVerse && !sText);
+
+             // Reset normal pagination if in single verse mode (we handle nav differently)
+             if (isSingleVerseMode && currentResults.length === 1) {
+                 document.querySelectorAll('.pagination-bar').forEach(el => el.style.display = 'none');
+                 displaySingleVerseWithContext();
+                 return;
+             }
+             
+             // --- Consolidated Rendering Logic ---
+             
+             // Common Render Function (can take a slice or full array)
+             const renderVerseList = (verses, container, showFullRef) => {
+                 // highlighting regex
+                 const searchTerm = activeSearchTerm;
+                 let highlightRegex = null;
+                 if (searchTerm && searchTerm.length > 0) {
+                     const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                     highlightRegex = new RegExp(`(${escapedTerm})`, 'gi');
+                 }
+                 
+                 verses.forEach(verse => {
+                     let displayText = verse.t;
+                     if (highlightRegex) {
+                         displayText = displayText.replace(highlightRegex, '<span class="highlight">$1</span>');
+                     }
+                     
+                     const div = document.createElement('div');
+                     div.className = 'chapter-verse'; // Unify style to 'chapter-verse' (clean row)
+                     div.style.cursor = 'pointer';
+                     div.style.display = 'flex'; // Enable flex for icon alignment
+                     div.style.alignItems = 'baseline'; // Align text baselines
+                     
+                     // Construct the reference part
+                     let refHtml = '';
+                     if (showFullRef) {
+                         // e.g. "Genesis 1:1"
+                         refHtml = `<span class="verse-ref-inline" style="color: var(--gold); font-weight: bold; margin-right: 0.5rem; white-space: nowrap; flex-shrink: 0;">${verse.b} ${verse.c}:${verse.v}</span>`;
+                     } else {
+                         // e.g. "1"
+                         refHtml = `<span class="verse-num-inline" style="color: var(--gold); font-weight: bold; margin-right: 0.5rem; flex-shrink: 0;">${verse.v}</span>`;
+                     }
+                     
+                     // Construct Notes Logic
+                     let notesHtml = '';
+                     if (verse.n && verse.n.length > 0) {
+                        // Build Popover Content
+                         const notesListHtml = verse.n.map(n => {
+                             const txt = (typeof n === 'object') ? n.text : n;
+                             const date = (typeof n === 'object' && n.date) ? new Date(n.date).toLocaleString() : '';
+                             return `
+                                <div class="popover-note-item">
+                                    <div class="popover-note-text">${txt}</div>
+                                    ${date ? `<div class="popover-note-date">${date}</div>` : ''}
+                                </div>
+                             `;
+                         }).join('');
+                         
+                         notesHtml = `
+                            <div class="notes-indicator" onclick="event.stopPropagation(); this.querySelector('.notes-popover').classList.toggle('show-mobile');">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <div class="notes-popover">
+                                    <div class="popover-header">
+                                        <div class="popover-title">My Notes</div>
+                                        <button class="popover-close" onclick="event.stopPropagation(); this.closest('.notes-popover').classList.remove('show-mobile');" title="Close">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                        </button>
+                                    </div>
+                                    <div class="popover-content">
+                                        ${notesListHtml}
+                                    </div>
+                                </div>
+                            </div>
+                         `;
+                     }
+
+                     div.onclick = function(e) { 
+                        // Prevent click if clicking tooltip
+                        if(e.target.closest('.notes-indicator')) return;
+                        viewVerse(verse); 
+                     };
+                     
+                     div.innerHTML = `${refHtml}<span style="flex:1;">${displayText} ${notesHtml}</span>`;
+                     container.appendChild(div);
+                 });
+             };
+
+             // --- Chapter Mode (Book + Chap selected) ---
+             if (isChapterMode) {
+                 document.querySelectorAll('.pagination-bar').forEach(el => el.style.display = 'none');
+                 resultsArea.innerHTML = '';
+                 
+                 // Header
+                 const headerDiv = document.createElement('div');
+                 headerDiv.className = 'chapter-mode-header';
+                 headerDiv.style.flexDirection = 'column';
+                 headerDiv.style.alignItems = 'stretch';
+                 headerDiv.innerHTML = `
+                    <div class="chapter-title" style="text-align: center; margin-bottom: 1rem;">${sBook} ${sChap}</div>
+                    <div style="display: flex; justify-content: space-between; width: 100%;">
+                        <div class="footer-nav-btn" onclick="goToRelativeChapter(-1)">&lt; Previous Chapter</div>
+                        <div class="footer-nav-btn" onclick="goToRelativeChapter(1)">Next Chapter &gt;</div>
+                    </div>
+                 `;
+                 resultsArea.appendChild(headerDiv);
+
+                 // Content
+                 const contentDiv = document.createElement('div');
+                 contentDiv.className = 'chapter-content';
+                 // Render ALL verses for chapter (no pagination usually, or one long page)
+                 renderVerseList(currentResults, contentDiv, false); // false = only verse num
+                 resultsArea.appendChild(contentDiv);
+                 
+                 // Footer
+                 const footerDiv = document.createElement('div');
+                 footerDiv.className = 'chapter-mode-footer';
+                 footerDiv.innerHTML = `
+                    <div class="footer-nav-btn" onclick="goToRelativeChapter(-1)">&lt; Previous Chapter</div>
+                    <div class="footer-nav-btn" onclick="goToRelativeChapter(1)">Next Chapter &gt;</div>
+                 `;
+                 resultsArea.appendChild(footerDiv);
+                 return;
+             }
+             
+             // --- Standard Search / Book Mode ---
+             
+             // Pagination setup
+             document.querySelectorAll('.pagination-bar').forEach(el => el.style.display = 'flex');
+             const start = currentPage * rowsPerPage;
+             const end = Math.min(start + rowsPerPage, currentResults.length);
+             const slice = currentResults.slice(start, end);
+
+             // Note: If BookMode, Header was already added. If not, resultsArea was cleared.
+             
+             // Create a container for the list if one doesn't exist? 
+             // Actually currently we just append to resultsArea. 
+             // Let's create a specific container to mirror Chapter Mode structure for consistency?
+             // Or just append directly. Direct append is fine.
+             
+             // Determine if we show full ref. 
+             // In Book Mode, we might want "Chapter:Verse" (e.g. 1:1) but maybe "Book 1:1" is safer/easier to read.
+             // If standard search, we definitely need "Book C:V".
+             // So always show full ref for consistency in these lists.
+             
+             resultsArea.innerHTML = '';
+             renderVerseList(slice, resultsArea, true); // true = Show "Genesis 1:1"
+             
+             updatePaginationControls(start + 1, end, currentResults.length);
+        }
+
+        // ... displaySingleVerseWithContext ...
+        
+        function goToRelativeChapter(offset) {
+            const currentBook = document.getElementById('bookSelect').value;
+            const currentChap = parseInt(document.getElementById('chapterSelect').value);
+            
+            // We need to determine the new Book and Chapter
+            let newBook = currentBook;
+            let newChap = currentChap + offset;
+            
+            // Check bounds for current book
+            const maxChap = Math.max(...Object.keys(bibleStructure[currentBook]).map(Number));
+            
+            if (newChap < 1) {
+                // Go to previous book?
+                // Get list of books
+                const books = Object.keys(bibleStructure);
+                const bookIdx = books.indexOf(currentBook);
+                if (bookIdx > 0) {
+                    newBook = books[bookIdx - 1];
+                    const prevBookChapters = Object.keys(bibleStructure[newBook]).map(Number);
+                    newChap = Math.max(...prevBookChapters); // Last chapter of prev book
+                } else {
+                    return; // Start of Bible
+                }
+            } else if (newChap > maxChap) {
+                // Go to next book
+                const books = Object.keys(bibleStructure);
+                const bookIdx = books.indexOf(currentBook);
+                if (bookIdx < books.length - 1) {
+                    newBook = books[bookIdx + 1];
+                    newChap = 1; // First chapter of next book
+                } else {
+                    return; // End of Bible
+                }
+            }
+            
+            // Update UI
+            updateSelection(newBook, newChap);
+        }
+        
+        function updateSelection(book, chap) {
+             const bookSelect = document.getElementById('bookSelect');
+             const chapterSelect = document.getElementById('chapterSelect');
+             const verseSelect = document.getElementById('verseSelect');
+             
+             if (bookSelect.value !== book) {
+                 bookSelect.value = book;
+                 // Re-populate chapters
+                 chapterSelect.innerHTML = '<option value="">Chapter...</option>';
+                 const chapters = Object.keys(bibleStructure[book]).map(Number).sort((a,b)=>a-b);
+                 chapters.forEach(c => {
+                    const opt = document.createElement('option');
+                    opt.value = c; opt.textContent = c; chapterSelect.appendChild(opt);
+                 });
+                 chapterSelect.disabled = false;
+             }
+             
+             chapterSelect.value = chap;
+             
+             // Reset verse (since we are in chapter mode)
+             verseSelect.innerHTML = '<option value="">Verse...</option>';
+             verseSelect.value = "";
+             verseSelect.disabled = true; // Wait, if book selected, verse is usually disabled until chap selected. 
+             // Logic says: if Book+Chap selected, Verse IS enabled but optional
+             
+             // Enable verse select with new chapter's verses
+             if (book && chap && bibleStructure[book][chap]) {
+                 verseSelect.disabled = false;
+                 const maxVerse = bibleStructure[book][chap];
+                 for(let i=1; i <= maxVerse; i++) {
+                     const opt = document.createElement('option');
+                     opt.value = i;
+                     opt.textContent = i;
+                     verseSelect.appendChild(opt);
+                 }
+             }
+
+             // Trigger Search
+             performSearch();
+             // Scroll to top
+             window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        // Back to top Logic
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('scrollTopBtn');
+            if (window.scrollY > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+            
+            // Header scroll effect (matches index.html logic)
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        // Menu Removed as per request
+
+        function viewVerse(verse) {
+             const bookSelect = document.getElementById('bookSelect');
+             const chapterSelect = document.getElementById('chapterSelect');
+             const verseSelect = document.getElementById('verseSelect');
+             
+             // Update Book
+             if (bookSelect.value !== verse.b) {
+                 bookSelect.value = verse.b;
+                 // Manually populate chapters
+                 chapterSelect.innerHTML = '<option value="">Chapter...</option>';
+                 const chapters = Object.keys(bibleStructure[verse.b]).map(Number).sort((a,b)=>a-b);
+                 chapters.forEach(c => {
+                    const opt = document.createElement('option');
+                    opt.value = c; opt.textContent = c; chapterSelect.appendChild(opt);
+                 });
+                 chapterSelect.disabled = false;
+             }
+             
+             chapterSelect.value = verse.c;
+             
+             // Populate Verses
+             verseSelect.innerHTML = '<option value="">Verse...</option>';
+             if (bibleStructure[verse.b] && bibleStructure[verse.b][verse.c]) {
+                 const maxVerse = bibleStructure[verse.b][verse.c];
+                 for(let i=1; i<=maxVerse; i++) {
+                     const opt = document.createElement('option');
+                     opt.value = i; opt.textContent = i; verseSelect.appendChild(opt);
+                 }
+                 verseSelect.disabled = false;
+             }
+             verseSelect.value = verse.v;
+             
+             // Clear text search to satisfy isSingleVerseMode
+             document.getElementById('textInput').value = "";
+             
+             performSearch();
+             window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function displaySingleVerseWithContext() {
+            const resultsArea = document.getElementById('resultsArea');
+            resultsArea.innerHTML = '';
+            
+            // The result is currentResults[0]
+            const targetVerse = currentResults[0];
+            
+            // Find index in full Bible Data to get context
+            // Optimization: We could store index, but finding it is fast enough
+            const index = bibleData.findIndex(item => 
+                item.b === targetVerse.b && item.c === targetVerse.c && item.v === targetVerse.v
+            );
+            
+            if (index === -1) return; // Should not happen
+            
+            // Get Prev Verse
+            if (index > 0) {
+                const prev = bibleData[index - 1];
+                const div = document.createElement('div');
+                div.className = 'verse-card context';
+                div.innerHTML = `
+                    <span class="verse-ref">${prev.b} ${prev.c}:${prev.v}</span>
+                    <div class="verse-text">${prev.t}</div>
+                `;
+                resultsArea.appendChild(div);
+            }
+            
+            // Get Target Verse (Featured)
+            const div = document.createElement('div');
+            div.className = 'verse-card featured';
+            
+            // Audio Button HTML
+            const btnLabel = isAutoPlaying ? 'Stop' : 'Play';
+            const btnClass = isAutoPlaying ? 'audio-btn playing' : 'audio-btn';
+            const btnIcon = isAutoPlaying 
+                ? '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>' 
+                : '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>';
+
+            div.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: nowrap; gap: 1rem;">
+                    <span class="verse-ref" style="margin-bottom: 0;">${targetVerse.b} ${targetVerse.c}:${targetVerse.v}</span>
+                    <button class="${btnClass}" onclick="toggleVerseAudio(${index})">
+                        ${btnIcon}
+                        ${btnLabel}
+                    </button>
+                </div>
+                <div class="verse-text">
+                    ${targetVerse.t}
+                    ${(() => {
+                        if (targetVerse.n && targetVerse.n.length > 0) {
+                             const notesListHtml = targetVerse.n.map(n => {
+                                 const txt = (typeof n === 'object') ? n.text : n;
+                                 const date = (typeof n === 'object' && n.date) ? new Date(n.date).toLocaleString() : '';
+                                 return `
+                                    <div class="popover-note-item">
+                                        <div class="popover-note-text">${txt}</div>
+                                        ${date ? `<div class="popover-note-date">${date}</div>` : ''}
+                                    </div>
+                                 `;
+                             }).join('');
+                             
+                             return `
+                                <div class="notes-indicator" onclick="event.stopPropagation(); this.querySelector('.notes-popover').classList.toggle('show-mobile');">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                    <div class="notes-popover">
+                                        <div class="popover-header">
+                                            <div class="popover-title">My Notes</div>
+                                            <button class="popover-close" onclick="event.stopPropagation(); this.closest('.notes-popover').classList.remove('show-mobile');">✕</button>
+                                        </div>
+                                        <div class="popover-content">
+                                            ${notesListHtml}
+                                        </div>
+                                    </div>
+                                </div>
+                             `;
+                        } else { return ''; }
+                    })()}
+                </div>
+                
+                <div class="verse-navigation">
+                     <div class="nav-link" onclick="stopAudio(); goToVerse(${index - 1})">
+                        &larr; Prev
+                     </div>
+                     
+                     <div class="verse-action-btn" onclick="openVerseEditor(${index})">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                        Edit
+                     </div>
+                     
+                     <div class="verse-action-btn" onclick="openVerseEditor(${index}, 'notes')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        Notes
+                     </div>
+                     
+                     <div class="nav-link" onclick="stopAudio(); goToVerse(${index + 1})">
+                        Next &rarr;
+                     </div>
+                </div>
+            `;
+            resultsArea.appendChild(div);
+            
+            // Get Next Verse
+            if (index < bibleData.length - 1) {
+                const next = bibleData[index + 1];
+                const divNext = document.createElement('div');
+                divNext.className = 'verse-card context';
+                divNext.innerHTML = `
+                    <span class="verse-ref">${next.b} ${next.c}:${next.v}</span>
+                    <div class="verse-text">${next.t}</div>
+                `;
+                resultsArea.appendChild(divNext);
+            }
+
+            // Auto-Play Logic
+            if (isAutoPlaying) {
+                // Introduce a tiny delay to ensure DOM is ready and prevent instant loop issues
+                setTimeout(() => speakCurrentVerse(index), 300);
+            }
+        }
+        
+        function goToVerse(index) {
+            if (index < 0 || index >= bibleData.length) return;
+            
+            const nextVerse = bibleData[index];
+            
+            // Update Dropdowns to match new verse
+            const bookSelect = document.getElementById('bookSelect');
+            const chapterSelect = document.getElementById('chapterSelect');
+            const verseSelect = document.getElementById('verseSelect');
+            
+            // Set Book
+            bookSelect.value = nextVerse.b;
+            // Trigger change manual? We can just set internal state if we want, but better to update UI
+            
+            // We need to re-populate chapter dropdown if book changed, but since we are just navigating,
+            // let's cheat and just set the currentResult to this new verse and re-render standard text.
+            // BUT proper way is to update the UI controls so the user sees where they are.
+            
+            // 1. Update UI (Simpler approach: just update filtering logic params temporarily or force update)
+            // Let's manually trigger the updates
+            
+            // Only update book if changed
+            if (bookSelect.value !== nextVerse.b) {
+                // Populate chapters for new book
+                chapterSelect.innerHTML = '<option value="">Chapter...</option>';
+                verseSelect.innerHTML = '<option value="">Verse...</option>';
+                const chapters = Object.keys(bibleStructure[nextVerse.b]).map(Number).sort((a,b)=>a-b);
+                chapters.forEach(c => {
+                    const opt = document.createElement('option');
+                    opt.value = c; opt.textContent = c; chapterSelect.appendChild(opt);
+                });
+                chapterSelect.disabled = false;
+            }
+            
+            chapterSelect.value = nextVerse.c;
+            
+            // Update verses
+             verseSelect.innerHTML = '<option value="">Verse...</option>';
+             const maxVerse = bibleStructure[nextVerse.b][nextVerse.c];
+             for(let i=1; i<=maxVerse; i++){
+                 const opt = document.createElement('option');
+                 opt.value = i; opt.textContent = i; verseSelect.appendChild(opt);
+             }
+             verseSelect.disabled = false;
+             verseSelect.value = nextVerse.v;
+             
+             // Perform Search
+             performSearch();
+        }
+
+        function goToRelativeChapter(offset) {
+            const currentBook = document.getElementById('bookSelect').value;
+            const currentChap = parseInt(document.getElementById('chapterSelect').value);
+            
+            // We need to determine the new Book and Chapter
+            let newBook = currentBook;
+            let newChap = currentChap + offset;
+            
+            // Check bounds for current book
+            const maxChap = Math.max(...Object.keys(bibleStructure[currentBook]).map(Number));
+            
+            if (newChap < 1) {
+                // Go to previous book?
+                // Get list of books
+                const books = Object.keys(bibleStructure);
+                const bookIdx = books.indexOf(currentBook);
+                if (bookIdx > 0) {
+                    newBook = books[bookIdx - 1];
+                    const prevBookChapters = Object.keys(bibleStructure[newBook]).map(Number);
+                    newChap = Math.max(...prevBookChapters); // Last chapter of prev book
+                } else {
+                    return; // Start of Bible
+                }
+            } else if (newChap > maxChap) {
+                // Go to next book
+                const books = Object.keys(bibleStructure);
+                const bookIdx = books.indexOf(currentBook);
+                if (bookIdx < books.length - 1) {
+                    newBook = books[bookIdx + 1];
+                    newChap = 1; // First chapter of next book
+                } else {
+                    return; // End of Bible
+                }
+            }
+            
+            // Update UI
+            updateSelection(newBook, newChap);
+        }
+        
+        function updateSelection(book, chap) {
+             const bookSelect = document.getElementById('bookSelect');
+             const chapterSelect = document.getElementById('chapterSelect');
+             const verseSelect = document.getElementById('verseSelect');
+             
+             if (bookSelect.value !== book) {
+                 bookSelect.value = book;
+                 // Re-populate chapters
+                 chapterSelect.innerHTML = '<option value="">Chapter...</option>';
+                 const chapters = Object.keys(bibleStructure[book]).map(Number).sort((a,b)=>a-b);
+                 chapters.forEach(c => {
+                    const opt = document.createElement('option');
+                    opt.value = c; opt.textContent = c; chapterSelect.appendChild(opt);
+                 });
+                 chapterSelect.disabled = false;
+             }
+             
+             chapterSelect.value = chap;
+             
+             // Reset verse (since we are in chapter mode)
+             verseSelect.innerHTML = '<option value="">Verse...</option>';
+             verseSelect.value = "";
+             verseSelect.disabled = true; // Wait, if book selected, verse is usually disabled until chap selected. 
+             // Logic says: if Book+Chap selected, Verse IS enabled but optional
+             
+             // Enable verse select with new chapter's verses
+             if (book && chap && bibleStructure[book][chap]) {
+                 verseSelect.disabled = false;
+                 const maxVerse = bibleStructure[book][chap];
+                 for(let i=1; i <= maxVerse; i++) {
+                     const opt = document.createElement('option');
+                     opt.value = i;
+                     opt.textContent = i;
+                     verseSelect.appendChild(opt);
+                 }
+             }
+
+             // Trigger Search
+             performSearch();
+             // Scroll to top
+             window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        function updatePaginationControls(start, end, total) {
+            const text = `${start}-${end} of ${total}`;
+            
+            // Text updates
+            document.querySelectorAll('.page-info-text').forEach(el => el.textContent = text);
+            
+            // Dropdown updates
+            document.querySelectorAll('.rowsPerPageSelect').forEach(el => el.value = rowsPerPage);
+            
+            // Button states
+            const prevDisabled = currentPage === 0;
+            const nextDisabled = end >= total;
+            
+            document.querySelectorAll('.prevBtn').forEach(btn => btn.disabled = prevDisabled);
+            document.querySelectorAll('.nextBtn').forEach(btn => btn.disabled = nextDisabled);
+        }
+        
+        function prevPage() {
+            if (currentPage > 0) {
+                currentPage--;
+                displayResults();
+                scrollToTop();
+            }
+        }
+        
+        function nextPage() {
+            const maxPage = Math.ceil(currentResults.length / rowsPerPage) - 1;
+            if (currentPage < maxPage) {
+                currentPage++;
+                displayResults();
+                scrollToTop();
+            }
+        }
+        
+        function changeRowsPerPage(val) {
+            rowsPerPage = parseInt(val);
+            currentPage = 0; // Reset to start
+            displayResults();
+        }
+        
+        function scrollToTop() {
+             const searchContainer = document.querySelector('.search-container');
+             if (searchContainer) searchContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        /* --- Audio / Text-to-Speech Functions --- */
+
+        function toggleVerseAudio(index) {
+            if (isAutoPlaying) {
+                stopAudio();
+                // Re-render to show "Play" button
+                displaySingleVerseWithContext(); 
+            } else {
+                isAutoPlaying = true;
+                displaySingleVerseWithContext(); // Re-render to show "Stop" button immediately
+                // The auto-play logic inside displaySingleVerseWithContext will trigger speakCurrentVerse
+            }
+        }
+
+        function stopAudio() {
+            isAutoPlaying = false;
+            lastSpokenIndex = -1; // Reset continuous tracker
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+            }
+        }
+
+        function speakCurrentVerse(index) {
+            if (!isAutoPlaying) return;
+            if (!window.speechSynthesis) {
+                alert("Sorry, your browser does not support text-to-speech.");
+                stopAudio();
+                displaySingleVerseWithContext();
+                return;
+            }
+
+            // Ensure we have the latest voices
+            if (appVoices.length === 0) {
+                appVoices = window.speechSynthesis.getVoices();
+            }
+
+            // Get verse data
+            const verse = bibleData[index];
+            
+            // Logic for Continuous Reading
+            let textPrefix = "";
+            let textToRead = "";
+
+            // If this is a direct continuation (index is exactly next)
+            if (lastSpokenIndex !== -1 && index === lastSpokenIndex + 1) {
+                const prevVerse = bibleData[lastSpokenIndex];
+                if (prevVerse.b !== verse.b) {
+                     // New Book
+                     textPrefix = `${verse.b} Chapter ${verse.c}. `; 
+                } else if (prevVerse.c !== verse.c) {
+                     // New Chapter
+                     textPrefix = `Chapter ${verse.c}. `;
+                }
+                // Else: Same chapter, just read text (no "Verse X")
+            } else {
+                // Manual Start or Jump -> Announce Full Reference
+                textPrefix = `${verse.b} Chapter ${verse.c} Verse ${verse.v}. `;
+            }
+            
+            // Update tracker
+            lastSpokenIndex = index;
+
+            textToRead = textPrefix + verse.t;
+
+            // Cancel any previous
+            window.speechSynthesis.cancel();
+
+            const utterance = new SpeechSynthesisUtterance(textToRead);
+            utterance.rate = 0.9; // Slightly slower for scripture
+            utterance.pitch = 1.0;
+            
+            // Prioritize Female Voices:
+            // 1. Google US English (High quality Female on Chrome)
+            // 2. Microsoft Zira (Standard Windows Female)
+            // 3. Samantha (Standard Mac Female)
+            // 4. Any voice explicitly named "Female"
+            const preferredVoice = appVoices.find(v => v.name.includes("Google US English")) || 
+                                   appVoices.find(v => v.name.includes("Zira")) ||
+                                   appVoices.find(v => v.name.includes("Samantha")) ||
+                                   appVoices.find(v => v.name.toLowerCase().includes("female")) ||
+                                   appVoices.find(v => v.lang === "en-US"); // Fallback to en-US
+
+            if (preferredVoice) {
+                utterance.voice = preferredVoice;
+            }
+
+            utterance.onend = function(event) {
+                if (isAutoPlaying) {
+                    // Navigate to next verse
+                    if (index < bibleData.length - 1) {
+                        goToVerse(index + 1);
+                    } else {
+                        stopAudio();
+                        displaySingleVerseWithContext(); // Reset UI
+                    }
+                }
+            };
+
+            utterance.onerror = function(event) {
+                console.error("Speech error", event);
+                stopAudio();
+                displaySingleVerseWithContext();
+            };
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', loadBibleData);
+
+        // Allow Enter key to trigger search
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') performSearch();
+            });
+        });
+
+        // Info Modal Functions
+        function openInfoModal() {
+            document.getElementById('infoModal').classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeInfoModal() {
+            document.getElementById('infoModal').classList.remove('active');
+            document.body.style.overflow = ''; 
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeInfoModal();
+            }
+        });
+    // --- Personal Bible Logic ---
+    
+    let personalFileHandle = null;
+    let isPersonalMode = false;
+    let editingVerseIndex = -1;
+    let currentUser = null; // Store user info
+
+    // Handle Logic for Widget Click (Local Bible)
+    async function handleBibleAction() {
+        // 1. Check Auth (Must be logged in to do anything with personal bible)
+        const isAuthenticated = await checkAuth();
+        if (!isAuthenticated) {
+            document.getElementById('loginRequiredModal').classList.add('active');
+            return;
+        }
+        
+        // 2. If Active (Green) -> Prompt to Switch to Offline (Deactivate)
+        if (isPersonalMode) {
+            document.getElementById('switchModeModal').classList.add('active');
+            return;
+        }
+
+        // 3. If Inactive, prompt init (Connect/Reconnect)
+        document.getElementById('personalBibleInitModal').classList.add('active');
+    }
+    
+    // Switch to Online (Standard) Mode logic
+    async function switchToOnlineMode() {
+        isPersonalMode = false;
+        personalFileHandle = null; // Clear handle reference specifically for this session
+        
+        // Update Widget to Red
+        const localDot = document.getElementById('localDot');
+        const localLabel = document.getElementById('localLabel');
+        if(localDot) localDot.style.backgroundColor = '#ff4444'; // Red
+        if(localLabel) localLabel.textContent = "Online Bible Active";
+        
+        closeModal('switchModeModal');
+        
+        // Reload Default Data (web.csv)
+        // Show loading indicator
+        const loader = document.getElementById('loadingOverlay') || createLoader();
+        loader.style.opacity = '1';
+        loader.style.display = 'flex';
+        
+        await loadBibleData(); 
+        
+        setTimeout(() => {
+             loader.style.opacity = '0';
+             setTimeout(() => { loader.style.display = 'none'; }, 500);
+        }, 800);
+    }
+    
+    // Helper to ensure loader exists (if not in HTML)
+    function createLoader() {
+        let l = document.getElementById('loadingOverlay');
+        if(!l) {
+            l = document.createElement('div');
+            l.id = 'loadingOverlay';
+            l.style.cssText = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0a0a0a; z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: opacity 0.5s;";
+            l.innerHTML = '<div style="color:var(--gold);">Switching to Online Bible...</div>';
+            document.body.appendChild(l);
+        }
+        return l;
+    }
+    
+    // Check Auth
+    async function checkAuth() {
+        try {
+            // Add timestamp to prevent caching
+            // Add credentials: 'include' to ensure cookies are sent with the request
+            const res = await fetch('auth_check.php?t=' + Date.now(), {
+                credentials: 'include'
+            });
+            
+            // Check if response is valid JSON
+            const text = await res.text();
+            let data;
+            try {
+                data = JSON.parse(text);
+            } catch (e) {
+                console.error("Auth Check returned non-JSON:", text);
+                alert("Auth Error: Server returned invalid data. " + text.substring(0,200));
+                throw new Error("Invalid server response");
+            }
+
+            // Update UI Widget
+            const dot = document.getElementById('authDot');
+            const label = document.getElementById('authLabel');
+            const widget = document.getElementById('authStatusWidget');
+            
+            if (data.authenticated) {
+                currentUser = data;
+                
+                // UI Updates
+                dot.classList.add('logged-in'); // Green
+                label.textContent = "Log Out"; // Action text
+                widget.href = data.logout_url || '#'; 
+                widget.style.cursor = 'pointer';
+
+                // Check for Backup on Login
+                checkForBackup(); // Async check
+
+                isLoggedIn = true;
+                return true;
+            } else {
+                currentUser = null;
+                dot.classList.remove('logged-in'); // Red
+                label.textContent = "Log In"; // Action text
+                widget.href = data.login_url || '/wp-login.php';
+                widget.style.cursor = 'pointer';
+                
+                // Update Modal Link too
+                const modalLink = document.getElementById('loginLinkBtn');
+                if (modalLink) modalLink.href = data.login_url || '/wp-login.php';
+                
+                return false;
+            }
+        } catch (e) {
+            console.error("Auth check failed", e);
+            // Default to logged out state
+            document.getElementById('authDot').classList.remove('logged-in');
+            document.getElementById('authLabel').textContent = "Logged Out";
+            document.getElementById('authStatusWidget').href = '/wp-login.php';
+            return false;
+        }
+    }
+
+    // UI Action Button Logic (The "One Button" handler)
+    async function handleBibleAction() {
+        // Toggle Logic
+        if (typeof isPersonalMode !== 'undefined' && isPersonalMode) {
+            // Already in Personal Mode -> Switch to Online
+            const confirmSwitch = confirm("Switch back to the Online Bible? \n\nThis will temporarily close your personal file. Your data is safe.");
+            if (!confirmSwitch) return;
+
+            // Reset State
+            personalFileHandle = null;
+            isPersonalMode = false;
+
+            // Reset UI
+            const localDot = document.getElementById('localDot');
+            const localLabel = document.getElementById('localLabel');
+            const cloudActions = document.getElementById('cloudActions');
+            const cloudDivider = document.getElementById('cloudDivider');
+
+            if (localDot) localDot.style.backgroundColor = '#ff6b6b'; // Red
+            if (localLabel) localLabel.textContent = "Online Bible Active";
+            if (cloudActions) cloudActions.style.display = 'none';
+            if (cloudDivider) cloudDivider.style.display = 'none';
+
+            // Reload Online Data
+            await loadBibleData(true);
+            
+            // Re-render
+            if (typeof performSearch === 'function' && currentResults.length > 0) {
+                 performSearch(); 
+            } else {
+                 populateBooks(); // Reset view
+            }
+            return;
+        }
+
+        // If we have a handle stored, try to reconnect (Permissions will be asked)
+        const storedHandle = await getHandle();
+        
+        if (storedHandle) {
+             // Try to reconnect
+             personalFileHandle = storedHandle;
+             await requestPermission(); 
+        } else {
+             // Create new
+             await createMyBibleData();
+        }
+        closeModal('personalBibleInitModal');
+    }
+
+    // IndexedDB: Store File Handle
+    async function getDb() {
+        return new Promise((resolve, reject) => {
+            const request = indexedDB.open('MyBibleDB', 1);
+            request.onupgradeneeded = e => {
+                const db = e.target.result;
+                if (!db.objectStoreNames.contains('handles')) {
+                    db.createObjectStore('handles');
+                }
+            };
+            request.onsuccess = e => resolve(e.target.result);
+            request.onerror = e => reject(e);
+        });
+    }
+
+    async function saveHandle(handle) {
+        try {
+            const db = await getDb();
+            const tx = db.transaction('handles', 'readwrite');
+            tx.objectStore('handles').put(handle, 'bible_csv');
+        } catch(e) { console.warn("IDB Save Error", e); }
+    }
+
+    async function getHandle() {
+        try {
+            const db = await getDb();
+            return new Promise(resolve => {
+                const tx = db.transaction('handles', 'readonly');
+                const req = tx.objectStore('handles').get('bible_csv');
+                req.onsuccess = e => resolve(e.target.result);
+                req.onerror = () => resolve(null);
+            });
+        } catch(e) { return null; }
+    }
+
+    // Init: Check if we have a stored handle and try to load
+    async function checkPersonalBible() {
+         const handle = await getHandle();
+         
+         const localDot = document.getElementById('localDot');
+         const localLabel = document.getElementById('localLabel');
+         
+         if (handle) {
+             personalFileHandle = handle;
+             
+             // Update Button Text
+             const btn = document.getElementById('pbPrimaryActionBtn');
+             if (btn) btn.innerText = "Reconnect My Bible";
+             
+             // Auto-Load Attempt (If permission persists)
+             try {
+                // Check if we have persistission
+                const opts = { mode: 'readwrite' };
+                if ((await handle.queryPermission(opts)) === 'granted') {
+                    // We can load!
+                    await loadPersonalContent();
+                    // Status is updated in loadPersonalContent
+                } else {
+                    console.log("Personal Bible found but permission required.");
+                    // Update Widget to indicated "Ready to Connect"
+                    if(localDot) localDot.style.backgroundColor = 'orange';
+                    if(localLabel) localLabel.innerText = "My Bible: Click to Load";
+                }
+             } catch(e) { console.warn("Auto-load check failed", e); }
+         } else {
+             // No handle known
+             if(localDot) localDot.style.backgroundColor = '#ff4444';
+             if(localLabel) localLabel.innerText = "My Bible: Inactive";
+         }
+    }
+
+    async function requestPermission() {
+        if (!personalFileHandle) return;
+        const opts = { mode: 'readwrite' };
+        if ((await personalFileHandle.requestPermission(opts)) === 'granted') {
+            await loadPersonalContent();
+        }
+    }
+
+    async function loadPersonalContent() {
+        try {
+            const file = await personalFileHandle.getFile();
+            const text = await file.text();
+            
+            // Clear current data and reload from file
+            bibleData = [];
+            bibleStructure = {};
+            parseCSV(text); // parseCSV will need to handle the extra columns
+            
+            isPersonalMode = true;
+            
+            const status = document.getElementById('personalBibleStatus');
+            if(status) status.style.display = 'none'; // Hide old bottom widget as we have top widget now
+            // status.innerHTML = '<span id="pbStatusText">My Bible Data Active</span>';
+            
+            // Update Top Widget
+            const localDot = document.getElementById('localDot');
+            const localLabel = document.getElementById('localLabel');
+            if(localDot) localDot.style.backgroundColor = '#00cc66'; // Green
+            if(localLabel) localLabel.textContent = "My Bible Active"; // Action text requested? Or State? 
+            
+            // Show Backup Button
+            const cloudActions = document.getElementById('cloudActions');
+            const cloudDivider = document.getElementById('cloudDivider');
+            
+            if(cloudActions) cloudActions.style.display = 'flex';
+            if(cloudDivider) cloudDivider.style.display = 'block';
+            
+            // Auto-Check Server State (updates Download icon if exists)
+            checkServerBackupForModal().catch(e => console.warn("Background backup check failed", e));
+
+            // Re-render current view with new data
+            if (currentResults.length > 0) performSearch(); 
+        } catch (e) {
+            console.error("Failed to load personal file", e);
+            alert("Error loading your personal Bible data.");
+        }
+    }
+
+    // Create New Personal Bible (Save As...)
+    async function createMyBibleData() {
+        try {
+            const opts = {
+                suggestedName: 'My Bible Data.csv',
+                types: [{
+                    description: 'Bible Data CSV',
+                    accept: {'text/csv': ['.csv']},
+                }],
+            };
+            const handle = await window.showSaveFilePicker(opts);
+            personalFileHandle = handle;
+            await saveHandle(handle);
+            
+            // Generate CSV from current memory
+            let csvContent = '"Book","Chapter","Verse","Text","Note","EditNote"\n';
+            bibleData.forEach(v => {
+                const txt = v.t.replace(/"/g, '""'); // Escape double quotes
+                // Store Arrays as JSON string, but escape quotes for CSV
+                const nJson = JSON.stringify(v.n || []).replace(/"/g, '""');
+                const enJson = JSON.stringify(v.en || []).replace(/"/g, '""');
+                
+                csvContent += `"${v.b}","${v.c}","${v.v}","${txt}","${nJson}","${enJson}"\n`;
+            });
+            
+            const writable = await handle.createWritable();
+            await writable.write(csvContent);
+            await writable.close();
+            
+            isPersonalMode = true;
+            closeModal('personalBibleInitModal');
+            await loadPersonalContent(); // Reload to confirm
+            
+        } catch (e) {
+            console.error("Create failed", e);
+        }
+    }
+
+    // Open Existing
+    async function openMyBibleData() {
+         try {
+            const [handle] = await window.showOpenFilePicker({
+                types: [{ description: 'Bible Data CSV', accept: {'text/csv': ['.csv']} }],
+                multiple: false
+            });
+            personalFileHandle = handle;
+            await saveHandle(handle);
+            await loadPersonalContent();
+            closeModal('personalBibleInitModal');
+         } catch(e) { console.error("Open failed", e); }
+    }
+
+    // UI Logic
+    async function openVerseEditor(index, focusMode = 'text') {
+        
+        // 1. Check Auth / Local File
+        // Allow if logged in OR if local file is active (Relaxed Auth)
+        const isAuthenticated = await checkAuth();
+        if (!isAuthenticated && !personalFileHandle) {
+             // If not logged in AND no local file, show login prompt to get started
+             // Actually, if no local file, they can't edit anyway until they create one.
+             // But to create one, we usually ask them to login first to associate options?
+             // User said: "Log in to wordpress is only an initial requirement...".
+             // So if they are guest, they should be able to click "Edit", then get prompted to "Create My Bible".
+             // So we should SKIP this check if we are going to prompt for Init later.
+             // usage: isPersonalMode checks if we have initialized.
+        }
+        
+        // If we are strictly checking for "Can I Edit This Verse?":
+        // If (Locked && !LocalHandle) -> Login Required.
+        // If (LocalHandle) -> Allowed.
+        
+        if (!personalFileHandle && !isAuthenticated) {
+             // Guide them to login first? Or let them Init as Guest?
+             // "Log in ... is only an initial requirement ... so we can associate their options"
+             // I will Keep the login prompt for *First Time* users to encourage login, 
+             // BUT if they already have a handle (personalFileHandle), we skip it.
+             document.getElementById('loginRequiredModal').classList.add('active');
+             return;
+        }
+
+        // 2. Check if Personal Mode is Active
+        if (!isPersonalMode) {
+            document.getElementById('personalBibleInitModal').classList.add('active');
+            await checkPersonalBible();
+            return;
+        }
+        
+        // 3. Open Editor
+        editingVerseIndex = index;
+        const verse = bibleData[index];
+        const title = document.getElementById('editorTitle');
+        const textArea = document.getElementById('verseEditText');
+        
+        // Mode Handling
+        // focusMode: 'text' (Edit Button) or 'notes' (Notes Button)
+        const editSection = document.getElementById('editModeSection');
+        const notesSection = document.getElementById('notesModeSection');
+        
+        if (focusMode === 'notes') {
+            // NOTES MODE: Show Notes ONLY
+            title.innerHTML = `<span style="opacity:0.8; font-size:0.9em;">My Notes on -</span> ${verse.b} ${verse.c}:${verse.v}`;
+            editSection.style.display = 'none';
+            notesSection.style.display = 'block';
+        } else {
+            // EDIT MODE: Show Content + Translation Edits
+            title.innerText = `Edit ${verse.b} ${verse.c}:${verse.v}`;
+            editSection.style.display = 'block';
+            notesSection.style.display = 'none';
+        }
+
+        textArea.value = verse.t || "";
+        
+        // Sort Lists Newest First
+        const dateSort = (a, b) => {
+             const da = (typeof a==='object' && a.date) ? new Date(a.date) : new Date(0);
+             const db = (typeof b==='object' && b.date) ? new Date(b.date) : new Date(0);
+             return db - da;
+        };
+        if(verse.n) verse.n.sort(dateSort);
+        if(verse.en) verse.en.sort(dateSort);
+
+        // Render Lists
+        renderEditorList('notesList', verse.n || []);
+        renderEditorList('editsList', verse.en || []);
+        
+        document.getElementById('verseEditorModal').classList.add('active');
+    }
+    
+    // Helper to render list
+    function renderEditorList(containerId, list) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = '';
+        
+        list.forEach((item, idx) => {
+            const div = document.createElement('div');
+            div.className = 'editor-list-item';
+            
+            // Format Date if exists
+            let dateStr = "";
+            const textVal = (typeof item === 'object' && item.text) ? item.text : item;
+            const dateVal = (typeof item === 'object' && item.date) ? item.date : null;
+            
+            if (dateVal) {
+                try {
+                    const d = new Date(dateVal);
+                    dateStr = d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                } catch(e) {}
+            }
+            
+            div.innerHTML = `
+                <div style="flex:1;">
+                    <textarea class="item-text verse-editor-area" style="min-height: 40px; margin-bottom:0;" onblur="updateListItem('${containerId}', ${idx}, this.value)">${textVal}</textarea>
+                    ${dateStr ? `<div style="font-size: 0.75rem; color: var(--gold); opacity: 0.7; margin-top: 4px;">${dateStr}</div>` : ''}
+                </div>
+                <button class="delete-btn" onclick="deleteListItem('${containerId}', ${idx})">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2-2v2"></path></svg>
+                </button>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    // Helper to add new item
+    window.addListItem = function(type) {
+        // type = 'note' or 'edit'
+        const verse = bibleData[editingVerseIndex];
+        const newItem = {
+            text: type === 'note' ? "New Note" : "New Edit Note",
+            date: new Date().toISOString()
+        };
+        
+        if (type === 'note') {
+            if (!verse.n) verse.n = [];
+            verse.n.unshift(newItem); // Prepend (Top)
+            renderEditorList('notesList', verse.n);
+        } else {
+            if (!verse.en) verse.en = [];
+            verse.en.unshift(newItem); // Prepend (Top)
+            renderEditorList('editsList', verse.en);
+        }
+    };
+    
+    // Helper to delete
+    window.deleteListItem = function(containerId, idx) {
+        const verse = bibleData[editingVerseIndex];
+        const list = (containerId === 'notesList') ? verse.n : verse.en;
+        list.splice(idx, 1);
+        renderEditorList(containerId, list);
+    };
+    
+    // Helper to update (on blur)
+    window.updateListItem = function(containerId, idx, val) {
+        const verse = bibleData[editingVerseIndex];
+        const list = (containerId === 'notesList') ? verse.n : verse.en;
+        list[idx].text = val;
+        // Optionally update timestamp on edit? User just asked to include timestamps, usually creation time is key.
+        // Let's keep original creation time unless explicit request.
+    }
+
+    async function saveVerseEdits() {
+        if (editingVerseIndex === -1 || !personalFileHandle) return;
+        
+        const newText = document.getElementById('verseEditText').value.trim();
+        // Notes and Edits are already updated in bibleData via the direct array manipulation in helpers above
+        
+        // Update Text Memory
+        bibleData[editingVerseIndex].t = newText;
+        
+        closeModal('verseEditorModal');
+        
+        // Show saving state
+        const status = document.getElementById('pbStatusText');
+        const originalStatus = status.innerText;
+        status.innerText = "Saving...";
+        
+        try {
+            const writable = await personalFileHandle.createWritable();
+            let csvContent = '"Book","Chapter","Verse","Text","Note","EditNote"\n';
+            
+            const VM = String.fromCharCode(253);
+            const SM = String.fromCharCode(252);
+
+            for (let i = 0; i < bibleData.length; i++) {
+                const v = bibleData[i];
+                const txt = v.t.replace(/"/g, '""');
+                
+                // Serialize Pick Format
+                // item = {text, date}
+                // entry = text + SM + date
+                // list = entry + VM + entry...
+                
+                const serialize = (list) => {
+                    if (!list || list.length === 0) return "";
+                    return list.map(i => {
+                        let t = i.text || "";
+                        // Ensure we don't accidentally have VM/SM in text
+                        // Although rare, minimal safety:
+                         // t = t.split(VM).join("").split(SM).join(""); 
+                         return t + SM + (i.date || "");
+                    }).join(VM).replace(/"/g, '""');
+                };
+
+                const nStr = serialize(v.n);
+                const enStr = serialize(v.en);
+                
+                csvContent += `"${v.b}","${v.c}","${v.v}","${txt}","${nStr}","${enStr}"\n`;
+            }
+            
+            await writable.write(csvContent);
+            await writable.close();
+            status.innerText = "Saved!";
+            setTimeout(() => status.innerText = originalStatus, 2000);
+            
+            displaySingleVerseWithContext(); // Refresh UI
+            
+        } catch (e) {
+            console.error("Save failed", e);
+            status.innerText = "Save Failed!";
+            alert("Failed to save to My Bible Data file. Please check permissions.");
+        }
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).classList.remove('active');
+    }
+    
+    function openInfoModal() {
+        document.getElementById('infoModal').classList.add('active');
+    }
+    
+    function closeInfoModal() {
+        document.getElementById('infoModal').classList.remove('active');
+    }
+    
+    function toggleNoticePopup() {
+        const p = document.getElementById('noticePopup');
+        if (p.style.display === 'none') {
+            p.style.display = 'block';
+        } else {
+            p.style.display = 'none';
+        }
+    }
+    
+    // Run Auth Check on Load
+    document.addEventListener('DOMContentLoaded', () => {
+        checkAuth();
+        loadBibleData(); 
+        // checkPersonalBible() is called inside loadBibleData after success
+    });
+
+    // --- BACKUP & RESTORE SYSTEM --- //
+
+    // --- BACKUP & RESTORE SYSTEM (v2.0 UI) --- //
+
+    // 1. ENTRY POINT: Open Modal
+    async function openBackupModal(actionForce = null) {
+        if (!isLoggedIn) {
+             // Redirect to login if user tries to backup without auth
+             // But maybe warn them first? "Please log in..."
+             // User requested "automaticly invoke login".
+             window.location.href = "/wp-login.php?redirect_to=" + encodeURIComponent(window.location.href);
+             return;
+        }
+        
+        if (!personalFileHandle) {
+            showMessageModal("No Bible Data", "No Personal Bible file is currently active. Please create or load one first.");
+            return;
+        }
+
+        // Show Modal in "Loading" state first
+        createBackupModalStub(); 
+        const modal = document.getElementById('backupModal');
+        modal.classList.add('active');
+        
+        // Reset UI State
+        document.getElementById('backupLoading').style.display = 'block';
+        document.getElementById('backupContent').style.display = 'none';
+        
+        // Check Server for existing backup
+        await checkServerBackupForModal();
+    }
+    
+    // Helper: Generic Message Modal
+    function showMessageModal(title, text) {
+        const m = document.getElementById('messageModal');
+        if(m) {
+            document.getElementById('msgModalTitle').innerText = title;
+            document.getElementById('msgModalText').innerText = text;
+            m.classList.add('active');
+        } else {
+            alert(text); // Fallback
+        }
+    }
+    
+    // 2. CHECK STATUS
+    async function checkServerBackupForModal() {
+        try {
+            const res = await fetch('backup_api.php?action=check' + '&t=' + Date.now());
+            const data = await res.json();
+            
+            // Build UI Based on Result
+            setTimeout(() => {
+                updateBackupUI(data); 
+            }, 500); // Visual delay for smoothness
+            
+        } catch (e) {
+            console.warn("Backup check failed", e);
+            document.getElementById('backupLoading').innerHTML = '<p style="color:red">Failed to connect to server.</p>';
+        }
+    }
+    
+    // 3. RENDER UI
+    function updateBackupUI(data) {
+        document.getElementById('backupLoading').style.display = 'none';
+        document.getElementById('backupContent').style.display = 'block';
+        
+        const statusBox = document.getElementById('backupStatusBox');
+        const actionsDiv = document.getElementById('backupActionButtons');
+        const progressBar = document.getElementById('backupProgressBar');
+        
+        // Reset Progress
+        progressBar.style.display = 'none';
+        document.getElementById('backupStatusMsg').innerHTML = '';
+        
+        if (data.exists) {
+            // Check if we should show the "Download" icon in the main widget
+            // This function is driven by the modal, but we can update the main UI state too
+            const btnDownload = document.getElementById('btnCloudDownload');
+            if(btnDownload) btnDownload.style.display = 'block';
+
+            // SCENARIO B: Backup Exists
+            statusBox.innerHTML = `
+                <div style="margin-bottom: 0.5rem; color: #fff;">Cloud Backup Found</div>
+                <div class="backup-stat-row">
+                    <span class="backup-stat-label">Date:</span>
+                    <span class="backup-stat-value">${new Date(data.timestamp).toLocaleString()}</span>
+                </div>
+                <div class="backup-stat-row">
+                    <span class="backup-stat-label">Expires:</span>
+                    <span class="backup-stat-value">In ${7 - Math.floor(data.age_days)} days</span>
+                </div>
+                <div style="font-size:0.8rem; margin-top:0.5rem; color: #aaa;">
+                    Use this to transfer your local changes to another device.
+                </div>
+            `;
+            
+            actionsDiv.innerHTML = `
+                 <div class="backup-btn-row">
+                    <button class="btn-gold btn-icon-flex" onclick="performBackupAction('restore')" title="Pull from Cloud">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Download to Device
+                    </button>
+                    
+                    <button class="btn-outline btn-icon-flex" onclick="performBackupAction('upload')" title="Push to Cloud">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                        Overwrite Cloud
+                    </button>
+                 </div>
+                 <p style="font-size:0.8rem; color:#888; margin-top:1rem;">
+                    "Download" will replace your current local data.<br>
+                    "Overwrite" will update the cloud with your current local data.
+                 </p>
+            `;
+            
+        } else {
+            // SCENARIO A: No Backup
+            statusBox.innerHTML = `
+                <div style="color: #aaa; font-style: italic;">No cloud backup found for your account.</div>
+                <div style="margin-top: 1rem; color: var(--gold);">Upload your local Bible data to transfer it to other devices.</div>
+            `;
+            
+             actionsDiv.innerHTML = `
+                 <button class="btn-gold btn-icon-flex" onclick="performBackupAction('upload')" style="max-width:300px; margin:0 auto;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                    Upload to Cloud
+                </button>
+                <p style="font-size:0.8rem; color:#666; margin-top:1rem;">
+                    Your data will be securely stored for 7 days.
+                </p>
+             `;
+        }
+    }
+    
+    // 4. PERFORM ACTION
+    async function performBackupAction(type) {
+        // type = 'upload' or 'restore'
+        const progressBar = document.getElementById('backupProgressBar');
+        const fill = document.getElementById('backupProgressFill');
+        const msg = document.getElementById('backupStatusMsg');
+        
+        // Disable buttons
+        const btns = document.querySelectorAll('#backupActionButtons button');
+        btns.forEach(b => b.disabled = true);
+        
+        progressBar.style.display = 'block';
+        fill.style.width = '10%';
+        msg.className = 'status-message status-neutral';
+        
+        if (type === 'upload') {
+            msg.innerText = "Reading local file...";
+            try {
+                // 1. Read File
+                const file = await personalFileHandle.getFile();
+                fill.style.width = '30%';
+                
+                // 2. Upload
+                msg.innerText = "Uploading to server...";
+                const formData = new FormData();
+                formData.append('backup_file', file);
+                
+                // Fake progress for UX
+                let progress = 30;
+                const interval = setInterval(() => {
+                    if(progress < 90) { progress += 5; fill.style.width = progress + '%'; }
+                }, 100);
+                
+                const res = await fetch('backup_api.php?action=backup', {
+                     method: 'POST',
+                     body: formData
+                });
+                
+                clearInterval(interval);
+                const data = await res.json();
+                
+                if (data.success) {
+                    fill.style.width = '100%';
+                    msg.innerHTML = '<span class="status-success">Upload Successful!</span>';
+                    msg.className = 'status-message status-success';
+                    
+                    // Refresh UI after short delay
+                    setTimeout(() => checkServerBackupForModal(), 1500); 
+                } else {
+                    throw new Error(data.error || "Upload failed");
+                }
+
+            } catch(e) {
+                console.error(e);
+                fill.style.width = '100%';
+                fill.style.background = '#dc3545';
+                msg.innerText = "Error: " + e.message;
+                msg.className = 'status-message status-error';
+                btns.forEach(b => b.disabled = false); // Re-enable
+            }
+            
+        } else if (type === 'restore') {
+             // Restore Flow
+             // Confirm Again (Double Safety)
+             if(!confirm("Are you sure? This will OVERWRITE your current local data on this device.")) {
+                  btns.forEach(b => b.disabled = false);
+                  progressBar.style.display = 'none';
+                  msg.innerText = "";
+                  return;
+             }
+             
+             msg.innerText = "Downloading from cloud...";
+             fill.style.width = '40%';
+             
+             try {
+                const res = await fetch('backup_api.php?action=restore');
+                if (!res.ok) throw new Error("Download failed");
+                
+                const blob = await res.blob();
+                const text = await blob.text();
+                
+                fill.style.width = '80%';
+                msg.innerText = "Writing to local file...";
+                
+                const writable = await personalFileHandle.createWritable();
+                await writable.write(text);
+                await writable.close();
+                
+                fill.style.width = '100%';
+                msg.innerHTML = '<span class="status-success">Restore Complete! Reloadering...</span>';
+                
+                // Reload Data
+                await loadPersonalContent(); 
+                
+                setTimeout(() => {
+                    closeModal('backupModal'); 
+                    alert("Your Bible data has been restored.");
+                }, 1000);
+
+             } catch(e) {
+                console.error(e);
+                fill.style.width = '100%';
+                fill.style.background = '#dc3545';
+                msg.innerText = "Restore Error: " + e.message;
+                btns.forEach(b => b.disabled = false);
+             }
+        }
+    }
+    
+    // Helper to Create Modal HTML
+    function createBackupModalStub() {
+        if (!document.getElementById('backupModal')) {
+            const div = document.createElement('div');
+            div.id = 'backupModal';
+            div.className = 'modal-overlay';
+            div.innerHTML = `
+                <div class="modal-content" style="max-width: 500px;">
+                    <div class="modal-header">
+                        <h2>Cloud Backup & Transfer</h2>
+                        <button class="modal-close" onclick="closeModal('backupModal')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        </button>
+                    </div>
+                    <div class="backup-modal-body">
+                        
+                        <!-- Loading State -->
+                        <div id="backupLoading" style="padding:2rem;">
+                            <div style="color:var(--gold); font-size:1.2rem;">Checking Server...</div>
+                        </div>
+                        
+                        <!-- Content State -->
+                        <div id="backupContent" style="display:none;">
+                            <div id="backupStatusBox" class="backup-info-box">
+                                <!-- Dynamic Status Info -->
+                            </div>
+                            
+                            <div id="backupActionButtons" class="backup-actions">
+                                <!-- Dynamic Buttons -->
+                            </div>
+                            
+                            <!-- Progress Bar -->
+                            <div id="backupProgressBar" class="progress-container">
+                                <div class="progress-label">
+                                    <span>Progress</span>
+                                    <span id="backupProgressPercent"></span>
+                                </div>
+                                <div class="progress-track">
+                                    <div id="backupProgressFill" class="progress-bar-fill"></div>
+                                </div>
+                                <div id="backupStatusMsg" class="status-message"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(div);
+        }
+    }
+    
+    // Auto-check for Restore on Login is still useful, but maybe less aggressive?
+    // Let's keep checkForBackup() but update it to use the new UX?
+    // Actually, user said: "popup should appear... if there is an uploaded file... give option to download"
+    // So logic remains: perform a check on init, if exists -> show a prompt.
+    // We can just open the openBackupModal() directly!
+    async function checkForBackup() {
+        // Only if logged in + has local handle? 
+        // If they just logged in on a new device, they might NOT have a local handle yet. 
+        // In that case, we need to prompt "Restore Backup" BEFORE they even initialize "My Bible"!
+        
+        // Current logic: We only call checkForBackup() in checkAuth() success.
+        
+        try {
+            const res = await fetch('backup_api.php?action=check' + '&t=' + Date.now());
+            const data = await res.json();
+            
+            if (data.exists) {
+                // If we have a backup, we should let the user know!
+                // Especially if they are on a new device (no personalFileHandle)
+                if (!personalFileHandle) {
+                     // We need a specific "Found Backup" modal that LEADS to connecting a file handle
+                     // OR we just adapt the openBackupModal logic to handle "No Handle" state?
+                     // Let's create a notification dot on the cloud icon instead?
+                     // Or just show a Toast?
+                     
+                     // For now, let's stick to the subtle approach unless they click the button.
+                     // The user request implies the modal appears when they CLICK the button.
+                     // "The Backup to cloud icon does nothing. A popup should appear..."
+                     
+                     // So I will DISABLE the auto-popup on load to avoid annoyance, 
+                     // relying on the user to click the Cloud button when they want to sync.
+                }
+            }
+        } catch(e) {}
+    }
+
+    </script>
+    <!-- Information Modal -->
+    <div class="modal-overlay" id="infoModal" onclick="if(event.target === this) closeInfoModal()">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>About This Bible</h2>
+                <button class="modal-close" onclick="closeInfoModal()" aria-label="Close Modal" title="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="bib-meta">
+                    <strong>World English Bible (WEB)</strong><br />
+                    Published: 2000 (updated continuously)<br />
+                    Translator: Rainbow Missions, Inc. (led by Michael Paul Johnson)
+                </div>
+
+                <h3>The Core Philosophy</h3>
+                <p>The WEB was created to solve a legal problem, not a theological one. Almost all modern English Bibles (NIV, ESV, NKJV) are copyrighted, meaning you cannot print them, display them on websites, or build apps with them without paying royalties or strictly limiting how many verses you quote. The WEB is a Public Domain translation, meaning it is completely free for anyone to use, copy, or publish without permission.</p>
+
+                <h3>Key Characteristics</h3>
+                <ul>
+                    <li>
+                        <strong>God's Name:</strong> It is one of the few English Bibles to use <strong>Yahweh</strong> in the Old Testament instead of the traditional capitalised "LORD." <br /><em>(Note: In this application, "Yahweh" has been standardized to "Yehovah" as per site preferences).</em>
+                    </li>
+                    <li>
+                        <strong>Majority Text:</strong> Unlike most modern Bibles (which use the "Critical Text" or "Alexandrian" Greek manuscripts), the WEB New Testament is based on the <strong>Byzantine Majority Text</strong>. This means it includes verses often relegated to footnotes in other Bibles (like Acts 8:37 or the longer ending of Mark).
+                    </li>
+                    <li>
+                        <strong>Modern English:</strong> It is based on the American Standard Version (ASV) of 1901, but the language has been updated to remove "thee," "thou," and archaic grammar, making it readable for modern English speakers.
+                    </li>
+                </ul>
+
+                <h3>Who uses it?</h3>
+                <p>It is widely used by software developers, website creators, and missionaries who need a royalty-free Bible for apps and projection software. If you see a Bible verse on a random website or free app, there is a high chance it is the WEB because of its open license.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
