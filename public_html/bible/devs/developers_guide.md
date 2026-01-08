@@ -3,7 +3,7 @@
 ## 1. Overview
 The **Walk For God Bible App** is a specialized Single-Page Application (SPA) designed to run within a WordPress environment. Its core philosophy is **"Offline-First, Personal Ownership"**. Unlike typical web apps that store user data in a central database, this app empowers users to save their personal notes and edits directly to a **local CSV file** on their device using the modern **File System Access API**.
 
-**Current Version**: `v1.03`
+**Current Version**: `v1.07`
 
 ---
 

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-bible-edit-v1';
+const CACHE_NAME = 'my-bible-edit-v1-07';
 const ASSETS = [
   './bible.html',
   './manifest.json',
