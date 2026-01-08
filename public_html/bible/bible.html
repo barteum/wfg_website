@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags -->
     <title>Walk For God – My Personal Bible | Free Online Bible with Personal Notes</title>
-    <meta name="title" content="Walk For God – My Personal Bible | Free Online Bible with Personal Notes">
-    <meta name="description" content="Search, read, and personalize the World English Bible (WEB). Create your own personal Bible with custom edits and notes. Free for life for the first 10,000 users.">
-    <meta name="keywords" content="Bible, Personal Bible, World English Bible, WEB, Bible study, scripture, Christian, faith, Bible notes, Bible app, online Bible, free Bible">
-    <meta name="author" content="Walk For God">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#d4af37">
-    <link rel="canonical" href="https://walkforgod.org/bible/bible.html">
-    <link rel="icon" type="image/png" href="../images/logo-wfg.png">
+    <meta name="title" content="Walk For God – My Personal Bible | Free Online Bible with Personal Notes" />
+    <meta name="description" content="Search, read, and personalize the World English Bible (WEB). Create your own personal Bible with custom edits and notes. Free for life for the first 10,000 users." />
+    <meta name="keywords" content="Bible, Personal Bible, World English Bible, WEB, Bible study, scripture, Christian, faith, Bible notes, Bible app, online Bible, free Bible" />
+    <meta name="author" content="Walk For God" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#d4af37" />
+    <link rel="canonical" href="https://walkforgod.org/bible/bible.html" />
+    <link rel="icon" type="image/png" href="../images/logo-wfg.png" />
     
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://walkforgod.org/bible/bible.html">
-    <meta property="og:title" content="Walk For God – My Personal Bible">
-    <meta property="og:description" content="Search, read, and personalize the World English Bible. Create your own personal Bible with custom edits and notes. Free for life!">
-    <meta property="og:image" content="https://walkforgod.org/images/logo-wfg.png">
-    <meta property="og:site_name" content="Walk For God">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://walkforgod.org/bible/bible.html" />
+    <meta property="og:title" content="Walk For God – My Personal Bible" />
+    <meta property="og:description" content="Search, read, and personalize the World English Bible. Create your own personal Bible with custom edits and notes. Free for life!" />
+    <meta property="og:image" content="https://walkforgod.org/images/logo-wfg.png" />
+    <meta property="og:site_name" content="Walk For God" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://walkforgod.org/bible/bible.html">
-    <meta name="twitter:title" content="Walk For God – My Personal Bible">
-    <meta name="twitter:description" content="Search, read, and personalize the World English Bible. Create your own personal Bible with custom edits and notes.">
-    <meta name="twitter:image" content="https://walkforgod.org/images/logo-wfg.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://walkforgod.org/bible/bible.html" />
+    <meta name="twitter:title" content="Walk For God – My Personal Bible" />
+    <meta name="twitter:description" content="Search, read, and personalize the World English Bible. Create your own personal Bible with custom edits and notes." />
+    <meta name="twitter:image" content="https://walkforgod.org/images/logo-wfg.png" />
     
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -63,9 +63,9 @@
     </script>
     
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     
     
     <style>
@@ -1926,6 +1926,15 @@
         let activeSearchTerm = '';
         let isExactMatch = false;
 
+        // UK -> US Scaling Map for Auto-correction
+        const spellingMap = {
+            'neighbour': 'neighbor', 'saviour': 'savior', 'honour': 'honor', 'labour': 'labor',
+            'colour': 'color', 'favour': 'favor', 'splendour': 'splendor', 'rumour': 'rumor',
+            'harbour': 'harbor', 'armour': 'armor', 'clamour': 'clamor', 'endeavour': 'endeavor',
+            'parlour': 'parlor', 'vigour': 'vigor', 'valour': 'valor', 'centre': 'center',
+            'theatre': 'theater', 'grey': 'gray'
+        };
+
         // Podcast / Audio State
         let isAutoPlaying = false;
         let currentUtterance = null;
@@ -2246,15 +2255,6 @@
             
             // Auto-correct behavior (UK -> US)
             if (currentResults.length === 0 && sText) {
-                // ... (omitted spelling logic for brevity, it remains unchanged) ...
-                // Re-inserted full block below to match context
-                const spellingMap = {
-                    'neighbour': 'neighbor', 'saviour': 'savior', 'honour': 'honor', 'labour': 'labor',
-                    'colour': 'color', 'favour': 'favor', 'splendour': 'splendor', 'rumour': 'rumor',
-                    'harbour': 'harbor', 'armour': 'armor', 'clamour': 'clamor', 'endeavour': 'endeavor',
-                    'parlour': 'parlor', 'vigour': 'vigor', 'valour': 'valor', 'centre': 'center',
-                    'theatre': 'theater', 'grey': 'gray'
-                };
                 let usText = sText; 
                 let changed = false;
                 let displayTerm = activeSearchTerm;
@@ -2785,87 +2785,6 @@
              performSearch();
         }
 
-        function goToRelativeChapter(offset) {
-            const currentBook = document.getElementById('bookSelect').value;
-            const currentChap = parseInt(document.getElementById('chapterSelect').value);
-            
-            // We need to determine the new Book and Chapter
-            let newBook = currentBook;
-            let newChap = currentChap + offset;
-            
-            // Check bounds for current book
-            const maxChap = Math.max(...Object.keys(bibleStructure[currentBook]).map(Number));
-            
-            if (newChap < 1) {
-                // Go to previous book?
-                // Get list of books
-                const books = Object.keys(bibleStructure);
-                const bookIdx = books.indexOf(currentBook);
-                if (bookIdx > 0) {
-                    newBook = books[bookIdx - 1];
-                    const prevBookChapters = Object.keys(bibleStructure[newBook]).map(Number);
-                    newChap = Math.max(...prevBookChapters); // Last chapter of prev book
-                } else {
-                    return; // Start of Bible
-                }
-            } else if (newChap > maxChap) {
-                // Go to next book
-                const books = Object.keys(bibleStructure);
-                const bookIdx = books.indexOf(currentBook);
-                if (bookIdx < books.length - 1) {
-                    newBook = books[bookIdx + 1];
-                    newChap = 1; // First chapter of next book
-                } else {
-                    return; // End of Bible
-                }
-            }
-            
-            // Update UI
-            updateSelection(newBook, newChap);
-        }
-        
-        function updateSelection(book, chap) {
-             const bookSelect = document.getElementById('bookSelect');
-             const chapterSelect = document.getElementById('chapterSelect');
-             const verseSelect = document.getElementById('verseSelect');
-             
-             if (bookSelect.value !== book) {
-                 bookSelect.value = book;
-                 // Re-populate chapters
-                 chapterSelect.innerHTML = '<option value="">Chapter...</option>';
-                 const chapters = Object.keys(bibleStructure[book]).map(Number).sort((a,b)=>a-b);
-                 chapters.forEach(c => {
-                    const opt = document.createElement('option');
-                    opt.value = c; opt.textContent = c; chapterSelect.appendChild(opt);
-                 });
-                 chapterSelect.disabled = false;
-             }
-             
-             chapterSelect.value = chap;
-             
-             // Reset verse (since we are in chapter mode)
-             verseSelect.innerHTML = '<option value="">Verse...</option>';
-             verseSelect.value = "";
-             verseSelect.disabled = true; // Wait, if book selected, verse is usually disabled until chap selected. 
-             // Logic says: if Book+Chap selected, Verse IS enabled but optional
-             
-             // Enable verse select with new chapter's verses
-             if (book && chap && bibleStructure[book][chap]) {
-                 verseSelect.disabled = false;
-                 const maxVerse = bibleStructure[book][chap];
-                 for(let i=1; i <= maxVerse; i++) {
-                     const opt = document.createElement('option');
-                     opt.value = i;
-                     opt.textContent = i;
-                     verseSelect.appendChild(opt);
-                 }
-             }
-
-             // Trigger Search
-             performSearch();
-             // Scroll to top
-             window.scrollTo({top: 0, behavior: 'smooth'});
-        }
         
         function updatePaginationControls(start, end, total) {
             const text = `${start}-${end} of ${total}`;
@@ -3019,8 +2938,7 @@
             window.speechSynthesis.speak(utterance);
         }
 
-        // Initialize
-        document.addEventListener('DOMContentLoaded', loadBibleData);
+        // Initialize - handled in unified DOMContentLoaded below
 
         // Allow Enter key to trigger search
         document.querySelectorAll('input').forEach(input => {
