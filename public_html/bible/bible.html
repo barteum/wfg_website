@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     
     <!-- Primary Meta Tags -->
-    <title>Walk For God – My Personal Bible | Free Online Bible with Personal Notes</title>
-    <meta name="title" content="Walk For God – My Personal Bible | Free Online Bible with Personal Notes" />
-    <meta name="description" content="Search, read, and personalize the World English Bible (WEB). Create your own personal Bible with custom edits and notes. Free for life for the first 10,000 users." />
-    <meta name="keywords" content="Bible, Personal Bible, World English Bible, WEB, Bible study, scripture, Christian, faith, Bible notes, Bible app, online Bible, free Bible" />
+    <title>My Personal Editable Bible</title>
+    <meta name="title" content="Walk for God" />
+    <meta name="description" content="Search, read, and edit to personalize the World English Bible (WEB). Create your own personal Bible with custom edits and notes. Free for life for the first 10,000 users." />
+    <meta name="keywords" content="Bible, Personal Bible, World English Bible, Editable Bible, Bible study, scripture, Christian, faith, Bible notes, Bible app, online Bible, free Bible" />
     <meta name="author" content="Walk For God" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#d4af37" />
+    <link rel="manifest" href="manifest.json" />
     <link rel="canonical" href="https://walkforgod.org/bible/bible.html" />
     <link rel="icon" type="image/png" href="../images/logo-wfg.png" />
     
@@ -124,7 +125,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 1rem 2rem;
+            padding: max(1rem, env(safe-area-inset-top)) max(2rem, env(safe-area-inset-right)) 1rem max(2rem, env(safe-area-inset-left));
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -136,6 +137,18 @@
             background: rgba(10,10,10,0.98);
             padding: 0.75rem 2rem;
             backdrop-filter: blur(10px);
+        }
+
+        /* Mobile Header Adjustments */
+        @media (max-width: 768px) {
+            header {
+                padding-top: max(3.5rem, env(safe-area-inset-top)) !important; /* Force extra top spacing */
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            .logo-text small {
+                display: none !important; /* Force hide on mobile */
+            }
         }
 
         /* Logo */
@@ -171,6 +184,12 @@
             font-weight: 400;
             color: var(--cyan);
             -webkit-text-fill-color: var(--cyan);
+        }
+
+        @media (max-width: 480px) {
+            .logo-text small {
+                display: none;
+            }
         }
         
         /* Menu removed */
@@ -1142,7 +1161,9 @@
             }
             .pagination-bar {
                 justify-content: center;
-                flex-wrap: wrap;
+                flex-wrap: nowrap; /* Prevent stacking */
+                gap: 0.5rem; /* Tighter spacing */
+                font-size: 0.85rem; /* Slightly smaller text */
             }
             /* Chapter Mode Mobile Fixes */
             .chapter-mode-header {
@@ -1561,8 +1582,8 @@
         <a href="../index.html" class="logo">
             <img src="../images/logo-wfg.png" alt="Walk For God Logo" />
             <div class="logo-text">
-                Walk For God
-                <small>My Personal Bible</small>
+                Walk for God
+                <small>Editable & Personal Bible</small>
             </div>
         </a>
         
@@ -1745,7 +1766,7 @@
                     <!-- Row 3: Buttons -->
                     <div class="search-row">
                         <button id="searchBtn" onclick="performSearch()">Search Scripture</button>
-                        <button id="resetBtn" onclick="resetSearch()" style="background: transparent; border: 1px solid var(--gold); color: var(--gold); margin-left: 0.5rem;" onmouseover="this.style.background='rgba(212,175,55,0.1)'" onmouseout="this.style.background='transparent'">Reset</button>
+                        <button id="resetBtn" onclick="resetSearch()" style="background: transparent; border: 1px solid var(--gold); color: var(--gold); margin-left: 0.5rem;" onmouseover="this.style.background='rgba(212,175,55,0.1)'" onmouseout="this.style.background='transparent'">Refresh - New Search</button>
 
                     </div>
                 </div>
@@ -1804,7 +1825,7 @@
     <footer>
         <div class="footer-content">
             <p>&copy; 2026 Walk For God. All Rights Reserved. <span style="opacity:0.3; font-size:0.7rem;">v1.03</span></p>
-            <a href="index.html" class="home-link">← Back to Home</a>
+            <a href="https://walkforgod.org/index.html" class="home-link">← Go to Walk for God Website</a>
         </div>
     </footer>
 
@@ -2351,19 +2372,18 @@
                      }
                      
                      const div = document.createElement('div');
-                     div.className = 'chapter-verse'; // Unify style to 'chapter-verse' (clean row)
+                     div.className = 'chapter-verse'; 
+                     // div.style.display = 'block'; // Default is block, natural flow
                      div.style.cursor = 'pointer';
-                     div.style.display = 'flex'; // Enable flex for icon alignment
-                     div.style.alignItems = 'baseline'; // Align text baselines
                      
                      // Construct the reference part
                      let refHtml = '';
                      if (showFullRef) {
                          // e.g. "Genesis 1:1"
-                         refHtml = `<span class="verse-ref-inline" style="color: var(--gold); font-weight: bold; margin-right: 0.5rem; white-space: nowrap; flex-shrink: 0;">${verse.b} ${verse.c}:${verse.v}</span>`;
+                         refHtml = `<span class="verse-ref-inline" style="color: var(--gold); font-weight: bold; margin-right: 0.5rem;">${verse.b} ${verse.c}:${verse.v}</span>`;
                      } else {
                          // e.g. "1"
-                         refHtml = `<span class="verse-num-inline" style="color: var(--gold); font-weight: bold; margin-right: 0.5rem; flex-shrink: 0;">${verse.v}</span>`;
+                         refHtml = `<span class="verse-num-inline" style="color: var(--gold); font-weight: bold; margin-right: 0.5rem;">${verse.v}</span>`;
                      }
                      
                      // Construct Notes Logic
@@ -2382,7 +2402,7 @@
                          }).join('');
                          
                          notesHtml = `
-                            <div class="notes-indicator" onclick="event.stopPropagation(); this.querySelector('.notes-popover').classList.toggle('show-mobile');">
+                            <span class="notes-indicator" onclick="event.stopPropagation(); this.querySelector('.notes-popover').classList.toggle('show-mobile');" style="display:inline-block; vertical-align:middle; margin-left:5px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                                 <div class="notes-popover">
                                     <div class="popover-header">
@@ -2395,7 +2415,7 @@
                                         ${notesListHtml}
                                     </div>
                                 </div>
-                            </div>
+                            </span>
                          `;
                      }
 
@@ -2405,7 +2425,8 @@
                         viewVerse(verse); 
                      };
                      
-                     div.innerHTML = `${refHtml}<span style="flex:1;">${displayText} ${notesHtml}</span>`;
+                     // Natural Flow: Reference + Text + Notes all inline/wrapping naturally
+                     div.innerHTML = `${refHtml}${displayText} ${notesHtml}`;
                      container.appendChild(div);
                  });
              };
@@ -3551,6 +3572,15 @@
         // checkPersonalBible() is called inside loadBibleData after success
     });
 
+    function toggleNoticePopup() {
+        const p = document.getElementById('noticePopup');
+        if (p.style.display === 'block') {
+            p.style.display = 'none';
+        } else {
+            p.style.display = 'block';
+        }
+    }
+
     // --- BACKUP & RESTORE SYSTEM --- //
 
     // --- BACKUP & RESTORE SYSTEM (v2.0 UI) --- //
@@ -3894,19 +3924,25 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="bib-meta">
-                    <strong>World English Bible (WEB)</strong><br />
-                    Published: 2000 (updated continuously)<br />
-                    Translator: Rainbow Missions, Inc. (led by Michael Paul Johnson)
-                </div>
+                <h3>My Bible App ✝️ This Editable Edition</h3>
+                <p>This is the world’s first personal study Bible that is fully editable, allowing you to create your own Personal Edition with study notes, references, and wording refinements based on your research. The Bible is searchable at extremely fast speeds, and your personal Bible data is stored locally on your mobile or desktop device that allows you to use offline.</p>
 
+<p>Beyond personal study, this app represents the beginning of a new artificial intelligence–driven Bible platform. It will be the world’s first collaborative digital Bible that allows you to compare translations with the original Hebrew and Greek, personalize your own version with notes and edits, and optionally adopt trusted community interpretations - making lifelong Bible study clearer, deeper, and more personal.</p>
+
+<p>It is designed for serious bible readers who want to track how their understanding evolves over time, and learn from the insights of others if they choose and understand the Bible more deeply. In simple terms, it transforms Bible reading from a passive activity into an active, lifelong study experience, while still allowing you to read the Bible normally whenever you wish.</p>
+                <div class="bib-meta">
+                    <strong>Original Bible - World English Bible (WEB)</strong><br />
+                    Published: 2000 (updated continuously)<br />
+                    Translator: Rainbow Missions, Inc. (led by Michael Paul Johnson)<br />
+                    Website: www.mljohnson.org
+                </p>
                 <h3>The Core Philosophy</h3>
                 <p>The WEB was created to solve a legal problem, not a theological one. Almost all modern English Bibles (NIV, ESV, NKJV) are copyrighted, meaning you cannot print them, display them on websites, or build apps with them without paying royalties or strictly limiting how many verses you quote. The WEB is a Public Domain translation, meaning it is completely free for anyone to use, copy, or publish without permission.</p>
 
                 <h3>Key Characteristics</h3>
                 <ul>
                     <li>
-                        <strong>God's Name:</strong> It is one of the few English Bibles to use <strong>Yahweh</strong> in the Old Testament instead of the traditional capitalised "LORD." <br /><em>(Note: In this application, "Yahweh" has been standardized to "Yehovah" as per site preferences).</em>
+                        <strong>God's Name:</strong> It is one of the few English Bibles to use <strong>Yahweh</strong> in the Old Testament instead of the traditional capitalised "LORD." <br /><em>(Note: In this application, "Yahweh" has been standardized to "Yehovah" as per site preferences based on the research and work done by Dr. Nehemia Gordon - PhD, at https://www.nehemiaswall.com/1000-manuscripts-yehovah).</em>
                     </li>
                     <li>
                         <strong>Majority Text:</strong> Unlike most modern Bibles (which use the "Critical Text" or "Alexandrian" Greek manuscripts), the WEB New Testament is based on the <strong>Byzantine Majority Text</strong>. This means it includes verses often relegated to footnotes in other Bibles (like Acts 8:37 or the longer ending of Mark).
@@ -3918,8 +3954,18 @@
 
                 <h3>Who uses it?</h3>
                 <p>It is widely used by software developers, website creators, and missionaries who need a royalty-free Bible for apps and projection software. If you see a Bible verse on a random website or free app, there is a high chance it is the WEB because of its open license.</p>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('SW registered'))
+                .catch(err => console.log('SW registration failed: ', err));
+        });
+    }
+    </script>
 </body>
 </html>

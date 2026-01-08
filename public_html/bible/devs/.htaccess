@@ -1,0 +1,18 @@
+# Deny access to CSV and Excel files generally
+<FilesMatch "\.(csv|xlsx)$">
+    # By default deny
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Allow access to specific PHP API entry points if needed, 
+# but actually we want to allow PHP execution, just deny direct download of source if possible?
+# No, standard PHP files are executed by server, not downloaded. 
+# We only need to block the DATA files (.csv, .xlsx) from being downloaded directly.
+
+<FilesMatch "\.(csv|xlsx)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+Options -Indexes

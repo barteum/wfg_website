@@ -1,0 +1,20 @@
+{
+  "name": "My Bible Edit",
+  "short_name": "My Bible",
+  "start_url": "./bible.html",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#d4af37",
+  "icons": [
+    {
+      "src": "images/logo-wfg.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logo-wfg.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
