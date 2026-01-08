@@ -1,0 +1,12 @@
+# robots.txt for walkforgod.org
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://walkforgod.org/sitemap.xml
+
+# Disallow admin areas
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+Disallow: /administrator/
