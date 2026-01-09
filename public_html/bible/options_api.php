@@ -1,6 +1,7 @@
 <?php
-// options_api.php - Manage User Options in options.csv
-// Format: Username, OptionsBlob (Pick-style)
+// options_api.php - Manage User Options in users.csv
+// ARCHITECTURE: Pure Pick/MultiValue Format
+// Format: Username (ID) + AM + OptionsBlob
 // OptionsBlob: Key + SM + Value + VM + Key2 + SM + Value2...
 
 error_reporting(E_ALL);
@@ -9,11 +10,10 @@ header('Content-Type: application/json');
 header("Cache-Control: no-store, no-cache, must-revalidate");
 
 // 1. Load WordPress for Auth
-$wp_load_path = __DIR__ . '/../../wp-load.php'; // Adjust path based on location in /bible/ subdir
+$wp_load_path = __DIR__ . '/../../wp-load.php'; 
 if (file_exists($wp_load_path)) {
     require_once($wp_load_path);
 } else {
-    // Fallback if we can't find WP (for testing mostly)
     echo json_encode(['success' => false, 'error' => 'WordPress not found']);
     exit;
 }
@@ -26,26 +26,12 @@ if (!is_user_logged_in()) {
 
 $current_user = wp_get_current_user();
 $username = $current_user->user_login;
-$csv_file = __DIR__ . '/users.csv';
+$db_file = __DIR__ . '/users.db'; // Renamed to .db for Pick Format consistency
 
 // Delimiters
-$VM = chr(253); // Value Mark (Separate Items)
+$AM = chr(254); // Attribute Mark (Separates Username from Data)
+$VM = chr(253); // Value Mark (Separates Options)
 $SM = chr(252); // Sub-Value Mark (Key vs Value)
-
-// Helper: Parse CSV Line
-function parse_csv_line($line) {
-    return str_getcsv($line);
-}
-
-// Helper: Build CSV Line
-function build_csv_line($fields) {
-    $fp = fopen('php://temp', 'r+');
-    fputcsv($fp, $fields);
-    rewind($fp);
-    $data = fgets($fp);
-    fclose($fp);
-    return $data; // Includes newline
-}
 
 // 3. Handle Request
 $action = isset($_GET['action']) ? $_GET['action'] : 'get';
@@ -53,18 +39,23 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'get';
 if ($action === 'get') {
     $user_options = [];
     
-    if (file_exists($csv_file)) {
-        $lines = file($csv_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    if (file_exists($db_file)) {
+        // Read file - simpler now, no CSV parsing overhead
+        $lines = file($db_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         foreach ($lines as $line) {
-            $data = parse_csv_line($line);
-            if (count($data) >= 2 && $data[0] === $username) {
-                // Found User
-                $blob = $data[1];
-                $items = explode($VM, $blob);
-                foreach ($items as $item) {
-                    $parts = explode($SM, $item);
-                    if (count($parts) >= 2) {
-                        $user_options[$parts[0]] = $parts[1];
+            // Pick Parse: Split by AM
+            // Expected: Username + AM + OptionsBlob
+            if (strpos($line, $username . $AM) === 0) {
+                $parts = explode($AM, $line);
+                if (count($parts) >= 2) {
+                    $blob = $parts[1]; // The Options Blob
+                    // Parse Blob
+                    $items = explode($VM, $blob);
+                    foreach ($items as $item) {
+                        $kv = explode($SM, $item);
+                        if (count($kv) >= 2) {
+                            $user_options[$kv[0]] = $kv[1];
+                        }
                     }
                 }
                 break;
@@ -83,63 +74,64 @@ if ($action === 'update') {
         exit;
     }
     
-    $updates = $input; // Key-Value pairs
+    $updates = $input; // New Key-Values to merge
     
-    // Read all lines
-    $lines = file_exists($csv_file) ? file($csv_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) : [];
-    $new_lines = [];
+    $lines = file_exists($db_file) ? file($db_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) : [];
+    $new_file_content = "";
     $found = false;
     
     foreach ($lines as $line) {
-        $data = parse_csv_line($line);
-        if (count($data) >= 1 && $data[0] === $username) {
-            // Existing User - Merge Data
+        // Check ID
+        if (strpos($line, $username . $AM) === 0) {
             $found = true;
-            $current_blob = isset($data[1]) ? $data[1] : '';
-            $current_opts = [];
+            $parts = explode($AM, $line);
             
-            // Parse existing
-            if ($current_blob) {
-                $items = explode($VM, $current_blob);
+            // Reconstruct Current Options
+            $current_opts = [];
+            if (count($parts) >= 2) {
+                $blob = $parts[1];
+                $items = explode($VM, $blob);
                 foreach ($items as $item) {
-                    $parts = explode($SM, $item);
-                    if (count($parts) >= 2) {
-                        $current_opts[$parts[0]] = $parts[1];
+                    $kv = explode($SM, $item);
+                    if (count($kv) >= 2) {
+                        $current_opts[$kv[0]] = $kv[1];
                     }
                 }
             }
             
-            // Merge new
+            // Merge Updates
             foreach ($updates as $k => $v) {
                 $current_opts[$k] = $v;
             }
             
-            // Rebuild Blob
+            // Re-Serialize Blob
             $blob_parts = [];
             foreach ($current_opts as $k => $v) {
-                $blob_parts[] = $k . $SM . $v;
+                $blob_parts[] = $k . $SM . $v; // Key + SM + Value
             }
-            $new_blob = implode($VM, $blob_parts);
+            $new_blob = implode($VM, $blob_parts); // Join by VM
             
-            $new_lines[] = build_csv_line([$username, $new_blob]);
+            // Write User Line: Username + AM + Blob
+            $new_file_content .= $username . $AM . $new_blob . "\n";
+            
         } else {
             // Keep other users
-            $new_lines[] = $line . "\n";
+            $new_file_content .= $line . "\n";
         }
     }
     
     if (!$found) {
-        // New User Entry
+        // New User
         $blob_parts = [];
         foreach ($updates as $k => $v) {
             $blob_parts[] = $k . $SM . $v;
         }
         $new_blob = implode($VM, $blob_parts);
-        $new_lines[] = build_csv_line([$username, $new_blob]);
+        $new_file_content .= $username . $AM . $new_blob . "\n";
     }
     
-    // Write back
-    file_put_contents($csv_file, implode("", $new_lines));
+    // Write Atomic
+    file_put_contents($db_file, $new_file_content);
     
     echo json_encode(['success' => true, 'message' => 'Options saved']);
     exit;

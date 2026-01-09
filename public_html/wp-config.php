@@ -15,21 +15,25 @@ define( 'WP_CACHE', true ) ;
  *
  * @package WordPress
  */
-define('WP_HOME', 'https://walkforgod.org');
-define('WP_SITEURL', 'https://walkforgod.org');
-
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'walkforg_wfg');
-
-/** MySQL database username */
-define('DB_USER', 'walkforg_wfg');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'Alosvite12');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+// --- HYBRID CONFIGURATION (LOCAL VS PRODUCTION) --- //
+if (isset($_SERVER['HTTP_HOST']) && (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || $_SERVER['HTTP_HOST'] == '127.0.0.1')) {
+    // LOCAL environment (Ampps)
+    define('DB_NAME', 'walkforg_wfg');
+    define('DB_USER', 'root');
+    define('DB_PASSWORD', 'mysql');
+    define('DB_HOST', 'localhost');
+    define('WP_HOME', 'http://localhost/walkforgod/public_html');
+    define('WP_SITEURL', 'http://localhost/walkforgod/public_html');
+    if (!defined('WP_DEBUG')) define('WP_DEBUG', true);
+} else {
+    // PRODUCTION environment
+    define('DB_NAME', 'walkforg_wfg');
+    define('DB_USER', 'walkforg_wfg');
+    define('DB_PASSWORD', 'Alosvite12');
+    define('DB_HOST', 'localhost');
+    define('WP_HOME', 'https://walkforgod.org');
+    define('WP_SITEURL', 'https://walkforgod.org');
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -82,9 +86,10 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', true);
-define('WP_DEBUG_LOG', true);
-define('WP_DEBUG_DISPLAY', false);
+// WP_DEBUG is handled in the Hybrid Configuration block at the top.
+// define('WP_DEBUG', true);
+// define('WP_DEBUG_LOG', true);
+// define('WP_DEBUG_DISPLAY', false);
 
 /* That's all, stop editing! Happy blogging. */
 

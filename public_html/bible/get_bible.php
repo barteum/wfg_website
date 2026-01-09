@@ -35,7 +35,9 @@ if (!$allowed) {
 }
 
 // 2. Serve File
-$file = __DIR__ . '/web.csv';
+// Default or explicitly web
+$file = __DIR__ . '/web.db';
+if (!file_exists($file)) $file = __DIR__ . '/web.csv'; // Legacy Fallback
 
 if (file_exists($file)) {
     // Check if user has permission? 
