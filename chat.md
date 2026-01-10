@@ -8,6 +8,14 @@
 
 ---
 
+### [2026-01-11T05:10:11+11:00] USER REQUEST
+In mobile view make sure Chapter and Verse dropdowns are on the same row, not two separate rows.
+
+### [2026-01-11T05:10:11+11:00] ANTIGRAVITY ACTION
+Fixed mobile layout for dropdowns:
+- Book dropdown: `flex: 1 1 100%` (full row)
+- Chapter/Verse dropdowns: `flex: 1 1 calc(50% - 0.5rem)` (share same row)
+
 ### [2026-01-11T04:59:15+11:00] USER REQUEST
 Add "Clear" text under the X icon, same text size as Exact match widget. Make X icon smaller if needed for balance.
 

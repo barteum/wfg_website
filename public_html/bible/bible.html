@@ -1267,10 +1267,12 @@
             .text-search-row .exact-match-label {
                 align-self: flex-start;
             }
-            .form-group.book-group, 
+            .form-group.book-group {
+                flex: 1 1 100%;
+            }
             .form-group.chapter-group, 
             .form-group.verse-group {
-                flex: 1 1 100%;
+                flex: 1 1 calc(50% - 0.5rem);
             }
             .search-container {
                 padding: 1.5rem;
