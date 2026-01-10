@@ -8,6 +8,34 @@
 
 ---
 
+### [2026-01-11T05:51:55+11:00] USER DECISION
+Reverted all previous changes. Want simpler approach: on page load, silently check for stale IndexedDB entry and delete it. No popup.
+
+### [2026-01-11T05:51:55+11:00] ANTIGRAVITY ACTION
+Implemented silent stale handle cleanup:
+- Added `clearStaleHandle()` function to delete stale IndexedDB entries
+- Modified `checkPersonalBible()` to verify file exists via `handle.getFile()`
+- If file doesn't exist or handle check fails, silently clears the stale entry
+- No popup - just sets UI to "My Bible: Inactive" state
+
+### [2026-01-11T05:46:29+11:00] USER ISSUE
+Modal showing raw HTML tags instead of rendered content. Also popup appeared when no local Bible was previously selected.
+
+### [2026-01-11T05:46:29+11:00] ANTIGRAVITY ACTION
+Fixed `showMessageModal()` - changed `innerText` to `innerHTML` to properly render HTML content.
+Added console logging to `checkPersonalBible()` to debug when handle is found.
+Note: If popup appeared unexpectedly, there may be a stale IndexedDB entry from a previous session - user may need to clear site data.
+
+### [2026-01-11T05:33:03+11:00] USER REQUEST
+Re-apply local Bible file validation fix from previous session. On page load, if local Bible was selected but file is now missing, notify user with options: download new, select another file, or use Online Bible.
+
+### [2026-01-11T05:33:03+11:00] ANTIGRAVITY ACTION
+Re-applied local Bible file validation fix (v1.08):
+- Added `clearHandle()` function to remove stale handles from IndexedDB
+- Modified `checkPersonalBible()` to call `handle.getFile()` to verify file exists
+- If file missing: clears handle, resets UI to Online Bible mode, shows modal with options
+- Modal explains file may have been moved/deleted and lists recovery options
+
 ### [2026-01-11T05:10:11+11:00] USER REQUEST
 In mobile view make sure Chapter and Verse dropdowns are on the same row, not two separate rows.
 

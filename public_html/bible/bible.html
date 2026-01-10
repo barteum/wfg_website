@@ -3826,6 +3826,18 @@
         } catch(e) { return null; }
     }
 
+    // Silently clear stale handle from IndexedDB
+    async function clearStaleHandle() {
+        try {
+            const db = await getDb();
+            const tx = db.transaction('handles', 'readwrite');
+            tx.objectStore('handles').delete('bible_csv');
+            console.log("Cleared stale IndexedDB handle.");
+        } catch(e) { 
+            console.warn("Failed to clear stale handle:", e);
+        }
+    }
+
     // Init: Check if we have a stored handle and try to load
     async function checkPersonalBible() {
          const handle = await getHandle();
@@ -3834,27 +3846,43 @@
          const localLabel = document.getElementById('localLabel');
          
          if (handle) {
-            personalFileHandle = handle;
-             
-             // Update Button Text
-             const btn = document.getElementById('pbPrimaryActionBtn');
-             if (btn) btn.innerText = "Reconnect My Bible";
-             
-             // Auto-Load Attempt (If permission persists)
-             try {
-                // Check if we have persistission
+            // Verify handle is still valid by attempting to get the file
+            try {
                 const opts = { mode: 'readwrite' };
-                if ((await handle.queryPermission(opts)) === 'granted') {
-                    // We can load!
-                    await loadPersonalContent(true); // Silent auto-load
-                    // Status is updated in loadPersonalContent
+                const permission = await handle.queryPermission(opts);
+                
+                if (permission === 'granted') {
+                    // Try to access the file - this will fail if file was deleted
+                    try {
+                        await handle.getFile();
+                        // File exists - proceed normally
+                        personalFileHandle = handle;
+                        const btn = document.getElementById('pbPrimaryActionBtn');
+                        if (btn) btn.innerText = "Reconnect My Bible";
+                        await loadPersonalContent(true); // Silent auto-load
+                    } catch (fileErr) {
+                        // File was deleted - silently clear the stale handle
+                        console.log("File no longer exists, clearing stale handle.");
+                        await clearStaleHandle();
+                        if(localDot) localDot.style.backgroundColor = '#ff4444';
+                        if(localLabel) localLabel.innerText = "My Bible: Inactive";
+                    }
                 } else {
+                    // Permission not granted yet - keep handle for later
+                    personalFileHandle = handle;
+                    const btn = document.getElementById('pbPrimaryActionBtn');
+                    if (btn) btn.innerText = "Reconnect My Bible";
                     console.log("Personal Bible found but permission required.");
-                    // Update Widget to indicated "Ready to Connect"
                     if(localDot) localDot.style.backgroundColor = 'orange';
                     if(localLabel) localLabel.innerText = "My Bible: Click to Load";
                 }
-             } catch(e) { console.warn("Auto-load check failed", e); }
+            } catch(e) { 
+                // Handle query failed - clear stale handle
+                console.warn("Handle check failed, clearing:", e);
+                await clearStaleHandle();
+                if(localDot) localDot.style.backgroundColor = '#ff4444';
+                if(localLabel) localLabel.innerText = "My Bible: Inactive";
+            }
          } else {
              // No handle known
              if(localDot) localDot.style.backgroundColor = '#ff4444';
@@ -4119,7 +4147,7 @@
         
         if (focusMode === 'notes') {
             // NOTES MODE: Show Notes ONLY
-            title.innerHTML = `<span style="opacity:0.8; font-size:0.9em;">My Notes on -</span> ${verse.b} ${verse.c}:${verse.v}`;
+            title.innerHTML = `<span style="opacity:0.8; font-size:0.8rem;">Notes-</span> ${verse.b} ${verse.c}:${verse.v}`;
             editSection.style.display = 'none';
             notesSection.style.display = 'block';
         } else {
