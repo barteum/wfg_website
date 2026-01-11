@@ -142,14 +142,21 @@
         /* Mobile Header Adjustments */
         @media (max-width: 768px) {
             header {
-                padding-top: max(3.5rem, env(safe-area-inset-top)) !important; /* Force extra top spacing */
+                padding-top: max(3.5rem, env(safe-area-inset-top)) !important;
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
             }
+            .logo img {
+                height: 50px; /* Slightly smaller logo on mobile */
+            }
+            .logo-text {
+                font-size: 1rem; /* Smaller text on mobile */
+            }
             .logo-text small {
-                display: none !important; /* Force hide on mobile */
+                font-size: 0.65rem; /* Smaller subtitle on mobile */
             }
         }
+
 
         /* Logo */
         .logo {
@@ -186,11 +193,6 @@
             -webkit-text-fill-color: var(--cyan);
         }
 
-        @media (max-width: 480px) {
-            .logo-text small {
-                display: none;
-            }
-        }
         
         /* Menu removed */
 
@@ -580,13 +582,35 @@
         }
         .notes-indicator:hover { opacity: 1; }
         
+        /* Edit Indicator Icon */
+        .edit-indicator {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0.5rem;
+            color: var(--gold);
+            cursor: pointer;
+            vertical-align: middle;
+            opacity: 1; /* Always visible for click interaction */
+            transition: opacity 0.2s;
+        }
+        
+        /* Hover effect for visual feedback */
+        .edit-indicator:hover {
+            opacity: 0.7; /* Slight dim on hover for feedback */
+        }
+        
+        .edit-indicator.active {
+            opacity: 1; /* Full opacity when popup is open */
+        }
+        
+        
         .notes-popover {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 90vw;
-            max-width: 500px;
+            width: min(500px, 90vw); /* Single calculation prevents resize */
             max-height: 75vh;
             overflow-y: auto;
             background: rgba(10, 10, 10, 0.98);
@@ -605,14 +629,23 @@
            (Base styles now cover both mobile and centered desktop) 
         */
         
-        @media (min-width: 769px) {
-            .notes-indicator:hover .notes-popover {
-                display: block;
-            }
+        /* Hover behavior removed - popovers now only open on click for cleaner UX */
+        
+        
+        /* Popover Overlay (Background dimmer & click blocker) */
+        #popoverOverlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1999; /* Below popover (2000) */
+            display: none;
+            backdrop-filter: blur(2px);
         }
+        #popoverOverlay.active { display: block; }
         
         .notes-popover.show-mobile {
             display: block;
+            animation: modalSlideIn 0.3s ease-out;
         }
         
         .popover-header {
@@ -747,6 +780,41 @@
 
         .icon-btn:hover:not(:disabled) {
             background: rgba(255,255,255,0.1);
+        }
+
+        /* Clear/Reset Button - Compact Icon + Text */
+        .clear-btn {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.5rem 0.8rem;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            flex-grow: 0;
+            width: auto;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.75rem;
+            line-height: 1;
+            white-space: nowrap;
+        }
+        
+        .clear-btn:hover {
+            background: rgba(212, 175, 55, 0.15);
+            transform: scale(1.02);
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+        }
+        
+        .clear-btn svg {
+            width: 16px;
+            height: 16px;
+            stroke-width: 2.5;
         }
         
         .pagination-controls {
@@ -1098,6 +1166,40 @@
             align-items: center;
         }
         
+        .exact-match-label {
+            display: flex; 
+            align-items: center; 
+            gap: 0.8rem; 
+            color: var(--gold); 
+            font-size: 1.1rem; 
+            cursor: pointer; 
+            white-space: nowrap;
+            min-width: fit-content;
+            
+            /* Professional styling */
+            border: 1px solid var(--gold);
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            background: rgba(212, 175, 55, 0.08); /* Light gold tint */
+            transition: all 0.3s ease;
+            font-family: 'Playfair Display', serif; /* Matching headers for elegance */
+        }
+        
+        .exact-match-label:hover {
+            background: rgba(212, 175, 55, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+        
+        .exact-match-label input {
+            width: 1.3rem; 
+            height: 1.3rem;
+            margin: 0;
+            box-shadow: none; 
+            accent-color: var(--gold);
+            cursor: pointer;
+        }
+
         /* Integrated Search Input Group */
         .search-input-group {
             display: flex;
@@ -1112,7 +1214,7 @@
 
         .search-input-group:focus-within {
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-            border: 2px solid var(--gold); /* Note: might shift layout slightly by 1px, or use outline */
+            border: 2px solid var(--gold);
         }
         /* Offset padding for 2px border */
         .search-input-group:focus-within .exact-match-addon {
@@ -1176,8 +1278,6 @@
             box-shadow: none;
             padding: 1rem 1.5rem; /* Maintain padding, don't reduce for border */
         }
-        
-
 
         @media (max-width: 768px) {
             .search-row {
@@ -1194,13 +1294,35 @@
                 width: 100%;
                 flex: 1;
             }
-            .form-group.book-group, 
+            .text-search-row .form-group {
+                width: 100%;
+            }
+            .text-search-row .exact-match-label {
+                align-self: flex-start;
+            }
+            .form-group.book-group {
+                flex: 1 1 100%;
+            }
             .form-group.chapter-group, 
             .form-group.verse-group {
-                flex: 1 1 100%;
+                flex: 1 1 calc(50% - 0.5rem);
             }
             .search-container {
                 padding: 1.5rem;
+            }
+            /* Keep search button and clear button on same row */
+            .search-row:has(#searchBtn) {
+                flex-wrap: nowrap;
+                gap: 0.5rem;
+                justify-content: flex-start;
+            }
+            .search-row:has(#searchBtn) #searchBtn {
+                flex: 0 1 auto;
+            }
+            .search-row:has(#searchBtn) .clear-btn {
+                flex: 0 0 auto;
+                padding: 0.4rem 0.6rem;
+                font-size: 0.7rem;
             }
             h1 {
                 line-height: 1.3;
@@ -2147,17 +2269,22 @@
                         <div class="search-input-group">
                             <label class="exact-match-addon">
                                 <input type="checkbox" id="exactMatchCheckbox" />
-                                <span>Exact</span>
+                                <span>EXACT</span>
                             </label>
                             <input type="text" id="textInput" placeholder="Search text (e.g. 'Love your neighbor')..." />
                         </div>
                     </div>
 
                     <!-- Row 3: Buttons -->
-                    <div class="search-row">
+                    <div class="search-row" style="gap: 0.75rem;">
                         <button id="searchBtn" onclick="performSearch()">Search Scripture</button>
-                        <button id="resetBtn" onclick="resetSearch()" style="background: transparent; border: 1px solid var(--gold); color: var(--gold); margin-left: 0.5rem;" onmouseover="this.style.background='rgba(212,175,55,0.1)'" onmouseout="this.style.background='transparent'">Refresh - New Search</button>
-
+                        <button id="resetBtn" class="clear-btn" onclick="resetSearch()" title="Clear All & Start New Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                            <span>CLEAR</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -2395,23 +2522,8 @@
                 setProgress(10); // Start
                 results.innerHTML = '<div class="status-msg">Connecting to database...</div>';
                 
-                // Determine Version
-                let ver = 'web';
-                // Try Global Options first, then direct Storage fallback (Fast Path)
-                if (typeof userOptions !== 'undefined' && userOptions.translation) {
-                    ver = userOptions.translation;
-                } else {
-                    try {
-                        const saved = localStorage.getItem('wfg_user_options');
-                        if(saved) {
-                            const parsed = JSON.parse(saved);
-                            if(parsed.translation) ver = parsed.translation;
-                        }
-                    } catch(e) {}
-                }
-
-                // Use Secure Proxy with Version Param
-                const response = await fetch('get_bible.php?v=' + ver);
+                // Use Secure Proxy
+                const response = await fetch('get_bible.php');
                 if (!response.ok) throw new Error("Failed to load bible file: " + response.statusText);
                 
                 setProgress(40); // Connected
@@ -2429,8 +2541,7 @@
                     reader.readAsText(blob); // Default UTF-8
                 });
                 
-                // Parse the Bible data
-                parseCSV(text);
+                parseCSV(text, true); // Skip Encoding Fix (Now pure UTF-8)
                 
                 setProgress(100); // Done
                 
@@ -2511,19 +2622,12 @@
         }
 
         function parseCSV(csvText, skipEncodingFix = false) {
-            // Support BOTH Delimiters (254/253/252) AND (30/29/31)
-            const AM = String.fromCharCode(254);
-            const AM_OLD = String.fromCharCode(30);
-            
-            let activeAM = AM;
-            if (!csvText.includes(AM) && csvText.includes(AM_OLD)) {
-                activeAM = AM_OLD;
-            }
-            
             const lines = csvText.split(/\r?\n/);
-            
-            bibleData = [];
-            bibleStructure = {};
+            const AM = String.fromCharCode(254); // Attribute Mark
+            const VM = String.fromCharCode(253);
+            const SM = String.fromCharCode(252);
+
+            // Header is skipped (i=1)
             
             for (let i = 1; i < lines.length; i++) {
                 const line = lines[i].trim();
@@ -2533,9 +2637,9 @@
                 let book, chapter, verse, text, note = [], editNote = [];
 
                 // Format Sniffing: Check for Attribute Mark
-                if (line.indexOf(activeAM) !== -1) {
+                if (line.indexOf(AM) !== -1) {
                 // PICK FORMAT
-                    const parts = line.split(activeAM);
+                    const parts = line.split(AM);
                     if (parts.length >= 4) {
                         book = parts[0];
                         chapter = parseInt(parts[1]);
@@ -2544,6 +2648,11 @@
                         // FIX MIXED ENCODING on the Text Field
                         // For Local Files (UTF-8), we skip this. For Online (ISO-8859-1), we run it.
                         text = skipEncodingFix ? (parts[3] || "") : fixEncoding(parts[3] || "");
+                        
+                        // Parse Pick Values for Notes (Index 4) and Edits (Index 5)
+                        // Notes usually don't have mixed encoding issues if generated properly, but let's be safe?
+                        // Actually, parsePickValue splits first. We should probably NOT mess with them unless needed.
+                        // Assuming Notes are ASCII-safe or correctly UTF-8 if purely text.
                         
                         if (parts.length >= 5 && parts[4]) {
                             note = parsePickValue(parts[4]);
@@ -2575,7 +2684,14 @@
                 }
 
                 if (book && chapter && verse) {
+                    // Deduplication Check
+                    if (bibleData.some(b => b.b === book && b.c === chapter && b.v === verse)) {
+                        continue;
+                    }
+
                     bibleData.push({ b: book, c: chapter, v: verse, t: text, n: note, en: editNote });
+                    
+                    // Build Structure
                     if (!bibleStructure[book]) bibleStructure[book] = {};
                     if (!bibleStructure[book][chapter]) bibleStructure[book][chapter] = 0;
                     if (verse > bibleStructure[book][chapter]) bibleStructure[book][chapter] = verse;
@@ -2595,31 +2711,6 @@
             });
         }
         
-        // Helper to update selection and search
-        function updateSelection(book, chapter) {
-            const verseSelect = document.getElementById('verseSelect');
-            
-            // Populate Verses for this Chapter
-            verseSelect.innerHTML = '<option value="">Verse...</option>';
-            if (book && chapter && bibleStructure[book] && bibleStructure[book][chapter]) {
-                const maxVerse = bibleStructure[book][chapter];
-                for(let i=1; i <= maxVerse; i++) {
-                     const opt = document.createElement('option');
-                     opt.value = i;
-                     opt.textContent = i;
-                     verseSelect.appendChild(opt);
-                }
-                verseSelect.disabled = false;
-            } else {
-                verseSelect.disabled = true;
-            }
-            
-            // Trigger Search
-            document.getElementById('bookSelect').value = book;
-            document.getElementById('chapterSelect').value = chapter;
-            performSearch();
-        }
-
         // Event Listeners for Dynamic Dropdowns
         const bookSelect = document.getElementById('bookSelect');
         const chapterSelect = document.getElementById('chapterSelect');
@@ -2627,14 +2718,15 @@
         
         bookSelect.addEventListener('change', function() {
             const book = this.value;
+            
+            // Reset dependent dropdowns
             chapterSelect.innerHTML = '<option value="">Chapter...</option>';
             verseSelect.innerHTML = '<option value="">Verse...</option>';
             verseSelect.disabled = true;
             
             if (book === 'ALL') {
                 chapterSelect.disabled = true;
-                // No search triggered? Or verify behavior.
-                // Assuming ALL means All Books Search.
+                document.getElementById('textInput').focus();
             } else if (book && bibleStructure[book]) {
                 chapterSelect.disabled = false;
                 const chapters = Object.keys(bibleStructure[book]).map(Number).sort((a,b) => a - b);
@@ -2646,15 +2738,45 @@
                     chapterSelect.appendChild(opt);
                 });
                 
-                // AUTO SELECT CHAPTER 1
-                const firstChapter = "1";
-                chapterSelect.value = firstChapter;
-                updateSelection(book, firstChapter);
+                // Default to Chapter 1
+                chapterSelect.value = "1";
+                
+                // Manually trigger verse population for Chapter 1
+                if (bibleStructure[book]["1"]) {
+                    verseSelect.disabled = false;
+                    const maxVerse = bibleStructure[book]["1"];
+                    for(let i=1; i <= maxVerse; i++) {
+                        const opt = document.createElement('option');
+                        opt.value = i;
+                        opt.textContent = i;
+                        verseSelect.appendChild(opt);
+                    }
+                }
+            } else {
+                chapterSelect.disabled = true;
             }
         });
         
         chapterSelect.addEventListener('change', function() {
-            updateSelection(bookSelect.value, this.value);
+            const book = bookSelect.value;
+            const chapter = this.value;
+            
+            // Reset verse
+            verseSelect.innerHTML = '<option value="">Verse...</option>';
+            
+            if (book && book !== 'ALL' && chapter && bibleStructure[book][chapter]) {
+                verseSelect.disabled = false;
+                const maxVerse = bibleStructure[book][chapter];
+                
+                for(let i=1; i <= maxVerse; i++) {
+                     const opt = document.createElement('option');
+                     opt.value = i;
+                     opt.textContent = i;
+                     verseSelect.appendChild(opt);
+                }
+            } else {
+                verseSelect.disabled = true;
+            }
         });
 
         function resetSearch() {
@@ -2786,6 +2908,54 @@
             }, 100);
         }
 
+        // Popover Management
+        function openPopover(indicator, type) {
+            closeAllPopovers();
+            
+            // Find the popover inside this indicator
+            const popover = indicator.querySelector(type === 'notes' ? '.notes-popover' : '.bible-popover');
+            if (!popover) return;
+            
+            // Store reference to original parent for restoring later
+            popover._originalParent = indicator;
+            
+            // Move popover to body (portaling) - breaks free from parent stacking context
+            document.body.appendChild(popover);
+            
+            // Show popover and overlay
+            popover.classList.add('show-mobile');
+            document.getElementById('popoverOverlay').classList.add('active');
+            indicator.classList.add('active');
+        }
+        
+        function closeAllPopovers() {
+            // Find all active popovers and restore them to original parents
+            document.querySelectorAll('.notes-popover.show-mobile, .bible-popover.show-mobile').forEach(popover => {
+                popover.classList.remove('show-mobile');
+                
+                // Return popover to original parent
+                if (popover._originalParent) {
+                    popover._originalParent.appendChild(popover);
+                    delete popover._originalParent;
+                }
+            });
+            
+            // Remove active states
+            document.querySelectorAll('.edit-indicator.active, .notes-indicator.active').forEach(el => el.classList.remove('active'));
+            
+            // Hide overlay
+            const overlay = document.getElementById('popoverOverlay');
+            if(overlay) overlay.classList.remove('active');
+        }
+
+        // Ensure overlay exists
+        if (!document.getElementById('popoverOverlay')) {
+            const ov = document.createElement('div');
+            ov.id = 'popoverOverlay';
+            ov.onclick = closeAllPopovers;
+            document.body.appendChild(ov);
+        }
+
         function displayResults() {
              const resultsArea = document.getElementById('resultsArea');
              
@@ -2845,7 +3015,42 @@
                          refHtml = `<span class="verse-num-inline" style="color: var(--gold); font-weight: bold; margin-right: 0.5rem;">${verse.v}</span>`;
                      }
                      
-                     // Construct Notes Logic
+                     // Bible Text View Popover (Pencil Icon)
+                     // Only show icon if verse has edit notes (verse.en)
+                     let bibleViewHtml = '';
+                     if (verse.en && verse.en.length > 0) {
+                         // Build edit notes content
+                         const editNotesContent = verse.en.map(en => {
+                             const txt = (typeof en === 'object') ? en.text : en;
+                             const date = (typeof en === 'object' && en.date) ? new Date(en.date).toLocaleString() : '';
+                             return `
+                                <div class="popover-note-item">
+                                    <div class="popover-note-text" style="font-size: 1.1rem; line-height: 1.6;">${txt}</div>
+                                    ${date ? `<div class="popover-note-date">${date}</div>` : ''}
+                                </div>
+                             `;
+                         }).join('');
+                         
+                         bibleViewHtml = `
+                            <span class="edit-indicator" onclick="event.stopPropagation(); openPopover(this, 'edit');" style="display:inline-block; vertical-align:middle; margin-left:5px;" title="View Edit Notes (${verse.en.length})">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                                <div class="bible-popover notes-popover">
+                                    <div class="popover-header">
+                                        <div class="popover-title">Edit Notes (${verse.en.length}) - ${verse.b} ${verse.c}:${verse.v}</div>
+                                        <button class="popover-close" onclick="event.stopPropagation(); closeAllPopovers();" title="Close">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                        </button>
+                                    </div>
+                                    <div class="popover-content">
+                                        ${editNotesContent}
+                                    </div>
+                                </div>
+                            </span>
+                         `;
+                     }
+                     // If no edit notes, bibleViewHtml remains empty string
+                     
+                     // Construct Notes Logic (only show if notes exist)
                      let notesHtml = '';
                      if (verse.n && verse.n.length > 0) {
                         // Build Popover Content
@@ -2860,13 +3065,13 @@
                              `;
                          }).join('');
                          
-                         notesHtml = `
-                            <span class="notes-indicator" onclick="event.stopPropagation(); this.querySelector('.notes-popover').classList.toggle('show-mobile');" style="display:inline-block; vertical-align:middle; margin-left:5px;">
+                          notesHtml = `
+                             <span class="notes-indicator" onclick="event.stopPropagation(); openPopover(this, 'notes');" style="display:inline-block; vertical-align:middle; margin-left:5px;" title="View My Notes">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                                 <div class="notes-popover">
                                     <div class="popover-header">
                                         <div class="popover-title">My Notes</div>
-                                        <button class="popover-close" onclick="event.stopPropagation(); this.closest('.notes-popover').classList.remove('show-mobile');" title="Close">
+                                        <button class="popover-close" onclick="event.stopPropagation(); closeAllPopovers();" title="Close">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                                         </button>
                                     </div>
@@ -2879,13 +3084,13 @@
                      }
 
                      div.onclick = function(e) { 
-                        // Prevent click if clicking tooltip
-                        if(e.target.closest('.notes-indicator')) return;
+                        // Prevent click if clicking tooltip or edit icon
+                        if(e.target.closest('.notes-indicator') || e.target.closest('.edit-indicator')) return;
                         viewVerse(verse); 
                      };
                      
-                     // Natural Flow: Reference + Text + Notes all inline/wrapping naturally
-                     div.innerHTML = `${refHtml}${displayText} ${notesHtml}`;
+                     // Natural Flow: Reference + Text + Bible View Icon + Notes all inline/wrapping naturally
+                     div.innerHTML = `${refHtml}${displayText} ${bibleViewHtml}${notesHtml}`;
                      container.appendChild(div);
                  });
              };
@@ -2958,7 +3163,7 @@
                     <div style="font-size:0.9rem; color:#fff;">
                         Found <strong style="color:var(--gold);">${currentResults.length}</strong> matches for "<span class="highlight" style="padding:0 4px;">${activeSearchTerm}</span>"
                     </div>
-                    <button class="btn-gold-sm" onclick="handleReplaceAction()" style="padding:6px 14px; font-size:0.85rem; display:flex; align-items:center; gap:0.5rem; background:var(--gold); color:var(--black); border:none; border-radius:4px; font-weight:600; cursor:pointer;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+                    <button class="btn-gold-sm" onclick="handleReplaceAction()" style="padding:6px 14px; font-size:0.85rem; display:flex; align-items:center; gap:0.5rem; background:var(--gold); color:var(--black); border:none; border-radius:4px; font-weight:600; cursor:pointer; width:auto;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
                         Replace All
                     </button>
@@ -3221,6 +3426,41 @@
                 <div class="verse-text">
                     ${targetVerse.t}
                     ${(() => {
+                        let html = '';
+                        
+                        // Bible View Popover (Pencil Icon) - Only show if edit notes exist
+                        if (targetVerse.en && targetVerse.en.length > 0) {
+                            // Build edit notes content
+                            const editNotesContent = targetVerse.en.map(en => {
+                                const txt = (typeof en === 'object') ? en.text : en;
+                                const date = (typeof en === 'object' && en.date) ? new Date(en.date).toLocaleString() : '';
+                                return `
+                                   <div class="popover-note-item">
+                                       <div class="popover-note-text" style="font-size: 1.1rem; line-height: 1.6;">${txt}</div>
+                                       ${date ? `<div class="popover-note-date">${date}</div>` : ''}
+                                   </div>
+                                `;
+                            }).join('');
+                        
+                            html += `
+                            <span class="edit-indicator" onclick="event.stopPropagation(); openPopover(this, 'edit');" style="display:inline-block; vertical-align:middle; margin-left:5px;" title="View Edit Notes (${targetVerse.en.length})">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                                <div class="bible-popover notes-popover">
+                                    <div class="popover-header">
+                                        <div class="popover-title">Edit Notes (${targetVerse.en.length}) - ${targetVerse.b} ${targetVerse.c}:${targetVerse.v}</div>
+                                        <button class="popover-close" onclick="event.stopPropagation(); closeAllPopovers();" title="Close">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                        </button>
+                                    </div>
+                                    <div class="popover-content">
+                                        ${editNotesContent}
+                                    </div>
+                                </div>
+                            </span>
+                            `;
+                        }
+                        
+                        
                         if (targetVerse.n && targetVerse.n.length > 0) {
                              const notesListHtml = targetVerse.n.map(n => {
                                  const txt = (typeof n === 'object') ? n.text : n;
@@ -3233,21 +3473,24 @@
                                  `;
                              }).join('');
                              
-                             return `
-                                <div class="notes-indicator" onclick="event.stopPropagation(); this.querySelector('.notes-popover').classList.toggle('show-mobile');">
+                             html += `
+                                <span class="notes-indicator" onclick="event.stopPropagation(); openPopover(this, 'notes');" style="display:inline-block; vertical-align:middle; margin-left:5px;" title="View My Notes">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                                     <div class="notes-popover">
                                         <div class="popover-header">
                                             <div class="popover-title">My Notes</div>
-                                            <button class="popover-close" onclick="event.stopPropagation(); this.closest('.notes-popover').classList.remove('show-mobile');">✕</button>
+                                            <button class="popover-close" onclick="event.stopPropagation(); closeAllPopovers();" title="Close">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                            </button>
                                         </div>
                                         <div class="popover-content">
                                             ${notesListHtml}
                                         </div>
                                     </div>
-                                </div>
+                                </span>
                              `;
-                        } else { return ''; }
+                        } 
+                        return html;
                     })()}
                 </div>
                 
@@ -3737,95 +3980,81 @@
         } catch(e) { return null; }
     }
 
-    // Clear stale handle from IndexedDB (when file is deleted)
-    async function clearHandle() {
+    // Silently clear stale handle from IndexedDB
+    async function clearStaleHandle() {
         try {
             const db = await getDb();
             const tx = db.transaction('handles', 'readwrite');
             tx.objectStore('handles').delete('bible_csv');
-            console.log("Cleared stale file handle from IndexedDB");
-        } catch(e) { console.warn("IDB Clear Error", e); }
+            console.log("Cleared stale IndexedDB handle.");
+        } catch(e) { 
+            console.warn("Failed to clear stale handle:", e);
+        }
     }
 
     // Init: Check if we have a stored handle and try to load
-    // v1.08: Now validates file existence and cleans up stale handles
     async function checkPersonalBible() {
          const handle = await getHandle();
          
          const localDot = document.getElementById('localDot');
          const localLabel = document.getElementById('localLabel');
-         const statusDot = document.getElementById('statusDot');
-         const statusText = document.getElementById('statusText');
-         const menuDotLocal = document.getElementById('menuDotLocal');
-         const menuDotOnline = document.getElementById('menuDotOnline');
          
          if (handle) {
-            personalFileHandle = handle;
-             
-             // Update Button Text
-             const btn = document.getElementById('pbPrimaryActionBtn');
-             if (btn) btn.innerText = "Reconnect My Bible";
-             
-             // Auto-Load Attempt (If permission persists)
-             try {
-                // Check if we have permission
-                const opts = { mode: 'readwrite' };
-                if ((await handle.queryPermission(opts)) === 'granted') {
-                    
-                    // *** NEW: Verify file still exists before loading ***
+            // Verify handle is still valid by attempting to get the file
+            try {
+                // Check read permission first (less aggressive)
+                const opts = { mode: 'read' };
+                const permission = await handle.queryPermission(opts);
+                
+                if (permission === 'granted') {
+                    // Try to access the file - this will fail if file was deleted
                     try {
-                        await handle.getFile(); // This throws if file is missing/deleted
-                        
-                        // File exists - proceed to load
+                        await handle.getFile();
+                        // File exists - proceed normally
+                        personalFileHandle = handle;
+                        const btn = document.getElementById('pbPrimaryActionBtn');
+                        if (btn) btn.innerText = "Reconnect My Bible";
                         await loadPersonalContent(true); // Silent auto-load
-                        // Status is updated in loadPersonalContent
+                    } catch (fileErr) {
+                        console.warn("File access error:", fileErr);
                         
-                    } catch(fileError) {
-                        // *** File no longer exists - clean up and fallback ***
-                        console.warn("Personal Bible file no longer exists:", fileError.message);
-                        
-                        // Clear stale handle from IndexedDB
-                        await clearHandle();
-                        personalFileHandle = null;
-                        isPersonalMode = false;
-                        
-                        // Update UI to show Online Bible mode
-                        if(localDot) localDot.style.backgroundColor = '#ff4444';
-                        if(localLabel) localLabel.innerText = "My Bible: File Not Found";
-                        
-                        // Update Status Dropdown UI
-                        if(statusDot) statusDot.className = 'status-dot green';
-                        if(statusText) statusText.textContent = 'ONLINE BIBLE';
-                        if(menuDotOnline) menuDotOnline.className = 'status-dot green';
-                        if(menuDotLocal) menuDotLocal.className = 'status-dot red';
-                        
-                        // Hide cloud backup actions
-                        const cloudActions = document.getElementById('cloudActions');
-                        const cloudDivider = document.getElementById('cloudDivider');
-                        if(cloudActions) cloudActions.style.display = 'none';
-                        if(cloudDivider) cloudDivider.style.display = 'none';
-                        
-                        // Notify user
-                        setTimeout(() => {
-                            showMessageModal("File Not Found", 
-                                "Your personal Bible file was not found on this device. " +
-                                "It may have been moved or deleted. The Online Bible has been loaded instead.<br><br>" +
-                                "If you have a cloud backup, you can restore it by creating a new local Bible file.");
-                        }, 500);
+                        if (fileErr.name === 'NotFoundError') {
+                            // File was actually deleted - clear handle
+                            console.log("File no longer exists, clearing stale handle.");
+                            await clearStaleHandle();
+                            if(localDot) localDot.style.backgroundColor = '#ff4444';
+                            if(localLabel) localLabel.innerText = "My Bible: Inactive";
+                        } else {
+                            // Transient error? Keep handle.
+                            personalFileHandle = handle; 
+                             if(localDot) localDot.style.backgroundColor = 'orange';
+                             if(localLabel) localLabel.innerText = "My Bible: Click to Connect";
+                        }
                     }
-                    
                 } else {
+                    // Permission not granted yet - keep handle for later
+                    personalFileHandle = handle;
+                    const btn = document.getElementById('pbPrimaryActionBtn');
+                    if (btn) btn.innerText = "Reconnect My Bible";
                     console.log("Personal Bible found but permission required.");
-                    // Update Widget to indicate "Ready to Connect"
                     if(localDot) localDot.style.backgroundColor = 'orange';
                     if(localLabel) localLabel.innerText = "My Bible: Click to Load";
                 }
-             } catch(e) { 
-                 console.warn("Auto-load check failed", e);
-                 // Reset to safe state
-                 if(localDot) localDot.style.backgroundColor = '#ff4444';
-                 if(localLabel) localLabel.innerText = "My Bible: Error";
-             }
+            } catch(e) { 
+                // Handle query failed
+                console.warn("Handle check failed:", e);
+                // Only clear if definitively invalid
+                 if (e.name === 'NotFoundError' || e.name === 'TypeMismatchError') {
+                    await clearStaleHandle();
+                    if(localDot) localDot.style.backgroundColor = '#ff4444';
+                    if(localLabel) localLabel.innerText = "My Bible: Inactive";
+                 } else {
+                     // Keep handle accessible for retry
+                     personalFileHandle = handle;
+                     if(localDot) localDot.style.backgroundColor = 'orange';
+                     if(localLabel) localLabel.innerText = "My Bible: Click to Connect";
+                 }
+            }
          } else {
              // No handle known
              if(localDot) localDot.style.backgroundColor = '#ff4444';
@@ -4090,7 +4319,7 @@
         
         if (focusMode === 'notes') {
             // NOTES MODE: Show Notes ONLY
-            title.innerHTML = `<span style="opacity:0.8; font-size:0.9em;">My Notes on -</span> ${verse.b} ${verse.c}:${verse.v}`;
+            title.innerHTML = `<span style="opacity:0.8; font-size:0.8rem;">Notes-</span> ${verse.b} ${verse.c}:${verse.v}`;
             editSection.style.display = 'none';
             notesSection.style.display = 'block';
         } else {
@@ -4540,164 +4769,11 @@
             }
             if(btn) {
                 btn.innerText = "Create Offline Bible";
-                btn.onclick = () => handleBibleAction(); 
+                btn.onclick = () => handleBibleAction(); // Standard Create
             }
         }
     }
     
-
-    // --- BIBLE CREATION HANDLERS ---
-    
-    async function handleBibleAction() {
-        try {
-            const options = {
-                suggestedName: 'My Bible Data.db', 
-                types: [{
-                    description: 'Walk For God Bible Data',
-                    accept: {'application/octet-stream': ['.db'], 'text/plain': ['.txt', '.csv']}
-                }],
-            };
-            const handle = await window.showSaveFilePicker(options);
-            
-            // Save Handle
-            personalFileHandle = handle;
-            if(typeof saveHandle === 'function') await saveHandle(handle);
-            
-            // Show Loader or Status
-            const status = document.getElementById('pbStatusText');
-            if(status) status.innerText = "Creating file...";
-            
-            // Create Content
-            await createMyBibleData(handle);
-            
-            // Success UI
-            isPersonalMode = true; 
-            // Update Dots
-            const dotOn = document.getElementById('menuDotOnline');
-            const dotLoc = document.getElementById('menuDotLocal');
-            if(dotOn && dotLoc) { dotOn.className='status-dot red'; dotLoc.className='status-dot green'; }
-            
-            // Close Modal
-            const m = document.getElementById('personalBibleInitModal');
-            if(m) m.classList.remove('active');
-            
-            alert("Bible created successfully! You can now edit verses.");
-            window.location.reload(); 
-            
-        } catch (err) {
-            console.log("Bible Creation Cancelled or Failed", err);
-        }
-    }
-
-    // --- HELPER FIX: Update Status UI ---
-    function updateStatusUI(mode) {
-        const dotOn = document.getElementById('menuDotOnline');
-        const dotLoc = document.getElementById('menuDotLocal');
-        const pill = document.getElementById('statusDropdownBtn');
-        const statusText = document.getElementById('statusText');
-        
-        if (mode === 'LOCAL') {
-            if(dotOn && dotLoc) { dotOn.className='status-dot red'; dotLoc.style.backgroundColor='#f44336'; dotLoc.className='status-dot green'; dotLoc.style.backgroundColor='#28a745'; }
-            if(pill) { pill.classList.remove('online'); pill.classList.add('local'); }
-            if(statusText) statusText.innerText = "MY LOCAL BIBLE";
-        } else {
-            if(dotOn && dotLoc) { dotOn.className='status-dot green'; dotOn.style.backgroundColor='#28a745'; dotLoc.className='status-dot red'; dotLoc.style.backgroundColor='#f44336'; }
-            if(pill) { pill.classList.add('online'); pill.classList.remove('local'); }
-            if(statusText) statusText.innerText = "ONLINE BIBLE";
-        }
-    }
-
-    // --- IDB HELPERS ---
-    const DB_NAME = 'WFG_Bible_Store';
-    const STORE_NAME = 'handles';
-
-    function getDB() {
-        return new Promise((resolve, reject) => {
-            const request = indexedDB.open(DB_NAME, 1);
-            request.onupgradeneeded = (event) => {
-                event.target.result.createObjectStore(STORE_NAME);
-            };
-            request.onsuccess = (event) => resolve(event.target.result);
-            request.onerror = (event) => reject(event.target.error);
-        });
-    }
-
-    async function saveHandle(handle) {
-        const db = await getDB();
-        const tx = db.transaction(STORE_NAME, 'readwrite');
-        const store = tx.objectStore(STORE_NAME);
-        store.put(handle, 'personalBibleHandle');
-        return new Promise((resolve, reject) => {
-            tx.oncomplete = () => resolve();
-            tx.onerror = () => reject(tx.error);
-        });
-    }
-
-    async function getHandle() {
-        const db = await getDB();
-        const tx = db.transaction(STORE_NAME, 'readonly');
-        const store = tx.objectStore(STORE_NAME);
-        const req = store.get('personalBibleHandle');
-        return new Promise((resolve, reject) => {
-            req.onsuccess = () => resolve(req.result);
-            req.onerror = () => reject(req.error);
-        });
-    }
-    
-    async function checkPersonalBible() {
-        try {
-            const handle = await getHandle();
-            if (handle) {
-                // Verify Permission
-                const opts = { mode: 'readwrite' };
-                if ((await handle.queryPermission(opts)) === 'granted') {
-                    personalFileHandle = handle;
-                    isPersonalMode = true;
-                    updateStatusUI('LOCAL');
-                    loadPersonalContent();
-                    return true;
-                }
-            }
-        } catch(e) { console.warn("Check Personal Bible Failed", e); }
-        return false;
-    }
-
-    async function createMyBibleData(handle) {
-        // Create initial content from CURRENT cached Web Bible
-        if (!bibleData || bibleData.length === 0) {
-            alert("Please wait for the Bible to finish loading before creating a local copy.");
-            return;
-        }
-
-        // CORRECT delimiters for parseCSV (254, 253, 252)
-        const AM = String.fromCharCode(254);
-        const VM = String.fromCharCode(253); 
-        const SM = String.fromCharCode(252);
-        
-        try {
-            const writable = await handle.createWritable();
-            let content = `"Book","Chapter","Verse","Text" (Optimized Format)\n`; 
-            
-            for (let v of bibleData) {
-                // Determine edited vs original
-                // Structure: B AM C AM V AM T AM Notes AM Edits
-                const nStr = ""; // Empty notes
-                const enStr = ""; // Empty edits
-                
-                // Format: b, c, v, t, n, en
-                const line = `${v.b}${AM}${v.c}${AM}${v.v}${AM}${v.t}${AM}${nStr}${AM}${enStr}\n`; 
-                content += line;
-            }
-            
-            await writable.write(content);
-            await writable.close();
-            
-        } catch(e) {
-            console.error("Failed to write initial data", e);
-            throw e;
-        }
-    }
-
     // 3. Handle Restore Flow (Create File -> Download Backup)
     async function handleRestoreFlow() {
         try {
@@ -5058,119 +5134,6 @@
     }
 
     
-    // --- SETTINGS MODAL & VERSION SUPPORT ---
-    
-    function createSettingsModalStub() {
-        if (!document.getElementById('settingsModal')) {
-            const div = document.createElement('div');
-            div.id = 'settingsModal';
-            div.className = 'modal-overlay';
-            div.onclick = function(e) { if(e.target === this) closeModal('settingsModal'); };
-            div.innerHTML = `
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2>Settings</h2>
-                        <button class="modal-close" onclick="closeModal('settingsModal')">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                         <!-- Version Section -->
-                         <div id="versionSection" class="settings-section">
-                             <div class="section-title">Bible Translation</div>
-                             <div class="setting-item">
-                                 <label>Select Version</label>
-                                 <select id="optTranslation" class="setting-select" onchange="changeTranslation(this.value)">
-                                     <option value="web">World English Bible (WEB)</option>
-                                     <option value="nog">Names of God Bible (NOG)</option>
-                                 </select>
-                                 <p style="font-size:0.8rem; color:#888; margin-top:0.5rem;">
-                                    <strong>Note:</strong> The NOG Bible is currently Read-Only. Personal notes will be saved but editing text is disabled.
-                                 </p>
-                             </div>
-                         </div>
-
-                         <!-- Preferences Section -->
-                         <div id="prefsSection" class="settings-section">
-                             <div class="section-title">Preferences</div>
-                             <div class="setting-item">
-                                 <label>Name of God</label>
-                                 <select id="optNameGod" class="setting-select" onchange="if(typeof saveUserOptions === 'function') saveUserOptions()">
-                                     <option value="Yahweh">Yahweh</option>
-                                     <option value="Yehovah">Yehovah</option>
-                                     <option value="Jehovah">Jehovah</option>
-                                     <option value="LORD">LORD</option>
-                                     <option value="Adonai">Adonai</option>
-                                     <option value="HaShem">HaShem</option>
-                                 </select>
-                             </div>
-                             <div class="setting-item">
-                                 <label>Name of Messiah</label>
-                                 <select id="optNameMessiah" class="setting-select" onchange="if(typeof saveUserOptions === 'function') saveUserOptions()">
-                                     <option value="Jesus">Jesus</option>
-                                     <option value="Yeshua">Yeshua</option>
-                                     <option value="Iesous">Iesous</option>
-                                     <option value="Christ">Christ</option>
-                                     <option value="Messiah">Messiah</option>
-                                 </select>
-                             </div>
-                         </div>
-                         
-                         <!-- Account Section -->
-                         <div class="settings-section">
-                             <div class="section-title">Account & Cloud</div>
-                             <div class="status-row">
-                                 <div class="status-indicator">
-                                     <div id="stAuthDot" class="status-dot-large"></div>
-                                     <div id="stAuthText" style="color:var(--white);">Checking...</div>
-                                 </div>
-                                 <a id="stAuthAction" href="#" class="btn-outline-sm">Log In</a>
-                             </div>
-                             <div style="margin-top:1rem; font-size:0.8rem; color:#666;">
-                                 Device ID: <span id="optDeviceId" style="font-family:monospace; color:#888;"></span>
-                             </div>
-                         </div>
-                         
-                         <div class="modal-footer" style="border-top:none; padding-top:0;">
-                            <button class="btn-gold" onclick="closeModal('settingsModal')">Close Settings</button>
-                         </div>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(div);
-        }
-    }
-
-    function changeTranslation(val) {
-        if (confirm("Switching Bible Translation will reload the app. Continue?")) {
-            if (typeof userOptions !== 'undefined') {
-                userOptions.translation = val;
-                // Save and Reload
-                if(typeof saveUserOptions === 'function') saveUserOptions(true);
-                else {
-                    // Fallback save if function missing
-                     localStorage.setItem('wfg_user_options', JSON.stringify(userOptions));
-                }
-                setTimeout(() => location.reload(), 200);
-            }
-        } else {
-            // Revert UI if cancelled
-            if (typeof userOptions !== 'undefined') {
-                document.getElementById('optTranslation').value = userOptions.translation;
-            }
-        }
-    }
-
-    // Initialize Settings (ensure logic runs)
-    function initSettingsUI() {
-        createSettingsModalStub();
-        // Sync Dropdown
-        if (typeof userOptions !== 'undefined') {
-            const sel = document.getElementById('optTranslation');
-            if(sel) sel.value = userOptions.translation || 'web';
-        }
-    }
-
     // Helper to Create Modal HTML
     function createBackupModalStub() {
         if (!document.getElementById('backupModal')) {
@@ -5323,9 +5286,6 @@
         // Run standard checks
         // checkAuth(); // Already running in main script
         // loadBibleData(); // Already running
-        
-        // Initialize Settings UI
-        initSettingsUI();
         
         // Load Options (Async)
         setTimeout(() => {
