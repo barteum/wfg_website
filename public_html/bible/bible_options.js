@@ -169,7 +169,7 @@
         if (currentResults.length > 0) displayResults();
     }
     
-    // THE GLOBAL REPLACE LOGIC
+    // THE GLOBAL REPLACE LOGIC (uses replaceTextInArray from bible.html)
     function applyNameSubstitutions() {
         if (!isDataLoaded) return;
         
@@ -179,12 +179,17 @@
         const godPattern = /\b(Yahweh|Jehovah|LORD|YHWH|Yehovah)\b/g;
         const messiahPattern = /\b(Yeshua|Jesus|Iesous|Y'shua)\b/g;
         
-        bibleData.forEach(v => {
-            let txt = v.t;
-            txt = txt.replace(godPattern, targetGod);
-            txt = txt.replace(messiahPattern, targetMessiah);
-            v.t = txt;
-        });
+        // Use reusable function if available (from bible.html)
+        if (typeof replaceTextInArray === 'function') {
+            replaceTextInArray(bibleData, godPattern, targetGod);
+            replaceTextInArray(bibleData, messiahPattern, targetMessiah);
+        } else {
+            // Fallback for offline/standalone use
+            bibleData.forEach(v => {
+                v.t = v.t.replace(godPattern, targetGod);
+                v.t = v.t.replace(messiahPattern, targetMessiah);
+            });
+        }
         console.log("Substitutions applied.");
     }
 
