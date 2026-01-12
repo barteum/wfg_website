@@ -1,3 +1,13 @@
+### [12-01-26 : 00:26:40] *USER FEEDBACK*
+Active Personal Mode - this is not visible in settings page ... is the code active?
+(User quotes manual steps for connecting local folder)
+
+### [12-01-26 : 00:18:31] *USER REQUEST*
+as with the homepage having a top of page widget is import in large pages ... add same widget to bible_manual.html
+
+### [12-01-26 : 00:12:58] *USER REQUEST*
+Lets create a HTML file called bible_manual.html ... conducting a complete audit of @[public_html/bible/bible.html] ... Use design principles @[public_html/devs/ui_design.md]
+
 ### [11-01-26 : 23:58:00] *USER FEEDBACK*
 the popup is been blocked as a see a flash of something when i click the button
 

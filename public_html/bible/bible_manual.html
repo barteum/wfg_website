@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walk For God Bible - User Manual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --black-light: #1a1a1a;
+            --gold: #d4af37;
+            --gold-light: #f0d77c;
+            --purple: #6b4c9a;
+            --cyan: #2bb8b8;
+            --white: #ffffff;
+            --gray: #888888;
+        }
+
+        body {
+            background-color: var(--black);
+            color: rgba(255, 255, 255, 0.9);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 280px;
+            background: var(--black-light);
+            border-right: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 2rem;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            top: 0;
+            left: 0;
+        }
+
+        .main-content {
+            flex: 1;
+            margin-left: 280px; /* Width of sidebar */
+            padding: 4rem;
+            max-width: 1000px;
+        }
+
+        /* Logo Area */
+        .logo-area {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* TOC Links */
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+        .toc-list li { margin-bottom: 0.5rem; }
+        .toc-list a {
+            text-decoration: none;
+            color: var(--gray);
+            font-size: 0.95rem;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        .toc-list a:hover, .toc-list a.active {
+            color: var(--white);
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 3px solid var(--gold);
+        }
+
+        /* Content Styling */
+        section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        .subtitle { color: var(--gray); margin-bottom: 3rem; font-size: 1.2rem; }
+
+        h2 { 
+            font-size: 2rem; 
+            margin-bottom: 1.5rem; 
+            border-left: 4px solid var(--gold);
+            padding-left: 1rem;
+        }
+
+        h3 { color: var(--white); font-size: 1.4rem; margin-top: 2rem; }
+
+        p { margin-bottom: 1rem; }
+
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--gold);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Tips & Alerts */
+        .tip-box {
+            background: rgba(43, 184, 184, 0.1);
+            border-left: 4px solid var(--cyan);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .tip-title { color: var(--cyan); font-weight: bold; display: block; margin-bottom: 0.5rem; }
+
+        .warning-box {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--gold);
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Buttons Representation */
+        .btn-ui {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background: var(--gold);
+            color: var(--black);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            vertical-align: middle;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .sidebar { 
+                width: 100%; 
+                height: auto; 
+                position: relative; 
+                padding: 1rem;
+                border-right: none;
+                border-bottom: 1px solid var(--gold);
+            }
+            .main-content { margin-left: 0; padding: 2rem 1.5rem; }
+            h1 { font-size: 2rem; }
+        }
+
+        /* Scroll Top Button */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            background: var(--gold);
+            color: var(--black);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 9000;
+            transition: all 0.3s;
+        }
+        #scrollTopBtn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <div class="logo-text">Walk For God Bible</div>
+            </div>
+            <nav>
+                <ul class="toc-list">
+                    <li><a href="#intro">1. Introduction</a></li>
+                    <li><a href="#getting-started">2. Getting Started</a></li>
+                    <li><a href="#navigation">3. Navigation & Reading</a></li>
+                    <li><a href="#search">4. Search & Replace</a></li>
+                    <li><a href="#editing">5. Editing & Personalization</a></li>
+                    <li><a href="#backup">6. Data Safety (Backup)</a></li>
+                     <li><a href="#audio">7. Audio Features</a></li>
+                    <li><a href="#troubleshooting">8. Troubleshooting</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section id="intro">
+                <h1>User Manual</h1>
+                <p class="subtitle">The complete guide to your Personal Editable Bible.</p>
+                
+                <p>Welcome to the <strong>Walk For God Bible App</strong>. This is not just another Bible reader; it is a tool designed for <em>active engagement</em> with scripture. Unlike standard apps, this platform allows you to <strong>edit, annotate, and personalize</strong> the text itself, creating a version that grows with your understanding.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🔒 100% Your Data</h4>
+                        <p>Your Bible Edition data lives on your device. We do not track your edits or store them on our servers, so dont lose your local data file.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>✍️ Fully Editable</h4>
+                        <p>Correct translations, add clarity, or insert your own study notes directly into the verse.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔍 Powerful Search</h4>
+                        <p>Intelligent search tools that help you find patterns and replace terms globally.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="getting-started">
+                <h2>2. Getting Started</h2>
+                <p>By default, the app runs in <strong>Online Mode</strong> (Read-Only). To unlock the full potential, you must switch to <strong>Personal Mode</strong>.</p>
+                
+                <h3>Active Personal Mode</h3>
+                <ol>
+                    <li>Click the <strong>Settings Icon</strong> <span style="font-size:1.2rem;">⚙️</span> at the top right.</li>
+                    <li>Under "General Settings", look for the <strong>"My Local Bible"</strong> section.</li>
+                    <li>Click <span class="btn-ui">Connect Local Folder</span>.</li>
+                    <li>Select a folder on your computer where you want to store your Bible data.</li>
+                    <li>The app will initialize your personal database.</li>
+                </ol>
+                
+                <div class="tip-box">
+                    <span class="tip-title">Why a Local Folder?</span>
+                    This gives you physical ownership of your data (`bible_data.json` or `.csv`). You can back it up, move it, or open it in Excel!
+                </div>
+            </section>
+
+            <section id="navigation">
+                <h2>3. Navigation & Reading</h2>
+                <p>The interface is designed for focus and clarity.</p>
+                
+                <h3>Selecting Scripture</h3>
+                <p>Use the three dropdown menus at the top:</p>
+                <ul>
+                    <li><strong>Book</strong>: Select the book (e.g., Genesis).</li>
+                    <li><strong>Chapter</strong>: Defaults to Chapter 1 automatically for quick reading.</li>
+                    <li><strong>Verse</strong>: Optional. Scroll directly to a specific verse.</li>
+                </ul>
+
+                <h3>Reading Modes</h3>
+                <p>Once a book is selected, you can scroll through the chapter. At the bottom of each chapter, use the "Next Chapter" button to continue reading seamlessly.</p>
+            </section>
+
+            <section id="search">
+                <h2>4. Search & Replace</h2>
+                <p>The search bar is your command center for finding scripture.</p>
+
+                <h3>Standard Search</h3>
+                <p>Type any word or phrase into the search box and press Enter. Results will appear below.</p>
+                <ul>
+                    <li><strong>Exact Match</strong>: Check this box to find exact phrases only.</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>Smart Search Scope:</strong>
+                    <ul>
+                        <li>If you select a <strong>Book</strong> (e.g., Genesis) and type text, it searches the <strong>Whole Book</strong>.</li>
+                        <li>If you manually select a specific <strong>Chapter</strong> (e.g., Genesis 5), it searches <strong>Only that Chapter</strong>.</li>
+                    </ul>
+                </div>
+
+                <h3>Global Replace</h3>
+                <p>Want to change a word everywhere? (e.g., "servant" to "bondservant")</p>
+                <ol>
+                    <li>Perform a search for the term you want to change.</li>
+                    <li>In the results header, click <span class="btn-ui">Replace All</span>.</li>
+                    <li>A popup will appear. Enter the new term.</li>
+                    <li>Confirm the replacement. It updates <strong>all occurrences</strong> instantly.</li>
+                </ol>
+            </section>
+
+            <section id="editing">
+                <h2>5. Editing & Personalization</h2>
+                <p>This is the core feature of the app. Make the Bible yours.</p>
+
+                <h3>Editing a Verse</h3>
+                <p>Simply <strong>click on the text</strong> of any verse. An editor window will open.</p>
+                <ul>
+                    <li><strong>Text</strong>: Modify the scripture text itself.</li>
+                    <li><strong>Notes</strong>: Add personal study notes that appear alongside the verse.</li>
+                    <li><strong>Save</strong>: Click <span class="btn-ui">Save Changes</span> to commit to your local file.</li>
+                </ul>
+
+                <h3>Names of God</h3>
+                <p>In Settings, you can globally customize how Divine Names are rendered (e.g., Yahweh vs Jehovah, Yeshua vs Jesus). This is a display-only setting that applies instantly.</p>
+            </section>
+
+            <section id="backup">
+                <h2>6. Data Safety (Backup)</h2>
+                <p>Your data is precious. The app provides robust backup tools.</p>
+
+                <h3>Manual Backup</h3>
+                <p>Go to Settings > Backup & Restore.</p>
+                <ul>
+                    <li><strong>Download JSON</strong>: Creates a full backup file.</li>
+                    <li><strong>Download CSV</strong>: Creates a spreadsheet-compatible file.</li>
+                </ul>
+
+                <h3>Automatic Cloud Backup</h3>
+                <p>If configured, the app can automatically sync backups to a designated endpoint. Check the "Cloud Actions" section in settings for status.</p>
+            </section>
+            
+            <section id="audio">
+                <h2>7. Audio Features</h2>
+                <p>Listen to the Bible while you walk or work.</p>
+                <p>At the top of each chapter view, click the <strong>Purple Audio Button</strong> <span style="font-size:1.2rem; color:var(--purple);">▶</span>. This opens a dedicated player window that reads the chapter aloud.</p>
+            </section>
+
+            <section id="troubleshooting">
+                <h2>8. Troubleshooting</h2>
+                
+                <h4>"Replace All" button is missing?</h4>
+                <p>The button only appears after you perform a text search. It is not available in pure reading mode.</p>
+
+                <h4>Changes aren't saving?</h4>
+                <p>Ensure the "My Bible" indicator is <strong>Green</strong>. If it is Red, your local file connection may have been lost. Go to Settings and Reconnect.</p>
+
+                <h4>Search only finds results in Chapter 1?</h4>
+                <p>This usually happens if you explicitly selected Chapter 1. Clear the Chapter selection (set to "Chapter...") or just re-select the Book to reset the Smart Scope.</p>
+            </section>
+            
+            <footer style="margin-top:4rem; border-top:1px solid rgba(255,255,255,0.1); padding-top:2rem; text-align:center; color:var(--gray); font-size:0.9rem;">
+                &copy; 2026 Walk For God. All rights reserved. <br/>
+                <a href="bible.html" style="color:var(--gold); text-decoration:none;">Return to App</a>
+            </footer>
+        </main>
+    </div>
+    
+    <!-- Scroll Top Button -->
+    <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+    
+    <script>
+        // Scroll Top Logic
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.style.display = 'flex';
+                // Slide in animation could be added here
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        });
+
+        // Simple script to highlight active TOC item on scroll
+        const sections = document.querySelectorAll('section');
+        const navLi = document.querySelectorAll('.toc-list a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLi.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
